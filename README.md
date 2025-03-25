@@ -31,7 +31,7 @@ ros2 launch robotiq_2finger_grippers/robotiq_2f_85_gripper_visualization/launch/
 
 To visualize the UR robotic arm with the gripper, use:
 ```bash
-ros2 launch ur_description view_ur.launch.py ur_type:=ur3e
+ros2 launch ur_description view_ur.launch.py ur_type:=ur3
 ```
 
 ### Prerequisites for Launching
