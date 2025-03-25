@@ -14,7 +14,7 @@ def generate_launch_description():
         "robotiq_arg2f_85_model.xacro",
     )
 
-    robot_description = Command(["xacro", urdf_file])
+    robot_description = Command(["xacro", " ", urdf_file]) 
 
     rviz_config_file = os.path.join(
         get_package_share_directory("robotiq_2f_85_gripper_visualization"),
@@ -25,6 +25,7 @@ def generate_launch_description():
         DeclareLaunchArgument("gui", default_value="True", description="Use GUI for visualization"),
         DeclareLaunchArgument("rviz_config_file", default_value=rviz_config_file, description="Path to RViz config file"),
 
+        # Publish robot description
         Node(
             package="robot_state_publisher",
             executable="robot_state_publisher",
@@ -32,6 +33,7 @@ def generate_launch_description():
             parameters=[{"robot_description": robot_description}],
         ),
 
+        # Joint state publisher
         Node(
             package="joint_state_publisher",
             executable="joint_state_publisher",
@@ -39,6 +41,7 @@ def generate_launch_description():
             parameters=[{"use_gui": LaunchConfiguration("gui")}],
         ),
 
+        # RViz
         Node(
             package="rviz2",
             executable="rviz2",
