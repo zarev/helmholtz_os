@@ -1,0 +1,61 @@
+[0.067s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/movit_config -DCMAKE_INSTALL_PREFIX=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config
+[0.381s] -- The C compiler identification is GNU 13.3.0
+[0.963s] -- The CXX compiler identification is GNU 13.3.0
+[1.385s] -- Detecting C compiler ABI info
+[1.651s] -- Detecting C compiler ABI info - done
+[1.663s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.665s] -- Detecting C compile features
+[1.666s] -- Detecting C compile features - done
+[1.760s] -- Detecting CXX compiler ABI info
+[2.045s] -- Detecting CXX compiler ABI info - done
+[2.058s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.059s] -- Detecting CXX compile features
+[2.059s] -- Detecting CXX compile features - done
+[2.088s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.261s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.516s] -- Configuring done (2.4s)
+[2.526s] -- Generating done (0.0s)
+[2.531s] -- Build files have been written to: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config
+[2.537s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/movit_config -DCMAKE_INSTALL_PREFIX=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config
+[2.539s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config -- -j16 -l16
+[2.577s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config -- -j16 -l16
+[2.579s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config
+[2.586s] -- Install configuration: ""
+[2.589s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/ament_index/resource_index/package_run_dependencies/movit_config
+[2.589s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/ament_index/resource_index/parent_prefix_path/movit_config
+[2.590s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/environment/ament_prefix_path.sh
+[2.591s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/environment/ament_prefix_path.dsv
+[2.591s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/environment/path.sh
+[2.591s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/environment/path.dsv
+[2.592s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/local_setup.bash
+[2.592s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/local_setup.sh
+[2.593s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/local_setup.zsh
+[2.593s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/local_setup.dsv
+[2.594s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.dsv
+[2.594s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/ament_index/resource_index/packages/movit_config
+[2.595s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/cmake/movit_configConfig.cmake
+[2.595s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/cmake/movit_configConfig-version.cmake
+[2.596s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.xml
+[2.596s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch
+[2.596s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/setup_assistant.launch.py
+[2.597s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/demo.launch.py
+[2.597s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/warehouse_db.launch.py
+[2.598s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/spawn_controllers.launch.py
+[2.598s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/static_virtual_joint_tfs.launch.py
+[2.598s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/move_group.launch.py
+[2.598s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/moveit_rviz.launch.py
+[2.599s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/rsp.launch.py
+[2.599s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config
+[2.599s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ur.urdf.xacro
+[2.599s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/initial_positions.yaml
+[2.600s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ur.srdf
+[2.600s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/pilz_cartesian_limits.yaml
+[2.601s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ros2_controllers.yaml
+[2.602s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/kinematics.yaml
+[2.603s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/joint_limits.yaml
+[2.603s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ur.ros2_control.xacro
+[2.604s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/moveit.rviz
+[2.604s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/moveit_controllers.yaml
+[2.605s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/sensors_3d.yaml
+[2.606s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/.setup_assistant
+[2.609s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config
