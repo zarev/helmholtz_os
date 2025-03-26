@@ -1,11 +1,1 @@
-sensors:
-  - default_sensor
-default_sensor:
-  filtered_cloud_topic: ""
-  max_range: ""
-  max_update_rate: ""
-  padding_offset: ""
-  padding_scale: ""
-  point_cloud_topic: ""
-  point_subsample: ""
-  sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/movit_config/config/sensors_3d.yaml

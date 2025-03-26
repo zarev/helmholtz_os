@@ -1,7 +1,1 @@
-from moveit_configs_utils import MoveItConfigsBuilder
-from moveit_configs_utils.launches import generate_moveit_rviz_launch
-
-
-def generate_launch_description():
-    moveit_config = MoveItConfigsBuilder("ur", package_name="movit_config").to_moveit_configs()
-    return generate_moveit_rviz_launch(moveit_config)
+/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/movit_config/launch/moveit_rviz.launch.py
