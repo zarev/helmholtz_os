@@ -51,6 +51,8 @@ source install/setup.bash
 
 ![UR Arm with Gripper](/images/arm_with_gripper.png)
 
+![rviz](/images/rviz.png)
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request or create an issue if you find any bugs or have suggestions for improvement.

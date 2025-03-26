@@ -1,0 +1,42 @@
+[0.090s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config': AMENT_PREFIX_PATH=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config -- -j16 -l16
+[0.148s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config' returned '0': AMENT_PREFIX_PATH=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config -- -j16 -l16
+[0.151s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config': AMENT_PREFIX_PATH=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config
+[0.164s] -- Install configuration: ""
+[0.164s] -- Execute custom install script
+[0.165s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/ament_index/resource_index/package_run_dependencies/movit_config
+[0.166s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/ament_index/resource_index/parent_prefix_path/movit_config
+[0.166s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/environment/ament_prefix_path.sh
+[0.167s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/environment/ament_prefix_path.dsv
+[0.167s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/environment/path.sh
+[0.167s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/environment/path.dsv
+[0.168s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/local_setup.bash
+[0.168s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/local_setup.sh
+[0.169s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/local_setup.zsh
+[0.169s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/local_setup.dsv
+[0.169s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.dsv
+[0.184s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/ament_index/resource_index/packages/movit_config
+[0.185s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/cmake/movit_configConfig.cmake
+[0.185s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/cmake/movit_configConfig-version.cmake
+[0.185s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.xml
+[0.186s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/demo.launch.py
+[0.186s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/move_group.launch.py
+[0.187s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/moveit_rviz.launch.py
+[0.187s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/rsp.launch.py
+[0.188s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/setup_assistant.launch.py
+[0.188s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/spawn_controllers.launch.py
+[0.189s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/static_virtual_joint_tfs.launch.py
+[0.189s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/warehouse_db.launch.py
+[0.190s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/initial_positions.yaml
+[0.190s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/joint_limits.yaml
+[0.191s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/kinematics.yaml
+[0.191s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/moveit.rviz
+[0.192s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/moveit_controllers.yaml
+[0.192s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/pilz_cartesian_limits.yaml
+[0.192s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ros2_controllers.yaml
+[0.192s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/sensors_3d.yaml
+[0.193s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ur.ros2_control.xacro
+[0.193s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ur.srdf
+[0.193s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ur.urdf
+[0.193s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ur.urdf.xacro
+[0.193s] -- Up-to-date symlink: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/.setup_assistant
+[0.196s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config' returned '0': AMENT_PREFIX_PATH=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config
