@@ -1,0 +1,1 @@
+/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo/ament_cmake_core/ur_gazeboConfig.cmake

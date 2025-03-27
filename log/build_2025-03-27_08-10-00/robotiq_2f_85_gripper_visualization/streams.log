@@ -1,0 +1,63 @@
+[0.032s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/robotiq_2f_85_gripper_visualization -DCMAKE_INSTALL_PREFIX=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization
+[0.188s] -- The C compiler identification is GNU 13.3.0
+[0.809s] -- The CXX compiler identification is GNU 13.3.0
+[1.382s] -- Detecting C compiler ABI info
+[1.706s] -- Detecting C compiler ABI info - done
+[1.728s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.728s] -- Detecting C compile features
+[1.729s] -- Detecting C compile features - done
+[1.833s] -- Detecting CXX compiler ABI info
+[2.187s] -- Detecting CXX compiler ABI info - done
+[2.210s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.210s] -- Detecting CXX compile features
+[2.211s] -- Detecting CXX compile features - done
+[2.217s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.491s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.866s] -- Configuring done (2.8s)
+[2.876s] -- Generating done (0.0s)
+[2.881s] -- Build files have been written to: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization
+[2.890s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/robotiq_2f_85_gripper_visualization -DCMAKE_INSTALL_PREFIX=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization
+[2.891s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization -- -j16 -l16
+[2.962s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization -- -j16 -l16
+[2.964s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization
+[2.975s] -- Install configuration: ""
+[2.976s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes
+[2.977s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/collision
+[2.977s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_base_link.stl
+[2.979s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_base_link.stl
+[2.981s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_outer_finger.dae
+[2.982s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_outer_knuckle.dae
+[2.983s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_inner_finger.dae
+[2.984s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_inner_knuckle.dae
+[2.987s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual
+[2.988s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_base_link.dae
+[3.108s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_pad.dae
+[3.108s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_gripper_coupling.stl
+[3.110s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_outer_finger.dae
+[3.115s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_outer_knuckle.dae
+[3.119s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_inner_finger.dae
+[3.128s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_inner_knuckle.dae
+[3.133s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/urdf
+[3.133s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/urdf/robotiq_arg2f_85_model_macro.xacro
+[3.134s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/urdf/robotiq_arg2f_transmission.xacro
+[3.135s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/urdf/robotiq_arg2f_85_model.xacro
+[3.136s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/urdf/robotiq_arg2f.xacro
+[3.136s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/launch
+[3.137s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/launch/test_2f_85_model.launch.py
+[3.137s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/visualize.rviz
+[3.138s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/ament_index/resource_index/package_run_dependencies/robotiq_2f_85_gripper_visualization
+[3.138s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/ament_index/resource_index/parent_prefix_path/robotiq_2f_85_gripper_visualization
+[3.139s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/environment/ament_prefix_path.sh
+[3.140s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/environment/ament_prefix_path.dsv
+[3.141s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/environment/path.sh
+[3.141s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/environment/path.dsv
+[3.141s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/local_setup.bash
+[3.142s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/local_setup.sh
+[3.142s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/local_setup.zsh
+[3.142s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/local_setup.dsv
+[3.142s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.dsv
+[3.143s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/ament_index/resource_index/packages/robotiq_2f_85_gripper_visualization
+[3.143s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/cmake/robotiq_2f_85_gripper_visualizationConfig.cmake
+[3.144s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/cmake/robotiq_2f_85_gripper_visualizationConfig-version.cmake
+[3.144s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.xml
+[3.147s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization

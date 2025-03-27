@@ -1,1 +1,0 @@
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/movit_config/launch/static_virtual_joint_tfs.launch.py

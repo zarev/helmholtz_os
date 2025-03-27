@@ -1,16 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro" name="$(arg name)">
-   <!-- robot name parameter -->
+
+   <!-- Declare arguments at the top -->
    <xacro:arg name="name" default="ur"/>
-   <!-- import main macro -->
-   <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro"/>
-
-   <!-- possible 'ur_type' values: ur3, ur3e, ur5, ur5e, ur10, ur10e, ur16e, ur20, ur30 -->
-   <!-- the default value should raise an error in case this was called without defining the type -->
-   <xacro:arg name="ur_type" default="ur5"/>
-
-   <!-- parameters -->
-   <xacro:arg name="tf_prefix" default="" />
+   <xacro:arg name="ur_type" default="ur3"/>
+   <xacro:arg name="tf_prefix" default=""/>
    <xacro:arg name="joint_limit_params" default="$(find ur_description)/config/$(arg ur_type)/joint_limits.yaml"/>
    <xacro:arg name="kinematics_params" default="$(find ur_description)/config/$(arg ur_type)/default_kinematics.yaml"/>
    <xacro:arg name="physical_params" default="$(find ur_description)/config/$(arg ur_type)/physical_parameters.yaml"/>
@@ -19,14 +13,15 @@
    <xacro:arg name="safety_limits" default="false"/>
    <xacro:arg name="safety_pos_margin" default="0.15"/>
    <xacro:arg name="safety_k_position" default="20"/>
+   <xacro:arg name="force_abs_paths" default="false"/>
 
-   <!--When using gazebo simulations absolute paths are necessary.-->
-   <xacro:arg name="force_abs_paths" default="false" />
+   <!-- Include main macro after declaring arguments -->
+   <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro"/>
 
-   <!-- create link fixed to the "world" -->
+   <!-- Create link fixed to the "world" -->
    <link name="world" />
 
-   <!-- arm -->
+   <!-- Arm -->
    <xacro:ur_robot
      name="$(arg name)"
      tf_prefix="$(arg tf_prefix)"
@@ -38,8 +33,11 @@
      safety_limits="$(arg safety_limits)"
      safety_pos_margin="$(arg safety_pos_margin)"
      safety_k_position="$(arg safety_k_position)"
-     force_abs_paths="$(arg force_abs_paths)"
-     >
-     <origin xyz="0 0 0" rpy="0 0 0" />          <!-- position robot in the world -->
+     force_abs_paths="$(arg force_abs_paths)">
+     <origin xyz="0 0 0" rpy="0 0 0" /> <!-- Position robot in the world -->
    </xacro:ur_robot>
+
+   <!-- Include Intel RealSense Camera -->
+   <xacro:include filename="$(find ur_description)/urdf/intel_rgbd_cam_d435.urdf.xacro"/>
+
 </robot>

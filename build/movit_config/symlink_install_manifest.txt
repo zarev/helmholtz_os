@@ -13,14 +13,7 @@
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/cmake/movit_configConfig.cmake
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/cmake/movit_configConfig-version.cmake
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.xml
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/demo.launch.py
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/move_group.launch.py
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/moveit_rviz.launch.py
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/rsp.launch.py
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/setup_assistant.launch.py
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/spawn_controllers.launch.py
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/static_virtual_joint_tfs.launch.py
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/warehouse_db.launch.py
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/initial_positions.yaml
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/joint_limits.yaml
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/kinematics.yaml
