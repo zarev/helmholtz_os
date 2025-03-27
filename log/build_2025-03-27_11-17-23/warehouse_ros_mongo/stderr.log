@@ -1,6 +1,0 @@
-[31mCMake Error at cmake/FindMONGODB.cmake:91 (message):
-  MONGODB not found.
-Call Stack (most recent call first):
-  CMakeLists.txt:24 (find_package)
-
-[0m

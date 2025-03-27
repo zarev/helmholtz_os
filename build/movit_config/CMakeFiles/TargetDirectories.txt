@@ -1,9 +1,0 @@
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config/CMakeFiles/uninstall.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config/CMakeFiles/movit_config_uninstall.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config/CMakeFiles/test.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config/CMakeFiles/edit_cache.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config/CMakeFiles/rebuild_cache.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config/CMakeFiles/list_install_components.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config/CMakeFiles/install.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config/CMakeFiles/install/local.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config/CMakeFiles/install/strip.dir

@@ -1,9 +1,0 @@
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/CMakeFiles/uninstall.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/CMakeFiles/ur_interfaces_uninstall.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/CMakeFiles/test.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/CMakeFiles/edit_cache.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/CMakeFiles/rebuild_cache.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/CMakeFiles/list_install_components.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/CMakeFiles/install.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/CMakeFiles/install/local.dir
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/CMakeFiles/install/strip.dir
