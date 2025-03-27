@@ -445,10 +445,14 @@ CMakeFiles/rviz_marker_tools.dir/src/marker_creation.cpp.o
  /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__traits.hpp
  /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp
  /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+ /opt/ros/jazzy/include/std_msgs/std_msgs/msg/color_rgba.hpp
+ /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__builder.hpp
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__struct.hpp
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__traits.hpp
+ /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__type_support.hpp
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp
+ /opt/ros/jazzy/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
  /opt/ros/jazzy/include/tf2/tf2/LinearMath/Matrix3x3.hpp
  /opt/ros/jazzy/include/tf2/tf2/LinearMath/MinMax.hpp
  /opt/ros/jazzy/include/tf2/tf2/LinearMath/QuadWord.hpp

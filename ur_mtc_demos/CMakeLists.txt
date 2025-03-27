@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(mycobot_mtc_demos)
+project(ur_mtc_demos)
 
 # Set the build type if not specified
 if(NOT CMAKE_BUILD_TYPE)

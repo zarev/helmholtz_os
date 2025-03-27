@@ -1,0 +1,582 @@
+[0.241s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.241s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f1ce36d1e20>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f1ce36d1b80>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f1ce36d1b80>>, mixin_verb=('build',))
+[0.297s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.298s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.298s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.298s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.298s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.298s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.298s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['ignore', 'ignore_ament_install']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'ignore'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'ignore_ament_install'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['colcon_pkg']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'colcon_pkg'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['colcon_meta']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'colcon_meta'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['ros']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'ros'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['cmake', 'python']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'cmake'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'python'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['python_setup_py']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'python_setup_py'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extensions ['ignore', 'ignore_ament_install']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extension 'ignore'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extension 'ignore_ament_install'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extensions ['colcon_pkg']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extension 'colcon_pkg'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extensions ['colcon_meta']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extension 'colcon_meta'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extensions ['ros']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extension 'ros'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extensions ['cmake', 'python']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extension 'cmake'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extension 'python'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extensions ['python_setup_py']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor) by extension 'python_setup_py'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/capabilities) by extensions ['ignore', 'ignore_ament_install']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/capabilities) by extension 'ignore'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/capabilities) by extension 'ignore_ament_install'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/capabilities) by extensions ['colcon_pkg']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/capabilities) by extension 'colcon_pkg'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/capabilities) by extensions ['colcon_meta']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/capabilities) by extension 'colcon_meta'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/capabilities) by extensions ['ros']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/capabilities) by extension 'ros'
+[0.343s] DEBUG:colcon.colcon_core.package_identification:Package 'moveit_task_constructor/capabilities' with type 'ros.ament_cmake' and name 'moveit_task_constructor_capabilities'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/core) by extensions ['ignore', 'ignore_ament_install']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/core) by extension 'ignore'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/core) by extension 'ignore_ament_install'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/core) by extensions ['colcon_pkg']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/core) by extension 'colcon_pkg'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/core) by extensions ['colcon_meta']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/core) by extension 'colcon_meta'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/core) by extensions ['ros']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/core) by extension 'ros'
+[0.345s] DEBUG:colcon.colcon_core.package_identification:Package 'moveit_task_constructor/core' with type 'ros.ament_cmake' and name 'moveit_task_constructor_core'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/demo) by extensions ['ignore', 'ignore_ament_install']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/demo) by extension 'ignore'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/demo) by extension 'ignore_ament_install'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/demo) by extensions ['colcon_pkg']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/demo) by extension 'colcon_pkg'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/demo) by extensions ['colcon_meta']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/demo) by extension 'colcon_meta'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/demo) by extensions ['ros']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/demo) by extension 'ros'
+[0.347s] DEBUG:colcon.colcon_core.package_identification:Package 'moveit_task_constructor/demo' with type 'ros.ament_cmake' and name 'moveit_task_constructor_demo'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/msgs) by extension 'ignore'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/msgs) by extension 'ignore_ament_install'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/msgs) by extensions ['colcon_pkg']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/msgs) by extension 'colcon_pkg'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/msgs) by extensions ['colcon_meta']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/msgs) by extension 'colcon_meta'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/msgs) by extensions ['ros']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/msgs) by extension 'ros'
+[0.349s] DEBUG:colcon.colcon_core.package_identification:Package 'moveit_task_constructor/msgs' with type 'ros.ament_cmake' and name 'moveit_task_constructor_msgs'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/rviz_marker_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/rviz_marker_tools) by extension 'ignore'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/rviz_marker_tools) by extension 'ignore_ament_install'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/rviz_marker_tools) by extensions ['colcon_pkg']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/rviz_marker_tools) by extension 'colcon_pkg'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/rviz_marker_tools) by extensions ['colcon_meta']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/rviz_marker_tools) by extension 'colcon_meta'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/rviz_marker_tools) by extensions ['ros']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/rviz_marker_tools) by extension 'ros'
+[0.351s] DEBUG:colcon.colcon_core.package_identification:Package 'moveit_task_constructor/rviz_marker_tools' with type 'ros.ament_cmake' and name 'rviz_marker_tools'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/visualization) by extensions ['ignore', 'ignore_ament_install']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/visualization) by extension 'ignore'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/visualization) by extension 'ignore_ament_install'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/visualization) by extensions ['colcon_pkg']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/visualization) by extension 'colcon_pkg'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/visualization) by extensions ['colcon_meta']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/visualization) by extension 'colcon_meta'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/visualization) by extensions ['ros']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_task_constructor/visualization) by extension 'ros'
+[0.353s] DEBUG:colcon.colcon_core.package_identification:Package 'moveit_task_constructor/visualization' with type 'ros.ament_cmake' and name 'moveit_task_constructor_visualization'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extension 'ignore'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extension 'ignore_ament_install'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extensions ['colcon_pkg']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extension 'colcon_pkg'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extensions ['colcon_meta']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extension 'colcon_meta'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extensions ['ros']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extension 'ros'
+[0.354s] DEBUG:colcon.colcon_core.package_identification:Package 'movit_config' with type 'ros.ament_cmake' and name 'movit_config'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extensions ['ignore', 'ignore_ament_install']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extension 'ignore'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extension 'ignore_ament_install'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extensions ['colcon_pkg']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extension 'colcon_pkg'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extensions ['colcon_meta']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extension 'colcon_meta'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extensions ['ros']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extension 'ros'
+[0.356s] DEBUG:colcon.colcon_core.package_identification:Package 'robotiq_2f_85_gripper_visualization' with type 'ros.ament_cmake' and name 'robotiq_2f_85_gripper_visualization'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extensions ['ignore', 'ignore_ament_install']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extension 'ignore'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extension 'ignore_ament_install'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extensions ['colcon_pkg']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extension 'colcon_pkg'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extensions ['colcon_meta']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extension 'colcon_meta'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extensions ['ros']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extension 'ros'
+[0.358s] DEBUG:colcon.colcon_core.package_identification:Package 'ur_description' with type 'ros.ament_cmake' and name 'ur_description'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extension 'ignore'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extension 'ignore_ament_install'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extensions ['colcon_pkg']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extension 'colcon_pkg'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extensions ['colcon_meta']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extension 'colcon_meta'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extensions ['ros']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extension 'ros'
+[0.360s] DEBUG:colcon.colcon_core.package_identification:Package 'ur_gazebo' with type 'ros.ament_cmake' and name 'ur_gazebo'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extension 'ignore'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extension 'ignore_ament_install'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extensions ['colcon_pkg']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extension 'colcon_pkg'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extensions ['colcon_meta']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extension 'colcon_meta'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extensions ['ros']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extension 'ros'
+[0.362s] DEBUG:colcon.colcon_core.package_identification:Package 'ur_interfaces' with type 'ros.ament_cmake' and name 'ur_interfaces'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_demos) by extensions ['ignore', 'ignore_ament_install']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_demos) by extension 'ignore'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_demos) by extension 'ignore_ament_install'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_demos) by extensions ['colcon_pkg']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_demos) by extension 'colcon_pkg'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_demos) by extensions ['colcon_meta']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_demos) by extension 'colcon_meta'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_demos) by extensions ['ros']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_demos) by extension 'ros'
+[0.363s] DEBUG:colcon.colcon_core.package_identification:Package 'ur_mtc_demos' with type 'ros.ament_cmake' and name 'ur_mtc_demos'
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_pick_place_demo) by extensions ['ignore', 'ignore_ament_install']
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_pick_place_demo) by extension 'ignore'
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_pick_place_demo) by extension 'ignore_ament_install'
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_pick_place_demo) by extensions ['colcon_pkg']
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_pick_place_demo) by extension 'colcon_pkg'
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_pick_place_demo) by extensions ['colcon_meta']
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_pick_place_demo) by extension 'colcon_meta'
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_pick_place_demo) by extensions ['ros']
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(ur_mtc_pick_place_demo) by extension 'ros'
+[0.365s] DEBUG:colcon.colcon_core.package_identification:Package 'ur_mtc_pick_place_demo' with type 'ros.ament_cmake' and name 'ur_mtc_pick_place_demo'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_ros_mongo) by extensions ['ignore', 'ignore_ament_install']
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_ros_mongo) by extension 'ignore'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_ros_mongo) by extension 'ignore_ament_install'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_ros_mongo) by extensions ['colcon_pkg']
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_ros_mongo) by extension 'colcon_pkg'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_ros_mongo) by extensions ['colcon_meta']
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_ros_mongo) by extension 'colcon_meta'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_ros_mongo) by extensions ['ros']
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_ros_mongo) by extension 'ros'
+[0.368s] DEBUG:colcon.colcon_core.package_identification:Package 'warehouse_ros_mongo' with type 'ros.ament_cmake' and name 'warehouse_ros_mongo'
+[0.368s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.368s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.368s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.368s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.368s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.396s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.396s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.400s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 419 installed packages in /opt/ros/jazzy
+[0.402s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'cmake_args' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'cmake_target' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.486s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_task_constructor_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs', 'symlink_install': True, 'test_result_base': None}
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'cmake_args' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'cmake_target' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'cmake_clean_first' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'cmake_force_configure' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'ament_cmake_args' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.487s] DEBUG:colcon.colcon_core.verb:Building package 'robotiq_2f_85_gripper_visualization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/robotiq_2f_85_gripper_visualization', 'symlink_install': True, 'test_result_base': None}
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'cmake_args' from command line to 'None'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'cmake_target' from command line to 'None'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'cmake_clean_cache' from command line to 'False'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'cmake_clean_first' from command line to 'False'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'cmake_force_configure' from command line to 'False'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'ament_cmake_args' from command line to 'None'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'catkin_cmake_args' from command line to 'None'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.488s] DEBUG:colcon.colcon_core.verb:Building package 'rviz_marker_tools' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/rviz_marker_tools', 'symlink_install': True, 'test_result_base': None}
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_args' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_target' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.489s] DEBUG:colcon.colcon_core.verb:Building package 'ur_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_description', 'symlink_install': True, 'test_result_base': None}
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.490s] DEBUG:colcon.colcon_core.verb:Building package 'ur_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_gazebo', 'symlink_install': True, 'test_result_base': None}
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.490s] DEBUG:colcon.colcon_core.verb:Building package 'ur_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'warehouse_ros_mongo' build argument 'cmake_args' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'warehouse_ros_mongo' build argument 'cmake_target' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'warehouse_ros_mongo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'warehouse_ros_mongo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'warehouse_ros_mongo' build argument 'cmake_clean_first' from command line to 'False'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'warehouse_ros_mongo' build argument 'cmake_force_configure' from command line to 'False'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'warehouse_ros_mongo' build argument 'ament_cmake_args' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'warehouse_ros_mongo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'warehouse_ros_mongo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.491s] DEBUG:colcon.colcon_core.verb:Building package 'warehouse_ros_mongo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo', 'symlink_install': True, 'test_result_base': None}
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'cmake_args' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'cmake_target' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'cmake_clean_cache' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'cmake_clean_first' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'cmake_force_configure' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'ament_cmake_args' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'catkin_cmake_args' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.492s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_task_constructor_core' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core', 'symlink_install': True, 'test_result_base': None}
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'cmake_args' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'cmake_target' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'cmake_clean_first' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'cmake_force_configure' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'ament_cmake_args' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.492s] DEBUG:colcon.colcon_core.verb:Building package 'movit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/movit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/movit_config', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/movit_config', 'symlink_install': True, 'test_result_base': None}
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'cmake_args' from command line to 'None'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'cmake_target' from command line to 'None'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'cmake_clean_cache' from command line to 'False'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'cmake_clean_first' from command line to 'False'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'cmake_force_configure' from command line to 'False'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'ament_cmake_args' from command line to 'None'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'catkin_cmake_args' from command line to 'None'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.493s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_task_constructor_capabilities' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_capabilities', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/capabilities', 'symlink_install': True, 'test_result_base': None}
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'cmake_args' from command line to 'None'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'cmake_target' from command line to 'None'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'cmake_clean_first' from command line to 'False'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'cmake_force_configure' from command line to 'False'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'ament_cmake_args' from command line to 'None'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.494s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_task_constructor_visualization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_visualization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/visualization', 'symlink_install': True, 'test_result_base': None}
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_demos' build argument 'cmake_args' from command line to 'None'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_demos' build argument 'cmake_target' from command line to 'None'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_demos' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_demos' build argument 'cmake_clean_cache' from command line to 'False'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_demos' build argument 'cmake_clean_first' from command line to 'False'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_demos' build argument 'cmake_force_configure' from command line to 'False'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_demos' build argument 'ament_cmake_args' from command line to 'None'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_demos' build argument 'catkin_cmake_args' from command line to 'None'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_demos' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.495s] DEBUG:colcon.colcon_core.verb:Building package 'ur_mtc_demos' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos', 'symlink_install': True, 'test_result_base': None}
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_pick_place_demo' build argument 'cmake_args' from command line to 'None'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_pick_place_demo' build argument 'cmake_target' from command line to 'None'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_pick_place_demo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_pick_place_demo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_pick_place_demo' build argument 'cmake_clean_first' from command line to 'False'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_pick_place_demo' build argument 'cmake_force_configure' from command line to 'False'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_pick_place_demo' build argument 'ament_cmake_args' from command line to 'None'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_pick_place_demo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'ur_mtc_pick_place_demo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.495s] DEBUG:colcon.colcon_core.verb:Building package 'ur_mtc_pick_place_demo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo', 'symlink_install': True, 'test_result_base': None}
+[0.496s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'cmake_args' from command line to 'None'
+[0.496s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'cmake_target' from command line to 'None'
+[0.496s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.496s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.496s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'cmake_clean_first' from command line to 'False'
+[0.496s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'cmake_force_configure' from command line to 'False'
+[0.496s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'ament_cmake_args' from command line to 'None'
+[0.496s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.496s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.496s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_task_constructor_demo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_demo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo', 'merge_install': False, 'path': '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/demo', 'symlink_install': True, 'test_result_base': None}
+[0.496s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.498s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.499s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs' with build type 'ament_cmake'
+[0.499s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs'
+[0.504s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.504s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.504s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.509s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/rviz_marker_tools' with build type 'ament_cmake'
+[0.509s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/rviz_marker_tools'
+[0.509s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.510s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.515s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_description' with build type 'ament_cmake'
+[0.516s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_description'
+[0.516s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.516s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.521s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo' with build type 'ament_cmake'
+[0.521s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo'
+[0.522s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.522s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.527s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/robotiq_2f_85_gripper_visualization' with build type 'ament_cmake'
+[0.527s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/robotiq_2f_85_gripper_visualization'
+[0.528s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.529s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.540s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_gazebo' with build type 'ament_cmake'
+[0.541s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_gazebo'
+[0.541s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.542s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.548s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_interfaces' with build type 'ament_cmake'
+[0.549s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_interfaces'
+[0.549s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.549s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.573s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_msgs -- -j16 -l16
+[0.584s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools -- -j16 -l16
+[0.586s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_description -- -j16 -l16
+[0.602s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo -- -j16 -l16
+[0.607s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization -- -j16 -l16
+[0.612s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo -- -j16 -l16
+[0.680s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces -- -j16 -l16
+[0.694s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_description -- -j16 -l16
+[0.716s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_description
+[0.719s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization -- -j16 -l16
+[0.722s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization
+[0.724s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo -- -j16 -l16
+[0.726s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo
+[0.786s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robotiq_2f_85_gripper_visualization)
+[0.813s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces -- -j16 -l16
+[0.825s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization' for CMake module files
+[0.841s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization' for CMake config files
+[0.846s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces
+[0.855s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_2f_85_gripper_visualization', 'cmake_prefix_path')
+[0.855s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/hook/cmake_prefix_path.ps1'
+[0.859s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/hook/cmake_prefix_path.dsv'
+[0.862s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/hook/cmake_prefix_path.sh'
+[0.870s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/bin'
+[0.871s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/lib/pkgconfig/robotiq_2f_85_gripper_visualization.pc'
+[0.871s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/lib/python3.12/site-packages'
+[0.873s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/bin'
+[0.875s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.ps1'
+[0.880s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.dsv'
+[0.884s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.sh'
+[0.891s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.bash'
+[0.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.zsh'
+[0.907s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/colcon-core/packages/robotiq_2f_85_gripper_visualization)
+[0.922s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization
+[0.926s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robotiq_2f_85_gripper_visualization)
+[0.927s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization' for CMake module files
+[0.934s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization' for CMake config files
+[0.956s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_2f_85_gripper_visualization', 'cmake_prefix_path')
+[0.961s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/hook/cmake_prefix_path.ps1'
+[0.965s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/hook/cmake_prefix_path.dsv'
+[0.972s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/hook/cmake_prefix_path.sh'
+[0.977s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/bin'
+[0.977s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/lib/pkgconfig/robotiq_2f_85_gripper_visualization.pc'
+[0.978s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/lib/python3.12/site-packages'
+[0.979s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/bin'
+[0.980s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.ps1'
+[0.984s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.dsv'
+[0.992s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.sh'
+[0.996s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.bash'
+[1.000s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.zsh'
+[1.005s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/colcon-core/packages/robotiq_2f_85_gripper_visualization)
+[1.020s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_interfaces)
+[1.021s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces' for CMake module files
+[1.030s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces' for CMake config files
+[1.042s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_interfaces', 'cmake_prefix_path')
+[1.043s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/hook/cmake_prefix_path.ps1'
+[1.047s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/hook/cmake_prefix_path.dsv'
+[1.051s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/hook/cmake_prefix_path.sh'
+[1.055s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/bin'
+[1.055s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/pkgconfig/ur_interfaces.pc'
+[1.055s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages'
+[1.056s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/bin'
+[1.057s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.ps1'
+[1.059s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.dsv'
+[1.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.sh'
+[1.070s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.bash'
+[1.077s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.zsh'
+[1.083s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/colcon-core/packages/ur_interfaces)
+[1.086s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_interfaces)
+[1.087s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces' for CMake module files
+[1.093s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces' for CMake config files
+[1.112s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_interfaces', 'cmake_prefix_path')
+[1.112s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/hook/cmake_prefix_path.ps1'
+[1.116s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/hook/cmake_prefix_path.dsv'
+[1.121s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/hook/cmake_prefix_path.sh'
+[1.128s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/bin'
+[1.128s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/pkgconfig/ur_interfaces.pc'
+[1.129s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages'
+[1.130s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/bin'
+[1.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.ps1'
+[1.135s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.dsv'
+[1.138s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.sh'
+[1.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.bash'
+[1.145s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.zsh'
+[1.153s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/colcon-core/packages/ur_interfaces)
+[1.156s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_description)
+[1.156s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description' for CMake module files
+[1.165s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description' for CMake config files
+[1.184s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_description', 'cmake_prefix_path')
+[1.184s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/hook/cmake_prefix_path.ps1'
+[1.187s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/hook/cmake_prefix_path.dsv'
+[1.195s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/hook/cmake_prefix_path.sh'
+[1.202s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/bin'
+[1.202s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/lib/pkgconfig/ur_description.pc'
+[1.203s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/lib/python3.12/site-packages'
+[1.204s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/bin'
+[1.205s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.ps1'
+[1.207s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.dsv'
+[1.212s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.sh'
+[1.215s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.bash'
+[1.222s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.zsh'
+[1.224s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/colcon-core/packages/ur_description)
+[1.229s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_description)
+[1.230s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description' for CMake module files
+[1.237s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description' for CMake config files
+[1.253s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_description', 'cmake_prefix_path')
+[1.254s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/hook/cmake_prefix_path.ps1'
+[1.256s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/hook/cmake_prefix_path.dsv'
+[1.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/hook/cmake_prefix_path.sh'
+[1.267s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/bin'
+[1.268s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/lib/pkgconfig/ur_description.pc'
+[1.269s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/lib/python3.12/site-packages'
+[1.270s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/bin'
+[1.270s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.ps1'
+[1.273s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.dsv'
+[1.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.sh'
+[1.280s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.bash'
+[1.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.zsh'
+[1.285s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces
+[1.286s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/colcon-core/packages/ur_description)
+[1.289s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_gazebo)
+[1.289s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo' for CMake module files
+[1.293s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo' for CMake config files
+[1.294s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_description
+[1.298s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo
+[1.298s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_gazebo', 'cmake_prefix_path')
+[1.299s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/hook/cmake_prefix_path.ps1'
+[1.300s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/hook/cmake_prefix_path.dsv'
+[1.301s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/hook/cmake_prefix_path.sh'
+[1.303s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/bin'
+[1.303s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/lib/pkgconfig/ur_gazebo.pc'
+[1.303s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/lib/python3.12/site-packages'
+[1.304s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/bin'
+[1.305s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.ps1'
+[1.306s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.dsv'
+[1.308s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.sh'
+[1.309s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.bash'
+[1.310s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.zsh'
+[1.311s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/colcon-core/packages/ur_gazebo)
+[1.312s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_gazebo)
+[1.313s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo' for CMake module files
+[1.314s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo' for CMake config files
+[1.315s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_gazebo', 'cmake_prefix_path')
+[1.315s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/hook/cmake_prefix_path.ps1'
+[1.316s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/hook/cmake_prefix_path.dsv'
+[1.318s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/hook/cmake_prefix_path.sh'
+[1.319s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/bin'
+[1.319s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/lib/pkgconfig/ur_gazebo.pc'
+[1.319s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/lib/python3.12/site-packages'
+[1.320s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/bin'
+[1.320s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.ps1'
+[1.322s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.dsv'
+[1.323s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.sh'
+[1.324s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.bash'
+[1.325s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.zsh'
+[1.326s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/colcon-core/packages/ur_gazebo)
+[5.023s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_msgs -- -j16 -l16
+[5.024s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moveit_task_constructor_msgs)
+[5.024s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs' for CMake module files
+[5.025s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs' for CMake config files
+[5.026s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit_task_constructor_msgs', 'cmake_prefix_path')
+[5.027s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/hook/cmake_prefix_path.ps1'
+[5.028s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/hook/cmake_prefix_path.dsv'
+[5.029s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/hook/cmake_prefix_path.sh'
+[5.030s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib'
+[5.030s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit_task_constructor_msgs', 'ld_library_path_lib')
+[5.030s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/hook/ld_library_path_lib.ps1'
+[5.031s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/hook/ld_library_path_lib.dsv'
+[5.032s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/hook/ld_library_path_lib.sh'
+[5.033s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/bin'
+[5.033s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/pkgconfig/moveit_task_constructor_msgs.pc'
+[5.033s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages'
+[5.034s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit_task_constructor_msgs', 'pythonpath')
+[5.034s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/hook/pythonpath.ps1'
+[5.035s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/hook/pythonpath.dsv'
+[5.036s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/hook/pythonpath.sh'
+[5.037s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/bin'
+[5.037s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/package.ps1'
+[5.039s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/package.dsv'
+[5.040s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/package.sh'
+[5.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/package.bash'
+[5.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/package.zsh'
+[5.042s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/colcon-core/packages/moveit_task_constructor_msgs)
+[17.197s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[17.198s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[17.198s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[17.198s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[17.282s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[17.282s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[17.283s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[17.283s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[17.283s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NoServer: Failed to connect to socket /run/user/1000/bus: Connection refused
+[17.283s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[17.283s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/local_setup.ps1'
+[17.285s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/_local_setup_util_ps1.py'
+[17.288s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/setup.ps1'
+[17.289s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/local_setup.sh'
+[17.290s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/_local_setup_util_sh.py'
+[17.291s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/setup.sh'
+[17.293s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/local_setup.bash'
+[17.293s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/setup.bash'
+[17.295s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/local_setup.zsh'
+[17.296s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/setup.zsh'

@@ -1,0 +1,28 @@
+[0.071s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_msgs -- -j16 -l16
+[0.190s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.268s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.696s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.727s] -- Found builtin_interfaces: 2.0.2 (/opt/ros/jazzy/share/builtin_interfaces/cmake)
+[0.794s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.795s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.804s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.837s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.860s] -- Found moveit_msgs: 2.6.0 (/opt/ros/jazzy/share/moveit_msgs/cmake)
+[1.329s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.341s] -- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.343s] -- Found visualization_msgs: 5.3.5 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[2.084s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[3.144s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.579s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.581s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[4.026s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[4.253s] -- Configuring done (4.1s)
+[4.425s] -- Generating done (0.1s)
+[4.460s] -- Build files have been written to: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_msgs
+[4.514s] failed to create symbolic link '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_msgs/ament_cmake_python/moveit_task_constructor_msgs/moveit_task_constructor_msgs' because existing path cannot be removed: Is a directory
+[4.515s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_moveit_task_constructor_msgs.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_moveit_task_constructor_msgs] Error 1
+[4.515s] gmake[1]: *** [CMakeFiles/Makefile2:452: CMakeFiles/ament_cmake_python_symlink_moveit_task_constructor_msgs.dir/all] Error 2
+[4.516s] gmake[1]: *** Waiting for unfinished jobs....
+[4.517s] [  1%] Built target moveit_task_constructor_msgs__rosidl_generator_type_description
+[4.519s] gmake: *** [Makefile:146: all] Error 2
+[4.521s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_msgs -- -j16 -l16

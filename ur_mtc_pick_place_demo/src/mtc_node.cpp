@@ -49,7 +49,7 @@
 #include <vector>
 
 // Handling the GetPlanningScene service
-#include "mycobot_mtc_pick_place_demo/get_planning_scene_client.h"
+#include "ur_mtc_pick_place_demo/get_planning_scene_client.h"
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <sensor_msgs/msg/image.hpp>
 

@@ -61,7 +61,7 @@ int main(int argc, char** argv) {
     std::cout << "Loaded robot model: " << t.getRobotModel()->getName() << std::endl;
 
     // Ensure the correct robot model is loaded
-    assert(t.getRobotModel()->getName() == "mycobot_280");
+    assert(t.getRobotModel()->getName() == "ur_280");
 
     // Create a planning scene
     auto scene{ std::make_shared<planning_scene::PlanningScene>(t.getRobotModel()) };

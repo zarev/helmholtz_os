@@ -33,7 +33,7 @@
  * @date December 20, 2024
  */
 
-#include "mycobot_mtc_pick_place_demo/plane_segmentation.h"
+#include "ur_mtc_pick_place_demo/plane_segmentation.h"
 
 // Function to segment the support plane and objects from a point cloud
 std::tuple<pcl::PointCloud<pcl::PointXYZRGB>::Ptr, pcl::PointCloud<pcl::PointXYZRGB>::Ptr, pcl::ModelCoefficients::Ptr>

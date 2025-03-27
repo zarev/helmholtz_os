@@ -10,7 +10,7 @@
  * @date December 20, 2024
  */
 
-#include "mycobot_mtc_pick_place_demo/normals_curvature_and_rsd_estimation.h"
+#include "ur_mtc_pick_place_demo/normals_curvature_and_rsd_estimation.h"
 
 // Define a logging function
 void LOG_INFO(const std::string& msg) {

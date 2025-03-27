@@ -48,7 +48,7 @@
 #include <tf2/LinearMath/Quaternion.h>  // For quaternion operations
 #include <tf2/LinearMath/Matrix3x3.h>   // For conversion between quaternions and Euler angles
 
-#include "mycobot_mtc_pick_place_demo/normals_curvature_and_rsd_estimation.h" // For LOG_INFO implementation
+#include "ur_mtc_pick_place_demo/normals_curvature_and_rsd_estimation.h" // For LOG_INFO implementation
 
 /**
  * @brief Fits a 2D line to two points.

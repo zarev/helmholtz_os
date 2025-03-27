@@ -1,0 +1,53 @@
+[0.073s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/rviz_marker_tools -DCMAKE_INSTALL_PREFIX=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools
+[0.150s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.839s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.859s] -- Found moveit_common: 2.12.2 (/opt/ros/jazzy/share/moveit_common/cmake)
+[1.121s] [0mrviz_marker_tools: You did not request a specific build type: Choosing 'Release' for maximum performance[0m
+[1.122s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[1.126s] -- Found geometry_msgs: 5.3.5 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.458s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.484s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.515s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.549s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.631s] -- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.727s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.730s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.044s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.341s] -- Found tf2_eigen: 0.36.8 (/opt/ros/jazzy/share/tf2_eigen/cmake)
+[2.661s] -- Found visualization_msgs: 5.3.5 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[2.760s] -- Configuring done (2.7s)
+[2.781s] -- Generating done (0.0s)
+[2.793s] -- Build files have been written to: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools
+[2.812s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/rviz_marker_tools -DCMAKE_INSTALL_PREFIX=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools
+[2.815s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools -- -j16 -l16
+[2.930s] [100%] Built target rviz_marker_tools
+[2.948s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools -- -j16 -l16
+[2.951s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools
+[2.966s] -- Install configuration: "Release"
+[2.967s] -- Execute custom install script
+[2.968s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/include/rviz_marker_tools/marker_creation.h
+[2.983s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/environment/library_path.sh
+[3.000s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/environment/library_path.dsv
+[3.013s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/ament_index/resource_index/package_run_dependencies/rviz_marker_tools
+[3.028s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/ament_index/resource_index/parent_prefix_path/rviz_marker_tools
+[3.041s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/environment/ament_prefix_path.sh
+[3.056s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/environment/ament_prefix_path.dsv
+[3.069s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/environment/path.sh
+[3.082s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/environment/path.dsv
+[3.098s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/local_setup.bash
+[3.117s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/local_setup.sh
+[3.131s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/local_setup.zsh
+[3.147s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/local_setup.dsv
+[3.162s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/package.dsv
+[3.176s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/ament_index/resource_index/packages/rviz_marker_tools
+[3.190s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/cmake/ament_cmake_export_targets-extras.cmake
+[3.205s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.221s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/cmake/rviz_marker_toolsConfig.cmake
+[3.233s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/cmake/rviz_marker_toolsConfig-version.cmake
+[3.246s] -- Symlinking: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/package.xml
+[3.264s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib/librviz_marker_tools.so
+[3.265s] -- Set non-toolchain portion of runtime path of "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib/librviz_marker_tools.so" to ""
+[3.266s] -- Old export file "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/cmake/rviz_marker_toolsTargetsExport.cmake" will be replaced.  Removing files [/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/cmake/rviz_marker_toolsTargetsExport-release.cmake].
+[3.266s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/cmake/rviz_marker_toolsTargetsExport.cmake
+[3.267s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/cmake/rviz_marker_toolsTargetsExport-release.cmake
+[3.271s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools

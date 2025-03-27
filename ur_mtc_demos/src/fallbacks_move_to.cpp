@@ -82,7 +82,7 @@ int main(int argc, char** argv) {
   const moveit::core::RobotModelConstPtr robot{ t.getRobotModel() };
 
   // Ensure we're using the correct robot model
-  assert(robot->getName() == "mycobot_280");
+  assert(robot->getName() == "ur_280");
   RCLCPP_INFO(logger, "Robot model loaded: %s", robot->getName().c_str());
 
   // Set up different path planning methods

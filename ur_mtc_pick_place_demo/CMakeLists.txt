@@ -8,7 +8,7 @@ endif()
 if(POLICY CMP0074)
   cmake_policy(SET CMP0074 NEW)
 endif()
-project(mycobot_mtc_pick_place_demo)
+project(ur_mtc_pick_place_demo)
 
 # Build settings
 if(NOT CMAKE_BUILD_TYPE)
@@ -36,7 +36,7 @@ set(REQUIRED_PACKAGES
   moveit_ros_planning_interface
   moveit_task_constructor_core
   moveit_task_constructor_msgs
-  mycobot_interfaces
+  ur_interfaces
   PCL
   pcl_conversions
   pcl_ros

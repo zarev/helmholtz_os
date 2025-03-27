@@ -1,5 +1,5 @@
 #!/bin/bash
-# Single script to launch the mycobot with Gazebo, RViz, and MoveIt 2
+# Single script to launch the ur with Gazebo, RViz, and MoveIt 2
 
 cleanup() {
     echo "Cleaning up..."
@@ -11,7 +11,7 @@ cleanup() {
 trap 'cleanup' SIGINT SIGTERM
 
 echo "Launching Gazebo simulation..."
-ros2 launch mycobot_gazebo mycobot.gazebo.launch.py \
+ros2 launch ur_gazebo ur.gazebo.launch.py \
     load_controllers:=true \
     world_file:=pick_and_place_demo.world \
     use_camera:=true \
@@ -27,9 +27,9 @@ ros2 launch mycobot_gazebo mycobot.gazebo.launch.py \
 
 sleep 15
 echo "Launching the move group interface..."
-ros2 launch mycobot_moveit_config move_group.launch.py \
+ros2 launch ur_moveit_config move_group.launch.py \
     rviz_config_file:=mtc_demos.rviz \
-    rviz_config_package:=mycobot_mtc_demos &
+    rviz_config_package:=ur_mtc_demos &
 
 echo "Adjusting camera position..."
 gz service -s /gui/move_to/pose \
@@ -40,9 +40,9 @@ gz service -s /gui/move_to/pose \
 
 sleep 10
 echo "Launching the Pick and Place demo..."
-ros2 launch mycobot_mtc_pick_place_demo get_planning_scene_server.launch.py &
+ros2 launch ur_mtc_pick_place_demo get_planning_scene_server.launch.py &
 sleep 5
-ros2 launch mycobot_mtc_pick_place_demo pick_place_demo.launch.py
+ros2 launch ur_mtc_pick_place_demo pick_place_demo.launch.py
 
 # Keep the script running until Ctrl+C
 #wait

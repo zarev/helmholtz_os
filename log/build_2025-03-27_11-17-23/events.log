@@ -875,7 +875,7 @@
 [1.811036] (-) TimerEvent: {}
 [1.895136] (ur_mtc_demos) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):\n'}
 [1.895731] (ur_mtc_demos) StderrLine: {'line': b"  ament_package_xml() package name 'ur_mtc_demos' in '/package.xml' does not\n"}
-[1.895925] (ur_mtc_demos) StderrLine: {'line': b"  match current PROJECT_NAME 'mycobot_mtc_demos'.  You must call project()\n"}
+[1.895925] (ur_mtc_demos) StderrLine: {'line': b"  match current PROJECT_NAME 'ur_mtc_demos'.  You must call project()\n"}
 [1.896083] (ur_mtc_demos) StderrLine: {'line': b'  with the same package name before.\n'}
 [1.896253] (ur_mtc_demos) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
 [1.896412] (ur_mtc_demos) StderrLine: {'line': b'  /opt/ros/jazzy/share/moveit_common/cmake/moveit_package.cmake:32 (ament_package_xml)\n'}
@@ -885,7 +885,7 @@
 [1.897160] (ur_mtc_demos) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
 [1.901272] (ur_mtc_pick_place_demo) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):\n'}
 [1.901896] (ur_mtc_pick_place_demo) StderrLine: {'line': b"  ament_package_xml() package name 'ur_mtc_pick_place_demo' in '/package.xml'\n"}
-[1.902140] (ur_mtc_pick_place_demo) StderrLine: {'line': b"  does not match current PROJECT_NAME 'mycobot_mtc_pick_place_demo'.  You\n"}
+[1.902140] (ur_mtc_pick_place_demo) StderrLine: {'line': b"  does not match current PROJECT_NAME 'ur_mtc_pick_place_demo'.  You\n"}
 [1.902314] (ur_mtc_pick_place_demo) StderrLine: {'line': b'  must call project() with the same package name before.\n'}
 [1.902477] (ur_mtc_pick_place_demo) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
 [1.902594] (ur_mtc_pick_place_demo) StderrLine: {'line': b'  /opt/ros/jazzy/share/moveit_common/cmake/moveit_package.cmake:32 (ament_package_xml)\n'}

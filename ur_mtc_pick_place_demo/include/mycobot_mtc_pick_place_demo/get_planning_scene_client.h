@@ -19,7 +19,7 @@
 #include <string>
 #include <vector>
 #include "rclcpp/rclcpp.hpp"
-#include "mycobot_interfaces/srv/get_planning_scene.hpp"
+#include "ur_interfaces/srv/get_planning_scene.hpp"
 #include <geometry_msgs/msg/pose.hpp>
 #include "moveit_msgs/msg/planning_scene_world.hpp"
 #include "sensor_msgs/msg/point_cloud2.hpp"
@@ -78,7 +78,7 @@ private:
    *
    * This client is used to send requests to the GetPlanningScene service.
    */
-  rclcpp::Client<mycobot_interfaces::srv::GetPlanningScene>::SharedPtr client_;
+  rclcpp::Client<ur_interfaces::srv::GetPlanningScene>::SharedPtr client_;
 
   /**
    * @brief Helper method to log information about the service response.

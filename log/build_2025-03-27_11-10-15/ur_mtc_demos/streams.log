@@ -28,7 +28,7 @@
 [16.069s] -- Found moveit_common: 2.12.2 (/opt/ros/jazzy/share/moveit_common/cmake)
 [16.670s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):
 [16.671s]   ament_package_xml() package name 'ur_mtc_demos' in '/package.xml' does not
-[16.672s]   match current PROJECT_NAME 'mycobot_mtc_demos'.  You must call project()
+[16.672s]   match current PROJECT_NAME 'ur_mtc_demos'.  You must call project()
 [16.672s]   with the same package name before.
 [16.673s] Call Stack (most recent call first):
 [16.674s]   /opt/ros/jazzy/share/moveit_common/cmake/moveit_package.cmake:32 (ament_package_xml)

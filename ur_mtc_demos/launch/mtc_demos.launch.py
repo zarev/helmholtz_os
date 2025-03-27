@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Launch MoveIt Task Constructor demo nodes for the myCobot robotic arm.
+Launch MoveIt Task Constructor demo nodes for the ur robotic arm.
 
 This script creates a ROS 2 launch file that starts the necessary nodes for running
 MoveIt Task Constructor demos. It uses the same configuration structure as the move_group
@@ -27,7 +27,7 @@ def generate_launch_description():
         LaunchDescription: A complete launch description for the MTC demo system
     """
     # Constants for paths to different files and folders
-    package_name_moveit_config = 'mycobot_moveit_config'
+    package_name_moveit_config = 'ur_moveit_config'
 
     # Launch configuration variables
     use_sim_time = LaunchConfiguration('use_sim_time')
@@ -39,7 +39,7 @@ def generate_launch_description():
     # Declare the launch arguments
     declare_robot_name_cmd = DeclareLaunchArgument(
         name='robot_name',
-        default_value='mycobot_280',
+        default_value='ur_280',
         description='Name of the robot to use')
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
@@ -95,7 +95,7 @@ def generate_launch_description():
 
         # Create MTC demo node
         mtc_demo_node = Node(
-            package="mycobot_mtc_demos",
+            package="ur_mtc_demos",
             executable=exe,
             output="screen",
             parameters=[

@@ -43,7 +43,19 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/environment" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_environment_hooks/pythonpath.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/environment" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_environment_hooks/pythonpath.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/warehouse_ros_mongo-2.0.3-py3.12.egg-info" TYPE DIRECTORY FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_python/warehouse_ros_mongo/warehouse_ros_mongo.egg-info/")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/warehouse_ros_mongo" TYPE DIRECTORY FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo/warehouse_ros_mongo/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -55,7 +67,23 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/warehouse_ros_mongo" TYPE PROGRAM FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo/warehouse_ros_mongo/mongo_wrapper_ros.py")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo/include/warehouse_ros_mongo/" FILES_MATCHING REGEX "/[^/]*\\.h$")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/warehouse_ros_mongo" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/include/warehouse_ros_mongo/config.h")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo/test/warehouse_ros_mongo.launch.py")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/cmake" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo/cmake/FindMONGODB.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -82,6 +110,70 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/environment" TYPE FILE FILES "/opt/ros/jazzy/lib/python3.12/site-packages/ament_package/template/environment_hook/library_path.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/environment" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_environment_hooks/library_path.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo/mongo_database_connection_plugin_description.xml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/warehouse_ros_mongo")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/warehouse_ros_mongo")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/environment" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/environment" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_environment_hooks/path.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_environment_hooks/local_setup.bash")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_environment_hooks/local_setup.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_environment_hooks/local_setup.zsh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_environment_hooks/local_setup.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_environment_hooks/package.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_index/share/ament_index/resource_index/packages/warehouse_ros_mongo")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/warehouse_ros__pluginlib__plugin" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_index/share/ament_index/resource_index/warehouse_ros__pluginlib__plugin/warehouse_ros_mongo")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/cmake/export_warehouse_ros_mongoExport.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/cmake/export_warehouse_ros_mongoExport.cmake"
@@ -102,6 +194,29 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
     file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/cmake" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/CMakeFiles/Export/1c12df55bedb113e5ce921a423cbfa3b/export_warehouse_ros_mongoExport-noconfig.cmake")
   endif()
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/cmake" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo/ConfigExtras.cmake")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/cmake" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/cmake" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo/cmake" TYPE FILE FILES
+    "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_core/warehouse_ros_mongoConfig.cmake"
+    "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_core/warehouse_ros_mongoConfig-version.cmake"
+    )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/warehouse_ros_mongo" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

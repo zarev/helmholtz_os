@@ -18,7 +18,7 @@
  */
 
 
-#include "mycobot_mtc_pick_place_demo/object_segmentation.h"
+#include "ur_mtc_pick_place_demo/object_segmentation.h"
 
 // Line fitting helpers
 // Computes the coefficients (a, b, c) of a 2D line in the form a*x + b*y + c = 0

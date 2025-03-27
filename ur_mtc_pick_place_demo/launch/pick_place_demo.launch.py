@@ -4,7 +4,7 @@ ROS 2 launch file for the MoveIt Task Constructor pick and place with perception
 
 This launch file configures and starts a pick-and-place demo using the MoveIt Task Constructor (MTC)
 framework with perception capabilities. It sets up the necessary configurations for
-trajectory execution, motion planning, and robot control specifically for the myCobot platform.
+trajectory execution, motion planning, and robot control specifically for the ur platform.
 
 :author: Addison Sears-Collins
 :date: December 19, 2024
@@ -27,8 +27,8 @@ def generate_launch_description():
         LaunchDescription: A complete launch description for the MTC pick and place demo system
     """
     # Constants for paths to different files and folders
-    package_name_moveit_config = 'mycobot_moveit_config'
-    package_name_mtc_pick_place_demo = 'mycobot_mtc_pick_place_demo'
+    package_name_moveit_config = 'ur_moveit_config'
+    package_name_mtc_pick_place_demo = 'ur_mtc_pick_place_demo'
 
     # Launch configuration variables
     use_sim_time = LaunchConfiguration('use_sim_time')
@@ -42,7 +42,7 @@ def generate_launch_description():
     # Declare the launch arguments
     declare_robot_name_cmd = DeclareLaunchArgument(
         name='robot_name',
-        default_value='mycobot_280',
+        default_value='ur_280',
         description='Name of the robot to use')
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
@@ -102,7 +102,7 @@ def generate_launch_description():
 
         # Create MTC demo node
         mtc_demo_node = Node(
-            package="mycobot_mtc_pick_place_demo",
+            package="ur_mtc_pick_place_demo",
             executable=exe,
             output="screen",
             parameters=[

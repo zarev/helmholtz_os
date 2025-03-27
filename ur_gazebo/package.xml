@@ -3,7 +3,7 @@
 <package format="3">
   <name>ur_gazebo</name>
   <version>0.0.0</version>
-  <description>Gazebo simulation support for myCobot robots including worlds and launch files</description>
+  <description>Gazebo simulation support for ur robots including worlds and launch files</description>
   <maintainer email="automaticaddison@todo.com">ubuntu</maintainer>
   <license>BSD-3-Clause</license>
 

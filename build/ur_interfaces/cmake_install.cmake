@@ -43,7 +43,62 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ur_interfaces")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ur_interfaces")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_interfaces/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_interfaces/environment" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_interfaces/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_interfaces/environment" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_environment_hooks/path.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_interfaces" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_environment_hooks/local_setup.bash")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_interfaces" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_environment_hooks/local_setup.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_interfaces" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_environment_hooks/local_setup.zsh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_interfaces" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_environment_hooks/local_setup.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_interfaces" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_environment_hooks/package.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_index/share/ament_index/resource_index/packages/ur_interfaces")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_interfaces/cmake" TYPE FILE FILES
+    "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_core/ur_interfacesConfig.cmake"
+    "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_core/ur_interfacesConfig-version.cmake"
+    )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_interfaces" TYPE FILE FILES "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_interfaces/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

@@ -1,0 +1,5 @@
+failed to create symbolic link '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/ament_cmake_python/warehouse_ros_mongo/warehouse_ros_mongo' because existing path cannot be removed: Is a directory
+gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_warehouse_ros_mongo.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_warehouse_ros_mongo] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:160: CMakeFiles/ament_cmake_python_symlink_warehouse_ros_mongo.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

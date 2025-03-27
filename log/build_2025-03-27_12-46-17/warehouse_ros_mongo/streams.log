@@ -1,0 +1,126 @@
+[0.062s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo -DCMAKE_INSTALL_PREFIX=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo
+[0.246s] -- The C compiler identification is GNU 13.3.0
+[1.209s] -- The CXX compiler identification is GNU 13.3.0
+[1.879s] -- Detecting C compiler ABI info
+[2.221s] -- Detecting C compiler ABI info - done
+[2.244s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.244s] -- Detecting C compile features
+[2.245s] -- Detecting C compile features - done
+[2.363s] -- Detecting CXX compiler ABI info
+[2.772s] -- Detecting CXX compiler ABI info - done
+[2.793s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.794s] -- Detecting CXX compile features
+[2.795s] -- Detecting CXX compile features - done
+[2.802s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.159s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.426s] -- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+[3.835s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[3.870s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[3.909s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.952s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.146s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[4.154s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[4.292s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[4.497s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[4.635s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.959s] -- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)
+[4.993s] -- Found warehouse_ros: 2.0.5 (/opt/ros/jazzy/share/warehouse_ros/cmake)
+[5.429s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[5.432s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[5.433s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[5.613s] -- Found MONGODB: /usr/include, /usr/lib/x86_64-linux-gnu/libmongoclient.so
+[5.613s] -- MONGODB using new interface: YES
+[5.615s] -- Found MONGODB: /usr/lib/x86_64-linux-gnu/libmongoclient.so  
+[5.621s] -- Found rclpy: 7.1.3 (/opt/ros/jazzy/share/rclpy/cmake)
+[5.904s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem thread 
+[5.908s] -- Looking for C++ include mongo/version.h
+[6.174s] -- Looking for C++ include mongo/version.h - found
+[6.379s] -- Found launch_testing_ament_cmake: 3.4.3 (/opt/ros/jazzy/share/launch_testing_ament_cmake/cmake)
+[6.384s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[6.578s] -- Found PythonExtra: /usr/bin/python3  
+[6.584s] -- Found ament_cmake_gtest: 2.5.3 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)
+[6.589s] -- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[6.595s] -- Found Threads: TRUE  
+[6.601s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[9.862s] -- Added test 'copyright' to check source files copyright and LICENSE
+[9.870s] -- Configuring done (9.8s)
+[9.923s] -- Generating done (0.0s)
+[9.938s] -- Build files have been written to: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo
+[9.963s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo -DCMAKE_INSTALL_PREFIX=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo
+[9.966s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo -- -j16 -l16
+[10.050s] [ 10%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[10.052s] [ 20%] [32mBuilding CXX object CMakeFiles/warehouse_ros_mongo.dir/src/query_results.cpp.o[0m
+[10.052s] [ 30%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[10.052s] [ 40%] [32mBuilding CXX object CMakeFiles/warehouse_ros_mongo.dir/src/database_connection.cpp.o[0m
+[10.053s] [ 50%] [32mBuilding CXX object CMakeFiles/warehouse_ros_mongo.dir/src/message_collection.cpp.o[0m
+[10.073s] [ 50%] Built target ament_cmake_python_copy_warehouse_ros_mongo
+[10.778s] running egg_info
+[10.788s] creating warehouse_ros_mongo.egg-info
+[10.903s] writing warehouse_ros_mongo.egg-info/PKG-INFO
+[10.904s] writing dependency_links to warehouse_ros_mongo.egg-info/dependency_links.txt
+[10.906s] writing top-level names to warehouse_ros_mongo.egg-info/top_level.txt
+[10.908s] writing manifest file 'warehouse_ros_mongo.egg-info/SOURCES.txt'
+[11.127s] reading manifest file 'warehouse_ros_mongo.egg-info/SOURCES.txt'
+[11.129s] writing manifest file 'warehouse_ros_mongo.egg-info/SOURCES.txt'
+[11.194s] [ 50%] Built target ament_cmake_python_build_warehouse_ros_mongo_egg
+[11.967s] [ 60%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[12.035s] [ 60%] Built target gtest_main
+[37.369s] [ 70%] [32m[1mLinking CXX static library libgtest.a[0m
+[37.472s] [ 70%] Built target gtest
+[37.996s] [ 80%] [32m[1mLinking CXX shared library libwarehouse_ros_mongo.so[0m
+[38.583s] [ 80%] Built target warehouse_ros_mongo
+[38.622s] [ 90%] [32mBuilding CXX object CMakeFiles/test_warehouse_ros_mongo_cpp.dir/test/test_warehouse_ros_mongo.cpp.o[0m
+[64.335s] [100%] [32m[1mLinking CXX executable test_warehouse_ros_mongo_cpp[0m
+[65.268s] [100%] Built target test_warehouse_ros_mongo_cpp
+[65.524s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo -- -j16 -l16
+[65.529s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo
+[65.546s] -- Install configuration: ""
+[65.549s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/environment/pythonpath.sh
+[65.550s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/environment/pythonpath.dsv
+[65.551s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages/warehouse_ros_mongo-2.0.3-py3.12.egg-info
+[65.551s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages/warehouse_ros_mongo-2.0.3-py3.12.egg-info/dependency_links.txt
+[65.552s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages/warehouse_ros_mongo-2.0.3-py3.12.egg-info/top_level.txt
+[65.552s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages/warehouse_ros_mongo-2.0.3-py3.12.egg-info/SOURCES.txt
+[65.553s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages/warehouse_ros_mongo-2.0.3-py3.12.egg-info/PKG-INFO
+[65.555s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages/warehouse_ros_mongo
+[65.556s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages/warehouse_ros_mongo/mongo_wrapper_ros.py
+[65.558s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages/warehouse_ros_mongo/__init__.py
+[65.629s] Listing '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages/warehouse_ros_mongo'...
+[65.629s] Compiling '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages/warehouse_ros_mongo/__init__.py'...
+[65.630s] Compiling '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages/warehouse_ros_mongo/mongo_wrapper_ros.py'...
+[65.642s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/warehouse_ros_mongo/mongo_wrapper_ros.py
+[65.643s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/include
+[65.644s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/include/database_connection.h
+[65.644s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/include/query_results.h
+[65.645s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/include/metadata.h
+[65.645s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/include/message_collection.h
+[65.647s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/include/warehouse_ros_mongo/config.h
+[65.648s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/warehouse_ros_mongo.launch.py
+[65.649s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake/FindMONGODB.cmake
+[65.650s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/libwarehouse_ros_mongo.so
+[65.651s] -- Set non-toolchain portion of runtime path of "/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/libwarehouse_ros_mongo.so" to ""
+[65.652s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/environment/library_path.sh
+[65.652s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/environment/library_path.dsv
+[65.653s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/mongo_database_connection_plugin_description.xml
+[65.658s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/ament_index/resource_index/package_run_dependencies/warehouse_ros_mongo
+[65.658s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/ament_index/resource_index/parent_prefix_path/warehouse_ros_mongo
+[65.659s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/environment/ament_prefix_path.sh
+[65.660s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/environment/ament_prefix_path.dsv
+[65.661s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/environment/path.sh
+[65.662s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/environment/path.dsv
+[65.662s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/local_setup.bash
+[65.663s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/local_setup.sh
+[65.664s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/local_setup.zsh
+[65.666s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/local_setup.dsv
+[65.666s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/package.dsv
+[65.666s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/ament_index/resource_index/packages/warehouse_ros_mongo
+[65.668s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/ament_index/resource_index/warehouse_ros__pluginlib__plugin/warehouse_ros_mongo
+[65.668s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake/export_warehouse_ros_mongoExport.cmake
+[65.669s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake/export_warehouse_ros_mongoExport-noconfig.cmake
+[65.670s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake/ConfigExtras.cmake
+[65.671s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake/ament_cmake_export_targets-extras.cmake
+[65.672s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake/ament_cmake_export_dependencies-extras.cmake
+[65.672s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake/warehouse_ros_mongoConfig.cmake
+[65.673s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake/warehouse_ros_mongoConfig-version.cmake
+[65.673s] -- Installing: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/package.xml
+[65.678s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo

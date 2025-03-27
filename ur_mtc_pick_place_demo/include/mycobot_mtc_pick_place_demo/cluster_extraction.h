@@ -14,7 +14,7 @@
  */
 
 // Include the header that defines PointXYZRGBNormalRSD and LOG_INFO
-#include "mycobot_mtc_pick_place_demo/normals_curvature_and_rsd_estimation.h"
+#include "ur_mtc_pick_place_demo/normals_curvature_and_rsd_estimation.h"
 #include <pcl/segmentation/region_growing.h>      // For region growing segmentation
 #include <pcl/search/kdtree.h>
 #include <pcl/features/normal_3d.h>

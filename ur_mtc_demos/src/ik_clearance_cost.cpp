@@ -2,7 +2,7 @@
  * @file ik_clearance_cost.cpp
  * @brief Demonstrates using MoveIt Task Constructor for motion planning with collision avoidance.
  *
- * This program sets up a motion planning task for a mycobot_280 robot arm using MoveIt Task Constructor.
+ * This program sets up a motion planning task for a ur_280 robot arm using MoveIt Task Constructor.
  * It creates a scene with an obstacle, computes inverse kinematics (IK) solutions, and plans a motion
  * while considering clearance from obstacles.
  *
@@ -51,9 +51,9 @@ int main(int argc, char** argv) {
   // Wait for 500 milliseconds to ensure ROS 2 is fully initialized
   rclcpp::sleep_for(std::chrono::milliseconds(500));
 
-  // Load the robot model (mycobot_280)
+  // Load the robot model (ur_280)
   t.loadRobotModel(node);
-  assert(t.getRobotModel()->getName() == "mycobot_280");
+  assert(t.getRobotModel()->getName() == "ur_280");
   RCLCPP_INFO(logger, "Robot model loaded: %s", t.getRobotModel()->getName().c_str());
 
   // Create a planning scene

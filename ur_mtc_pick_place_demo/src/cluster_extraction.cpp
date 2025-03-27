@@ -10,7 +10,7 @@
  * @date December 20, 2024
  */
 
-#include "mycobot_mtc_pick_place_demo/cluster_extraction.h"
+#include "ur_mtc_pick_place_demo/cluster_extraction.h"
 
 std::vector<pcl::PointCloud<PointXYZRGBNormalRSD>::Ptr>
 extractClusters(

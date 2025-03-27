@@ -8,7 +8,7 @@
  * the necessary data for subsequent grasp generation.
  *
  * Service:
- *     get_planning_scene_mycobot (mycobot_interfaces/srv/GetPlanningScene):
+ *     get_planning_scene_ur (ur_interfaces/srv/GetPlanningScene):
  *         Processes point cloud data and returns a planning scene
  *
  * Subscription Topics:
@@ -33,11 +33,11 @@
 
 #include <rclcpp/rclcpp.hpp>
 #include <rclcpp/qos.hpp>
-#include "mycobot_mtc_pick_place_demo/cluster_extraction.h"
-#include "mycobot_mtc_pick_place_demo/normals_curvature_and_rsd_estimation.h"
-#include "mycobot_mtc_pick_place_demo/object_segmentation.h"
-#include "mycobot_mtc_pick_place_demo/plane_segmentation.h"
-#include <mycobot_interfaces/srv/get_planning_scene.hpp>
+#include "ur_mtc_pick_place_demo/cluster_extraction.h"
+#include "ur_mtc_pick_place_demo/normals_curvature_and_rsd_estimation.h"
+#include "ur_mtc_pick_place_demo/object_segmentation.h"
+#include "ur_mtc_pick_place_demo/plane_segmentation.h"
+#include <ur_interfaces/srv/get_planning_scene.hpp>
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <sensor_msgs/msg/image.hpp>
 #include <moveit_msgs/msg/planning_scene_world.hpp>
@@ -148,7 +148,7 @@ class GetPlanningSceneServer : public rclcpp::Node {
   rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr rgb_image_sub;
 
   // Service
-  rclcpp::Service<mycobot_interfaces::srv::GetPlanningScene>::SharedPtr service;
+  rclcpp::Service<ur_interfaces::srv::GetPlanningScene>::SharedPtr service;
 
   // Latest data storage
   sensor_msgs::msg::PointCloud2::SharedPtr latest_point_cloud;
@@ -354,8 +354,8 @@ class GetPlanningSceneServer : public rclcpp::Node {
 
   void createService() {
     auto qos = rclcpp::QoS(rclcpp::KeepLast(10)).reliable();
-    service = this->create_service<mycobot_interfaces::srv::GetPlanningScene>(
-      "get_planning_scene_mycobot",
+    service = this->create_service<ur_interfaces::srv::GetPlanningScene>(
+      "get_planning_scene_ur",
      std::bind(&GetPlanningSceneServer::handleService, this, std::placeholders::_1, std::placeholders::_2),
       qos
     );
@@ -844,8 +844,8 @@ class GetPlanningSceneServer : public rclcpp::Node {
    *                                                                                 *
    **********************************************************************************/
   void handleService(
-      const std::shared_ptr<mycobot_interfaces::srv::GetPlanningScene::Request> request,
-      std::shared_ptr<mycobot_interfaces::srv::GetPlanningScene::Response> response) {
+      const std::shared_ptr<ur_interfaces::srv::GetPlanningScene::Request> request,
+      std::shared_ptr<ur_interfaces::srv::GetPlanningScene::Response> response) {
 
     /****************************************************
      *                                                  *

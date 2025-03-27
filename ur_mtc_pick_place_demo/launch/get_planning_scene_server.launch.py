@@ -12,7 +12,7 @@ Launch Arguments:
 
 Configuration:
     The node uses configuration from 'config/get_planning_scene_server.yaml'
-    in the mycobot_mtc_pick_place_demo package.
+    in the ur_mtc_pick_place_demo package.
 
 :author: Addison Sears-Collins
 :date: December 19, 2024
@@ -37,7 +37,7 @@ def generate_launch_description():
         LaunchDescription: A complete launch description for the planning scene server
     """
     # Constants for paths to different files and folders
-    package_name_mtc = 'mycobot_mtc_pick_place_demo'
+    package_name_mtc = 'ur_mtc_pick_place_demo'
 
     # Set the path to different files and folders
     pkg_share_mtc = FindPackageShare(package=package_name_mtc).find(package_name_mtc)

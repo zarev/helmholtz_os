@@ -36,7 +36,7 @@ def generate_launch_description():
     :rtype: LaunchDescription
     """
     # Constants for paths to different files and folders
-    package_name = 'mycobot_mtc_pick_place_demo'
+    package_name = 'ur_mtc_pick_place_demo'
 
     # Set the path to different files and folders
     pkg_share = FindPackageShare(package=package_name).find(package_name)

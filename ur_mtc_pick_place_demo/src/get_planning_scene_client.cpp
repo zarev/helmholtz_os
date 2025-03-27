@@ -26,13 +26,13 @@
  * @date December 20, 2024
  */
 
-#include "mycobot_mtc_pick_place_demo/get_planning_scene_client.h"
+#include "ur_mtc_pick_place_demo/get_planning_scene_client.h"
 
 GetPlanningSceneClient::GetPlanningSceneClient()
 : Node("get_planning_scene_client")
 {
   // Create a client for the GetPlanningScene service
-  client_ = create_client<mycobot_interfaces::srv::GetPlanningScene>("/get_planning_scene_mycobot");
+  client_ = create_client<ur_interfaces::srv::GetPlanningScene>("/get_planning_scene_ur");
 }
 
 GetPlanningSceneClient::PlanningSceneResponse
@@ -51,7 +51,7 @@ GetPlanningSceneClient::call_service(const std::string& target_shape, const std:
   }
 
   // Prepare the request
-  auto request = std::make_shared<mycobot_interfaces::srv::GetPlanningScene::Request>();
+  auto request = std::make_shared<ur_interfaces::srv::GetPlanningScene::Request>();
   request->target_shape = target_shape;
   request->target_dimensions = target_dimensions;
 
