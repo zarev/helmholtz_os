@@ -1,0 +1,430 @@
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages/pick.h:39[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/pick.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages/predicate_filter.h:38[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/predicate_filter.cpp:36[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages/move_relative.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/move_relative.cpp:39[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages/simple_grasp.h:39[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/simple_grasp.cpp:37[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages/generate_pose.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages/generate_random_pose.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/generate_random_pose.cpp:37[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages/generate_pose.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages/generate_grasp_pose.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/generate_grasp_pose.cpp:37[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage_p.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/stage_mockups.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/predicate_filter.cpp:40[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/generate_grasp_pose.cpp:42[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/pick.cpp:8[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/move_relative.cpp:42[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/simple_grasp.cpp:44[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/generate_random_pose.cpp:40[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/stage_mockups.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/predicate_filter.cpp:42[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/predicate_filter.cpp:43[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/generate_grasp_pose.cpp:43[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:50[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/stage_mockups.h:3[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/stage_mockups.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/storage.h:42[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_interface_state.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/models.h:3[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_move_to.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/models.h:3[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_stage.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/storage.h:42[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_cost_queue.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/models.h:3[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_pipeline_planner.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/models.h:3[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_move_relative.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages/current_state.h:42[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/stages/plugins.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | ase use the .hpp header instead."[01;36m[K)[m[K
+      |                                  [01;36m[K^[m[K
+
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:42[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_pruning.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:42[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_serial.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/models.h:3[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_cost_terms.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:42[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/pick_ur5.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:50[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:50[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:50[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container_p.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_container.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_pipeline_planner.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:42[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/stage_mockups.h:3[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_mockups.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container_p.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_fallback.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/stage_mockups.h:6[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_pruning.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages/fix_collision_objects.h:44[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages.h:44[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_serial.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_common.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:50[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_interface_state.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:50[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_move_relative.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_stage.cpp:6[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_serial.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:50[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/stage_mockups.h:3[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_move_to.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/stage_mockups.h:6[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:42[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/pick_pr2.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | ase use the .hpp header instead."[01;36m[K)[m[K
+      |                                  [01;36m[K^[m[K
+
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/stage_mockups.h:6[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:50[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/stage_mockups.h:3[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_stage.cpp:9[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:50[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | ase use the .hpp header instead."[01;36m[K)[m[K
+      |                                  [01;36m[K^[m[K
+
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_serial.cpp:6[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/robot_model_test_utils.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:50[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task_p.h:42[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_container.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+gmake[2]: *** [test/CMakeFiles/moveit_task_constructor_core-test-interface-state.dir/build.make:76: test/CMakeFiles/moveit_task_constructor_core-test-interface-state.dir/test_interface_state.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:776: test/CMakeFiles/moveit_task_constructor_core-test-interface-state.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_container.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_move_relative.cpp:9[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_move_relative.cpp:10[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:42[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/pick_pa10.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/pick_ur5.cpp:11[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+gmake[2]: *** [test/CMakeFiles/moveit_task_constructor_core-test-pipeline-planner.dir/build.make:76: test/CMakeFiles/moveit_task_constructor_core-test-pipeline-planner.dir/test_pipeline_planner.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:866: test/CMakeFiles/moveit_task_constructor_core-test-pipeline-planner.dir/all] Error 2
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_cost_terms.cpp:8[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:50[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+gmake[2]: *** [test/CMakeFiles/moveit_task_constructor_core-test-container.dir/build.make:76: test/CMakeFiles/moveit_task_constructor_core-test-container.dir/test_container.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:561: test/CMakeFiles/moveit_task_constructor_core-test-container.dir/all] Error 2
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:50[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task_p.h:42[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_fallback.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_fallback.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task.h:50[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/stage_mockups.h:3[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/test_cost_terms.cpp:14[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+gmake[2]: *** [test/CMakeFiles/moveit_task_constructor_core-test-move-to.dir/build.make:76: test/CMakeFiles/moveit_task_constructor_core-test-move-to.dir/test_move_to.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:806: test/CMakeFiles/moveit_task_constructor_core-test-move-to.dir/all] Error 2
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+gmake[2]: *** [test/CMakeFiles/moveit_task_constructor_core-test-stage.dir/build.make:76: test/CMakeFiles/moveit_task_constructor_core-test-stage.dir/test_stage.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:531: test/CMakeFiles/moveit_task_constructor_core-test-stage.dir/all] Error 2
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/pick_pr2.cpp:11[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | ase use the .hpp header instead."[01;36m[K)[m[K
+      |                                  [01;36m[K^[m[K
+
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/python/bindings/src/core.h:37[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/python/bindings/src/core.cpp:35[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/solvers/planner_interface.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/solvers/cartesian_path.h:41[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/python/bindings/src/solvers.cpp:36[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+gmake[2]: *** [test/CMakeFiles/moveit_task_constructor_core-test-move-relative.dir/build.make:76: test/CMakeFiles/moveit_task_constructor_core-test-move-relative.dir/test_move_relative.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:836: test/CMakeFiles/moveit_task_constructor_core-test-move-relative.dir/all] Error 2
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/python/bindings/src/core.h:41[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages/fix_collision_objects.h:44[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/pick_pa10.cpp:14[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_common.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/test/pick_pa10.cpp:17[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+gmake[2]: *** [test/CMakeFiles/moveit_task_constructor_core-test-cost-terms.dir/build.make:76: test/CMakeFiles/moveit_task_constructor_core-test-cost-terms.dir/test_cost_terms.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:683: test/CMakeFiles/moveit_task_constructor_core-test-cost-terms.dir/all] Error 2
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/python/bindings/src/core.cpp:43[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/python/bindings/src/core.cpp:44[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/python/bindings/src/core.cpp:45[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+gmake[2]: *** [test/CMakeFiles/moveit_task_constructor_core-test-fallback.dir/build.make:76: test/CMakeFiles/moveit_task_constructor_core-test-fallback.dir/test_fallback.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:714: test/CMakeFiles/moveit_task_constructor_core-test-fallback.dir/all] Error 2
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h:47[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h:43[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/python/bindings/src/core.h:37[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/python/bindings/src/stages.h:37[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/python/bindings/src/stages.cpp:35[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/python/bindings/src/core.h:41[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:48:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   48 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages/fix_collision_objects.h:44[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages.h:44[m[K,
+                 from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/python/bindings/src/stages.cpp:37[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_common.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/python/bindings/src/stages.cpp:40[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[Klto-wrapper:[m[K [01;35m[Kwarning: [m[Kusing serial compilation of 12 LTRANS jobs
+[01m[Klto-wrapper:[m[K [01;36m[Knote: [m[Ksee the ]8;;https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html#index-flto‘[01m[K-flto[m[K’ option documentation]8;; for more information
+gmake: *** [Makefile:146: all] Error 2

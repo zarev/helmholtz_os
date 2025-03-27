@@ -3,6 +3,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/merge.cpp.o: \
  /usr/include/stdc-predef.h \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/merge.h \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/storage.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
@@ -659,6 +660,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/merge.cpp.o: \
  /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
  /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h \
  /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.h \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
  /opt/ros/jazzy/include/srdfdom/srdfdom/model.h /usr/include/tinyxml2.h \
@@ -1037,6 +1039,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/merge.cpp.o: \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/planar_joint_model.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/revolute_joint_model.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/prismatic_joint_model.hpp \
+ /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.h \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
@@ -1161,6 +1164,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/merge.cpp.o: \
  /opt/ros/jazzy/include/rclcpp/rclcpp/parameter_map.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/parameter_event_handler.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/parameter_service.hpp \
+ /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.h \
  /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.hpp \
  /usr/include/boost/range/adaptor/transformed.hpp \
  /usr/include/boost/range/adaptor/argument_fwd.hpp \

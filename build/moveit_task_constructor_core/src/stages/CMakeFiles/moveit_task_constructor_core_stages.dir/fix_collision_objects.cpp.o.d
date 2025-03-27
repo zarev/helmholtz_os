@@ -3,6 +3,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/fix_collision_obje
  /usr/include/stdc-predef.h \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stages/fix_collision_objects.h \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/storage.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
@@ -668,6 +669,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/fix_collision_obje
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__builder.hpp \
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__type_support.hpp \
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_common.h \
  /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_common.hpp \
  /usr/include/eigen3/Eigen/Core \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
@@ -1047,13 +1049,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/fix_collision_obje
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/planar_joint_model.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/revolute_joint_model.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/prismatic_joint_model.hpp \
- /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/fmt_p.h \
- /usr/include/fmt/core.h /usr/include/fmt/ostream.h \
- /usr/include/c++/13/fstream \
- /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
- /usr/include/c++/13/bits/fstream.tcc /usr/include/fmt/format.h \
- /usr/include/fmt/core.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
@@ -1257,12 +1253,12 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/fix_collision_obje
  /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/robot_state__type_support.h \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/include/rviz_marker_tools/marker_creation.h \
- /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp \
- /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__builder.hpp \
- /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__type_support.hpp \
  /opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/marker.hpp \
  /opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/detail/marker__builder.hpp \
  /opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/detail/marker__type_support.hpp \
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp \
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__builder.hpp \
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__type_support.hpp \
  /opt/ros/jazzy/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp \
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/point.hpp \
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__builder.hpp \
@@ -1319,4 +1315,5 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/fix_collision_obje
  /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_services_interface.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_services_interface_traits.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_logging_interface.hpp \
- /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_logging_interface_traits.hpp
+ /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_logging_interface_traits.hpp \
+ /usr/include/fmt/core.h

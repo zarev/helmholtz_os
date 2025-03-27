@@ -448,6 +448,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/compute_ik.cpp.o: 
  /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
  /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h \
  /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/storage.h \
@@ -672,21 +673,10 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/compute_ik.cpp.o: 
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/marker_tools.h \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/include/rviz_marker_tools/marker_creation.h \
- /opt/ros/jazzy/include/std_msgs/std_msgs/msg/color_rgba.hpp \
- /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__builder.hpp \
- /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__type_support.hpp \
- /opt/ros/jazzy/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/marker.hpp \
  /opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/detail/marker__builder.hpp \
  /opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/detail/marker__type_support.hpp \
- /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/fmt_p.h \
- /usr/include/eigen3/Eigen/Core /usr/include/fmt/core.h \
- /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
- /usr/include/fmt/ostream.h /usr/include/c++/13/fstream \
- /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
- /usr/include/c++/13/bits/fstream.tcc /usr/include/fmt/format.h \
- /usr/include/fmt/core.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
@@ -761,7 +751,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/compute_ik.cpp.o: 
  /usr/include/boost/random/exponential_distribution.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/link_model.hpp \
  /opt/ros/jazzy/include/eigen_stl_containers/eigen_stl_containers/eigen_stl_vector_container.h \
- /usr/include/eigen3/Eigen/StdVector \
+ /usr/include/eigen3/Eigen/Core /usr/include/eigen3/Eigen/StdVector \
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h \
  /usr/include/eigen3/Eigen/src/StlSupport/details.h \
  /opt/ros/jazzy/include/geometric_shapes/geometric_shapes/check_isometry.h \
@@ -898,6 +888,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/compute_ik.cpp.o: 
  /opt/ros/jazzy/include/rclcpp/rclcpp/exceptions.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/exceptions/exceptions.hpp \
  /opt/ros/jazzy/include/rcpputils/rcpputils/join.hpp \
+ /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
  /opt/ros/jazzy/include/rclcpp/rclcpp/expand_topic_or_service_name.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/function_traits.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp \
@@ -1080,6 +1071,10 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/compute_ik.cpp.o: 
  /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp \
  /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp \
  /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/jazzy/include/std_msgs/std_msgs/msg/color_rgba.hpp \
+ /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__builder.hpp \
+ /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__type_support.hpp \
+ /opt/ros/jazzy/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/twist.hpp \
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__type_support.hpp \
@@ -1232,7 +1227,9 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/compute_ik.cpp.o: 
  /opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/detail/octomap_with_pose__type_support.hpp \
  /opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit_planning_scene_export.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.h \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.hpp \
+ /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.h \
  /opt/ros/jazzy/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp \
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/point.hpp \
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__builder.hpp \
@@ -1289,4 +1286,5 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/compute_ik.cpp.o: 
  /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_services_interface.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_services_interface_traits.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_logging_interface.hpp \
- /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_logging_interface_traits.hpp
+ /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_logging_interface_traits.hpp \
+ /usr/include/fmt/core.h

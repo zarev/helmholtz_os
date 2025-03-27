@@ -3,6 +3,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: \
  /usr/include/stdc-predef.h \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/cost_terms.h \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/storage.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
@@ -694,15 +695,9 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/trajectory_execution_info.hpp \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/trajectory_execution_info__builder.hpp \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/trajectory_execution_info__type_support.hpp \
- /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/fmt_p.h \
- /usr/include/eigen3/Eigen/Core /usr/include/fmt/core.h \
- /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
- /usr/include/fmt/ostream.h /usr/include/c++/13/fstream \
- /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
- /usr/include/c++/13/bits/fstream.tcc /usr/include/fmt/format.h \
- /usr/include/fmt/core.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_common.h \
  /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_common.hpp \
+ /usr/include/eigen3/Eigen/Core \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
  /opt/ros/jazzy/include/srdfdom/srdfdom/model.h /usr/include/tinyxml2.h \
@@ -911,6 +906,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: \
  /opt/ros/jazzy/include/rclcpp/rclcpp/exceptions.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/exceptions/exceptions.hpp \
  /opt/ros/jazzy/include/rcpputils/rcpputils/join.hpp \
+ /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
  /opt/ros/jazzy/include/rclcpp/rclcpp/expand_topic_or_service_name.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/function_traits.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp \
@@ -1077,6 +1073,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/planar_joint_model.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/revolute_joint_model.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/prismatic_joint_model.hpp \
+ /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.h \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
@@ -1201,6 +1198,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: \
  /opt/ros/jazzy/include/rclcpp/rclcpp/parameter_map.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/parameter_event_handler.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/parameter_service.hpp \
+ /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_detector_allocator.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_env.hpp \
@@ -1251,4 +1249,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: \
  /opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/detail/octomap_with_pose__type_support.hpp \
  /opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit_planning_scene_export.h \
- /opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.hpp
+ /opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.hpp \
+ /usr/include/fmt/core.h

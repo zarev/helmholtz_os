@@ -447,6 +447,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/modify_planning_sc
  /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
  /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h \
  /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/storage.h \
@@ -699,14 +700,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/modify_planning_sc
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
  /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/robot_state__type_support.h \
- /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/fmt_p.h \
- /usr/include/eigen3/Eigen/Core /usr/include/fmt/core.h \
- /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
- /usr/include/fmt/ostream.h /usr/include/c++/13/fstream \
- /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
- /usr/include/c++/13/bits/fstream.tcc /usr/include/fmt/format.h \
- /usr/include/fmt/core.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
@@ -780,7 +774,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/modify_planning_sc
  /usr/include/boost/random/exponential_distribution.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/link_model.hpp \
  /opt/ros/jazzy/include/eigen_stl_containers/eigen_stl_containers/eigen_stl_vector_container.h \
- /usr/include/eigen3/Eigen/StdVector \
+ /usr/include/eigen3/Eigen/Core /usr/include/eigen3/Eigen/StdVector \
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h \
  /usr/include/eigen3/Eigen/src/StlSupport/details.h \
  /opt/ros/jazzy/include/geometric_shapes/geometric_shapes/check_isometry.h \
@@ -915,6 +909,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/modify_planning_sc
  /opt/ros/jazzy/include/rclcpp/rclcpp/exceptions.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/exceptions/exceptions.hpp \
  /opt/ros/jazzy/include/rcpputils/rcpputils/join.hpp \
+ /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
  /opt/ros/jazzy/include/rclcpp/rclcpp/expand_topic_or_service_name.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/function_traits.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp \
@@ -1254,4 +1249,5 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/modify_planning_sc
  /opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/detail/octomap_with_pose__builder.hpp \
  /opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/detail/octomap_with_pose__type_support.hpp \
  /opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
- /opt/ros/jazzy/include/moveit_core/moveit_planning_scene_export.h
+ /opt/ros/jazzy/include/moveit_core/moveit_planning_scene_export.h \
+ /usr/include/fmt/core.h

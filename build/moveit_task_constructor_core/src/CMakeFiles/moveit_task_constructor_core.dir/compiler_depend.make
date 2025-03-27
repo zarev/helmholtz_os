@@ -44,7 +44,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/container.cpp.o: /home/darsh/ros
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container_p.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/cost_queue.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/cost_terms.h \
-  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/fmt_p.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/introspection.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/merge.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/properties.h \
@@ -134,8 +133,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/container.cpp.o: /home/darsh/ros
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/kinematic_constraint.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/fixed_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/floating_joint_model.hpp \
@@ -145,11 +146,15 @@ src/CMakeFiles/moveit_task_constructor_core.dir/container.cpp.o: /home/darsh/ros
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/planar_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/prismatic_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/revolute_joint_model.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.h \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.h \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_optimal_trajectory_generation.h \
   /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_optimal_trajectory_generation.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.h \
   /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/utils/logger.hpp \
@@ -1523,7 +1528,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/container.cpp.o: /home/darsh/ros
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
-  /usr/include/c++/13/bits/fstream.tcc \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
@@ -1637,7 +1641,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/container.cpp.o: /home/darsh/ros
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
-  /usr/include/c++/13/fstream \
   /usr/include/c++/13/functional \
   /usr/include/c++/13/future \
   /usr/include/c++/13/initializer_list \
@@ -1876,8 +1879,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/container.cpp.o: /home/darsh/ros
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/fmt/core.h \
-  /usr/include/fmt/format.h \
-  /usr/include/fmt/ostream.h \
   /usr/include/libintl.h \
   /usr/include/limits.h \
   /usr/include/linux/close_range.h \
@@ -2015,10 +2016,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/container.cpp.o: /home/darsh/ros
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
@@ -2069,7 +2068,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: /home/darsh/ro
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/trajectory_execution_info.hpp \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/cost_queue.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/cost_terms.h \
-  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/fmt_p.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/properties.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/storage.h \
@@ -2147,6 +2145,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: /home/darsh/ro
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_common.h \
   /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_common.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_detector_allocator.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_env.hpp \
@@ -2156,8 +2155,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: /home/darsh/ro
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/kinematic_constraint.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/fixed_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/floating_joint_model.hpp \
@@ -2169,8 +2170,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: /home/darsh/ro
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/revolute_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.h \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.h \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/utils/logger.hpp \
@@ -2856,7 +2859,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: /home/darsh/ro
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
-  /usr/include/c++/13/bits/fstream.tcc \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
@@ -2970,7 +2972,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: /home/darsh/ro
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
-  /usr/include/c++/13/fstream \
   /usr/include/c++/13/functional \
   /usr/include/c++/13/future \
   /usr/include/c++/13/initializer_list \
@@ -3209,8 +3210,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: /home/darsh/ro
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/fmt/core.h \
-  /usr/include/fmt/format.h \
-  /usr/include/fmt/ostream.h \
   /usr/include/libintl.h \
   /usr/include/limits.h \
   /usr/include/linux/close_range.h \
@@ -3348,10 +3347,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o: /home/darsh/ro
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
@@ -3518,8 +3515,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/introspection.cpp.o: /home/darsh
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/kinematic_constraint.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/fixed_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/floating_joint_model.hpp \
@@ -3535,6 +3534,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/introspection.cpp.o: /home/darsh
   /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/utils/logger.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h \
   /opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit_kinematics_base_export.h \
   /opt/ros/jazzy/include/moveit_core/moveit_planning_scene_export.h \
@@ -5447,8 +5447,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/marker_tools.cpp.o: /home/darsh/
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/kinematic_constraint.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/fixed_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/floating_joint_model.hpp \
@@ -5460,6 +5462,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/marker_tools.cpp.o: /home/darsh/
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/revolute_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.h \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp \
@@ -6705,6 +6708,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/merge.cpp.o: /home/darsh/ros2_ws
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/fixed_joint_model.hpp \
@@ -6715,10 +6719,13 @@ src/CMakeFiles/moveit_task_constructor_core.dir/merge.cpp.o: /home/darsh/ros2_ws
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/planar_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/prismatic_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/revolute_joint_model.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.h \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.h \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.h \
   /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/utils/logger.hpp \
@@ -8211,7 +8218,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/merge.cpp.o: /home/darsh/ros2_ws
   /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h
 
 src/CMakeFiles/moveit_task_constructor_core.dir/properties.cpp.o: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/properties.cpp \
-  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/fmt_p.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/properties.h \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__builder.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp \
@@ -8414,7 +8420,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/properties.cpp.o: /home/darsh/ro
   /usr/include/boost/version.hpp \
   /usr/include/c++/13/algorithm \
   /usr/include/c++/13/array \
-  /usr/include/c++/13/atomic \
   /usr/include/c++/13/backward/auto_ptr.h \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
@@ -8517,16 +8522,13 @@ src/CMakeFiles/moveit_task_constructor_core.dir/properties.cpp.o: /home/darsh/ro
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
   /usr/include/c++/13/bits/vector.tcc \
-  /usr/include/c++/13/cassert \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/chrono \
-  /usr/include/c++/13/climits \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/codecvt \
   /usr/include/c++/13/compare \
-  /usr/include/c++/13/complex \
   /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
@@ -8597,132 +8599,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/properties.cpp.o: /home/darsh/ro
   /usr/include/c++/13/vector \
   /usr/include/c++/13/version \
   /usr/include/ctype.h \
-  /usr/include/eigen3/Eigen/Core \
-  /usr/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
-  /usr/include/eigen3/Eigen/src/Core/Array.h \
-  /usr/include/eigen3/Eigen/src/Core/ArrayBase.h \
-  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
-  /usr/include/eigen3/Eigen/src/Core/Assign.h \
-  /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
-  /usr/include/eigen3/Eigen/src/Core/BandMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/Block.h \
-  /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h \
-  /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h \
-  /usr/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
-  /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
-  /usr/include/eigen3/Eigen/src/Core/CoreIterators.h \
-  /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
-  /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
-  /usr/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
-  /usr/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
-  /usr/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
-  /usr/include/eigen3/Eigen/src/Core/DenseBase.h \
-  /usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
-  /usr/include/eigen3/Eigen/src/Core/DenseStorage.h \
-  /usr/include/eigen3/Eigen/src/Core/Diagonal.h \
-  /usr/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
-  /usr/include/eigen3/Eigen/src/Core/Dot.h \
-  /usr/include/eigen3/Eigen/src/Core/EigenBase.h \
-  /usr/include/eigen3/Eigen/src/Core/Fuzzy.h \
-  /usr/include/eigen3/Eigen/src/Core/GeneralProduct.h \
-  /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
-  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
-  /usr/include/eigen3/Eigen/src/Core/IO.h \
-  /usr/include/eigen3/Eigen/src/Core/IndexedView.h \
-  /usr/include/eigen3/Eigen/src/Core/Inverse.h \
-  /usr/include/eigen3/Eigen/src/Core/Map.h \
-  /usr/include/eigen3/Eigen/src/Core/MapBase.h \
-  /usr/include/eigen3/Eigen/src/Core/MathFunctions.h \
-  /usr/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
-  /usr/include/eigen3/Eigen/src/Core/Matrix.h \
-  /usr/include/eigen3/Eigen/src/Core/MatrixBase.h \
-  /usr/include/eigen3/Eigen/src/Core/NestByValue.h \
-  /usr/include/eigen3/Eigen/src/Core/NoAlias.h \
-  /usr/include/eigen3/Eigen/src/Core/NumTraits.h \
-  /usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
-  /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
-  /usr/include/eigen3/Eigen/src/Core/Product.h \
-  /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
-  /usr/include/eigen3/Eigen/src/Core/Random.h \
-  /usr/include/eigen3/Eigen/src/Core/Redux.h \
-  /usr/include/eigen3/Eigen/src/Core/Ref.h \
-  /usr/include/eigen3/Eigen/src/Core/Replicate.h \
-  /usr/include/eigen3/Eigen/src/Core/Reshaped.h \
-  /usr/include/eigen3/Eigen/src/Core/ReturnByValue.h \
-  /usr/include/eigen3/Eigen/src/Core/Reverse.h \
-  /usr/include/eigen3/Eigen/src/Core/Select.h \
-  /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
-  /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
-  /usr/include/eigen3/Eigen/src/Core/Solve.h \
-  /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h \
-  /usr/include/eigen3/Eigen/src/Core/SolverBase.h \
-  /usr/include/eigen3/Eigen/src/Core/StableNorm.h \
-  /usr/include/eigen3/Eigen/src/Core/StlIterators.h \
-  /usr/include/eigen3/Eigen/src/Core/Stride.h \
-  /usr/include/eigen3/Eigen/src/Core/Swap.h \
-  /usr/include/eigen3/Eigen/src/Core/Transpose.h \
-  /usr/include/eigen3/Eigen/src/Core/Transpositions.h \
-  /usr/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/VectorBlock.h \
-  /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
-  /usr/include/eigen3/Eigen/src/Core/Visitor.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h \
-  /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
-  /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
-  /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
-  /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
-  /usr/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
-  /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
-  /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
-  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
-  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
-  /usr/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
-  /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
-  /usr/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
-  /usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
-  /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
-  /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
-  /usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
-  /usr/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
-  /usr/include/eigen3/Eigen/src/Core/util/Constants.h \
-  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
-  /usr/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
-  /usr/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
-  /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
-  /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
-  /usr/include/eigen3/Eigen/src/Core/util/Memory.h \
-  /usr/include/eigen3/Eigen/src/Core/util/Meta.h \
-  /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /usr/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
-  /usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
-  /usr/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
-  /usr/include/eigen3/Eigen/src/Core/util/XprHelper.h \
-  /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
-  /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
-  /usr/include/eigen3/Eigen/src/plugins/BlockMethods.h \
-  /usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
-  /usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
-  /usr/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
-  /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
-  /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  /usr/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
   /usr/include/features-time64.h \
@@ -8731,10 +8607,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/properties.cpp.o: /home/darsh/ro
   /usr/include/fmt/format.h \
   /usr/include/fmt/ostream.h \
   /usr/include/libintl.h \
-  /usr/include/limits.h \
   /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
-  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/pthread.h \
@@ -8768,15 +8642,12 @@ src/CMakeFiles/moveit_task_constructor_core.dir/properties.cpp.o: /home/darsh/ro
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -8832,7 +8703,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/properties.cpp.o: /home/darsh/ro
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/unistd-decl.h \
   /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
@@ -8843,7 +8713,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/properties.cpp.o: /home/darsh/ro
   /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
@@ -8866,17 +8735,11 @@ src/CMakeFiles/moveit_task_constructor_core.dir/properties.cpp.o: /home/darsh/ro
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdalign.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
 src/CMakeFiles/moveit_task_constructor_core.dir/solvers/cartesian_path.cpp.o: /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/solvers/cartesian_path.cpp \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/properties.h \
@@ -8977,9 +8840,12 @@ src/CMakeFiles/moveit_task_constructor_core.dir/solvers/cartesian_path.cpp.o: /h
   /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/world_diff.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/kinematic_constraint.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.h \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/fixed_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/floating_joint_model.hpp \
@@ -8991,9 +8857,11 @@ src/CMakeFiles/moveit_task_constructor_core.dir/solvers/cartesian_path.cpp.o: /h
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/revolute_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/cartesian_interpolator.h \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/cartesian_interpolator.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.h \
   /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/utils/logger.hpp \
@@ -10290,8 +10158,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/solvers/joint_interpolation.cpp.
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/kinematic_constraint.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/fixed_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/floating_joint_model.hpp \
@@ -10305,6 +10175,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/solvers/joint_interpolation.cpp.
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.h \
   /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/utils/logger.hpp \
@@ -11556,6 +11427,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/solvers/multi_planner.cpp.o: /ho
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/fixed_joint_model.hpp \
@@ -11569,6 +11441,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/solvers/multi_planner.cpp.o: /ho
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.h \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/utils/logger.hpp \
@@ -12887,8 +12760,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/solvers/pipeline_planner.cpp.o: 
   /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/world_diff.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/kinematic_constraint.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/utils.h \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/utils.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_interface/planning_interface.hpp \
@@ -12896,6 +12771,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/solvers/pipeline_planner.cpp.o: 
   /opt/ros/jazzy/include/moveit_core/moveit/planning_interface/planning_request_adapter.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_interface/planning_response.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_interface/planning_response_adapter.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/fixed_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/floating_joint_model.hpp \
@@ -12911,6 +12787,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/solvers/pipeline_planner.cpp.o: 
   /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/utils/logger.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h \
   /opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit_kinematics_base_export.h \
   /opt/ros/jazzy/include/moveit_core/moveit_planning_scene_export.h \
@@ -13017,6 +12894,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/solvers/pipeline_planner.cpp.o: 
   /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/robot_state.hpp \
   /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/robot_trajectory.hpp \
   /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline/planning_pipeline.h \
   /opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline/planning_pipeline.hpp \
   /opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline_interfaces/plan_responses_container.hpp \
   /opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline_interfaces/planning_pipeline_interfaces.hpp \
@@ -14283,6 +14161,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/solvers/planner_interface.cpp.o:
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/fixed_joint_model.hpp \
@@ -14297,6 +14176,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/solvers/planner_interface.cpp.o:
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_optimal_trajectory_generation.h \
   /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_optimal_trajectory_generation.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp \
@@ -15488,7 +15368,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/stage.cpp.o: /home/darsh/ros2_ws
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/container_p.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/cost_queue.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/cost_terms.h \
-  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/fmt_p.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/introspection.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/properties.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/stage.h \
@@ -15577,8 +15456,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/stage.cpp.o: /home/darsh/ros2_ws
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/kinematic_constraint.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/fixed_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/floating_joint_model.hpp \
@@ -16907,7 +16788,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/stage.cpp.o: /home/darsh/ros2_ws
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
-  /usr/include/c++/13/bits/fstream.tcc \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
@@ -17021,7 +16901,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/stage.cpp.o: /home/darsh/ros2_ws
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
-  /usr/include/c++/13/fstream \
   /usr/include/c++/13/functional \
   /usr/include/c++/13/future \
   /usr/include/c++/13/initializer_list \
@@ -17260,8 +17139,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/stage.cpp.o: /home/darsh/ros2_ws
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/fmt/core.h \
-  /usr/include/fmt/format.h \
-  /usr/include/fmt/ostream.h \
   /usr/include/libintl.h \
   /usr/include/limits.h \
   /usr/include/linux/close_range.h \
@@ -17399,10 +17276,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/stage.cpp.o: /home/darsh/ros2_ws
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
@@ -17562,8 +17437,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/storage.cpp.o: /home/darsh/ros2_
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/kinematic_constraint.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/fixed_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/floating_joint_model.hpp \
@@ -17575,8 +17452,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/storage.cpp.o: /home/darsh/ros2_
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/revolute_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.h \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.h \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/utils/logger.hpp \
@@ -18839,7 +18718,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/task.cpp.o: /home/darsh/ros2_ws/
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/task_p.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/trajectory_execution_info.h \
   /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/utils.h \
-  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/scope_guard/scope_guard.hpp \
   /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__builder.hpp \
   /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__functions.h \
   /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__struct.h \
@@ -18986,6 +18864,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/task.cpp.o: /home/darsh/ros2_ws/
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/kinematic_constraint.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_interface/planning_interface.hpp \
@@ -19008,6 +18887,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/task.cpp.o: /home/darsh/ros2_ws/
   /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/utils/logger.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h \
   /opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit_kinematics_base_export.h \
   /opt/ros/jazzy/include/moveit_core/moveit_planning_scene_export.h \
@@ -19123,9 +19003,11 @@ src/CMakeFiles/moveit_task_constructor_core.dir/task.cpp.o: /home/darsh/ros2_ws/
   /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/jazzy/include/moveit_ros_planning/kinematics_parameters.hpp \
   /opt/ros/jazzy/include/moveit_ros_planning/moveit/kinematics_plugin_loader/kinematics_plugin_loader.hpp \
+  /opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline/planning_pipeline.h \
   /opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline/planning_pipeline.hpp \
   /opt/ros/jazzy/include/moveit_ros_planning/moveit/rdf_loader/rdf_loader.hpp \
   /opt/ros/jazzy/include/moveit_ros_planning/moveit/rdf_loader/synchronized_string_parameter.hpp \
+  /opt/ros/jazzy/include/moveit_ros_planning/moveit/robot_model_loader/robot_model_loader.h \
   /opt/ros/jazzy/include/moveit_ros_planning/moveit/robot_model_loader/robot_model_loader.hpp \
   /opt/ros/jazzy/include/moveit_ros_planning/moveit_planning_pipeline_export.h \
   /opt/ros/jazzy/include/moveit_ros_planning/planning_pipeline_parameters.hpp \
@@ -21072,8 +20954,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/kinematic_constraint.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
   /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/fixed_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/floating_joint_model.hpp \
@@ -21085,6 +20969,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/revolute_joint_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
+  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.h \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp \
@@ -22330,13 +22215,19 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/rclcpp_action/rclcpp_action/create_server.hpp:
 
-/usr/include/boost/mpl/logical.hpp:
+/opt/ros/jazzy/include/rcl_action/rcl_action/visibility_control.h:
 
-/usr/include/boost/mpl/limits/vector.hpp:
+/opt/ros/jazzy/include/rcl_action/rcl_action/types.h:
 
-/usr/include/c++/13/bits/functional_hash.h:
+/opt/ros/jazzy/include/rcl_action/rcl_action/goal_state_machine.h:
 
-/usr/include/boost/mpl/lambda_fwd.hpp:
+/opt/ros/jazzy/include/moveit_ros_planning/moveit/robot_model_loader/robot_model_loader.hpp:
+
+/opt/ros/jazzy/include/moveit_ros_planning/moveit/rdf_loader/synchronized_string_parameter.hpp:
+
+/opt/ros/jazzy/include/moveit_ros_planning/moveit/kinematics_plugin_loader/kinematics_plugin_loader.hpp:
+
+/opt/ros/jazzy/include/moveit_ros_planning/kinematics_parameters.hpp:
 
 /usr/include/boost/mpl/lambda.hpp:
 
@@ -22381,8 +22272,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/mpl/begin_end.hpp:
 
 /usr/include/boost/mpl/aux_/template_arity.hpp:
-
-/usr/include/boost/mpl/aux_/static_cast.hpp:
 
 /usr/include/boost/mpl/aux_/reverse_iter_fold_impl.hpp:
 
@@ -22842,8 +22731,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/boost/bind/std_placeholders.hpp:
 
-/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/visibility_control.h:
-
 /usr/include/c++/13/bits/functexcept.h:
 
 /usr/include/boost/assert/source_location.hpp:
@@ -22910,11 +22797,7 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/urdfdom_headers/urdf_model/color.h:
 
-/usr/include/boost/move/detail/meta_utils_core.hpp:
-
 /opt/ros/jazzy/include/urdf/urdf/model.h:
-
-/opt/ros/jazzy/include/rcl_action/rcl_action/goal_state_machine.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/resolve_enable_topic_statistics.hpp:
 
@@ -22959,8 +22842,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/subscription_intra_process_buffer.hpp:
 
 /usr/include/boost/random/detail/enable_warnings.hpp:
-
-/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__traits.hpp:
 
 /usr/include/boost/container_hash/hash.hpp:
 
@@ -23124,8 +23005,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/identifier.h:
 
-/usr/include/boost/mpl/less.hpp:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:
 
 /opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/serialization_support_interface.h:
@@ -23176,23 +23055,27 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/rcl/rcl/timer.h:
 
-/usr/include/boost/range/config.hpp:
+/usr/include/boost/mpl/if.hpp:
 
-/opt/ros/jazzy/include/rcpputils/rcpputils/visibility_control.hpp:
+/opt/ros/jazzy/include/rmw/rmw/impl/config.h:
 
-/usr/include/boost/mpl/aux_/fold_impl.hpp:
+/usr/include/boost/bimap/detail/bimap_core.hpp:
+
+/usr/include/boost/mpl/aux_/has_tag.hpp:
+
+/opt/ros/jazzy/include/rmw/rmw/get_topic_names_and_types.h:
+
+/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/type_description__struct.h:
+
+/usr/include/boost/type_traits/negation.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/subscription_options.hpp:
+
+/opt/ros/jazzy/include/urdfdom_headers/urdf_model/pose.h:
+
+/opt/ros/jazzy/include/rmw/rmw/events_statuses/requested_deadline_missed.h:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/motion_plan_response.hpp:
-
-/opt/ros/jazzy/include/rcl/rcl/log_level.h:
-
-/opt/ros/jazzy/include/rcutils/rcutils/shared_library.h:
-
-/usr/include/boost/multi_index/detail/access_specifier.hpp:
-
-/usr/include/boost/call_traits.hpp:
-
-/usr/include/c++/13/bits/locale_classes.h:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
 
@@ -23244,14 +23127,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/boost/mpl/assert.hpp:
 
-/usr/include/boost/mpl/aux_/has_tag.hpp:
-
-/usr/include/boost/bimap/detail/bimap_core.hpp:
-
-/opt/ros/jazzy/include/urdfdom_headers/urdf_model/pose.h:
-
-/opt/ros/jazzy/include/rmw/rmw/events_statuses/requested_deadline_missed.h:
-
 /opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/detail/octomap__struct.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/wrench__traits.hpp:
@@ -23289,6 +23164,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/algorithm/string/join.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/usr/include/boost/mpl/lambda_fwd.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/attached_collision_object__struct.h:
 
@@ -23426,12 +23303,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/c++/13/cstddef:
 
-/usr/include/boost/mp11/version.hpp:
-
-/opt/ros/jazzy/include/random_numbers/random_numbers.h:
-
-/opt/ros/jazzy/include/rcl/rcl/guard_condition.h:
-
 /opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/detail/multi_dof_joint_trajectory_point__struct.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
@@ -23534,6 +23405,16 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/polygon__traits.hpp:
 
+/opt/ros/jazzy/include/rclcpp/rclcpp/network_flow_endpoint.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp:
+
+/usr/include/boost/mp11/version.hpp:
+
+/opt/ros/jazzy/include/random_numbers/random_numbers.h:
+
+/opt/ros/jazzy/include/rcl/rcl/guard_condition.h:
+
 /opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/detail/multi_dof_joint_trajectory_point__traits.hpp:
 
 /usr/include/boost/algorithm/string/detail/sequence.hpp:
@@ -23561,6 +23442,12 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model.hpp:
 
 /opt/ros/jazzy/include/rcl/rcl/node.h:
+
+/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:
+
+/usr/include/boost/optional/optional_fwd.hpp:
+
+/usr/include/boost/preprocessor/list/fold_left.hpp:
 
 /usr/include/boost/multi_index/detail/index_saver.hpp:
 
@@ -23608,7 +23495,13 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/serialized_message.hpp:
 
-/opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_matrix.hpp:
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__builder.hpp:
+
+/usr/include/boost/bimap/detail/map_view_base.hpp:
+
+/opt/ros/jazzy/include/tf2/tf2/buffer_core.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h:
 
 /usr/include/c++/13/memory:
 
@@ -23676,14 +23569,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/cartesian_point__traits.hpp:
 
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__builder.hpp:
-
-/usr/include/boost/bimap/detail/map_view_base.hpp:
-
-/opt/ros/jazzy/include/tf2/tf2/buffer_core.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h:
-
 /usr/include/boost/mpl/aux_/config/nttp.hpp:
 
 /usr/include/boost/mpl/push_back_fwd.hpp:
@@ -23695,10 +23580,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/mpl/inherit_linearly.hpp:
 
 /usr/include/boost/mp11/detail/mp_void.hpp:
-
-/opt/ros/jazzy/include/rcl/rcl/init_options.h:
-
-/usr/include/boost/preprocessor/config/config.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/twist.hpp:
 
@@ -23723,6 +23604,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/kinematic_constraint.hpp:
 
 /usr/include/boost/mpl/aux_/yes_no.hpp:
+
+/opt/ros/jazzy/include/rclcpp_action/rclcpp_action/client.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.h:
 
 /usr/include/eigen3/Eigen/src/Core/Swap.h:
 
@@ -23759,8 +23644,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/mpl/integral_c_tag.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/Half.h:
-
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/fmt_p.h:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/link_padding__builder.hpp:
 
@@ -23845,6 +23728,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__type_support.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/robot_state.h:
+
+/usr/include/limits.h:
+
+/usr/include/boost/preprocessor/seq/cat.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/orientation_constraint__struct.hpp:
 
@@ -24012,6 +23899,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/c++/13/bits/stl_heap.h:
 
+/opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_matrix.hpp:
+
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/task_description__type_support.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/move_it_error_codes.hpp:
@@ -24028,6 +23917,12 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/joint_limits__builder.hpp:
 
+/usr/include/boost/move/detail/meta_utils_core.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/subscription_wait_set_mask.hpp:
+
+/usr/include/boost/move/utility.hpp:
+
 /usr/include/boost/mpl/aux_/push_front_impl.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
@@ -24043,8 +23938,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/boost/bimap/detail/concept_tags.hpp:
-
-/opt/ros/jazzy/include/rcl_action/rcl_action/visibility_control.h:
 
 /opt/ros/jazzy/include/urdf/urdf/visibility_control.hpp:
 
@@ -24110,10 +24003,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/boost/type_traits/is_const.hpp:
 
-/usr/include/boost/mpl/same_as.hpp:
-
-/usr/include/c++/13/bits/sstream.tcc:
-
 /opt/ros/jazzy/include/rmw/rmw/rmw.h:
 
 /usr/include/boost/type_traits/integral_constant.hpp:
@@ -24131,6 +24020,12 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/config/no_tr1/memory.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point32__struct.h:
+
+/opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_optimal_trajectory_generation.h:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
 
 /usr/include/boost/bimap/detail/is_set_type_of.hpp:
 
@@ -24192,14 +24087,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp:
 
-/usr/include/boost/mpl/if.hpp:
-
-/opt/ros/jazzy/include/rmw/rmw/impl/config.h:
-
-/usr/include/boost/preprocessor/seq/cat.hpp:
-
-/usr/include/limits.h:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/executors/executor_entities_collection.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/incompatible_type.h:
@@ -24233,6 +24120,16 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/x86_64-linux-gnu/bits/unistd-decl.h:
 
 /opt/ros/jazzy/include/moveit_core/moveit/utils/logger.hpp:
+
+/opt/ros/jazzy/include/rcl/rcl/log_level.h:
+
+/opt/ros/jazzy/include/rcutils/rcutils/shared_library.h:
+
+/usr/include/boost/multi_index/detail/access_specifier.hpp:
+
+/usr/include/boost/call_traits.hpp:
+
+/usr/include/c++/13/bits/locale_classes.h:
 
 /opt/ros/jazzy/include/rmw/rmw/dynamic_message_type_support.h:
 
@@ -24294,6 +24191,20 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:
 
+/usr/include/boost/mpl/aux_/fold_impl.hpp:
+
+/usr/include/boost/preprocessor/config/config.hpp:
+
+/opt/ros/jazzy/include/rcl/rcl/init_options.h:
+
+/usr/include/c++/13/variant:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:
+
+/usr/include/boost/range/config.hpp:
+
+/opt/ros/jazzy/include/rcpputils/rcpputils/visibility_control.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/buffers/ring_buffer_implementation.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:
@@ -24311,12 +24222,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__traits.hpp:
 
 /usr/include/boost/mpl/aux_/traits_lambda_spec.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/pipeline_state__builder.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/robot_state__traits.hpp:
-
-/opt/ros/jazzy/include/rmw/rmw/events_statuses/liveliness_changed.h:
 
 /opt/ros/jazzy/include/rcl/rcl/service.h:
 
@@ -24452,10 +24357,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
-
 /usr/include/boost/integer_traits.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/rmw_implementation_specific_publisher_payload.hpp:
@@ -24468,14 +24369,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/rmw/rmw/domain_id.h:
 
-/opt/ros/jazzy/include/rclcpp_action/rclcpp_action/rclcpp_action.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/position_constraint__traits.hpp:
-
-/usr/include/c++/13/cstdint:
-
 /usr/include/boost/bimap/unconstrained_set_of.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:
@@ -24483,6 +24376,14 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/eigen3/Eigen/src/plugins/ReshapedMethods.h:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/accel__traits.hpp:
+
+/opt/ros/jazzy/include/rclcpp_action/rclcpp_action/rclcpp_action.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/position_constraint__traits.hpp:
+
+/usr/include/c++/13/cstdint:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/add_guard_condition_to_rcl_wait_set.hpp:
 
@@ -24507,6 +24408,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/iterator/distance.hpp:
 
 /opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/detail/marker_array__struct.hpp:
+
+/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.h:
 
 /opt/ros/jazzy/include/rcl/rcl/publisher.h:
 
@@ -24545,6 +24448,10 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status_array__traits.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__type_support.hpp:
+
+/opt/ros/jazzy/include/rcl_action/rcl_action/action_server.h:
+
+/usr/include/boost/bimap/support/key_type_by.hpp:
 
 /opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/detail/marker_array__traits.hpp:
 
@@ -24750,14 +24657,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__traits.hpp:
 
-/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/type_description__struct.h:
-
-/opt/ros/jazzy/include/rmw/rmw/get_topic_names_and_types.h:
-
-/usr/include/boost/type_traits/negation.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/subscription_options.hpp:
-
 /opt/ros/jazzy/include/rcl_yaml_param_parser/rcl_yaml_param_parser/visibility_control.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/event.hpp:
@@ -24840,10 +24739,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/boost/random/detail/polynomial.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/network_flow_endpoint.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/detail/node_interfaces_helpers.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h:
@@ -24922,6 +24817,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:
 
+/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/service.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h:
@@ -24935,10 +24832,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
 
 /usr/include/boost/mpl/and.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/subscription_wait_set_mask.hpp:
-
-/usr/include/boost/move/utility.hpp:
 
 /usr/include/boost/mpl/arg.hpp:
 
@@ -25028,8 +24921,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/rcutils/rcutils/types/uint8_array.h:
 
-/usr/include/boost/preprocessor/list/fold_left.hpp:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/static_storage.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/event_callback_type.h:
@@ -25050,9 +24941,23 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/message_lost.h:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:
+/usr/include/boost/mpl/less.hpp:
 
-/usr/include/c++/13/variant:
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/robot_state__traits.hpp:
+
+/opt/ros/jazzy/include/rmw/rmw/events_statuses/liveliness_changed.h:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/pipeline_state__builder.hpp:
+
+/usr/include/boost/mpl/same_as.hpp:
+
+/usr/include/c++/13/bits/sstream.tcc:
+
+/usr/include/boost/mpl/limits/vector.hpp:
+
+/usr/include/c++/13/bits/functional_hash.h:
+
+/usr/include/boost/mpl/logical.hpp:
 
 /usr/include/boost/mpl/long.hpp:
 
@@ -25176,6 +25081,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/boost/mpl/size.hpp:
 
+/opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.h:
+
 /usr/include/boost/mpl/tag.hpp:
 
 /usr/include/boost/mpl/transform.hpp:
@@ -25241,10 +25148,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/mpl/vector/vector10.hpp:
 
 /usr/include/boost/mpl/void.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.h:
-
-/opt/ros/jazzy/include/rclcpp_action/rclcpp_action/client.hpp:
 
 /usr/include/boost/multi_index/detail/adl_swap.hpp:
 
@@ -25396,6 +25299,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/boost/preprocessor/array/elem.hpp:
 
+/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.h:
+
 /usr/include/boost/mpl/aux_/preprocessor/enum.hpp:
 
 /opt/ros/jazzy/include/urdf/urdf/urdfdom_compatibility.h:
@@ -25427,12 +25332,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/preprocessor/control/deduce_d.hpp:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/goal_status.h:
-
-/usr/include/boost/preprocessor/repetition/enum_trailing_params.hpp:
-
-/usr/include/boost/preprocessor/list/fold_right.hpp:
-
-/opt/ros/jazzy/include/rcl_action/rcl_action/action_client.h:
 
 /usr/include/boost/preprocessor/control/detail/limits/while_256.hpp:
 
@@ -25501,6 +25400,12 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /opt/ros/jazzy/include/geometric_shapes/geometric_shapes/shapes.h:
 
 /usr/include/boost/optional/detail/optional_aligned_storage.hpp:
+
+/opt/ros/jazzy/include/rcl_action/rcl_action/action_client.h:
+
+/usr/include/boost/preprocessor/repetition/enum_trailing_params.hpp:
+
+/usr/include/boost/preprocessor/list/fold_right.hpp:
 
 /usr/include/boost/mpl/long_fwd.hpp:
 
@@ -25872,8 +25777,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h:
 
-/usr/include/c++/13/bits/fstream.tcc:
-
 /usr/include/c++/13/bits/invoke.h:
 
 /usr/include/c++/13/bits/list.tcc:
@@ -25893,6 +25796,12 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/c++/13/bits/move.h:
 
 /usr/include/c++/13/bits/node_handle.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h:
+
+/usr/include/boost/mpl/aux_/type_wrapper.hpp:
+
+/usr/include/c++/13/bits/ostream.tcc:
 
 /usr/include/boost/bimap/container_adaptor/detail/non_unique_container_helper.hpp:
 
@@ -25933,6 +25842,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/preprocessor/cat.hpp:
 
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
+
+/opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/utils.h:
 
 /usr/include/c++/13/bits/stl_iterator_base_types.h:
 
@@ -26134,6 +26045,12 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/c++/13/version:
 
+/opt/ros/jazzy/include/rcl_action/rcl_action/goal_handle.h:
+
+/opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/usr/include/ctype.h:
+
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/goal_status_array.hpp:
 
 /usr/include/boost/mpl/aux_/config/msvc_typename.hpp:
@@ -26267,6 +26184,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status_array__struct.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h:
+
+/opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.h:
 
 /usr/include/eigen3/Eigen/SVD:
 
@@ -26418,8 +26337,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/features-time64.h:
 
-/usr/include/fmt/format.h:
-
 /usr/include/libintl.h:
 
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/srv/detail/get_type_description__type_support.h:
@@ -26500,10 +26417,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/x86_64-linux-gnu/bits/select-decl.h:
 
-/usr/include/boost/bimap/support/key_type_by.hpp:
-
-/opt/ros/jazzy/include/rcl_action/rcl_action/action_server.h:
-
 /usr/include/x86_64-linux-gnu/bits/select2.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
@@ -26523,8 +26436,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
-
-/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/scope_guard/scope_guard.hpp:
 
 /usr/include/boost/mpl/aux_/config/compiler.hpp:
 
@@ -26614,10 +26525,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
-/usr/include/c++/13/bits/stl_queue.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h:
-
 /usr/include/eigen3/Eigen/src/Core/Map.h:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/point_stamped.hpp:
@@ -26638,12 +26545,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
 
-/usr/include/boost/mpl/aux_/type_wrapper.hpp:
-
-/usr/include/c++/13/bits/ostream.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h:
-
 /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
@@ -26657,6 +26558,20 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h:
 
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/src/cost_terms.cpp:
+
+/usr/include/boost/mpl/aux_/static_cast.hpp:
+
+/opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_common.h:
+
+/opt/ros/jazzy/include/class_loader/class_loader/visibility_control.hpp:
+
+/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/visibility_control.h:
+
+/opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.h:
+
+/usr/include/boost/mpl/front_inserter.hpp:
+
+/opt/ros/jazzy/include/tf2_msgs/tf2_msgs/srv/detail/frame_graph__traits.hpp:
 
 /opt/ros/jazzy/include/rcl/rcl/allocator.h:
 
@@ -26677,6 +26592,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/mpl/bool.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp:
+
+/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.h:
 
 /usr/include/boost/algorithm/string/sequence_traits.hpp:
 
@@ -26699,8 +26616,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/multi_index/indexed_by.hpp:
 
 /usr/include/c++/13/filesystem:
-
-/usr/include/boost/optional/optional_fwd.hpp:
 
 /usr/include/boost/range/adaptor/argument_fwd.hpp:
 
@@ -26729,6 +26644,14 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/type_traits/is_nothrow_move_constructible.hpp:
 
 /usr/include/boost/utility/compare_pointees.hpp:
+
+/usr/include/c++/13/bits/fstream.tcc:
+
+/usr/include/fmt/format.h:
+
+/usr/include/c++/13/bits/stl_queue.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h:
 
 /usr/include/time.h:
 
@@ -26770,6 +26693,12 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/point.hpp:
 
+/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.h:
+
+/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__traits.hpp:
+
+/opt/ros/jazzy/include/moveit_core/moveit/robot_state/cartesian_interpolator.h:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/typesupport_helpers.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_services_interface_traits.hpp:
@@ -26793,10 +26722,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /opt/ros/jazzy/include/tf2/tf2/visibility_control.h:
 
 /opt/ros/jazzy/include/tf2_msgs/tf2_msgs/srv/detail/frame_graph__struct.hpp:
-
-/usr/include/boost/mpl/front_inserter.hpp:
-
-/opt/ros/jazzy/include/tf2_msgs/tf2_msgs/srv/detail/frame_graph__traits.hpp:
 
 /opt/ros/jazzy/include/tf2_msgs/tf2_msgs/srv/detail/frame_graph__type_support.hpp:
 
@@ -26822,6 +26747,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /usr/include/c++/13/bits/regex.h:
 
+/opt/ros/jazzy/include/moveit_ros_planning/moveit/robot_model_loader/robot_model_loader.h:
+
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__builder.hpp:
 
 /opt/ros/jazzy/include/class_loader/class_loader/class_loader.hpp:
@@ -26841,10 +26768,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/eigen3/Eigen/src/Core/NestByValue.h:
 
 /opt/ros/jazzy/include/class_loader/class_loader/register_macro.hpp:
-
-/opt/ros/jazzy/include/moveit_ros_planning/moveit/robot_model_loader/robot_model_loader.hpp:
-
-/opt/ros/jazzy/include/class_loader/class_loader/visibility_control.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/accel__struct.hpp:
 
@@ -26910,6 +26833,8 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/pipeline_state.hpp:
 
+/opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline/planning_pipeline.h:
+
 /opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline/planning_pipeline.hpp:
 
 /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h:
@@ -26961,8 +26886,6 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/c++/13/bits/regex_compiler.tcc:
 
 /usr/include/c++/13/bits/regex_constants.h:
-
-/opt/ros/jazzy/include/moveit_ros_planning/moveit/kinematics_plugin_loader/kinematics_plugin_loader.hpp:
 
 /usr/include/c++/13/bits/regex_executor.tcc:
 
@@ -27049,15 +26972,3 @@ src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o: /home/darsh/ros2_ws
 /usr/include/boost/config/no_tr1/cmath.hpp:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/srv/detail/cancel_goal__type_support.hpp:
-
-/opt/ros/jazzy/include/moveit_ros_planning/kinematics_parameters.hpp:
-
-/opt/ros/jazzy/include/moveit_ros_planning/moveit/rdf_loader/synchronized_string_parameter.hpp:
-
-/opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
-
-/usr/include/ctype.h:
-
-/opt/ros/jazzy/include/rcl_action/rcl_action/goal_handle.h:
-
-/opt/ros/jazzy/include/rcl_action/rcl_action/types.h:

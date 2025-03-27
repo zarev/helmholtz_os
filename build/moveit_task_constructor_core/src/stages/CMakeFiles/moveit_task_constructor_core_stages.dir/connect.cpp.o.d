@@ -447,6 +447,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/connect.cpp.o: \
  /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
  /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h \
  /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.h \
  /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/storage.h \
@@ -683,6 +684,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/connect.cpp.o: \
  /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/constraints__type_support.hpp \
  /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/merge.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.h \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
  /opt/ros/jazzy/include/srdfdom/srdfdom/model.h /usr/include/tinyxml2.h \
@@ -1060,6 +1062,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/connect.cpp.o: \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/planar_joint_model.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/revolute_joint_model.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_model/prismatic_joint_model.hpp \
+ /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.h \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp \
@@ -1184,6 +1187,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/connect.cpp.o: \
  /opt/ros/jazzy/include/rclcpp/rclcpp/parameter_map.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/parameter_event_handler.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/parameter_service.hpp \
+ /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.h \
  /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_parameterization.hpp \
  /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/cost_terms.h \
  /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/robot_state.h \
@@ -1213,13 +1217,7 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/connect.cpp.o: \
  /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/robot_state__functions.h \
  /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/robot_state__type_support.h \
- /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/core/include/moveit/task_constructor/fmt_p.h \
- /usr/include/fmt/core.h /usr/include/fmt/ostream.h \
- /usr/include/c++/13/fstream \
- /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
- /usr/include/c++/13/bits/fstream.tcc /usr/include/fmt/format.h \
- /usr/include/fmt/core.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h \
  /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_detector_allocator.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_env.hpp \
@@ -1254,4 +1252,11 @@ src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/connect.cpp.o: \
  /opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/detail/octomap_with_pose__type_support.hpp \
  /opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /opt/ros/jazzy/include/moveit_core/moveit_planning_scene_export.h \
- /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_optimal_trajectory_generation.hpp
+ /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_optimal_trajectory_generation.h \
+ /opt/ros/jazzy/include/moveit_core/moveit/trajectory_processing/time_optimal_trajectory_generation.hpp \
+ /usr/include/fmt/core.h /usr/include/fmt/ostream.h \
+ /usr/include/c++/13/fstream \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
+ /usr/include/c++/13/bits/fstream.tcc /usr/include/fmt/format.h \
+ /usr/include/fmt/core.h
