@@ -1,0 +1,39 @@
+[0.123s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/install/joint_state_publisher_gui:/home/darsh/install/joint_state_publisher:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos -DCMAKE_INSTALL_PREFIX=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos
+[1.345s] -- The C compiler identification is GNU 13.3.0
+[3.550s] -- The CXX compiler identification is GNU 13.3.0
+[5.788s] -- Detecting C compiler ABI info
+[7.010s] -- Detecting C compiler ABI info - done
+[7.063s] -- Check for working C compiler: /usr/bin/cc - skipped
+[7.069s] -- Detecting C compile features
+[7.074s] -- Detecting C compile features - done
+[7.391s] -- Detecting CXX compiler ABI info
+[8.375s] -- Detecting CXX compiler ABI info - done
+[8.433s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[8.434s] -- Detecting CXX compile features
+[8.437s] -- Detecting CXX compile features - done
+[8.596s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[9.555s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[10.312s] -- Found generate_parameter_library: 0.4.0 (/opt/ros/jazzy/share/generate_parameter_library/cmake)
+[10.382s] -- Found parameter_traits: 0.4.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[11.522s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[11.643s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[11.805s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[11.982s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[12.682s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[12.714s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[13.267s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[13.963s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[14.387s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[15.739s] -- Found rclcpp_lifecycle: 28.1.6 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[16.069s] -- Found moveit_common: 2.12.2 (/opt/ros/jazzy/share/moveit_common/cmake)
+[16.670s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):
+[16.671s]   ament_package_xml() package name 'ur_mtc_demos' in '/package.xml' does not
+[16.672s]   match current PROJECT_NAME 'mycobot_mtc_demos'.  You must call project()
+[16.672s]   with the same package name before.
+[16.673s] Call Stack (most recent call first):
+[16.674s]   /opt/ros/jazzy/share/moveit_common/cmake/moveit_package.cmake:32 (ament_package_xml)
+[16.677s]   CMakeLists.txt:21 (moveit_package)
+[16.679s] 
+[16.680s] [0m
+[16.681s] -- Configuring incomplete, errors occurred!
+[16.739s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/install/joint_state_publisher_gui:/home/darsh/install/joint_state_publisher:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos -DCMAKE_INSTALL_PREFIX=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos

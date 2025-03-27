@@ -155,6 +155,7 @@
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/inc/ur_transmissions.xacro
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/intel_rgbd_cam_d435.urdf.xacro
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ros2_control_mock_hardware.xacro
+/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur.urdf
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur.urdf.xacro
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur_macro.xacro
 /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur_mocked.urdf.xacro

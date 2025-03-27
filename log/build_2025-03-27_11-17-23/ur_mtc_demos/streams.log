@@ -1,0 +1,24 @@
+[0.074s] Invoking command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos -DCMAKE_INSTALL_PREFIX=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos
+[0.083s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.775s] -- Found generate_parameter_library: 0.4.0 (/opt/ros/jazzy/share/generate_parameter_library/cmake)
+[0.776s] -- Found parameter_traits: 0.4.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[0.915s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.934s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.953s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.983s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.098s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.101s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.359s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.641s] -- Found rclcpp_lifecycle: 28.1.6 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[1.695s] -- Found moveit_common: 2.12.2 (/opt/ros/jazzy/share/moveit_common/cmake)
+[1.867s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):
+[1.867s]   ament_package_xml() package name 'ur_mtc_demos' in '/package.xml' does not
+[1.867s]   match current PROJECT_NAME 'mycobot_mtc_demos'.  You must call project()
+[1.868s]   with the same package name before.
+[1.868s] Call Stack (most recent call first):
+[1.868s]   /opt/ros/jazzy/share/moveit_common/cmake/moveit_package.cmake:32 (ament_package_xml)
+[1.868s]   CMakeLists.txt:21 (moveit_package)
+[1.868s] 
+[1.869s] [0m
+[1.869s] -- Configuring incomplete, errors occurred!
+[1.883s] Invoked command in '/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos -DCMAKE_INSTALL_PREFIX=/home/darsh/ros2_ws/src/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos
