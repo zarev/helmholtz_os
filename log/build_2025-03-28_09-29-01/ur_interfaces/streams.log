@@ -1,0 +1,20 @@
+[0.050s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces -- -j16 -l16
+[0.143s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces -- -j16 -l16
+[0.146s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces
+[0.318s] -- Install configuration: ""
+[0.319s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ament_index/resource_index/package_run_dependencies/ur_interfaces
+[0.335s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ament_index/resource_index/parent_prefix_path/ur_interfaces
+[0.335s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/environment/ament_prefix_path.sh
+[0.336s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/environment/ament_prefix_path.dsv
+[0.336s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/environment/path.sh
+[0.359s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/environment/path.dsv
+[0.359s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/local_setup.bash
+[0.360s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/local_setup.sh
+[0.360s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/local_setup.zsh
+[0.361s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/local_setup.dsv
+[0.361s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.dsv
+[0.362s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ament_index/resource_index/packages/ur_interfaces
+[0.362s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ur_interfacesConfig.cmake
+[0.362s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ur_interfacesConfig-version.cmake
+[0.363s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.xml
+[0.472s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces
