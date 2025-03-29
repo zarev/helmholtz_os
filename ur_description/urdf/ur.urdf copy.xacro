@@ -44,7 +44,7 @@
   use_gazebo="$(arg use_gazebo)"/>
 
 <!-- UR-Specific ROS 2 Control -->
-<xacro:include filename="$(find ur_description)/urdf/ur_280_ros2_control.urdf.xacro" />
+<xacro:include filename="$(find ur_description)/urdf/ur.ros2_control.xacro" />
 <xacro:ur_ros2_control
   prefix="$(arg prefix)"
   flange_link="$(arg flange_link)"

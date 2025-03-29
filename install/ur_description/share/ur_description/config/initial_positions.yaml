@@ -6,3 +6,10 @@ initial_positions:
   wrist_1_joint: 0
   wrist_2_joint: 0
   wrist_3_joint: 0
+  gripper_joint: 0
+  left_outer_knuckle_joint: 0
+  left_inner_knuckle_joint: 0
+  left_inner_finger_joint: 0
+  right_outer_knuckle_joint: 0
+  right_inner_knuckle_joint: 0
+  right_inner_finger_joint: 0

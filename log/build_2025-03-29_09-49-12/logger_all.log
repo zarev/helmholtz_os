@@ -1,0 +1,514 @@
+[0.191s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.191s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f1805a86060>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f1805a85eb0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f1805a85eb0>>, mixin_verb=('build',))
+[0.241s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.242s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/darsh/UR3_ROS2_PICK_AND_PLACE'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['colcon_pkg']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'colcon_pkg'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['ros']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'ros'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['cmake', 'python']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'cmake'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'python'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['python_setup_py']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'python_setup_py'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'ignore_ament_install'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['colcon_pkg']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'colcon_pkg'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['colcon_meta']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'colcon_meta'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['ros']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'ros'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['cmake', 'python']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'cmake'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'python'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['python_setup_py']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'python_setup_py'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extensions ['ignore', 'ignore_ament_install']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extension 'ignore'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extension 'ignore_ament_install'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extensions ['colcon_pkg']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extension 'colcon_pkg'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extensions ['colcon_meta']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extension 'colcon_meta'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extensions ['ros']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extension 'ros'
+[0.278s] DEBUG:colcon.colcon_core.package_identification:Package 'joint_state_publisher/joint_state_publisher' with type 'ros.ament_python' and name 'joint_state_publisher'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extensions ['ignore', 'ignore_ament_install']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extension 'ignore'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extension 'ignore_ament_install'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extensions ['colcon_pkg']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extension 'colcon_pkg'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extensions ['colcon_meta']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extension 'colcon_meta'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extensions ['ros']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extension 'ros'
+[0.280s] DEBUG:colcon.colcon_core.package_identification:Package 'joint_state_publisher/joint_state_publisher_gui' with type 'ros.ament_python' and name 'joint_state_publisher_gui'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extension 'ignore'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extension 'ignore_ament_install'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extensions ['colcon_pkg']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extension 'colcon_pkg'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extensions ['colcon_meta']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extension 'colcon_meta'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extensions ['ros']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(movit_config) by extension 'ros'
+[0.281s] DEBUG:colcon.colcon_core.package_identification:Package 'movit_config' with type 'ros.ament_cmake' and name 'movit_config'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extension 'ignore_ament_install'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(robotiq_2f_85_gripper_visualization) by extension 'ros'
+[0.283s] DEBUG:colcon.colcon_core.package_identification:Package 'robotiq_2f_85_gripper_visualization' with type 'ros.ament_cmake' and name 'robotiq_2f_85_gripper_visualization'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extension 'ignore_ament_install'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extensions ['colcon_pkg']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extension 'colcon_pkg'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extensions ['colcon_meta']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extension 'colcon_meta'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extensions ['ros']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ur_description) by extension 'ros'
+[0.284s] DEBUG:colcon.colcon_core.package_identification:Package 'ur_description' with type 'ros.ament_cmake' and name 'ur_description'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extension 'ignore'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extension 'ignore_ament_install'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extensions ['colcon_pkg']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extension 'colcon_pkg'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extensions ['colcon_meta']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extension 'colcon_meta'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extensions ['ros']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(ur_gazebo) by extension 'ros'
+[0.286s] DEBUG:colcon.colcon_core.package_identification:Package 'ur_gazebo' with type 'ros.ament_cmake' and name 'ur_gazebo'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extension 'ignore'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extension 'ignore_ament_install'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extensions ['colcon_pkg']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extension 'colcon_pkg'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extensions ['colcon_meta']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extension 'colcon_meta'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extensions ['ros']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(ur_interfaces) by extension 'ros'
+[0.287s] DEBUG:colcon.colcon_core.package_identification:Package 'ur_interfaces' with type 'ros.ament_cmake' and name 'ur_interfaces'
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.310s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/darsh/UR3_ROS2_PICK_AND_PLACE/install
+[0.310s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/darsh/ros2_ws/install
+[0.313s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 419 installed packages in /opt/ros/jazzy
+[0.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.379s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'joint_state_publisher_gui' is in: /home/darsh/ros2_ws/install/joint_state_publisher_gui, /opt/ros/jazzy
+	'joint_state_publisher' is in: /home/darsh/ros2_ws/install/joint_state_publisher, /opt/ros/jazzy
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding joint_state_publisher joint_state_publisher_gui
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.381s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_args' from command line to 'None'
+[0.381s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_target' from command line to 'None'
+[0.381s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.381s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[0.381s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[0.381s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[0.381s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[0.381s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[0.381s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.381s] DEBUG:colcon.colcon_core.verb:Building package 'joint_state_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher', 'merge_install': False, 'path': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/joint_state_publisher/joint_state_publisher', 'symlink_install': False, 'test_result_base': None}
+[0.381s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.382s] DEBUG:colcon.colcon_core.verb:Building package 'ur_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo', 'merge_install': False, 'path': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'ur_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.383s] DEBUG:colcon.colcon_core.verb:Building package 'ur_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces', 'merge_install': False, 'path': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'cmake_args' from command line to 'None'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'cmake_target' from command line to 'None'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'cmake_clean_cache' from command line to 'False'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'cmake_clean_first' from command line to 'False'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'cmake_force_configure' from command line to 'False'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'ament_cmake_args' from command line to 'None'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'catkin_cmake_args' from command line to 'None'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.383s] DEBUG:colcon.colcon_core.verb:Building package 'joint_state_publisher_gui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher_gui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui', 'merge_install': False, 'path': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/joint_state_publisher/joint_state_publisher_gui', 'symlink_install': False, 'test_result_base': None}
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'cmake_args' from command line to 'None'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'cmake_target' from command line to 'None'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'cmake_clean_first' from command line to 'False'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'cmake_force_configure' from command line to 'False'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'ament_cmake_args' from command line to 'None'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'robotiq_2f_85_gripper_visualization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.384s] DEBUG:colcon.colcon_core.verb:Building package 'robotiq_2f_85_gripper_visualization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization', 'merge_install': False, 'path': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/robotiq_2f_85_gripper_visualization', 'symlink_install': False, 'test_result_base': None}
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_args' from command line to 'None'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_target' from command line to 'None'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.385s] DEBUG:colcon.colcon_core.verb:Building package 'ur_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description', 'merge_install': False, 'path': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_description', 'symlink_install': False, 'test_result_base': None}
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'cmake_args' from command line to 'None'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'cmake_target' from command line to 'None'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'cmake_clean_first' from command line to 'False'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'cmake_force_configure' from command line to 'False'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'ament_cmake_args' from command line to 'None'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'movit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.385s] DEBUG:colcon.colcon_core.verb:Building package 'movit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/movit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config', 'merge_install': False, 'path': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/movit_config', 'symlink_install': False, 'test_result_base': None}
+[0.385s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.387s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.387s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/joint_state_publisher/joint_state_publisher' with build type 'ament_python'
+[0.388s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_state_publisher', 'ament_prefix_path')
+[0.392s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.393s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/share/joint_state_publisher/hook/ament_prefix_path.ps1'
+[0.394s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/share/joint_state_publisher/hook/ament_prefix_path.dsv'
+[0.395s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/share/joint_state_publisher/hook/ament_prefix_path.sh'
+[0.396s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.396s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.404s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_gazebo' with build type 'ament_cmake'
+[0.404s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_gazebo'
+[0.404s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.405s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.412s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_interfaces' with build type 'ament_cmake'
+[0.412s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_interfaces'
+[0.413s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.413s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.697s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/joint_state_publisher/joint_state_publisher'
+[0.697s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.697s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.706s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo -- -j16 -l16
+[0.712s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces -- -j16 -l16
+[0.756s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo -- -j16 -l16
+[0.767s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo
+[0.770s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces -- -j16 -l16
+[0.773s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces
+[0.796s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_interfaces)
+[0.838s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces' for CMake module files
+[0.842s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces' for CMake config files
+[0.847s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_interfaces', 'cmake_prefix_path')
+[0.847s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/hook/cmake_prefix_path.ps1'
+[0.851s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/hook/cmake_prefix_path.dsv'
+[0.857s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/hook/cmake_prefix_path.sh'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/bin'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/pkgconfig/ur_interfaces.pc'
+[0.859s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages'
+[0.859s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/bin'
+[0.860s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.ps1'
+[0.864s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.dsv'
+[0.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.sh'
+[0.868s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.bash'
+[0.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.zsh'
+[0.872s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/colcon-core/packages/ur_interfaces)
+[0.873s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_interfaces)
+[0.874s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces' for CMake module files
+[0.877s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces' for CMake config files
+[0.885s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_interfaces', 'cmake_prefix_path')
+[0.885s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/hook/cmake_prefix_path.ps1'
+[0.887s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/hook/cmake_prefix_path.dsv'
+[0.890s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/hook/cmake_prefix_path.sh'
+[0.892s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/bin'
+[0.892s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/pkgconfig/ur_interfaces.pc'
+[0.893s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages'
+[0.894s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/bin'
+[0.895s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.ps1'
+[0.902s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.dsv'
+[0.906s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.sh'
+[0.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.bash'
+[0.912s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.zsh'
+[0.915s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/colcon-core/packages/ur_interfaces)
+[0.917s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_gazebo)
+[0.917s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo' for CMake module files
+[0.919s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo' for CMake config files
+[0.926s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_gazebo', 'cmake_prefix_path')
+[0.927s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/hook/cmake_prefix_path.ps1'
+[0.929s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/hook/cmake_prefix_path.dsv'
+[0.931s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/hook/cmake_prefix_path.sh'
+[0.934s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/bin'
+[0.935s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/lib/pkgconfig/ur_gazebo.pc'
+[0.936s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/lib/python3.12/site-packages'
+[0.936s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/bin'
+[0.937s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.ps1'
+[0.940s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.dsv'
+[0.944s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.sh'
+[0.945s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.bash'
+[0.947s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.zsh'
+[0.948s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/colcon-core/packages/ur_gazebo)
+[0.957s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_gazebo)
+[0.957s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo' for CMake module files
+[0.959s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo' for CMake config files
+[0.970s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces
+[0.971s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_gazebo', 'cmake_prefix_path')
+[0.971s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/hook/cmake_prefix_path.ps1'
+[0.976s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/hook/cmake_prefix_path.dsv'
+[0.977s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/hook/cmake_prefix_path.sh'
+[0.979s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/bin'
+[0.980s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/lib/pkgconfig/ur_gazebo.pc'
+[0.980s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/lib/python3.12/site-packages'
+[0.981s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/bin'
+[0.982s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.ps1'
+[0.984s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.dsv'
+[0.988s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.sh'
+[0.992s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.bash'
+[0.997s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/ur_gazebo/package.zsh'
+[0.998s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo/share/colcon-core/packages/ur_gazebo)
+[1.061s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo
+[1.955s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/joint_state_publisher/joint_state_publisher': PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joint_state_publisher build --build-base /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher/build install --record /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher/install.log --single-version-externally-managed install_data
+[2.655s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher' for CMake module files
+[2.656s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher' for CMake config files
+[2.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/joint_state_publisher/joint_state_publisher' returned '0': PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joint_state_publisher build --build-base /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher/build install --record /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher/install.log --single-version-externally-managed install_data
+[2.657s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib'
+[2.657s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/bin'
+[2.657s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/pkgconfig/joint_state_publisher.pc'
+[2.657s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages'
+[2.658s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_state_publisher', 'pythonpath')
+[2.658s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/share/joint_state_publisher/hook/pythonpath.ps1'
+[2.658s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/share/joint_state_publisher/hook/pythonpath.dsv'
+[2.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/share/joint_state_publisher/hook/pythonpath.sh'
+[2.659s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/bin'
+[2.659s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(joint_state_publisher)
+[2.660s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/share/joint_state_publisher/package.ps1'
+[2.660s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/share/joint_state_publisher/package.dsv'
+[2.661s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/share/joint_state_publisher/package.sh'
+[2.661s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/share/joint_state_publisher/package.bash'
+[2.661s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/share/joint_state_publisher/package.zsh'
+[2.662s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/share/colcon-core/packages/joint_state_publisher)
+[2.663s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/joint_state_publisher/joint_state_publisher_gui' with build type 'ament_python'
+[2.663s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_state_publisher_gui', 'ament_prefix_path')
+[2.663s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/share/joint_state_publisher_gui/hook/ament_prefix_path.ps1'
+[2.664s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/share/joint_state_publisher_gui/hook/ament_prefix_path.dsv'
+[2.665s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/share/joint_state_publisher_gui/hook/ament_prefix_path.sh'
+[2.665s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.665s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.000s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/joint_state_publisher/joint_state_publisher_gui'
+[3.000s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.000s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.784s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/joint_state_publisher/joint_state_publisher_gui': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joint_state_publisher_gui build --build-base /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher_gui/build install --record /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher_gui/install.log --single-version-externally-managed install_data
+[4.493s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui' for CMake module files
+[4.494s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui' for CMake config files
+[4.495s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/joint_state_publisher/joint_state_publisher_gui' returned '0': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joint_state_publisher_gui build --build-base /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher_gui/build install --record /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/joint_state_publisher_gui/install.log --single-version-externally-managed install_data
+[4.495s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib'
+[4.495s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/bin'
+[4.496s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/pkgconfig/joint_state_publisher_gui.pc'
+[4.496s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages'
+[4.496s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_state_publisher_gui', 'pythonpath')
+[4.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/share/joint_state_publisher_gui/hook/pythonpath.ps1'
+[4.497s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/share/joint_state_publisher_gui/hook/pythonpath.dsv'
+[4.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/share/joint_state_publisher_gui/hook/pythonpath.sh'
+[4.498s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/bin'
+[4.498s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(joint_state_publisher_gui)
+[4.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/share/joint_state_publisher_gui/package.ps1'
+[4.499s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/share/joint_state_publisher_gui/package.dsv'
+[4.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/share/joint_state_publisher_gui/package.sh'
+[4.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/share/joint_state_publisher_gui/package.bash'
+[4.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/share/joint_state_publisher_gui/package.zsh'
+[4.501s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/share/colcon-core/packages/joint_state_publisher_gui)
+[4.502s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_description' with build type 'ament_cmake'
+[4.503s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_description'
+[4.503s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.503s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.509s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/robotiq_2f_85_gripper_visualization' with build type 'ament_cmake'
+[4.509s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/robotiq_2f_85_gripper_visualization'
+[4.510s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.510s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.635s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description -- -j16 -l16
+[4.639s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization -- -j16 -l16
+[4.677s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description' returned '0': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description -- -j16 -l16
+[4.677s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description
+[4.680s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization' returned '0': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization -- -j16 -l16
+[4.682s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization
+[4.698s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robotiq_2f_85_gripper_visualization)
+[4.698s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization' for CMake module files
+[4.701s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization' for CMake config files
+[4.717s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_2f_85_gripper_visualization', 'cmake_prefix_path')
+[4.717s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/hook/cmake_prefix_path.ps1'
+[4.720s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/hook/cmake_prefix_path.dsv'
+[4.722s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/hook/cmake_prefix_path.sh'
+[4.726s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/bin'
+[4.726s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/lib/pkgconfig/robotiq_2f_85_gripper_visualization.pc'
+[4.727s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/lib/python3.12/site-packages'
+[4.727s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/bin'
+[4.727s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.ps1'
+[4.728s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.dsv'
+[4.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.sh'
+[4.733s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.bash'
+[4.737s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.zsh'
+[4.739s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/colcon-core/packages/robotiq_2f_85_gripper_visualization)
+[4.740s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robotiq_2f_85_gripper_visualization)
+[4.740s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization' for CMake module files
+[4.742s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization' for CMake config files
+[4.750s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_2f_85_gripper_visualization', 'cmake_prefix_path')
+[4.751s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/hook/cmake_prefix_path.ps1'
+[4.753s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/hook/cmake_prefix_path.dsv'
+[4.757s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/hook/cmake_prefix_path.sh'
+[4.760s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/bin'
+[4.760s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/lib/pkgconfig/robotiq_2f_85_gripper_visualization.pc'
+[4.761s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/lib/python3.12/site-packages'
+[4.761s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/bin'
+[4.761s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.ps1'
+[4.764s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.dsv'
+[4.766s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.sh'
+[4.767s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.bash'
+[4.772s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.zsh'
+[4.775s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/colcon-core/packages/robotiq_2f_85_gripper_visualization)
+[4.784s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_description)
+[4.784s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description' for CMake module files
+[4.789s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization' returned '0': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization
+[4.790s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description' for CMake config files
+[4.791s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description' returned '0': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description
+[4.791s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_description', 'cmake_prefix_path')
+[4.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/hook/cmake_prefix_path.ps1'
+[4.792s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/hook/cmake_prefix_path.dsv'
+[4.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/hook/cmake_prefix_path.sh'
+[4.793s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/bin'
+[4.793s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/lib/pkgconfig/ur_description.pc'
+[4.793s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/lib/python3.12/site-packages'
+[4.794s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/bin'
+[4.794s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.ps1'
+[4.794s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.dsv'
+[4.795s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.sh'
+[4.795s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.bash'
+[4.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.zsh'
+[4.796s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/colcon-core/packages/ur_description)
+[4.796s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_description)
+[4.797s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description' for CMake module files
+[4.797s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description' for CMake config files
+[4.797s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_description', 'cmake_prefix_path')
+[4.798s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/hook/cmake_prefix_path.ps1'
+[4.798s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/hook/cmake_prefix_path.dsv'
+[4.799s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/hook/cmake_prefix_path.sh'
+[4.800s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/bin'
+[4.800s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/lib/pkgconfig/ur_description.pc'
+[4.800s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/lib/python3.12/site-packages'
+[4.800s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/bin'
+[4.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.ps1'
+[4.801s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.dsv'
+[4.802s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.sh'
+[4.803s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.bash'
+[4.803s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.zsh'
+[4.804s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/colcon-core/packages/ur_description)
+[4.804s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/movit_config' with build type 'ament_cmake'
+[4.805s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/movit_config'
+[4.805s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.806s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.994s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/movit_config': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/home/darsh/ros2_ws/install/ur_interfaces:/home/darsh/ros2_ws/install/ur_gazebo:/home/darsh/ros2_ws/install/movit_config:/home/darsh/ros2_ws/install/ur_description:/home/darsh/ros2_ws/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/movit_config -- -j16 -l16
+[5.033s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/movit_config' returned '0': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/home/darsh/ros2_ws/install/ur_interfaces:/home/darsh/ros2_ws/install/ur_gazebo:/home/darsh/ros2_ws/install/movit_config:/home/darsh/ros2_ws/install/ur_description:/home/darsh/ros2_ws/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/movit_config -- -j16 -l16
+[5.035s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/movit_config': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/home/darsh/ros2_ws/install/ur_interfaces:/home/darsh/ros2_ws/install/ur_gazebo:/home/darsh/ros2_ws/install/movit_config:/home/darsh/ros2_ws/install/ur_description:/home/darsh/ros2_ws/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/movit_config
+[5.051s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movit_config)
+[5.051s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config' for CMake module files
+[5.055s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/movit_config' returned '0': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/home/darsh/ros2_ws/install/ur_interfaces:/home/darsh/ros2_ws/install/ur_gazebo:/home/darsh/ros2_ws/install/movit_config:/home/darsh/ros2_ws/install/ur_description:/home/darsh/ros2_ws/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/darsh/ros2_ws/install/joint_state_publisher_gui:/home/darsh/ros2_ws/install/joint_state_publisher:/opt/ros/jazzy PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher_gui/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/movit_config
+[5.055s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config' for CMake config files
+[5.056s] Level 1:colcon.colcon_core.shell:create_environment_hook('movit_config', 'cmake_prefix_path')
+[5.056s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/hook/cmake_prefix_path.ps1'
+[5.057s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/hook/cmake_prefix_path.dsv'
+[5.057s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/hook/cmake_prefix_path.sh'
+[5.058s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/bin'
+[5.058s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/lib/pkgconfig/movit_config.pc'
+[5.058s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/lib/python3.12/site-packages'
+[5.058s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/bin'
+[5.059s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.ps1'
+[5.059s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.dsv'
+[5.060s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.sh'
+[5.060s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.bash'
+[5.061s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.zsh'
+[5.061s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/colcon-core/packages/movit_config)
+[5.061s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movit_config)
+[5.062s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config' for CMake module files
+[5.062s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config' for CMake config files
+[5.062s] Level 1:colcon.colcon_core.shell:create_environment_hook('movit_config', 'cmake_prefix_path')
+[5.063s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/hook/cmake_prefix_path.ps1'
+[5.063s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/hook/cmake_prefix_path.dsv'
+[5.064s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/hook/cmake_prefix_path.sh'
+[5.064s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/bin'
+[5.064s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/lib/pkgconfig/movit_config.pc'
+[5.065s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/lib/python3.12/site-packages'
+[5.065s] Level 1:colcon.colcon_core.environment:checking '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/bin'
+[5.065s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.ps1'
+[5.066s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.dsv'
+[5.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.sh'
+[5.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.bash'
+[5.068s] INFO:colcon.colcon_core.shell:Creating package script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.zsh'
+[5.068s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/colcon-core/packages/movit_config)
+[5.069s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.070s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.070s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.070s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.113s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[5.113s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.113s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.113s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.113s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NoServer: Failed to connect to socket /run/user/1000/bus: Connection refused
+[5.113s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.114s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/local_setup.ps1'
+[5.115s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/_local_setup_util_ps1.py'
+[5.116s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/setup.ps1'
+[5.117s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/local_setup.sh'
+[5.118s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/_local_setup_util_sh.py'
+[5.118s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/setup.sh'
+[5.120s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/local_setup.bash'
+[5.121s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/setup.bash'
+[5.122s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/local_setup.zsh'
+[5.122s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/setup.zsh'
