@@ -1,2 +1,1 @@
-source;share/movit_config/environment/ament_prefix_path.sh
-source;share/movit_config/environment/path.sh
+/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/movit_config/ament_cmake_environment_hooks/local_setup.dsv

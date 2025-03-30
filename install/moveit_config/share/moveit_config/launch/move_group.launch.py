@@ -1,0 +1,1 @@
+/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_config/launch/move_group.launch.py

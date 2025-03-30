@@ -1,0 +1,44 @@
+-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/movit_config
+-- Install configuration: ""
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/ament_index/resource_index/package_run_dependencies/movit_config
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/ament_index/resource_index/parent_prefix_path/movit_config
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/environment/ament_prefix_path.sh
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/environment/path.sh
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/environment/path.dsv
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/local_setup.bash
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/local_setup.sh
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/local_setup.zsh
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/local_setup.dsv
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.dsv
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/ament_index/resource_index/packages/movit_config
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/cmake/movit_configConfig.cmake
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/cmake/movit_configConfig-version.cmake
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/package.xml
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/moveit_rviz.launch.py
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/static_virtual_joint_tfs.launch.py
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/demo.launch.py
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/warehouse_db.launch.py
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/setup_assistant.launch.py
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/rsp.launch.py
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/load_ros2_controllers.launch.py
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/move_group.launch.py
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/launch/spawn_controllers.launch.py
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config
+-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ur.urdf
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/moveit.rviz
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/initial_positions.yaml
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ur.ros2_control.xacro
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/kinematics.yaml
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/joint_limits.yaml
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ros2_controllers.yaml
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ur.srdf
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/moveit_controllers.yaml
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/pilz_cartesian_limits.yaml
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/ur.urdf.xacro
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/config/sensors_3d.yaml
+-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/movit_config/share/movit_config/.setup_assistant

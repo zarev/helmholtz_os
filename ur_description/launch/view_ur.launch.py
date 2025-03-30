@@ -18,7 +18,7 @@ from moveit_configs_utils import MoveItConfigsBuilder
 def generate_launch_description():
     # Package Configuration
     ur_description_pkg = "ur_description"
-    moveit_config_pkg = "movit_config"
+    moveit_config_pkg = "moveit_config"
 
     # Get package share directories
     ur_description_share = FindPackageShare(package=ur_description_pkg).find(ur_description_pkg)
@@ -39,7 +39,7 @@ def generate_launch_description():
     declared_arguments = [
         DeclareLaunchArgument(
             "ur_type",
-            default_value="ur5",
+            default_value="ur3",
             description="Type/series of UR robot",
             choices=["ur3", "ur3e", "ur5", "ur5e", "ur10", "ur10e", "ur16e", "ur20", "ur30"],
         ),

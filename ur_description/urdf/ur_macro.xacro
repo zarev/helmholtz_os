@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
   <xacro:include filename="$(find ur_description)/urdf/inc/ur_common.xacro" />
+   <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_85_model_macro.xacro"/>
 
   <xacro:macro name="ur_robot" params="
     name
@@ -346,18 +347,20 @@
   <child link="${tf_prefix}tool0"/>
   </joint>
 
-<!-- Include the gripper Xacro file -->
-    <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_85_model_macro.xacro"/>
-<xacro:robotiq_arg2f_85 prefix="${tf_prefix}"/>  <!-- Pass tf_prefix to the gripper -->
+
+  <!-- Include the gripper Xacro file  -->
+<xacro:robotiq_arg2f_85 prefix="$(arg tf_prefix)"/>
 
 <!-- Attach the gripper to tool0 -->
+<!-- Attach gripper to wrist_3_link with corrected rotation -->
 <joint name="${tf_prefix}gripper_joint" type="fixed">
   <parent link="${tf_prefix}wrist_3_link"/>
-  <child link="${tf_prefix}robotiq_arg2f_base_link"/>  <!-- Add tf_prefix to child -->
-  <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Adjust origin as needed -->
+  <child link="${tf_prefix}robotiq_arg2f_base_link"/> 
+  <origin xyz="0 0 0.005" rpy="0 0 ${pi}"/> 
 </joint>
 <!-- Define the gripper with a meaningful prefix -->
 
-
   </xacro:macro>
 </robot>
+  
+

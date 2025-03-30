@@ -1,0 +1,41 @@
+-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (0.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_base_link.stl
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_inner_finger.dae
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_inner_knuckle.dae
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_outer_finger.dae
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_outer_knuckle.dae
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_base_link.stl
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_base_link.dae
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_inner_finger.dae
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_inner_knuckle.dae
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_outer_finger.dae
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_outer_knuckle.dae
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_pad.dae
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_gripper_coupling.stl
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/urdf/robotiq_arg2f.xacro
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/urdf/robotiq_arg2f_85_model.xacro
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/urdf/robotiq_arg2f_85_model_macro.xacro
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/urdf/robotiq_arg2f_transmission.xacro
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/launch/test_2f_85_model.launch.py
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/visualize.rviz
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/ament_index/resource_index/package_run_dependencies/robotiq_2f_85_gripper_visualization
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/ament_index/resource_index/parent_prefix_path/robotiq_2f_85_gripper_visualization
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/environment/ament_prefix_path.sh
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/environment/ament_prefix_path.dsv
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/environment/path.sh
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/environment/path.dsv
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/local_setup.bash
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/local_setup.sh
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/local_setup.zsh
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/local_setup.dsv
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.dsv
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/ament_index/resource_index/packages/robotiq_2f_85_gripper_visualization
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/cmake/robotiq_2f_85_gripper_visualizationConfig.cmake
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/cmake/robotiq_2f_85_gripper_visualizationConfig-version.cmake
+-- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization/share/robotiq_2f_85_gripper_visualization/package.xml
