@@ -1,1 +1,0 @@
-/home/darsh/UR3_ROS2_PICK_AND_PLACE/robotiq_2f_85_gripper_visualization/launch/test_2f_85_model.launch.py

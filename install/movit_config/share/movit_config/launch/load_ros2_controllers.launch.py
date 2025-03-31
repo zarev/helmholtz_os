@@ -1,1 +1,0 @@
-/home/darsh/UR3_ROS2_PICK_AND_PLACE/movit_config/launch/load_ros2_controllers.launch.py
