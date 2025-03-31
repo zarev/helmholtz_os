@@ -354,10 +354,11 @@
 <!-- Attach the gripper to tool0 -->
 <!-- Attach gripper to wrist_3_link with corrected rotation -->
 <joint name="${tf_prefix}gripper_joint" type="fixed">
-  <parent link="${tf_prefix}wrist_3_link"/>
+  <parent link="${tf_prefix}tool0"/>
   <child link="${tf_prefix}robotiq_arg2f_base_link"/> 
-  <origin xyz="0 0 0.005" rpy="0 0 ${pi}"/> 
+  <origin xyz="0 0 0.005" rpy="0 0 0"/> 
 </joint>
+
 <!-- Define the gripper with a meaningful prefix -->
 
   </xacro:macro>

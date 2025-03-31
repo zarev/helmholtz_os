@@ -28,6 +28,7 @@
 /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/config/moveit_controllers.yaml
 /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/config/pilz_cartesian_limits.yaml
 /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/config/ros2_controllers.yaml
+/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/config/sensors_3d.yaml
 /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/config/ur.ros2_control.xacro
 /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/config/ur.srdf
 /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/config/ur.urdf

@@ -1,0 +1,37 @@
+[0.054s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo
+[0.242s] -- The C compiler identification is GNU 13.3.0
+[1.077s] -- The CXX compiler identification is GNU 13.3.0
+[1.734s] -- Detecting C compiler ABI info
+[2.090s] -- Detecting C compiler ABI info - done
+[2.113s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.113s] -- Detecting C compile features
+[2.114s] -- Detecting C compile features - done
+[2.236s] -- Detecting CXX compiler ABI info
+[2.834s] -- Detecting CXX compiler ABI info - done
+[2.908s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.911s] -- Detecting CXX compile features
+[2.913s] -- Detecting CXX compile features - done
+[2.934s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.872s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.343s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[4.641s] -- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+[5.653s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[5.823s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[6.002s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.174s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.820s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[6.841s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[7.328s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[7.735s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[7.892s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[8.244s] -- Found trajectory_msgs: 5.3.5 (/opt/ros/jazzy/share/trajectory_msgs/cmake)
+[8.381s] -- Found xacro: 2.0.11 (/opt/ros/jazzy/share/xacro/cmake)
+[8.389s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[8.666s] -- Added test 'flake8' to check Python code syntax and style conventions
+[8.666s] -- Configured 'flake8' exclude dirs and/or files: 
+[8.681s] -- Added test 'lint_cmake' to check CMake code style
+[8.689s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[8.745s] -- Added test 'xmllint' to check XML markup files
+[8.749s] -- Configuring done (8.7s)
+[8.758s] -- Generating done (0.0s)
+[8.762s] -- Build files have been written to: /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_gazebo

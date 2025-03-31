@@ -1,0 +1,205 @@
+[0.053s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description
+[0.257s] -- The C compiler identification is GNU 13.3.0
+[0.982s] -- The CXX compiler identification is GNU 13.3.0
+[1.685s] -- Detecting C compiler ABI info
+[2.080s] -- Detecting C compiler ABI info - done
+[2.102s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.103s] -- Detecting C compile features
+[2.104s] -- Detecting C compile features - done
+[2.260s] -- Detecting CXX compiler ABI info
+[2.775s] -- Detecting CXX compiler ABI info - done
+[2.848s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.850s] -- Detecting CXX compile features
+[2.853s] -- Detecting CXX compile features - done
+[2.877s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.782s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.259s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[4.539s] -- Found ament_cmake_pytest: 2.5.3 (/opt/ros/jazzy/share/ament_cmake_pytest/cmake)
+[5.132s] -- Configuring done (5.1s)
+[5.152s] -- Generating done (0.0s)
+[5.161s] -- Build files have been written to: /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description
+[5.189s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description
+[5.200s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description -- -j16 -l16
+[5.385s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description -- -j16 -l16
+[5.430s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description
+[5.471s] -- Install configuration: ""
+[5.473s] -- Execute custom install script
+[5.481s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/initial_positions.yaml
+[5.534s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10/default_kinematics.yaml
+[5.570s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10/joint_limits.yaml
+[5.613s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10/physical_parameters.yaml
+[5.654s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10/visual_parameters.yaml
+[5.695s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10e/default_kinematics.yaml
+[5.758s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10e/joint_limits.yaml
+[5.829s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10e/physical_parameters.yaml
+[5.897s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10e/visual_parameters.yaml
+[5.944s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur16e/default_kinematics.yaml
+[5.987s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur16e/joint_limits.yaml
+[6.038s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur16e/physical_parameters.yaml
+[6.078s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur16e/visual_parameters.yaml
+[6.131s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur20/default_kinematics.yaml
+[6.175s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur20/joint_limits.yaml
+[6.217s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur20/physical_parameters.yaml
+[6.254s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur20/visual_parameters.yaml
+[6.301s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3/default_kinematics.yaml
+[6.344s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3/joint_limits.yaml
+[6.386s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3/physical_parameters.yaml
+[6.424s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3/visual_parameters.yaml
+[6.469s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur30/default_kinematics.yaml
+[6.509s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur30/joint_limits.yaml
+[6.549s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur30/physical_parameters.yaml
+[6.594s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur30/visual_parameters.yaml
+[6.631s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3e/default_kinematics.yaml
+[6.671s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3e/joint_limits.yaml
+[6.713s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3e/physical_parameters.yaml
+[6.753s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3e/visual_parameters.yaml
+[6.794s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5/default_kinematics.yaml
+[6.838s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5/joint_limits.yaml
+[6.879s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5/physical_parameters.yaml
+[6.926s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5/visual_parameters.yaml
+[6.980s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5e/default_kinematics.yaml
+[7.023s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5e/joint_limits.yaml
+[7.068s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5e/physical_parameters.yaml
+[7.108s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5e/visual_parameters.yaml
+[7.155s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/launch/plan_motion.py
+[7.194s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/launch/view_ur.launch.py
+[7.239s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/d435/visual/d435.stl
+[7.284s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/base.stl
+[7.322s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/forearm.stl
+[7.360s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/shoulder.stl
+[7.406s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/upperarm.stl
+[7.444s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/wrist1.stl
+[7.487s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/wrist2.stl
+[7.525s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/wrist3.stl
+[7.564s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/base.dae
+[7.588s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/forearm.dae
+[7.599s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/shoulder.dae
+[7.613s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/upperarm.dae
+[7.629s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/wrist1.dae
+[7.641s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/wrist2.dae
+[7.654s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/wrist3.dae
+[7.672s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/base.stl
+[7.686s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/forearm.stl
+[7.699s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/shoulder.stl
+[7.713s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/upperarm.stl
+[7.728s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist1.stl
+[7.740s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist2.stl
+[7.753s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist3.stl
+[7.769s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/base.dae
+[7.783s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/forearm.dae
+[7.801s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/shoulder.dae
+[7.815s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/upperarm.dae
+[7.829s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist1.dae
+[7.844s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist2.dae
+[7.860s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist3.dae
+[7.875s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur16e/collision/forearm.stl
+[7.888s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur16e/collision/upperarm.stl
+[7.901s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur16e/visual/forearm.dae
+[7.914s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur16e/visual/upperarm.dae
+[7.930s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/LICENSE.txt
+[7.943s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/base.stl
+[7.960s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/forearm.stl
+[7.977s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/shoulder.stl
+[7.993s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/upperarm.stl
+[8.008s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/wrist1.stl
+[8.025s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/wrist2.stl
+[8.038s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/wrist3.stl
+[8.055s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/UR20_DIFF_8bit_2K.png
+[8.069s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/base.dae
+[8.083s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/forearm.dae
+[8.096s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/shoulder.dae
+[8.109s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/upperarm.dae
+[8.124s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/wrist1.dae
+[8.139s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/wrist2.dae
+[8.152s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/wrist3.dae
+[8.168s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/base.stl
+[8.182s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/forearm.stl
+[8.194s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/shoulder.stl
+[8.208s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/upperarm.stl
+[8.222s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/wrist1.stl
+[8.235s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/wrist2.stl
+[8.252s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/wrist3.stl
+[8.266s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/base.dae
+[8.280s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/forearm.dae
+[8.294s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/shoulder.dae
+[8.308s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/upperarm.dae
+[8.322s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/wrist1.dae
+[8.337s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/wrist2.dae
+[8.350s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/wrist3.dae
+[8.367s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/LICENSE.txt
+[8.383s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/collision/forearm.stl
+[8.396s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/collision/upperarm.stl
+[8.410s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/visual/UR30_DIFF_8bit_2K.png
+[8.426s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/visual/forearm.dae
+[8.443s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/visual/upperarm.dae
+[8.461s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/base.stl
+[8.475s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/forearm.stl
+[8.492s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/shoulder.stl
+[8.510s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/upperarm.stl
+[8.523s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist1.stl
+[8.537s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist2.stl
+[8.552s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist3.stl
+[8.566s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/base.dae
+[8.581s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/forearm.dae
+[8.597s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/shoulder.dae
+[8.610s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/upperarm.dae
+[8.624s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist1.dae
+[8.638s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist2.dae
+[8.651s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist3.dae
+[8.666s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/base.stl
+[8.680s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/forearm.stl
+[8.693s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/shoulder.stl
+[8.708s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/upperarm.stl
+[8.721s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/wrist1.stl
+[8.734s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/wrist2.stl
+[8.750s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/wrist3.stl
+[8.766s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/base.dae
+[8.779s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/forearm.dae
+[8.795s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/shoulder.dae
+[8.810s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/upperarm.dae
+[8.823s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/wrist1.dae
+[8.839s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/wrist2.dae
+[8.853s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/wrist3.dae
+[8.867s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/base.stl
+[8.885s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/forearm.stl
+[8.898s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/shoulder.stl
+[8.911s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/upperarm.stl
+[8.927s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist1.stl
+[8.940s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist2.stl
+[8.953s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist3.stl
+[8.967s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/base.dae
+[8.981s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/forearm.dae
+[8.995s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/shoulder.dae
+[9.009s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/upperarm.dae
+[9.022s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist1.dae
+[9.033s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist2.dae
+[9.049s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist3.dae
+[9.064s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/rviz/view_robot.rviz
+[9.078s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/gazebo_sim_ros2_control.urdf.xacro
+[9.093s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/inc/ur_common.xacro
+[9.105s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/inc/ur_joint_control.xacro
+[9.120s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/inc/ur_sensors.xacro
+[9.133s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/inc/ur_transmissions.xacro
+[9.145s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/intel_rgbd_cam_d435.urdf.xacro
+[9.158s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ros2_control_mock_hardware.xacro
+[9.176s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur.ros2_control.xacro
+[9.187s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur.urdf
+[9.203s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur.urdf copy.xacro
+[9.216s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur.urdf.xacro
+[9.227s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur_macro.xacro
+[9.238s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur_mocked.urdf.xacro
+[9.252s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ament_index/resource_index/package_run_dependencies/ur_description
+[9.265s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ament_index/resource_index/parent_prefix_path/ur_description
+[9.279s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/environment/ament_prefix_path.sh
+[9.293s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/environment/ament_prefix_path.dsv
+[9.305s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/environment/path.sh
+[9.318s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/environment/path.dsv
+[9.334s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/local_setup.bash
+[9.345s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/local_setup.sh
+[9.359s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/local_setup.zsh
+[9.374s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/local_setup.dsv
+[9.387s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.dsv
+[9.401s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ament_index/resource_index/packages/ur_description
+[9.416s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/cmake/ur_descriptionConfig.cmake
+[9.429s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/cmake/ur_descriptionConfig-version.cmake
+[9.443s] -- Symlinking: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.xml

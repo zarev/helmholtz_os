@@ -1,0 +1,1 @@
+/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/install/setup.bash

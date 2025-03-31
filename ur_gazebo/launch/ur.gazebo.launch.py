@@ -62,7 +62,7 @@ def generate_launch_description():
         DeclareLaunchArgument("robot_name", default_value=default_robot_name, description="The name for the robot"),
         DeclareLaunchArgument("use_sim_time", default_value="true", description="Use simulation (Gazebo) clock if true"),
         DeclareLaunchArgument("world_file", default_value=default_world_file, description="World file name"),
-        DeclareLaunchArgument("ur_type", default_value="ur5", description="Type/series of UR robot",
+        DeclareLaunchArgument("ur_type", default_value="ur3", description="Type/series of UR robot",
                               choices=["ur3", "ur3e", "ur5", "ur5e", "ur10", "ur10e", "ur16e", "ur20", "ur30"]),
         DeclareLaunchArgument("safety_limits", default_value="true", description="Enable safety limits controller"),
         DeclareLaunchArgument("safety_pos_margin", default_value="0.15", description="Safety controller position margin"),
@@ -116,7 +116,14 @@ def generate_launch_description():
         parameters=[{'config_file': default_ros_gz_bridge_config_file_path}],
         output='screen'
     )
-
+    # include_view_ur = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource(
+    #         os.path.join(pkg_share_description, 'launch', 'view_ur.launch.py')
+    #     ),
+    #     launch_arguments=[
+    #         ('ur_type', LaunchConfiguration('ur_type'))
+    #     ]
+    # )
     # Spawn robot in Gazebo
     start_gazebo_ros_spawner_cmd = Node(
         package='ros_gz_sim',

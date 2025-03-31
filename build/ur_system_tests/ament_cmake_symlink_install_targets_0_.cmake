@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests/arm_gripper_loop_controller" "TARGETS" "arm_gripper_loop_controller" "DESTINATION" "lib/ur_system_tests")

@@ -563,7 +563,7 @@
   <!-- Attach the gripper to tool0 -->
   <!-- Attach gripper to wrist_3_link with corrected rotation -->
   <joint name="gripper_joint" type="fixed">
-    <parent link="wrist_3_link"/>
+    <parent link="tool0"/>
     <child link="robotiq_arg2f_base_link"/>
     <origin rpy="0 0 3.141592653589793" xyz="0 0 0.005"/>
   </joint>
@@ -584,42 +584,42 @@
     <joint name="shoulder_pan_joint">
       <command_interface name="position"/>
       <state_interface name="position">
-        <param name="initial_value">0</param>
+        <param name="initial_value">-0.4513</param>
       </state_interface>
       <state_interface name="velocity"/>
     </joint>
     <joint name="shoulder_lift_joint">
       <command_interface name="position"/>
       <state_interface name="position">
-        <param name="initial_value">0</param>
+        <param name="initial_value">4.7557</param>
       </state_interface>
       <state_interface name="velocity"/>
     </joint>
     <joint name="elbow_joint">
       <command_interface name="position"/>
       <state_interface name="position">
-        <param name="initial_value">0</param>
+        <param name="initial_value">-0.2256</param>
       </state_interface>
       <state_interface name="velocity"/>
     </joint>
     <joint name="wrist_1_joint">
       <command_interface name="position"/>
       <state_interface name="position">
-        <param name="initial_value">0</param>
+        <param name="initial_value">-1.2844</param>
       </state_interface>
       <state_interface name="velocity"/>
     </joint>
     <joint name="wrist_2_joint">
       <command_interface name="position"/>
       <state_interface name="position">
-        <param name="initial_value">0</param>
+        <param name="initial_value">-0.1041</param>
       </state_interface>
       <state_interface name="velocity"/>
     </joint>
     <joint name="wrist_3_joint">
       <command_interface name="position"/>
       <state_interface name="position">
-        <param name="initial_value">0</param>
+        <param name="initial_value">1.4753</param>
       </state_interface>
       <state_interface name="velocity"/>
     </joint>

@@ -5,9 +5,9 @@ moveit_setup_assistant_config:
   srdf:
     relative_path: config/ur.srdf
   package_settings:
-    author_name: Drash Menon
-    author_email: darshmenon02@gmail.com
-    generated_timestamp: 1743327763
+    author_name: darsh menon
+    author_email: datshmenon02@gmail.com
+    generated_timestamp: 1743429353
   control_xacro:
     command:
       - position
