@@ -12,5 +12,11 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/launch")
     PATTERN "setup_assistant.launch" EXCLUDE)
 endif()
 
+# Install config directory
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
+
+# Install rviz directory
+install(DIRECTORY rviz DESTINATION share/${PROJECT_NAME})
+
+# Install the setup_assistant file
 install(FILES .setup_assistant DESTINATION share/${PROJECT_NAME})
