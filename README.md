@@ -1,4 +1,4 @@
-# UR Robotic Arm with Robotiq 2-Finger Gripper for ROS2
+# UR Robotic Arm with Robotiq 2-Finger Gripper for ROS2 
 
 This project implements the Robotiq 2-Finger Gripper along with the UR robotic arm using ROS2 (Jazzy). It includes the URDF model and launch files necessary for visualizing both the gripper and the robotic arm in RViz.
 
@@ -20,6 +20,14 @@ To set up this project, ensure you have ROS2 (Jazzy) installed on your system.
 ## Usage
 
 This project includes a UR robotic arm with the Robotiq 2-Finger Gripper that can be used for various robotic applications. The URDF models are located in the `urdf` directory, and you can modify them according to your needs.
+
+## Launching Gazebo
+
+To launch Gazebo with the UR robotic arm and the Robotiq 2-Finger Gripper, use the following command:
+
+```bash
+ros2 launch ur_gazebo ur.gazebo.launch.py
+```
 
 ## Launching the Visualization
 

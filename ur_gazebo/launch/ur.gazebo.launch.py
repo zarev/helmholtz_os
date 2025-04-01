@@ -3,9 +3,6 @@
 Launch Gazebo simulation with a UR robot.
 
 This launch file sets up a complete ROS 2 simulation environment with Gazebo.
-
-:author: Addison Sears-Collins
-:date: November 16, 2024
 """
 
 import os
@@ -13,16 +10,30 @@ from launch import LaunchDescription
 from launch.actions import (
     AppendEnvironmentVariable,
     DeclareLaunchArgument,
-    IncludeLaunchDescription
+    IncludeLaunchDescription,
+    RegisterEventHandler,
+    TimerAction,
 )
+from launch.event_handlers import OnProcessStart
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command, FindExecutable
+from launch_ros.actions import Node
+from launch_ros.descriptions import ParameterValue
+from launch_ros.substitutions import FindPackageShare
+import os
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import (
+    Command,
+    FindExecutable,
+    LaunchConfiguration,
+    PathJoinSubstitution,
+)
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
-from launch.substitutions import Command, FindExecutable
-from launch_ros.descriptions import ParameterValue
-
+from launch_ros.parameter_descriptions import ParameterValue
+from moveit_configs_utils import MoveItConfigsBuilder
 def generate_launch_description():
     """
     Generate a launch description for the Gazebo simulation.
@@ -38,6 +49,21 @@ def generate_launch_description():
     gazebo_models_path = 'models'
     gazebo_worlds_path = 'worlds'
     ros_gz_bridge_config_file_path = 'config/ros_gz_bridge.yaml'
+    ur_description_pkg = "ur_description"
+    moveit_config_pkg = "moveit_config"
+
+    # Get package share directories
+    ur_description_share = FindPackageShare(package=ur_description_pkg).find(ur_description_pkg)
+    moveit_config_share = FindPackageShare(package=moveit_config_pkg).find(moveit_config_pkg)
+
+    # File Path Configuration
+    urdf_path = os.path.join(moveit_config_share, "config", "ur.urdf")
+    srdf_path = os.path.join(moveit_config_share, "config", "ur.srdf")
+    moveit_controllers_path = os.path.join(moveit_config_share, "config", "moveit_controllers.yaml")
+    joint_limits_path = os.path.join(moveit_config_share, "config", "joint_limits.yaml")
+    pilz_cartesian_limits_path = os.path.join(moveit_config_share, "config", "pilz_cartesian_limits.yaml")
+    rviz_config_path = os.path.join(moveit_config_share, "rviz", "moveit.rviz")
+    kinematics_path = os.path.join(moveit_config_share, "config", "kinematics.yaml")
 
     # Find package paths
     pkg_ros_gz_sim = FindPackageShare('ros_gz_sim').find('ros_gz_sim')
@@ -52,7 +78,7 @@ def generate_launch_description():
     # Launch Configurations
     world_file = LaunchConfiguration('world_file')
     world_path = PathJoinSubstitution([pkg_share_gazebo, gazebo_worlds_path, world_file])
-    
+    controller_yaml = PathJoinSubstitution([pkg_share_moveit, 'config', 'ros2_controllers.yaml'])
     use_sim_time = LaunchConfiguration('use_sim_time')
     robot_name = LaunchConfiguration('robot_name')
     use_robot_state_pub = LaunchConfiguration('use_robot_state_pub')
@@ -73,6 +99,7 @@ def generate_launch_description():
     # Create launch description
     ld = LaunchDescription(declared_arguments)
     
+    # Use pkg_share_description for the URDF xacro file
     urdf_xacro_path = os.path.join(pkg_share_description, "urdf", "ur.urdf.xacro")
 
     robot_description_content = Command([
@@ -85,7 +112,10 @@ def generate_launch_description():
         " tf_prefix:=", LaunchConfiguration("tf_prefix")
     ])
     robot_description = {'robot_description': ParameterValue(robot_description_content, value_type=str)}
-
+    joint_state_publisher_node = Node(
+        package="joint_state_publisher_gui",
+        executable="joint_state_publisher_gui",
+    )
     # Robot State Publisher
     robot_state_publisher_cmd = Node(
         package='robot_state_publisher',
@@ -95,11 +125,64 @@ def generate_launch_description():
         parameters=[robot_description, {'use_sim_time': use_sim_time}]
     )
 
+    # MoveIt Configuration
+    moveit_config = (
+        MoveItConfigsBuilder("ur", package_name=moveit_config_pkg)
+        .robot_description(file_path=urdf_path)
+        .robot_description_semantic(file_path=srdf_path)
+        .joint_limits(file_path=joint_limits_path)
+        .robot_description_kinematics(file_path=kinematics_path)
+        .pilz_cartesian_limits(file_path=pilz_cartesian_limits_path)
+        .planning_pipelines(
+            pipelines=["pilz_industrial_motion_planner"],
+            default_planning_pipeline="pilz_industrial_motion_planner"
+        )
+        .trajectory_execution(file_path=moveit_controllers_path)
+        .planning_scene_monitor(
+            publish_robot_description=True,
+            publish_robot_description_semantic=True,
+            publish_planning_scene=True
+        )
+        .to_moveit_configs()
+    )
+
+    controller_manager_node = Node(
+        package='controller_manager',
+        executable='ros2_control_node',
+        parameters=[moveit_config.robot_description, controller_yaml],
+        output='screen'
+        # remappings=['~/robot_description','/robot_description']
+    )
+
     # Set environment variables
     set_env_vars_resources = AppendEnvironmentVariable(
         'GZ_SIM_RESOURCE_PATH',
         gazebo_models_path
     )
+
+    # Define controller spawners with delays after controller_manager_node starts
+    controllers = ['joint_state_broadcaster', 'arm_controller', 'grip_action_controller']
+    delays = [3.0, 5.0, 7.0]  # Adjust delays as needed (seconds)
+
+    for controller, delay in zip(controllers, delays):
+        spawner = Node(
+            package='controller_manager',
+            executable='spawner',
+            arguments=[controller, '-c', '/controller_manager'],
+            output='screen',
+        )
+        delayed_spawner = RegisterEventHandler(
+            event_handler=OnProcessStart(
+                target_action=controller_manager_node,
+                on_start=[
+                    TimerAction(
+                        period=delay,
+                        actions=[spawner],
+                    )
+                ]
+            )
+        )
+        ld.add_action(delayed_spawner)
 
     # Start Gazebo
     start_gazebo_cmd = IncludeLaunchDescription(
@@ -116,14 +199,7 @@ def generate_launch_description():
         parameters=[{'config_file': default_ros_gz_bridge_config_file_path}],
         output='screen'
     )
-    # include_view_ur = IncludeLaunchDescription(
-    #     PythonLaunchDescriptionSource(
-    #         os.path.join(pkg_share_description, 'launch', 'view_ur.launch.py')
-    #     ),
-    #     launch_arguments=[
-    #         ('ur_type', LaunchConfiguration('ur_type'))
-    #     ]
-    # )
+
     # Spawn robot in Gazebo
     start_gazebo_ros_spawner_cmd = Node(
         package='ros_gz_sim',
@@ -136,11 +212,38 @@ def generate_launch_description():
         ]
     )
 
+    rviz_node = Node(
+        package="rviz2",
+        executable="rviz2",
+        name="rviz2",
+        output="screen",
+        arguments=["-d", rviz_config_path],
+        parameters=[
+            moveit_config.robot_description,
+            moveit_config.robot_description_semantic,
+            moveit_config.planning_pipelines,
+            moveit_config.robot_description_kinematics,
+            moveit_config.joint_limits,
+            {"use_sim_time": use_sim_time}
+        ],
+    )
+    
+    move_group_node = Node(
+        package="moveit_ros_move_group",
+        executable="move_group",
+        output="screen",
+        parameters=[moveit_config.to_dict()],
+    )
+    # ld.add_action(joint_state_publisher_node)
+
     # Add actions to launch description
     ld.add_action(set_env_vars_resources)
     ld.add_action(robot_state_publisher_cmd)
     ld.add_action(start_gazebo_cmd)
     ld.add_action(start_gazebo_ros_bridge_cmd)
     ld.add_action(start_gazebo_ros_spawner_cmd)
+    ld.add_action(controller_manager_node)
+    ld.add_action(rviz_node)
+    ld.add_action(move_group_node)
 
     return ld
