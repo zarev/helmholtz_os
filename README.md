@@ -58,16 +58,6 @@ To visualize the UR robotic arm with the gripper, use:
 ros2 launch ur_description view_ur.launch.py ur_type:=ur3
 ```
 
-### Setting Up and Running Controllers
-
-Ensure that the necessary controllers are loaded and activated:
-
-```bash
-ros2 control load_controller joint_state_broadcaster
-ros2 control load_controller arm_controller
-ros2 control load_controller grip_action_controller
-ros2 control switch_controller --activate arm_controller grip_action_controller
-```
 
 ### Notes
 - Ensure that your ROS2 workspace is built and sourced before running any commands.
