@@ -1,4 +1,4 @@
-# UR Robotic Arm with Robotiq 2-Finger Gripper for ROS2 
+# UR Robotic Arm with Robotiq 2-Finger Gripper for ROS2
 
 This project implements the Robotiq 2-Finger Gripper along with the UR robotic arm using ROS2 (Jazzy). It includes the URDF model and launch files necessary for visualizing both the gripper and the robotic arm in RViz.
 
@@ -14,7 +14,23 @@ To set up this project, ensure you have ROS2 (Jazzy) installed on your system.
 
 2. Install the necessary dependencies:
    ```bash
-   sudo apt install ros-jazzy-rviz2 ros-jazzy-joint-state-publisher ros-jazzy-robot-state-publisher
+   sudo apt install ros-jazzy-rviz2 \
+                    ros-jazzy-joint-state-publisher \
+                    ros-jazzy-robot-state-publisher \
+                    ros-jazzy-ros2-control \
+                    ros-jazzy-ros2-controllers \
+                    ros-jazzy-controller-manager \
+                    ros-jazzy-joint-trajectory-controller \
+                    ros-jazzy-position-controllers \
+                    ros-jazzy-gz-ros2-control \
+                    ros-jazzy-ros2controlcli
+   ```
+
+3. Build your ROS2 workspace:
+   ```bash
+   cd ~/your_ros2_workspace  # Replace with your workspace path
+   colcon build --symlink-install
+   source install/setup.bash
    ```
 
 ## Usage
@@ -34,7 +50,7 @@ ros2 launch ur_gazebo ur.gazebo.launch.py
 To visualize the Robotiq 2-Finger Gripper in RViz, use the following command:
 
 ```bash
-ros2 launch robotiq_2finger_grippers/robotiq_2f_85_gripper_visualization/launch/test_2f_85_model.launch.py
+ros2 launch robotiq_2finger_grippers robotiq_2f_85_gripper_visualization/launch/test_2f_85_model.launch.py
 ```
 
 To visualize the UR robotic arm with the gripper, use:
@@ -42,16 +58,25 @@ To visualize the UR robotic arm with the gripper, use:
 ros2 launch ur_description view_ur.launch.py ur_type:=ur3
 ```
 
-### Prerequisites for Launching
-Ensure that your ROS2 workspace is built and sourced:
+### Setting Up and Running Controllers
+
+Ensure that the necessary controllers are loaded and activated:
+
 ```bash
-cd ~/your_ros2_workspace  # Replace with your workspace path
-colcon build --symlink-install
-source install/setup.bash
+ros2 control load_controller joint_state_broadcaster
+ros2 control load_controller arm_controller
+ros2 control load_controller grip_action_controller
+ros2 control switch_controller --activate arm_controller grip_action_controller
 ```
 
 ### Notes
-- Make sure to adjust the fixed frame in RViz to `base_link` or the appropriate frame for your setup.
+- Ensure that your ROS2 workspace is built and sourced before running any commands.
+- Adjust the fixed frame in RViz to `base_link` or the appropriate frame for your setup.
+- If `ros2 control` commands do not work, source your environment properly:
+  ```bash
+  source /opt/ros/jazzy/setup.bash
+  source ~/UR3_ROS2_PICK_AND_PLACE/install/setup.bash
+  ```
 
 ## Screenshots
 

@@ -136,7 +136,7 @@ def generate_launch_description():
         .planning_pipelines(
         pipelines=["ompl", "pilz_industrial_motion_planner"],
         default_planning_pipeline="ompl"
-    )
+     )
         .trajectory_execution(file_path=moveit_controllers_path)
         .planning_scene_monitor(
             publish_robot_description=True,
@@ -144,59 +144,78 @@ def generate_launch_description():
             publish_planning_scene=True
         )
         .to_moveit_configs()
-    )
-
+      )
     controller_manager_node = Node(
         package='controller_manager',
         executable='ros2_control_node',
-        parameters=[moveit_config.robot_description, controller_yaml],
+        parameters=[
+        moveit_config.robot_description, 
+        controller_yaml,
+        {'use_sim_time': True}  # Enable simulation time
+        ],
         output='screen'
-        # remappings=['~/robot_description','/robot_description']
+    # remappings=['~/robot_description','/robot_description']
     )
 
+
+      
+
+                    
     # Set environment variables
     set_env_vars_resources = AppendEnvironmentVariable(
         'GZ_SIM_RESOURCE_PATH',
         gazebo_models_path
     )
-    load_controllers_cmd = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([
-            os.path.join(pkg_share_moveit, 'launch', 'load_ros2_controllers.launch.py')
-        ]),
-        launch_arguments={
-            'use_sim_time': use_sim_time
-        }.items()    )
-    # Define controller spawners with delays after controller_manager_node starts
+    # load_controllers_cmd = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource([
+    #         os.path.join(pkg_share_moveit, 'launch', 'load_ros2_controllers.launch.py')
+    #     ]),
+    #     launch_arguments={
+    #         'use_sim_time': use_sim_time
+    #     }.items()    )
+
     # controllers = ['joint_state_broadcaster', 'arm_controller', 'grip_action_controller']
     # delays = [3.0, 5.0, 7.0]  # Adjust delays as needed (seconds)
 
-    # for controller, delay in zip(controllers, delays):
-    #     spawner = Node(
-    #         package='controller_manager',
-    #         executable='spawner',
-    #         arguments=[controller, '-c', '/controller_manager'],
-    #         output='screen',
-    #     )
-    #     delayed_spawner = RegisterEventHandler(
-    #         event_handler=OnProcessStart(
-    #             target_action=controller_manager_node,
-    #             on_start=[
-    #                 TimerAction(
-    #                     period=delay,
-    #                     actions=[spawner],
-    #                 )
-    #             ]
-    #         )
-    #     )
-        # ld.add_action(delayed_spawner)
-    ld.add_action(load_controllers_cmd)
+    controllers = ["joint_state_broadcaster", "arm_controller", "grip_action_controller"]
+    delays = [3.0, 5.0, 7.0]
+
+    for controller, delay in zip(controllers, delays):
+        ld.add_action(
+            RegisterEventHandler(
+                event_handler=OnProcessStart(
+                    target_action=controller_manager_node,
+                    on_start=[
+                        TimerAction(
+                            period=delay,
+                            actions=[
+                                Node(
+                                    package="controller_manager",
+                                    executable="spawner",
+                                    arguments=[controller],
+                                )
+                            ],
+                        )
+                    ],
+                )
+            )
+        )
+    # ld.add_action(load_controllers_cmd)
     # Start Gazebo
     start_gazebo_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')
         ),
-        launch_arguments=[('gz_args', [' -r -v 4 ', world_path])]
+    launch_arguments=[('gz_args', ['-r -v 4 ', world_path]), ('use_sim_time', 'true')]
     )
+    
+        # start_gazebo_cmd = IncludeLaunchDescription(
+        # PythonLaunchDescriptionSource(
+        #     os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')
+        # ),
+        #  launch_arguments=[('gz_args', ['-r -v 4 ', world_path])]
+        #     )
+
 
     # Start Gazebo ROS Bridge
     start_gazebo_ros_bridge_cmd = Node(
@@ -233,16 +252,25 @@ def generate_launch_description():
             {"use_sim_time": use_sim_time}
         ],
     )
-    
+    # config_dict = moveit_config.to_dict()
+    # config_dict.update(use_sim_time)
+    # move_group_node = Node(
+    #     package="moveit_ros_move_group",
+    #     executable="move_group",
+    #     output="screen",
+    #     parameters=[config_dict],
+    # )
+    # ld.add_action(joint_state_publisher_node)
+
+    # Add actions to launch description
+
     move_group_node = Node(
         package="moveit_ros_move_group",
         executable="move_group",
         output="screen",
-        parameters=[moveit_config.to_dict()],
+        parameters=[moveit_config.to_dict(), {"use_sim_time": use_sim_time}],
     )
-    ld.add_action(joint_state_publisher_node)
 
-    # Add actions to launch description
     ld.add_action(set_env_vars_resources)
     ld.add_action(robot_state_publisher_cmd)
     ld.add_action(start_gazebo_cmd)

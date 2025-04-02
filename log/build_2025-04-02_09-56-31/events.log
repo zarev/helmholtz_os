@@ -1,0 +1,9 @@
+[0.000000] (-) TimerEvent: {}
+[0.000197] (-) JobUnselected: {'identifier': 'moveit_config'}
+[0.000282] (-) JobUnselected: {'identifier': 'movit_config'}
+[0.000310] (-) JobUnselected: {'identifier': 'robotiq_2f_85_gripper_visualization'}
+[0.000328] (-) JobUnselected: {'identifier': 'ur_description'}
+[0.000377] (-) JobUnselected: {'identifier': 'ur_gazebo'}
+[0.000397] (-) JobUnselected: {'identifier': 'ur_interfaces'}
+[0.000445] (-) JobUnselected: {'identifier': 'ur_system_tests'}
+[0.000781] (-) EventReactorShutdown: {}

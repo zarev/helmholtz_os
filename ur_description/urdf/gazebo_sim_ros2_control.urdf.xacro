@@ -5,9 +5,13 @@
             <gazebo>
                 <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
                     <parameters>$(find moveit_config)/config/ros2_controllers.yaml</parameters>
+
+                    <!-- Uncomment this if controller_manager has issues finding robot_description -->
                     <ros>
                         <remapping>/controller_manager/robot_description:=/robot_description</remapping>
                     </ros>
+
+                    <controller_manager_node_name>controller_manager</controller_manager_node_name>
                 </plugin>
             </gazebo>
         </xacro:if>
