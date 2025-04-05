@@ -62,8 +62,17 @@ ros2 launch ur_description view_ur.launch.py ur_type:=ur3
 
 ## Screenshots
 
+### Arm with Gripper in RViz
+![Arm with Gripper](/images/arm_with_gripper.png)
 
-![gazebo](/images/image.png)
+### Robotiq Gripper Close-up
+![Gripper](/images/gripper.png)
+
+### Full Setup in Gazebo
+![Gazebo View](/images/image.png)
+
+### RViz View
+![RViz 1](/images/rviz1.png)
 
 ## Contributing
 
