@@ -8,7 +8,7 @@ To set up this project, ensure you have ROS2 (Jazzy) installed on your system.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/darshmenon/UR3_ROS2_PICK_AND_PLACE
+   git clone https://github.com/darshmenon/
    cd UR3_ROS2_PICK_AND_PLACE
    ```
 
@@ -42,7 +42,7 @@ This project includes a UR robotic arm with the Robotiq 2-Finger Gripper that ca
 To launch Gazebo with the UR robotic arm and the Robotiq 2-Finger Gripper, use the following command:
 
 ```bash
-ros2 launch ur_gazebo ur.gazebo.launch.py
+ros2 launch 
 ```
 
 ## Launching the Visualization
@@ -59,22 +59,9 @@ ros2 launch ur_description view_ur.launch.py ur_type:=ur3
 ```
 
 
-### Notes
-- Ensure that your ROS2 workspace is built and sourced before running any commands.
-- Adjust the fixed frame in RViz to `base_link` or the appropriate frame for your setup.
-- If `ros2 control` commands do not work, source your environment properly:
-  ```bash
-  source /opt/ros/jazzy/setup.bash
-  source ~/UR3_ROS2_PICK_AND_PLACE/install/setup.bash
-  ```
 
 ## Screenshots
 
-![Robotiq 2-Finger Gripper Visualization](/images/gripper.png)
-
-![UR Arm with Gripper](/images/arm_with_gripper.png)
-
-![rviz](/images/rviz1.png)
 
 ![gazebo](/images/image.png)
 

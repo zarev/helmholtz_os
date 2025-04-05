@@ -50,7 +50,6 @@
         <link name="right_inner_finger"/>
         <link name="right_inner_finger_pad"/>
         <link name="ft_frame"/>
-        <joint name="gripper_joint"/>
         <joint name="finger_joint"/>
         <joint name="left_outer_finger_joint"/>
         <joint name="left_inner_finger_joint"/>
@@ -61,6 +60,7 @@
         <joint name="right_outer_finger_joint"/>
         <joint name="right_inner_finger_joint"/>
         <joint name="right_inner_finger_pad_joint"/>
+        <chain base_link="robotiq_arg2f_base_link" tip_link="right_inner_finger_pad"/>
     </group>
     <group name="arm_with_gripper">
         <group name="arm"/>
@@ -94,7 +94,7 @@
         <joint name="wrist_3_joint" value="0"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
-    <end_effector name="gripper" parent_link="tool0" group="gripper"/>
+    <end_effector name="gripper" parent_link="tool0" group="gripper" parent_group="arm"/>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="base_link"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->

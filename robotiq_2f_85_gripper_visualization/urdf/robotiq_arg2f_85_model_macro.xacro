@@ -188,7 +188,7 @@
       <child link="${prefix}right_outer_knuckle" />
       <axis xyz="1 0 0" />
       <limit lower="0" upper="0.81" velocity="2.0" effort="1000" />
-      <mimic joint="${prefix}finger_joint" multiplier="1" offset="0" />
+      <mimic joint="${prefix}finger_joint" multiplier="-1" offset="0" />
     </joint>
     <xacro:finger_joints prefix="${prefix}" fingerprefix="right" reflect="-1.0"/>
   </xacro:macro>
@@ -226,8 +226,8 @@
     <xacro:right_outer_knuckle_joint prefix="${prefix}"/>
         <!-- <xacro:left_outer_knuckle_joint prefix="${prefix}"/> -->
 
-    <xacro:robotiq_arg2f_transmission prefix="${prefix}"/>
-    =<xacro:robotiq_arg2f_gazebo prefix="${prefix}"/>
+    <xacro:robotiq_85_gripper_transmission prefix="${prefix}"/>
+    <xacro:robotiq_arg2f_gazebo prefix="${prefix}"/>
 
   </xacro:macro>
 </robot>

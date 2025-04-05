@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://wiki.ros.org/xacro" name="$(arg name)">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur">
 
    <!-- Declare arguments at the top -->
    <xacro:arg name="name" default="ur"/>
@@ -38,16 +38,14 @@
      force_abs_paths="$(arg force_abs_paths)">
      <origin xyz="0 0 0" rpy="0 0 0" /> <!-- Position robot in the world -->
    </xacro:ur_robot>
-
-   <!-- Include Gazebo Simulation Control Plugin -->
-   <xacro:include filename="$(find ur_description)/urdf/gazebo_sim_ros2_control.urdf.xacro" />
+<!-- 
+=   <xacro:include filename="$(find ur_description)/urdf/gazebo_sim_ros2_control.urdf.xacro" />
    <xacro:load_gazebo_sim_ros2_control_plugin
      robot_name="$(arg robot_name)"
      use_gazebo="$(arg use_gazebo)"/>
 
-   <!-- UR-Specific ROS 2 Control -->
    <xacro:include filename="$(find ur_description)/urdf/ur.ros2_control.xacro" />
-<xacro:ur_ros2_control name="ur_robot" initial_positions_file="$(find ur_description)/config/initial_positions.yaml"/>
+<xacro:ur_ros2_control name="ur_robot" initial_positions_file="$(find ur_description)/config/initial_positions.yaml"/> -->
 
 
    <!-- Include Intel RealSense Camera -->

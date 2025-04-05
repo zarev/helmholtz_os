@@ -310,12 +310,12 @@
       <dynamics damping="0" friction="0"/>
     </joint>
 
-    <!-- <link name="${tf_prefix}ft_frame"/>
+    <link name="${tf_prefix}ft_frame"/>
     <joint name="${tf_prefix}wrist_3_link-ft_frame" type="fixed">
       <parent link="${tf_prefix}wrist_3_link"/>
       <child link="${tf_prefix}ft_frame"/>
       <origin xyz="0 0 0" rpy="${pi} 0 0"/>
-    </joint> -->
+    </joint>
 
     <!-- ROS-Industrial 'base' frame - base_link to UR 'Base' Coordinates transform -->
    <link name="${tf_prefix}base"/>
@@ -330,22 +330,19 @@
   <child link="${tf_prefix}base"/>
   </joint>
 
-  <!-- ROS-Industrial 'flange' frame - attachment point for EEF models
   <link name="${tf_prefix}flange" />  
   <joint name="${tf_prefix}wrist_3-flange" type="fixed">
   <parent link="${tf_prefix}wrist_3_link" />
   <child link="${tf_prefix}flange" />
   <origin xyz="0 0 0" rpy="0 ${-pi/2.0} ${-pi/2.0}" />
-  </joint> -->
+  </joint> 
 
-  <!-- ROS-Industrial 'tool0' frame - all-zeros tool frame -->
-  <!-- <link name="${tf_prefix}tool0"/>
-  <joint name="${tf_prefix}flange-tool0" type="fixed"> -->
-  <!-- default toolframe - X+ left, Y+ up, Z+ front -->
-  <!-- <origin xyz="0 0 0" rpy="${pi/2.0} 0 ${pi/2.0}"/>
+  <link name="${tf_prefix}tool0"/>
+  <joint name="${tf_prefix}flange-tool0" type="fixed">
+  <origin xyz="0 0 0" rpy="${pi/2.0} 0 ${pi/2.0}"/>
   <parent link="${tf_prefix}flange"/>
   <child link="${tf_prefix}tool0"/>
-  </joint> -->
+  </joint>
 
    <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_85_model_macro.xacro"/>
 
@@ -355,7 +352,7 @@
 <!-- Attach the gripper to tool0 -->
 <!-- Attach gripper to wrist_3_link with corrected rotation -->
 <joint name="${tf_prefix}gripper_joint" type="fixed">
-  <parent link="${tf_prefix}wrist_3_link"/>
+  <parent link="${tf_prefix}tool0"/>
   <child link="${tf_prefix}robotiq_arg2f_base_link"/> 
   <origin xyz="0 0 0.005" rpy="0 0 0"/> 
 </joint>

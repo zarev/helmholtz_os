@@ -34,6 +34,7 @@ from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 from launch_ros.parameter_descriptions import ParameterValue
 from moveit_configs_utils import MoveItConfigsBuilder
+
 def generate_launch_description():
     """
     Generate a launch description for the Gazebo simulation.
@@ -41,7 +42,7 @@ def generate_launch_description():
     # Package names
     package_name_gazebo = 'ur_gazebo'
     package_name_description = 'ur_description'
-    package_name_moveit = 'movit_config'
+    package_name_moveit = 'moveit_config'
 
     # Default values
     default_robot_name = 'ur'
@@ -111,7 +112,9 @@ def generate_launch_description():
         " ur_type:=", LaunchConfiguration("ur_type"),
         " tf_prefix:=", LaunchConfiguration("tf_prefix")
     ])
+
     robot_description = {'robot_description': ParameterValue(robot_description_content, value_type=str)}
+
     joint_state_publisher_node = Node(
         package="joint_state_publisher_gui",
         executable="joint_state_publisher_gui",
@@ -145,6 +148,7 @@ def generate_launch_description():
         )
         .to_moveit_configs()
       )
+
     controller_manager_node = Node(
         package='controller_manager',
         executable='ros2_control_node',
@@ -153,8 +157,8 @@ def generate_launch_description():
         controller_yaml,
         {'use_sim_time': True}  # Enable simulation time
         ],
-        output='screen'
-    # remappings=['~/robot_description','/robot_description']
+        output='screen',
+        remappings=[('~/robot_description', '/robot_description')]  # ✅ correct
     )
 
 
@@ -166,41 +170,44 @@ def generate_launch_description():
         'GZ_SIM_RESOURCE_PATH',
         gazebo_models_path
     )
-    # load_controllers_cmd = IncludeLaunchDescription(
-    #     PythonLaunchDescriptionSource([
-    #         os.path.join(pkg_share_moveit, 'launch', 'load_ros2_controllers.launch.py')
-    #     ]),
-    #     launch_arguments={
-    #         'use_sim_time': use_sim_time
-    #     }.items()    )
+
+    load_controllers_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(pkg_share_moveit, 'launch', 'load_ros2_controllers.launch.py')
+        ]),
+        launch_arguments={
+            'use_sim_time': use_sim_time
+        }.items()
+    )
 
     # controllers = ['joint_state_broadcaster', 'arm_controller', 'grip_action_controller']
     # delays = [3.0, 5.0, 7.0]  # Adjust delays as needed (seconds)
 
-    controllers = ["joint_state_broadcaster", "arm_controller", "grip_action_controller"]
-    delays = [3.0, 5.0, 7.0]
+    # controllers = ["joint_state_broadcaster", "arm_controller", "grip_action_controller"]
+    # delays = [3.0, 5.0, 7.0]
 
-    for controller, delay in zip(controllers, delays):
-        ld.add_action(
-            RegisterEventHandler(
-                event_handler=OnProcessStart(
-                    target_action=controller_manager_node,
-                    on_start=[
-                        TimerAction(
-                            period=delay,
-                            actions=[
-                                Node(
-                                    package="controller_manager",
-                                    executable="spawner",
-                                    arguments=[controller],
-                                )
-                            ],
-                        )
-                    ],
-                )
-            )
-        )
-    # ld.add_action(load_controllers_cmd)
+    # for controller, delay in zip(controllers, delays):
+    #     ld.add_action(
+    #         RegisterEventHandler(
+    #             event_handler=OnProcessStart(
+    #                 target_action=controller_manager_node,
+    #                 on_start=[
+    #                     TimerAction(
+    #                         period=delay,
+    #                         actions=[
+    #                             Node(
+    #                                 package="controller_manager",
+    #                                 executable="spawner",
+    #                                 arguments=[controller],
+    #                             )
+    #                         ],
+    #                     )
+    #                 ],
+    #             )
+    #         )
+    #     )
+
+    ld.add_action(load_controllers_cmd)
     # Start Gazebo
     start_gazebo_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(

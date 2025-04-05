@@ -31,6 +31,17 @@ def generate_launch_description():
         LaunchDescription: Launch description containing sequenced controller starts
     """
     # Start arm controller
+    #     controller_manager_node = Node(
+    #     package='controller_manager',
+    #     executable='ros2_control_node',
+    #     parameters=[
+    #     moveit_config.robot_description, 
+    #     controller_yaml,
+    #     {'use_sim_time': True}  # Enable simulation time
+    #     ],
+    #     output='screen'
+    # # remappings=['~/robot_description','/robot_description']
+    # )
     start_arm_controller_cmd = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
              'arm_controller'],
@@ -39,7 +50,7 @@ def generate_launch_description():
     # Start gripper action controller
     start_gripper_action_controller_cmd = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
-             'gripper_action_controller'],
+             'grip_action_controller'],
         output='screen')
 
     # Launch joint state broadcaster
@@ -69,6 +80,8 @@ def generate_launch_description():
 
     # Create the launch description and populate
     ld = LaunchDescription()
+    
+    # ld.add_action(controller_manager_node)
 
     # Add the actions to the launch description in sequence
     ld.add_action(delayed_start)
