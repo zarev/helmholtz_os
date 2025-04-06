@@ -86,6 +86,16 @@ ros2 action send_goal /arm_controller/follow_joint_trajectory control_msgs/actio
 
 This will move the arm to the specified joint positions over 2 seconds. Make sure your controller is running and correctly configured before sending the command.
 
+## Running the Arm-Gripper Loop Script
+
+After launching Gazebo and controllers, you can run the automatic arm-gripper movement loop with:
+
+```bash
+python3 /home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_controller.py
+```
+
+This script will automatically move the robotic arm to a target position, close the gripper, return to the home position, open the gripper, and repeat the cycle.
+
 ## Screenshots
 
 ### Arm with Gripper in RViz

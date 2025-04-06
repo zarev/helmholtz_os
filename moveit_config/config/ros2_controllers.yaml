@@ -11,8 +11,8 @@ controller_manager:
       type: position_controllers/GripperActionController
 
 
-    arm_with_gripper_controller:
-      type: joint_trajectory_controller/JointTrajectoryController
+    # arm_with_gripper_controller:
+    #   type: joint_trajectory_controller/JointTrajectoryController
 
 
     joint_state_broadcaster:
@@ -36,19 +36,19 @@ arm_controller:
 gripper_controller:
   ros__parameters:
     joint: finger_joint
-arm_with_gripper_controller:
-  ros__parameters:
-    joints:
-      - shoulder_pan_joint
-      - shoulder_lift_joint
-      - elbow_joint
-      - wrist_1_joint
-      - wrist_2_joint
-      - wrist_3_joint
-      - finger_joint
-    command_interfaces:
-      - position
-    state_interfaces:
-      - position
-      - velocity
+# arm_with_gripper_controller:
+#   ros__parameters:
+#     joints:
+#       - shoulder_pan_joint
+#       - shoulder_lift_joint
+#       - elbow_joint
+#       - wrist_1_joint
+#       - wrist_2_joint
+#       - wrist_3_joint
+#       - finger_joint
+#     command_interfaces:
+#       - position
+#     state_interfaces:
+#       - position
+#       - velocity
     allow_nonzero_velocity_at_trajectory_end: true
