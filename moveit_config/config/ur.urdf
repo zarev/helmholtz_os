@@ -255,10 +255,46 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_base_link.stl"/>
+        <mesh filename="package://robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_base_link.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
+  <joint name="finger_joint" type="revolute">
+    <origin rpy="0 0 3.141592653589793" xyz="0 -0.0306011 0.054904"/>
+    <parent link="robotiq_arg2f_base_link"/>
+    <child link="left_outer_knuckle"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="1000" lower="0" upper="0.8" velocity="2.0"/>
+  </joint>
+  <joint name="left_outer_finger_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.0315 -0.0041"/>
+    <parent link="left_outer_knuckle"/>
+    <child link="left_outer_finger"/>
+    <axis xyz="1 0 0"/>
+  </joint>
+  <joint name="left_inner_knuckle_joint" type="revolute">
+    <!-- <origin xyz="0 ${reflect * -0.0127} 0.06142" rpy="${pi / 2 + .725} 0 ${(reflect - 1) * pi / 2}" /> -->
+    <origin rpy="0 0 3.141592653589793" xyz="0 -0.0127 0.06142"/>
+    <parent link="robotiq_arg2f_base_link"/>
+    <child link="left_inner_knuckle"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="1000" lower="0" upper="0.8757" velocity="2.0"/>
+    <mimic joint="finger_joint" multiplier="1" offset="0"/>
+  </joint>
+  <joint name="left_inner_finger_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0.0061 0.0471"/>
+    <parent link="left_outer_finger"/>
+    <child link="left_inner_finger"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="1000" lower="-0.8757" upper="0" velocity="2.0"/>
+    <mimic joint="finger_joint" multiplier="-1" offset="0"/>
+  </joint>
+  <joint name="left_inner_finger_pad_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 -0.0220203446692936 0.03242"/>
+    <parent link="left_inner_finger"/>
+    <child link="left_inner_finger_pad"/>
+    <axis xyz="0 0 1"/>
+  </joint>
   <link name="left_outer_knuckle">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.000200000000003065 0.0199435877845359 0.0292245259211331"/>
@@ -475,49 +511,13 @@
       </geometry>
     </collision>
   </link>
-  <joint name="finger_joint" type="revolute">
-    <origin rpy="0 0 3.141592653589793" xyz="0 -0.0306011 0.054904"/>
-    <parent link="robotiq_arg2f_base_link"/>
-    <child link="left_outer_knuckle"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="1000" lower="0" upper="0.8" velocity="2.0"/>
-  </joint>
-  <joint name="left_outer_finger_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0.0315 -0.0041"/>
-    <parent link="left_outer_knuckle"/>
-    <child link="left_outer_finger"/>
-    <axis xyz="1 0 0"/>
-  </joint>
-  <joint name="left_inner_knuckle_joint" type="revolute">
-    <!-- <origin xyz="0 ${reflect * -0.0127} 0.06142" rpy="${pi / 2 + .725} 0 ${(reflect - 1) * pi / 2}" /> -->
-    <origin rpy="0 0 3.141592653589793" xyz="0 -0.0127 0.06142"/>
-    <parent link="robotiq_arg2f_base_link"/>
-    <child link="left_inner_knuckle"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="1000" lower="0" upper="0.8757" velocity="2.0"/>
-    <mimic joint="finger_joint" multiplier="1" offset="0"/>
-  </joint>
-  <joint name="left_inner_finger_joint" type="revolute">
-    <origin rpy="0 0 0" xyz="0 0.0061 0.0471"/>
-    <parent link="left_outer_finger"/>
-    <child link="left_inner_finger"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="1000" lower="-0.8757" upper="0" velocity="2.0"/>
-    <mimic joint="finger_joint" multiplier="-1" offset="0"/>
-  </joint>
-  <joint name="left_inner_finger_pad_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 -0.0220203446692936 0.03242"/>
-    <parent link="left_inner_finger"/>
-    <child link="left_inner_finger_pad"/>
-    <axis xyz="0 0 1"/>
-  </joint>
   <joint name="right_outer_knuckle_joint" type="revolute">
     <origin rpy="0 0 0" xyz="0 0.0306011 0.054904"/>
     <parent link="robotiq_arg2f_base_link"/>
     <child link="right_outer_knuckle"/>
     <axis xyz="1 0 0"/>
     <limit effort="1000" lower="0" upper="0.81" velocity="2.0"/>
-    <mimic joint="finger_joint" multiplier="-1" offset="0"/>
+    <mimic joint="finger_joint" multiplier="1" offset="0"/>
   </joint>
   <joint name="right_outer_finger_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0.0315 -0.0041"/>
@@ -549,16 +549,26 @@
     <axis xyz="0 0 1"/>
   </joint>
   <!-- <xacro:left_outer_knuckle_joint prefix="${prefix}"/> -->
-  <transmission name="robotiq_85_left_knuckle_trans">
+  <!-- <transmission name="${prefix}robotiq_85_left_knuckle_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}robotiq_85_left_knuckle_joint">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${prefix}robotiq_85_left_knuckle_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <hardwareInterface>EfforJointInterface</hardwareInterface>
+      </actuator>
+    </transmission> -->
+  <transmission name="robotiq_85_finger_joint_trans">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="robotiq_85_left_knuckle_joint">
+    <joint name="finger_joint">
       <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <!-- <hardwareInterface>EffortJointInterface</hardwareInterface> -->
     </joint>
-    <actuator name="robotiq_85_left_knuckle_motor">
-      <mechanicalReduction>1</mechanicalReduction>
+    <actuator name="finger_motor">
       <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <!-- <hardwareInterface>EfforJointInterface</hardwareInterface> -->
+      <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <!-- Mimic joints -->
@@ -588,38 +598,15 @@
         <offset>0.0</offset>
       </plugin>
     </gazebo> -->
-  <!-- <gazebo>
-    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_1">
-      <joint>finger_joint</joint>
-      <mimicJoint>right_outer_knuckle_joint</mimicJoint>
-      <multiplier>-1.0</multiplier>
-      <offset>0.0</offset>
-    </plugin>
-    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_2">
-      <joint>finger_joint</joint>
-      <mimicJoint>left_inner_knuckle_joint</mimicJoint>
-      <multiplier>-1.0</multiplier>
-      <offset>0.0</offset>
-    </plugin>
-    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_3">
-      <joint>finger_joint</joint>
-      <mimicJoint>right_inner_knuckle_joint</mimicJoint>
-      <multiplier>-1.0</multiplier>
-      <offset>0.0</offset>
-    </plugin>
-    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_4">
-      <joint>finger_joint</joint>
-      <mimicJoint>left_inner_finger_joint</mimicJoint>
-      <multiplier>1.0</multiplier>
-      <offset>0.0</offset>
-    </plugin>
-    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_5">
-      <joint>finger_joint</joint>
-      <mimicJoint>right_inner_finger_joint</mimicJoint>
-      <multiplier>1.0</multiplier>
-      <offset>0.0</offset>
-    </plugin>
-  </gazebo> -->
+  <!-- <xacro:robotiq_arg2f_gazebo prefix="${prefix}"/> -->
+  <gazebo reference="robotiq_arg2f_base_link">
+    <physics>
+      <ode>
+        <implicit_spring_damper>1</implicit_spring_damper>
+        <cfm_damping_reference_velocity>0.01</cfm_damping_reference_velocity>
+      </ode>
+    </physics>
+  </gazebo>
   <!-- Attach the gripper to tool0 -->
   <!-- Attach gripper to wrist_3_link with corrected rotation -->
   <joint name="gripper_joint" type="fixed">
@@ -782,48 +769,55 @@
     <joint name="shoulder_pan_joint">
       <command_interface name="position"/>
       <state_interface name="position">
-        <param name="initial_value">-0.1</param>
+        <param name="initial_value">0.0</param>
       </state_interface>
+      <state_interface name="velocity"/>
     </joint>
     <joint name="shoulder_lift_joint">
       <command_interface name="position"/>
       <state_interface name="position">
-        <param name="initial_value">-1.6315</param>
+        <param name="initial_value">4.8946</param>
       </state_interface>
+      <state_interface name="velocity"/>
     </joint>
     <joint name="elbow_joint">
       <command_interface name="position"/>
       <state_interface name="position">
-        <param name="initial_value">0</param>
+        <param name="initial_value">-0.3298</param>
       </state_interface>
+      <state_interface name="velocity"/>
     </joint>
     <joint name="wrist_1_joint">
       <command_interface name="position"/>
       <state_interface name="position">
-        <param name="initial_value">1.8251</param>
+        <param name="initial_value">4.6169</param>
       </state_interface>
+      <state_interface name="velocity"/>
     </joint>
     <joint name="wrist_2_joint">
       <command_interface name="position"/>
       <state_interface name="position">
-        <param name="initial_value">0</param>
+        <param name="initial_value">0.0041</param>
       </state_interface>
+      <state_interface name="velocity"/>
     </joint>
     <joint name="wrist_3_joint">
       <command_interface name="position"/>
       <state_interface name="position">
-        <param name="initial_value">1.2844</param>
+        <param name="initial_value">1.6489</param>
       </state_interface>
+      <state_interface name="velocity"/>
     </joint>
     <joint name="finger_joint">
       <command_interface name="position"/>
       <state_interface name="position">
-        <param name="initial_value">0</param>
+        <param name="initial_value">0.0</param>
       </state_interface>
+      <state_interface name="velocity"/>
     </joint>
   </ros2_control>
   <gazebo>
-    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+    <plugin filename="libgz_ros2_control-system.so" name="gz_ros2_control">
       <parameters>/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/config/ros2_controllers.yaml</parameters>
       <ros>
         <remapping>/controller_manager/robot_description:=/robot_description</remapping>
