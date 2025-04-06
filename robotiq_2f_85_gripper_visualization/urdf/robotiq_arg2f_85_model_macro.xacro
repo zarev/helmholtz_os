@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_transmission.xacro" />
-<!-- <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f.gazebo.xacro" /> -->
-  <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f.xacro" />
 
   <xacro:macro name="outer_knuckle" params="prefix fingerprefix stroke">
     <link name="${prefix}${fingerprefix}_outer_knuckle">
@@ -154,7 +152,7 @@
       <origin xyz="0 0.0061 0.0471" rpy="0 0 0"/>
       <parent link="${prefix}${fingerprefix}_outer_finger" />
       <child link="${prefix}${fingerprefix}_inner_finger" />
-      <axis xyz="1 0 0" />  
+      <axis xyz="1 0 0" />
       <limit lower="-0.8757" upper="0" velocity="2.0" effort="1000" />
       <mimic joint="${prefix}finger_joint" multiplier="-1" offset="0" />
     </joint>
@@ -169,6 +167,7 @@
     </joint>
   </xacro:macro>
 
+  <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f.xacro" />
 
   <xacro:macro name="finger_joint" params="prefix">
     <joint name="${prefix}finger_joint" type="revolute">
@@ -193,53 +192,13 @@
     <xacro:finger_joints prefix="${prefix}" fingerprefix="right" reflect="-1.0"/>
   </xacro:macro>
 
-  <xacro:macro name="robotiq_arg2f_base_link" params="prefix">
-    <link name="${prefix}robotiq_arg2f_base_link">
-      <inertial>
-        <origin xyz="8.625E-08 -4.6583E-06 0.03145" rpy="0 0 0" />
-        <mass value="0.22652" />
-        <inertia ixx="0.00020005" ixy="-4.2442E-10" ixz="-2.9069E-10" iyy="0.00017832" iyz="-3.4402E-08" izz="0.00013478" />
-      </inertial>
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_base_link.dae" scale="0.001 0.001 0.001"/>
-        </geometry>
-        <material name="">
-          <color rgba="0.1 0.1 0.1 1" />
-        </material>
-      </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_base_link.dae" scale="0.001 0.001 0.001"/>
-        </geometry>
-      </collision>
-    </link>
-    
-  </xacro:macro>
-
   <!-- Initialization of all joints and links -->
   <xacro:macro name="robotiq_arg2f_85" params="prefix">
-      <xacro:robotiq_arg2f_base_link prefix="${prefix}"/>
-          <xacro:finger_joint prefix="${prefix}"/>
-
+    <xacro:robotiq_arg2f_base_link prefix="${prefix}"/>
     <xacro:finger_links prefix="${prefix}" fingerprefix="left" stroke="85"/>
     <xacro:finger_links prefix="${prefix}" fingerprefix="right" stroke="85"/>
-   <!-- <xacro:finger_joints prefix="${prefix}" fingerprefix="left" reflect="1.0"/> -->
-    <!-- <xacro:finger_joints prefix="${prefix}" fingerprefix="right" reflect="-1.0"/>  -->
+    <xacro:finger_joint prefix="${prefix}"/>
     <xacro:right_outer_knuckle_joint prefix="${prefix}"/>
-        <!-- <xacro:left_outer_knuckle_joint prefix="${prefix}"/> -->
-
-    <xacro:robotiq_85_gripper_transmission prefix="${prefix}"/>
-    <!-- <xacro:robotiq_arg2f_gazebo prefix="${prefix}"/> -->
- <gazebo reference="${prefix}robotiq_arg2f_base_link">
-      <physics>
-        <ode>
-          <implicit_spring_damper>1</implicit_spring_damper>
-          <cfm_damping_reference_velocity>0.01</cfm_damping_reference_velocity>
-        </ode>
-      </physics>
-    </gazebo>
+    <xacro:robotiq_arg2f_transmission prefix="${prefix}"/>
   </xacro:macro>
 </robot>

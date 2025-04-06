@@ -180,9 +180,10 @@ def generate_launch_description():
     #     }.items()
     # )
 
-  
+    
     controllers = ["joint_state_broadcaster", "arm_controller", "gripper_controller", "arm_with_gripper_controller"]
-    delays = [3.0, 5.0, 7.0, 9.0]   
+    delays = [7.0, 11.0, 15.0, 19.0]
+
 
 
     for controller, delay in zip(controllers, delays):
