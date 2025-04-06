@@ -347,7 +347,7 @@
    <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_85_model_macro.xacro"/>
 
   <!-- Include the gripper Xacro file  -->
-<xacro:robotiq_arg2f_85 prefix="$(arg tf_prefix)"/>
+<xacro:robotiq_arg2f_85 prefix=""/>
 
 <!-- Attach the gripper to tool0 -->
 <!-- Attach gripper to wrist_3_link with corrected rotation -->

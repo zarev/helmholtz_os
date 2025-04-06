@@ -171,43 +171,43 @@ def generate_launch_description():
         gazebo_models_path
     )
 
-    load_controllers_cmd = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([
-            os.path.join(pkg_share_moveit, 'launch', 'load_ros2_controllers.launch.py')
-        ]),
-        launch_arguments={
-            'use_sim_time': use_sim_time
-        }.items()
-    )
+    # load_controllers_cmd = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource([
+    #         os.path.join(pkg_share_moveit, 'launch', 'load_ros2_controllers.launch.py')
+    #     ]),
+    #     launch_arguments={
+    #         'use_sim_time': use_sim_time
+    #     }.items()
+    # )
 
-    # controllers = ['joint_state_broadcaster', 'arm_controller', 'grip_action_controller']
-    # delays = [3.0, 5.0, 7.0]  # Adjust delays as needed (seconds)
+  
+    controllers = ["joint_state_broadcaster", "arm_controller", "grip_action_controller"]
+    delays = [3.0, 5.0, 7.0]
 
-    # controllers = ["joint_state_broadcaster", "arm_controller", "grip_action_controller"]
-    # delays = [3.0, 5.0, 7.0]
+    for controller, delay in zip(controllers, delays):
+        ld.add_action(
+            RegisterEventHandler(
+                OnProcessStart(
+                    target_action=controller_manager_node,
+                    on_start=[
+                        TimerAction(
+                            period=delay,
+                            actions=[
+                                Node(
+                                    package="controller_manager",
+                                    executable="spawner",
+                                    arguments=[controller],
+                                    parameters=[{'use_sim_time': True}],
+                                    output='screen'
+                                )
+                            ]
+                        )
+                    ]
+                )
+            )
+        )
 
-    # for controller, delay in zip(controllers, delays):
-    #     ld.add_action(
-    #         RegisterEventHandler(
-    #             event_handler=OnProcessStart(
-    #                 target_action=controller_manager_node,
-    #                 on_start=[
-    #                     TimerAction(
-    #                         period=delay,
-    #                         actions=[
-    #                             Node(
-    #                                 package="controller_manager",
-    #                                 executable="spawner",
-    #                                 arguments=[controller],
-    #                             )
-    #                         ],
-    #                     )
-    #                 ],
-    #             )
-    #         )
-    #     )
-
-    ld.add_action(load_controllers_cmd)
+    # ld.add_action(load_controllers_cmd)
     # Start Gazebo
     start_gazebo_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(

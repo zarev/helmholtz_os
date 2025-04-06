@@ -42,7 +42,7 @@ This project includes a UR robotic arm with the Robotiq 2-Finger Gripper that ca
 To launch Gazebo with the UR robotic arm and the Robotiq 2-Finger Gripper, use the following command:
 
 ```bash
-ros2 launch 
+ros2 launch ur_gazebo ur.gazebo.launch.py
 ```
 
 ## Launching the Visualization
@@ -58,7 +58,33 @@ To visualize the UR robotic arm with the gripper, use:
 ros2 launch ur_description view_ur.launch.py ur_type:=ur3
 ```
 
+## Moving the Arm from the Command Line
 
+After launching your simulation and controllers, you can test moving the UR arm using ROS 2 CLI. Use the following command to send a trajectory to the arm controller:
+
+```bash
+ros2 action send_goal /arm_controller/follow_joint_trajectory control_msgs/action/FollowJointTrajectory \
+'{
+  "trajectory": {
+    "joint_names": [
+      "shoulder_pan_joint",
+      "shoulder_lift_joint",
+      "elbow_joint",
+      "wrist_1_joint",
+      "wrist_2_joint",
+      "wrist_3_joint"
+    ],
+    "points": [
+      {
+        "positions": [0.0, -1.57, 1.57, 0.0, 1.57, 0.0],
+        "time_from_start": { "sec": 2, "nanosec": 0 }
+      }
+    ]
+  }
+}'
+```
+
+This will move the arm to the specified joint positions over 2 seconds. Make sure your controller is running and correctly configured before sending the command.
 
 ## Screenshots
 

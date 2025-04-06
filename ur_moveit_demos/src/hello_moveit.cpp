@@ -63,7 +63,7 @@ int main(int argc, char * argv[])
 
   //  Set a scaling factor for optionally reducing the maximum joint acceleration. Allowed values are in (0,1].
   arm_group_interface.setMaxAccelerationScalingFactor(1.0);
-  arm_group_interface.setEndEffectorLink("tool0");
+  arm_group_interface.setEndEffectorLink("robotiq_arg2f_base_link");
 
   // Display helpful logging messages on the terminal
   RCLCPP_INFO(logger, "Planning pipeline: %s", arm_group_interface.getPlanningPipelineId().c_str());

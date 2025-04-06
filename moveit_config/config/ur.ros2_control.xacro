@@ -53,6 +53,8 @@
                 <state_interface name="position">
                   <param name="initial_value">${initial_positions['finger_joint']}</param>
                 </state_interface>
+                    <!-- <state_interface name="velocity"/>  🔥 This is the missing piece -->
+
                   </joint>
 
         </ros2_control>

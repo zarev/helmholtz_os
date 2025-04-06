@@ -4,7 +4,7 @@
    <xacro:arg name="use_gazebo" default="true"/> <!-- Added missing argument -->
    <xacro:arg name="robot_name" default="ur"/>
     <!-- Import ur urdf file -->
-    <xacro:include filename="$(find ur_description)/urdf/ur.urdf" />
+    <xacro:include filename="$(find ur_description)/urdf/ur.urdf.xacro" />
 
     <!-- Import control_xacro -->
 

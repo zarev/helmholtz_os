@@ -475,13 +475,6 @@
       </geometry>
     </collision>
   </link>
-  <joint name="finger_joint" type="revolute">
-    <origin rpy="0 0 3.141592653589793" xyz="0 -0.0306011 0.054904"/>
-    <parent link="robotiq_arg2f_base_link"/>
-    <child link="left_outer_knuckle"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="1000" lower="0" upper="0.8" velocity="2.0"/>
-  </joint>
   <joint name="left_outer_finger_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0.0315 -0.0041"/>
     <parent link="left_outer_knuckle"/>
@@ -510,14 +503,6 @@
     <parent link="left_inner_finger"/>
     <child link="left_inner_finger_pad"/>
     <axis xyz="0 0 1"/>
-  </joint>
-  <joint name="right_outer_knuckle_joint" type="revolute">
-    <origin rpy="0 0 0" xyz="0 0.0306011 0.054904"/>
-    <parent link="robotiq_arg2f_base_link"/>
-    <child link="right_outer_knuckle"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="1000" lower="0" upper="0.81" velocity="2.0"/>
-    <mimic joint="finger_joint" multiplier="-1" offset="0"/>
   </joint>
   <joint name="right_outer_finger_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0.0315 -0.0041"/>
@@ -548,6 +533,7 @@
     <child link="right_inner_finger_pad"/>
     <axis xyz="0 0 1"/>
   </joint>
+  <!-- <xacro:right_outer_knuckle_joint prefix="${prefix}"/> -->
   <!-- <xacro:left_outer_knuckle_joint prefix="${prefix}"/> -->
   <transmission name="robotiq_85_left_knuckle_trans">
     <type>transmission_interface/SimpleTransmission</type>
@@ -562,63 +548,40 @@
     </actuator>
   </transmission>
   <!-- Mimic joints -->
-  <gazebo>
-    <plugin filename="libgazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_1">
-      <joint>robotiq_85_left_knuckle_joint</joint>
-      <mimicJoint>robotiq_85_right_knuckle_joint</mimicJoint>
-    </plugin>
-    <plugin filename="libgazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_2">
-      <joint>robotiq_85_left_knuckle_joint</joint>
-      <mimicJoint>robotiq_85_left_inner_knuckle_joint</mimicJoint>
-    </plugin>
-    <plugin filename="libgazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_3">
-      <joint>robotiq_85_left_knuckle_joint</joint>
-      <mimicJoint>robotiq_85_right_inner_knuckle_joint</mimicJoint>
-    </plugin>
-    <plugin filename="libgazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_4">
-      <joint>robotiq_85_left_knuckle_joint</joint>
-      <mimicJoint>robotiq_85_left_finger_tip_joint</mimicJoint>
-      <multiplier>-1.0</multiplier>
-      <offset>0.0</offset>
-    </plugin>
-    <plugin filename="libgazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_5">
-      <joint>robotiq_85_left_knuckle_joint</joint>
-      <mimicJoint>robotiq_85_right_finger_tip_joint</mimicJoint>
-      <multiplier>-1.0</multiplier>
-      <offset>0.0</offset>
-    </plugin>
-  </gazebo>
-  <gazebo>
-    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_1">
-      <joint>finger_joint</joint>
-      <mimicJoint>right_outer_knuckle_joint</mimicJoint>
-      <multiplier>-1.0</multiplier>
-      <offset>0.0</offset>
-    </plugin>
-    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_2">
-      <joint>finger_joint</joint>
-      <mimicJoint>left_inner_knuckle_joint</mimicJoint>
-      <multiplier>-1.0</multiplier>
-      <offset>0.0</offset>
-    </plugin>
-    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_3">
-      <joint>finger_joint</joint>
-      <mimicJoint>right_inner_knuckle_joint</mimicJoint>
-      <multiplier>-1.0</multiplier>
-      <offset>0.0</offset>
-    </plugin>
-    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_4">
-      <joint>finger_joint</joint>
-      <mimicJoint>left_inner_finger_joint</mimicJoint>
-      <multiplier>1.0</multiplier>
-      <offset>0.0</offset>
-    </plugin>
-    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_5">
-      <joint>finger_joint</joint>
-      <mimicJoint>right_inner_finger_joint</mimicJoint>
-      <multiplier>1.0</multiplier>
-      <offset>0.0</offset>
-    </plugin>
+  <!-- <gazebo>
+      <plugin filename="libgazebo_mimic_joint_plugin.so" name="${prefix}mimic_robotiq_85_1">
+        <joint>${prefix}robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>${prefix}robotiq_85_right_knuckle_joint</mimicJoint>
+      </plugin>
+      <plugin filename="libgazebo_mimic_joint_plugin.so" name="${prefix}mimic_robotiq_85_2">
+        <joint>${prefix}robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>${prefix}robotiq_85_left_inner_knuckle_joint</mimicJoint>
+      </plugin>
+      <plugin filename="libgazebo_mimic_joint_plugin.so" name="${prefix}mimic_robotiq_85_3">
+        <joint>${prefix}robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>${prefix}robotiq_85_right_inner_knuckle_joint</mimicJoint>
+      </plugin>
+      <plugin filename="libgazebo_mimic_joint_plugin.so" name="${prefix}mimic_robotiq_85_4">
+        <joint>${prefix}robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>${prefix}robotiq_85_left_finger_tip_joint</mimicJoint>
+        <multiplier>-1.0</multiplier>
+        <offset>0.0</offset>
+      </plugin>
+      <plugin filename="libgazebo_mimic_joint_plugin.so" name="${prefix}mimic_robotiq_85_5">
+        <joint>${prefix}robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>${prefix}robotiq_85_right_finger_tip_joint</mimicJoint>
+        <multiplier>-1.0</multiplier>
+        <offset>0.0</offset>
+      </plugin>
+    </gazebo> -->
+  <!-- <xacro:robotiq_arg2f_gazebo prefix="${prefix}"/> -->
+  <gazebo reference="robotiq_arg2f_base_link">
+    <physics>
+      <ode>
+        <implicit_spring_damper>1</implicit_spring_damper>
+        <cfm_damping_reference_velocity>0.01</cfm_damping_reference_velocity>
+      </ode>
+    </physics>
   </gazebo>
   <!-- Attach the gripper to tool0 -->
   <!-- Attach gripper to wrist_3_link with corrected rotation -->

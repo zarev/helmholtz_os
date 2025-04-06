@@ -2,7 +2,16 @@
 
 <sdf version="1.7">
   <world name="default">
-
+  <physics name="bullet_featherstone_physics" type="bullet_featherstone">
+  <bullet>
+    <solver>
+      <type>btSequentialImpulseConstraintSolver</type>
+    </solver>
+    <featherstone>true</featherstone>
+  </bullet>
+  <max_step_size>0.001</max_step_size>
+  <real_time_factor>1</real_time_factor>
+</physics>
     <!-- Plugin for simulating physics -->
     <plugin
       filename="gz-sim-physics-system"

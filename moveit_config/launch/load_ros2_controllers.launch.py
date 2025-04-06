@@ -1,91 +1,46 @@
 #!/usr/bin/env python3
-"""
-Launch ROS 2 controllers for the robot.
-
-This script creates a launch description that starts the necessary controllers
-for operating the robotic arm and gripper in a specific sequence.
-
-Launched Controllers:
-    1. Joint State Broadcaster: Publishes joint states to /joint_states
-    2. Arm Controller: Controls the robot arm movements via /follow_joint_trajectory
-    3. Gripper Action Controller: Controls gripper actions via /gripper_action
-
-Launch Sequence:
-    1. Joint State Broadcaster
-    2. Arm Controller (starts after Joint State Broadcaster)
-    3. Gripper Action Controller (starts after Arm Controller)
-
-:author: darsh Menon
-:date: March 11,2025
-"""
 
 from launch import LaunchDescription
-from launch.actions import ExecuteProcess, RegisterEventHandler, TimerAction
-from launch.event_handlers import OnProcessExit
+from launch.actions import TimerAction
+from launch_ros.actions import Node
 
 
 def generate_launch_description():
-    """Generate a launch description for sequentially starting robot controllers.
+    """Launch robot controllers in a defined sequence."""
 
-    Returns:
-        LaunchDescription: Launch description containing sequenced controller starts
-    """
-    # Start arm controller
-    #     controller_manager_node = Node(
-    #     package='controller_manager',
-    #     executable='ros2_control_node',
-    #     parameters=[
-    #     moveit_config.robot_description, 
-    #     controller_yaml,
-    #     {'use_sim_time': True}  # Enable simulation time
-    #     ],
-    #     output='screen'
-    # # remappings=['~/robot_description','/robot_description']
-    # )
-    start_arm_controller_cmd = ExecuteProcess(
-        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
-             'arm_controller'],
-        output='screen')
-
-    # Start gripper action controller
-    start_gripper_action_controller_cmd = ExecuteProcess(
-        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
-             'grip_action_controller'],
-        output='screen')
-
-    # Launch joint state broadcaster
-    start_joint_state_broadcaster_cmd = ExecuteProcess(
-        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
-             'joint_state_broadcaster'],
-        output='screen')
-
-    # Add delay to joint state broadcaster (if necessary)
-    delayed_start = TimerAction(
-        period=10.0,
-        actions=[start_joint_state_broadcaster_cmd]
+    # Start joint state broadcaster immediately
+    joint_state_broadcaster_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=['joint_state_broadcaster'],
+        output='screen'
     )
 
-    # Register event handlers for sequencing
-    # Launch the joint state broadcaster after spawning the robot
-    load_joint_state_broadcaster_cmd = RegisterEventHandler(
-        event_handler=OnProcessExit(
-            target_action=start_joint_state_broadcaster_cmd,
-            on_exit=[start_arm_controller_cmd]))
+    # Start arm controller after short delay
+    arm_controller_spawner = TimerAction(
+        period=2.0,
+        actions=[Node(
+            package='controller_manager',
+            executable='spawner',
+            arguments=['arm_controller'],
+            output='screen'
+        )]
+    )
 
-    # Launch the arm controller after launching the joint state broadcaster
-    load_arm_controller_cmd = RegisterEventHandler(
-        event_handler=OnProcessExit(
-            target_action=start_arm_controller_cmd,
-            on_exit=[start_gripper_action_controller_cmd]))
+    # Start gripper controller after arm controller
+    grip_controller_spawner = TimerAction(
+        period=4.0,
+        actions=[Node(
+            package='controller_manager',
+            executable='spawner',
+            arguments=['grip_action_controller'],
+            output='screen'
+        )]
+    )
 
-    # Create the launch description and populate
     ld = LaunchDescription()
-    
-    # ld.add_action(controller_manager_node)
-
-    # Add the actions to the launch description in sequence
-    ld.add_action(delayed_start)
-    ld.add_action(load_joint_state_broadcaster_cmd)
-    ld.add_action(load_arm_controller_cmd)
+    ld.add_action(joint_state_broadcaster_spawner)
+    ld.add_action(arm_controller_spawner)
+    ld.add_action(grip_controller_spawner)
 
     return ld

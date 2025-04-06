@@ -31,3 +31,7 @@ arm_controller:
 grip_action_controller:
   ros__parameters:
     joint: finger_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
