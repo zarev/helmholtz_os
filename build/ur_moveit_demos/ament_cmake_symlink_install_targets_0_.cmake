@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_moveit_demos/hello_moveit" "/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_moveit_demos/plan_around_objects" "TARGETS" "hello_moveit" "plan_around_objects" "DESTINATION" "lib/ur_moveit_demos")

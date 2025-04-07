@@ -182,7 +182,7 @@ def generate_launch_description():
 
     
     controllers = ["joint_state_broadcaster", "arm_controller", "gripper_controller"]
-    delays = [7.0, 11.0, 15.0]
+    delays = [15.0, 20.0, 25.0]
 
 
 
