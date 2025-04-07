@@ -1,67 +1,68 @@
-# UR Robotic Arm with Robotiq 2-Finger Gripper for ROS2
 
-This project implements the Robotiq 2-Finger Gripper along with the UR robotic arm using ROS2 (Jazzy). It includes the URDF model and launch files necessary for visualizing both the gripper and the robotic arm in RViz.
+# UR Robotic Arm with Robotiq 2-Finger Gripper for ROS 2
 
-## Installation
+This project integrates the Robotiq 2-Finger Gripper with a Universal Robots UR3 arm using ROS 2 Jazzy and Gazebo Harmonic. It includes URDF models, ROS 2 control configuration, simulation launch files, and control scripts.
 
-To set up this project, ensure you have ROS2 (Jazzy) installed on your system.
+> ✅ **Note:** This setup uses **fixed mimic joint configuration** for the Robotiq gripper to support simulation in **newer Gazebo (Harmonic)**. Only the primary `finger_joint` receives commands—mimic joints automatically follow.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/darshmenon/
-   cd UR3_ROS2_PICK_AND_PLACE
-   ```
+---
 
-2. Install the necessary dependencies:
-   ```bash
-   sudo apt install ros-jazzy-rviz2 \
-                    ros-jazzy-joint-state-publisher \
-                    ros-jazzy-robot-state-publisher \
-                    ros-jazzy-ros2-control \
-                    ros-jazzy-ros2-controllers \
-                    ros-jazzy-controller-manager \
-                    ros-jazzy-joint-trajectory-controller \
-                    ros-jazzy-position-controllers \
-                    ros-jazzy-gz-ros2-control \
-                    ros-jazzy-ros2controlcli
-   ```
+## 📦 Installation
 
-3. Build your ROS2 workspace:
-   ```bash
-   cd ~/your_ros2_workspace  # Replace with your workspace path
-   colcon build --symlink-install
-   source install/setup.bash
-   ```
+Make sure you have [ROS 2 Jazzy](https://docs.ros.org/en/jazzy/index.html) and Gazebo Harmonic installed.
 
-## Usage
+### 1. Clone the Repository
+```bash
+git clone https://github.com/darshmenon/UR3_ROS2_PICK_AND_PLACE.git
+cd UR3_ROS2_PICK_AND_PLACE
+```
 
-This project includes a UR robotic arm with the Robotiq 2-Finger Gripper that can be used for various robotic applications. The URDF models are located in the `urdf` directory, and you can modify them according to your needs.
+### 2. Install Dependencies
+```bash
+sudo apt install ros-jazzy-rviz2 \
+                 ros-jazzy-joint-state-publisher \
+                 ros-jazzy-robot-state-publisher \
+                 ros-jazzy-ros2-control \
+                 ros-jazzy-ros2-controllers \
+                 ros-jazzy-controller-manager \
+                 ros-jazzy-joint-trajectory-controller \
+                 ros-jazzy-position-controllers \
+                 ros-jazzy-gz-ros2-control \
+                 ros-jazzy-ros2controlcli \
+                 ros-jazzy-gz-sim
+```
 
-## Launching Gazebo
+### 3. Build the Workspace
+```bash
+cd ~/your_ros2_ws  # Replace with your workspace path
+colcon build --symlink-install
+source install/setup.bash
+```
 
-To launch Gazebo with the UR robotic arm and the Robotiq 2-Finger Gripper, use the following command:
+---
 
+## 🚀 Launch Instructions
+
+### Launch Full Simulation in Gazebo
 ```bash
 ros2 launch ur_gazebo ur.gazebo.launch.py
 ```
 
-## Launching the Visualization
-
-To visualize the Robotiq 2-Finger Gripper in RViz, use the following command:
-
-```bash
-ros2 launch robotiq_2finger_grippers robotiq_2f_85_gripper_visualization/launch/test_2f_85_model.launch.py
-```
-
-To visualize the UR robotic arm with the gripper, use:
+### Launch RViz Visualization (UR3 + Gripper)
 ```bash
 ros2 launch ur_description view_ur.launch.py ur_type:=ur3
 ```
 
-## Moving the Arm from the Command Line
+### Launch Gripper Visualization Alone
+```bash
+ros2 launch robotiq_2finger_grippers robotiq_2f_85_gripper_visualization/launch/test_2f_85_model.launch.py
+```
 
-After launching your simulation and controllers, you can test moving the UR arm using ROS 2 CLI. Use the following command to send a trajectory to the arm controller:
+---
 
+## 🤖 Move the Arm from CLI
+
+Send a simple trajectory:
 ```bash
 ros2 action send_goal /arm_controller/follow_joint_trajectory control_msgs/action/FollowJointTrajectory \
 '{
@@ -84,37 +85,53 @@ ros2 action send_goal /arm_controller/follow_joint_trajectory control_msgs/actio
 }'
 ```
 
-This will move the arm to the specified joint positions over 2 seconds. Make sure your controller is running and correctly configured before sending the command.
+---
 
-## Running the Arm-Gripper Loop Script
+## 🔁 Run Arm-Gripper Automation Script
 
-After launching Gazebo and controllers, you can run the automatic arm-gripper movement loop with:
-
+Run a full pick-return-release loop:
 ```bash
 python3 ~/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_controller.py
 ```
 
-This script will automatically move the robotic arm to a target position, close the gripper, return to the home position, open the gripper, and repeat the cycle.
+---
 
-## Screenshots
+## 📸 Screenshots
 
-### Arm with Gripper in RViz
+### UR3 with Robotiq Gripper in RViz  
 ![Arm with Gripper](/images/arm_with_gripper.png)
 
-### Robotiq Gripper Close-up
+### Robotiq Gripper Close-up  
 ![Gripper](/images/gripper.png)
 
-### Full Setup in Gazebo
+### Simulation in Gazebo  
 ![Gazebo View](/images/image.png)
 
-### RViz View
+### RViz Overview  
 ![RViz 1](/images/rviz1.png)
 
-## Contributing
+---
 
-Contributions are welcome! Please feel free to submit a pull request or create an issue if you find any bugs or have suggestions for improvement.
+## 📂 Project Structure
 
-## License
+- `urdf/`: Robot and gripper XACROs  
+- `launch/`: Launch files for simulation and visualization  
+- `config/`: Controller YAML and joint limits  
+- `scripts/`: Python control scripts  
+- `images/`: Preview screenshots  
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+---
 
+## 🤝 Contributing
+
+Feel free to open pull requests or issues if you have improvements or bug reports.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+---
+
+Let me know if you want a separate section on controller config, MoveIt 2 integration, or Gazebo troubleshooting tips.

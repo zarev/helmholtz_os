@@ -57,6 +57,48 @@
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
+            
+            <!-- Mimic joints (no command interfaces, initial value same as finger_joint) -->
+
+<!-- right_outer_knuckle_joint -->
+<joint name="right_outer_knuckle_joint">
+  <state_interface name="position">
+    <param name="initial_value">${initial_positions['finger_joint']}</param>
+  </state_interface>
+  <state_interface name="velocity"/>
+</joint>
+
+<!-- right_inner_knuckle_joint -->
+<joint name="right_inner_knuckle_joint">
+  <state_interface name="position">
+    <param name="initial_value">${initial_positions['finger_joint']}</param>
+  </state_interface>
+  <state_interface name="velocity"/>
+</joint>
+
+<!-- left_inner_knuckle_joint -->
+<joint name="left_inner_knuckle_joint">
+  <state_interface name="position">
+    <param name="initial_value">${initial_positions['finger_joint']}</param>
+  </state_interface>
+  <state_interface name="velocity"/>
+</joint>
+
+<!-- right_inner_finger_joint -->
+<joint name="right_inner_finger_joint">
+  <state_interface name="position">
+    <param name="initial_value">${initial_positions['finger_joint']}</param>
+  </state_interface>
+  <state_interface name="velocity"/>
+</joint>
+
+<!-- left_inner_finger_joint -->
+<joint name="left_inner_finger_joint">
+  <state_interface name="position">
+    <param name="initial_value">${initial_positions['finger_joint']}</param>
+  </state_interface>
+  <state_interface name="velocity"/>
+</joint>
 
         </ros2_control>
     </xacro:macro>
