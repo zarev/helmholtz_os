@@ -1,0 +1,1 @@
+/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/robotiq_2f_85_gripper_visualization/ament_cmake_environment_hooks/local_setup.zsh

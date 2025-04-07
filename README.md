@@ -91,7 +91,7 @@ This will move the arm to the specified joint positions over 2 seconds. Make sur
 After launching Gazebo and controllers, you can run the automatic arm-gripper movement loop with:
 
 ```bash
-python3 /home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_controller.py
+python3 ~/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_controller.py
 ```
 
 This script will automatically move the robotic arm to a target position, close the gripper, return to the home position, open the gripper, and repeat the cycle.

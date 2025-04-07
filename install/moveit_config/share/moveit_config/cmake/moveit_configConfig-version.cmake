@@ -1,0 +1,1 @@
+/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_config/ament_cmake_core/moveit_configConfig-version.cmake
