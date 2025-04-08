@@ -60,6 +60,7 @@ int main(int argc, char * argv[])
   // Source: https://github.com/moveit/moveit2/blob/main/moveit_ros/planning_interface/move_group_interface/include/moveit/move_group_interface/move_group_interface.h
   using moveit::planning_interface::MoveGroupInterface;
   auto arm_group_interface = MoveGroupInterface(node, "arm");
+  arm_group_interface.setEndEffectorLink("tool0");
 
   // Specify a planning pipeline to be used for further planning
   arm_group_interface.setPlanningPipelineId("ompl");

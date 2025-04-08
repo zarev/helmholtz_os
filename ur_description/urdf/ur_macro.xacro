@@ -342,6 +342,7 @@
   <origin xyz="0 0 0" rpy="${pi/2.0} 0 ${pi/2.0}"/>
   <parent link="${tf_prefix}flange"/>
   <child link="${tf_prefix}tool0"/>
+  
   </joint>
 
    <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_85_model_macro.xacro"/>
@@ -355,6 +356,9 @@
   <parent link="${tf_prefix}tool0"/>
   <child link="${tf_prefix}robotiq_arg2f_base_link"/> 
   <origin xyz="0 0 0.005" rpy="0 0 0"/> 
+    <gazebo>
+    <disableFixedJointLumping>true</disableFixedJointLumping>
+  </gazebo>
 </joint>
 
 <!-- Define the gripper with a meaningful prefix -->

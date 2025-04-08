@@ -22,6 +22,7 @@
         <joint name="wrist_3-flange"/>
         <joint name="flange-tool0"/>
         <joint name="gripper_joint"/>
+        <chain base_link="world" tip_link="tool0"/>
     </group>
     <group name="gripper">
         <joint name="finger_joint"/>

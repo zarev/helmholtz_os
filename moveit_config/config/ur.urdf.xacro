@@ -10,7 +10,9 @@
 
     <xacro:include filename="$(find moveit_config)/config/ur.ros2_control.xacro" />
 
-
+    <gazebo>
+  <disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
     <xacro:ur_ros2_control name="ur" initial_positions_file="$(find moveit_config)/config/initial_positions.yaml"/>
     <xacro:include filename="$(find ur_description)/urdf/gazebo_sim_ros2_control.urdf.xacro" />
    <xacro:load_gazebo_sim_ros2_control_plugin
