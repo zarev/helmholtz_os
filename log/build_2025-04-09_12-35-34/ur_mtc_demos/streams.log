@@ -1,0 +1,138 @@
+[0.213s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos
+[0.376s] -- The C compiler identification is GNU 13.3.0
+[0.844s] -- The CXX compiler identification is GNU 13.3.0
+[1.178s] -- Detecting C compiler ABI info
+[1.397s] -- Detecting C compiler ABI info - done
+[1.397s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.397s] -- Detecting C compile features
+[1.397s] -- Detecting C compile features - done
+[1.450s] -- Detecting CXX compiler ABI info
+[1.680s] -- Detecting CXX compiler ABI info - done
+[1.693s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.693s] -- Detecting CXX compile features
+[1.694s] -- Detecting CXX compile features - done
+[1.699s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.905s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.093s] -- Found generate_parameter_library: 0.4.0 (/opt/ros/jazzy/share/generate_parameter_library/cmake)
+[2.102s] -- Found parameter_traits: 0.4.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[2.339s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.364s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.402s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.446s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.626s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.634s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.770s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.897s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.987s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.204s] -- Found rclcpp_lifecycle: 28.1.6 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[3.259s] -- Found moveit_common: 2.12.2 (/opt/ros/jazzy/share/moveit_common/cmake)
+[3.367s] -- Found moveit_core: 2.12.2 (/opt/ros/jazzy/share/moveit_core/cmake)
+[3.628s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[4.636s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[4.872s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[4.872s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[5.435s] -- Found moveit_ros_planning: 2.12.2 (/opt/ros/jazzy/share/moveit_ros_planning/cmake)
+[5.442s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[5.499s] -- Found moveit_ros_planning_interface: 2.12.2 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[5.507s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[5.534s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[5.585s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[5.652s] -- Found moveit_task_constructor_core: 0.1.3 (/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake)
+[5.823s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[5.880s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[5.881s] -- Configured cppcheck include dirs: 
+[5.881s] -- Configured cppcheck exclude dirs and/or files: 
+[5.891s] -- Added test 'flake8' to check Python code syntax and style conventions
+[5.891s] -- Configured 'flake8' exclude dirs and/or files: 
+[5.892s] -- Added test 'lint_cmake' to check CMake code style
+[5.894s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[5.898s] -- Added test 'uncrustify' to check C / C++ code style
+[5.899s] -- Configured uncrustify additional arguments: 
+[5.900s] -- Added test 'xmllint' to check XML markup files
+[5.903s] -- Configuring done (5.7s)
+[6.034s] -- Generating done (0.1s)
+[6.063s] -- Build files have been written to: /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos
+[6.082s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos' returned '0': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos
+[6.082s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos -- -j4 -l4
+[6.150s] [  8%] [32mBuilding CXX object CMakeFiles/ur_mtc_demos_cartesian.dir/src/cartesian.cpp.o[0m
+[6.158s] [ 16%] [32mBuilding CXX object CMakeFiles/ur_mtc_demos_fallbacks_move_to.dir/src/fallbacks_move_to.cpp.o[0m
+[6.162s] [ 25%] [34m[1mRunning `/opt/ros/jazzy/bin/generate_parameter_library_cpp /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos/include/ur_mtc_demos/ik_clearance_cost_parameters.hpp /home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos/src/ik_clearance_cost_parameters.yaml `[0m
+[6.179s] [ 33%] [32mBuilding CXX object CMakeFiles/ur_mtc_demos_alternative_path_costs.dir/src/alternative_path_costs.cpp.o[0m
+[7.953s] [ 41%] [34m[1mCreating deprecated header file /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos/include/ik_clearance_cost_parameters.hpp[0m
+[8.109s] [ 41%] Built target ik_clearance_cost_parameters
+[8.218s] [ 50%] [32mBuilding CXX object CMakeFiles/ur_mtc_demos_modular.dir/src/modular.cpp.o[0m
+[11.926s] In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos/src/alternative_path_costs.cpp:16[m[K:
+[11.926s] [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[11.926s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[11.927s]       |                                                                             [01;36m[K^[m[K
+[12.194s] In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos/src/fallbacks_move_to.cpp:19[m[K:
+[12.194s] [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[12.194s]    51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[12.194s]       |                                                                             [01;36m[K^[m[K
+[13.881s] In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos/src/fallbacks_move_to.cpp:20[m[K:
+[13.881s] [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[13.881s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[13.881s]       |                                                                             [01;36m[K^[m[K
+[14.796s] In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos/src/cartesian.cpp:21[m[K:
+[14.796s] [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[14.796s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[14.796s]       |                                                                             [01;36m[K^[m[K
+[15.458s] In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos/src/modular.cpp:28[m[K:
+[15.458s] [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[15.459s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[15.459s]       |                                                                             [01;36m[K^[m[K
+[24.340s] [ 58%] [32m[1mLinking CXX executable modular[0m
+[25.116s] [ 58%] Built target ur_mtc_demos_modular
+[25.404s] [ 66%] [32m[1mLinking CXX executable cartesian[0m
+[26.024s] [ 66%] Built target ur_mtc_demos_cartesian
+[27.183s] [ 75%] [32m[1mLinking CXX executable alternative_path_costs[0m
+[27.663s] [ 75%] Built target ur_mtc_demos_alternative_path_costs
+[29.063s] [ 83%] [32m[1mLinking CXX executable fallbacks_move_to[0m
+[29.599s] [ 83%] Built target ur_mtc_demos_fallbacks_move_to
+[29.621s] [ 91%] [32mBuilding CXX object CMakeFiles/ur_mtc_demos_ik_clearance_cost.dir/src/ik_clearance_cost.cpp.o[0m
+[33.072s] In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos/src/ik_clearance_cost.cpp:14[m[K:
+[33.073s] [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[33.073s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[33.073s]       |                                                                             [01;36m[K^[m[K
+[35.962s] In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_demos/src/ik_clearance_cost.cpp:19[m[K:
+[35.962s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos/include/ik_clearance_cost_parameters.hpp:1:149:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: #include "ik_clearance_cost_parameters.hpp" is deprecated. Use #include <ur_mtc_demos/ik_clearance_cost_parameters.hpp> instead.[m[K’
+[35.962s]     1 |  message("#include \"ik_clearance_cost_parameters.hpp\" is deprecated. Use #include <ur_mtc_demos/ik_clearance_cost_parameters.hpp> instead."[01;36m[K)[m[K
+[35.963s]       |                                                                                                                                              [01;36m[K^[m[K
+[35.963s] 
+[41.603s] [100%] [32m[1mLinking CXX executable ik_clearance_cost[0m
+[42.042s] [100%] Built target ur_mtc_demos_ik_clearance_cost
+[42.063s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos' returned '0': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos -- -j4 -l4
+[42.064s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos
+[42.074s] -- Install configuration: "Release"
+[42.075s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/lib/ur_mtc_demos/alternative_path_costs
+[42.078s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/lib/ur_mtc_demos/alternative_path_costs" to ""
+[42.079s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/lib/ur_mtc_demos/cartesian
+[42.082s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/lib/ur_mtc_demos/cartesian" to ""
+[42.082s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/lib/ur_mtc_demos/fallbacks_move_to
+[42.085s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/lib/ur_mtc_demos/fallbacks_move_to" to ""
+[42.086s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/include/ur_mtc_demos
+[42.087s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/include/ur_mtc_demos/ik_clearance_cost_parameters.hpp
+[42.088s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/lib/ur_mtc_demos/ik_clearance_cost
+[42.090s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/lib/ur_mtc_demos/ik_clearance_cost" to ""
+[42.091s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/lib/ur_mtc_demos/modular
+[42.091s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/lib/ur_mtc_demos/modular" to ""
+[42.092s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/launch
+[42.093s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/launch/mtc_demos.launch.py
+[42.095s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/rviz
+[42.096s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/rviz/mtc_demos.rviz
+[42.099s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ament_index/resource_index/package_run_dependencies/ur_mtc_demos
+[42.099s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ament_index/resource_index/parent_prefix_path/ur_mtc_demos
+[42.099s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/environment/ament_prefix_path.sh
+[42.100s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/environment/ament_prefix_path.dsv
+[42.100s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/environment/path.sh
+[42.100s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/environment/path.dsv
+[42.101s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/local_setup.bash
+[42.101s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/local_setup.sh
+[42.101s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/local_setup.zsh
+[42.106s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/local_setup.dsv
+[42.109s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/package.dsv
+[42.109s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ament_index/resource_index/packages/ur_mtc_demos
+[42.109s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/cmake/ur_mtc_demosConfig.cmake
+[42.109s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/cmake/ur_mtc_demosConfig-version.cmake
+[42.109s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos/share/ur_mtc_demos/package.xml
+[42.116s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos' returned '0': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_demos

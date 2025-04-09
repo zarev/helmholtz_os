@@ -1,1 +1,0 @@
-Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces -- -j16 -l16

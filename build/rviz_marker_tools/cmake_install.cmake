@@ -1,4 +1,4 @@
-# Install script for directory: /home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/rviz_marker_tools
+# Install script for directory: /home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/rviz_marker_tools
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/rviz_marker_tools/include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/rviz_marker_tools/include/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -164,7 +164,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rviz_marker_tools" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/rviz_marker_tools/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rviz_marker_tools" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/rviz_marker_tools/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

@@ -269,10 +269,13 @@ FastRTPS_LIBRARY_DEBUG:FILEPATH=FastRTPS_LIBRARY_DEBUG-NOTFOUND
 FastRTPS_LIBRARY_RELEASE:FILEPATH=/opt/ros/jazzy/lib/libfastrtps.so
 
 //Path to a file.
-MONGODB_INCLUDE_DIR:PATH=MONGODB_INCLUDE_DIR-NOTFOUND
+MONGODB_INCLUDE_DIR:PATH=/usr/include
 
 //Path to a library.
-MONGODB_LIBRARIES:FILEPATH=MONGODB_LIBRARIES-NOTFOUND
+MONGODB_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libmongoclient.so
+
+//Path to a file.
+MONGODB_dbclientinterface_Path:PATH=/usr/include
 
 //Path to a library.
 OPENSSL_CRYPTO_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
@@ -302,7 +305,7 @@ _gtest_header_file:FILEPATH=/opt/ros/jazzy/src/gtest_vendor/include/gtest/gtest.
 _gtest_src_file:FILEPATH=/opt/ros/jazzy/src/gtest_vendor/src/gtest.cc
 
 //Path to a file.
-_launch_test_FILE_NAME:FILEPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo/test/warehouse_ros_mongo.launch.py
+_launch_test_FILE_NAME:FILEPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/warehouse_ros_mongo/test/warehouse_ros_mongo.launch.py
 
 //Path to a library.
 _lib:FILEPATH=/opt/ros/jazzy/lib/libtf2_msgs__rosidl_typesupport_fastrtps_cpp.so
@@ -611,10 +614,10 @@ warehouse_ros_mongo_BINARY_DIR:STATIC=/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/
 warehouse_ros_mongo_IS_TOP_LEVEL:STATIC=ON
 
 //Dependencies for the target
-warehouse_ros_mongo_LIB_DEPENDS:STATIC=general;rclcpp::rclcpp;general;std_msgs::std_msgs__rosidl_generator_c;general;std_msgs::std_msgs__rosidl_typesupport_fastrtps_c;general;std_msgs::std_msgs__rosidl_typesupport_fastrtps_cpp;general;std_msgs::std_msgs__rosidl_typesupport_introspection_c;general;std_msgs::std_msgs__rosidl_typesupport_c;general;std_msgs::std_msgs__rosidl_typesupport_introspection_cpp;general;std_msgs::std_msgs__rosidl_typesupport_cpp;general;std_msgs::std_msgs__rosidl_generator_py;general;warehouse_ros::warehouse_ros;general;class_loader::class_loader;general;Boost::system;general;Boost::filesystem;general;Boost::thread;general;MONGODB_LIBRARIES-NOTFOUND;
+warehouse_ros_mongo_LIB_DEPENDS:STATIC=general;rclcpp::rclcpp;general;std_msgs::std_msgs__rosidl_generator_c;general;std_msgs::std_msgs__rosidl_typesupport_fastrtps_c;general;std_msgs::std_msgs__rosidl_typesupport_fastrtps_cpp;general;std_msgs::std_msgs__rosidl_typesupport_introspection_c;general;std_msgs::std_msgs__rosidl_typesupport_c;general;std_msgs::std_msgs__rosidl_typesupport_introspection_cpp;general;std_msgs::std_msgs__rosidl_typesupport_cpp;general;std_msgs::std_msgs__rosidl_generator_py;general;warehouse_ros::warehouse_ros;general;class_loader::class_loader;general;Boost::system;general;Boost::filesystem;general;Boost::thread;general;/usr/lib/x86_64-linux-gnu/libmongoclient.so;
 
 //Value Computed by CMake
-warehouse_ros_mongo_SOURCE_DIR:STATIC=/home/darsh/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo
+warehouse_ros_mongo_SOURCE_DIR:STATIC=/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/warehouse_ros_mongo
 
 
 ########################
@@ -705,7 +708,7 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/darsh/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/warehouse_ros_mongo
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
@@ -776,6 +779,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boo
 FIND_PACKAGE_MESSAGE_DETAILS_Eigen3:INTERNAL=[1][v3.4.0()]
 //Details about finding FastRTPS
 FIND_PACKAGE_MESSAGE_DETAILS_FastRTPS:INTERNAL=[/opt/ros/jazzy/include][/opt/ros/jazzy/lib/libfastrtps.so;/opt/ros/jazzy/lib/libfastcdr.so][v(2.13)]
+//Details about finding MONGODB
+FIND_PACKAGE_MESSAGE_DETAILS_MONGODB:INTERNAL=[/usr/lib/x86_64-linux-gnu/libmongoclient.so][/usr/include][v()]
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcrypto.so][/usr/include][c ][v3.0.13()]
 //Details about finding Python3
@@ -791,7 +796,7 @@ GTEST_FROM_SOURCE_LIBRARIES:INTERNAL=gtest
 GTEST_FROM_SOURCE_LIBRARY_DIRS:INTERNAL=/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo/gtest
 GTEST_FROM_SOURCE_MAIN_LIBRARIES:INTERNAL=gtest_main
 //Have include mongo/version.h
-HAVE_MONGO_VERSION_H:INTERNAL=
+HAVE_MONGO_VERSION_H:INTERNAL=1
 //ADVANCED property for variable: MONGODB_INCLUDE_DIR
 MONGODB_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MONGODB_LIBRARIES

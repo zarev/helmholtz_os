@@ -1,4 +1,4 @@
-# Install script for directory: /home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs
+# Install script for directory: /home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -460,51 +460,51 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs/msg/Property.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs/msg/Property.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs/msg/Solution.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs/msg/Solution.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs/msg/SolutionInfo.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs/msg/SolutionInfo.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs/msg/StageDescription.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs/msg/StageDescription.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs/msg/StageStatistics.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs/msg/StageStatistics.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs/msg/SubSolution.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs/msg/SubSolution.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs/msg/SubTrajectory.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs/msg/SubTrajectory.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs/msg/TaskDescription.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs/msg/TaskDescription.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs/msg/TaskStatistics.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs/msg/TaskStatistics.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs/msg/TrajectoryExecutionInfo.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/msg" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs/msg/TrajectoryExecutionInfo.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/srv" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs/srv/GetSolution.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/srv" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs/srv/GetSolution.srv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/action" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs/action/ExecuteTaskSolution.action")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs/action" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs/action/ExecuteTaskSolution.action")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -795,7 +795,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs" TYPE FILE FILES "/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

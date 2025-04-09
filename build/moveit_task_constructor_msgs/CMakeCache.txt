@@ -334,7 +334,7 @@ moveit_task_constructor_msgs_BINARY_DIR:STATIC=/home/darsh/UR3_ROS2_PICK_AND_PLA
 moveit_task_constructor_msgs_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-moveit_task_constructor_msgs_SOURCE_DIR:STATIC=/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs
+moveit_task_constructor_msgs_SOURCE_DIR:STATIC=/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs
 
 //The directory containing a CMake configuration file for object_recognition_msgs.
 object_recognition_msgs_DIR:PATH=/opt/ros/jazzy/share/object_recognition_msgs/cmake
@@ -520,7 +520,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/msgs
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/msgs
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

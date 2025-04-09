@@ -1,0 +1,60 @@
+[0.137s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core -- -j16 -l16
+[0.288s] [  0%] Built target ament_cmake_python_copy_moveit
+[0.324s] [  2%] Built target gtest
+[0.558s] running egg_info
+[0.579s] writing moveit.egg-info/PKG-INFO
+[0.579s] writing dependency_links to moveit.egg-info/dependency_links.txt
+[0.580s] writing top-level names to moveit.egg-info/top_level.txt
+[0.647s] reading manifest file 'moveit.egg-info/SOURCES.txt'
+[0.648s] writing manifest file 'moveit.egg-info/SOURCES.txt'
+[0.671s] [  2%] Built target ament_cmake_python_build_moveit_egg
+[0.693s] [  4%] Built target gmock_main
+[0.716s] [  8%] Built target gmock
+[0.736s] [ 10%] Built target gtest_main
+[0.940s] [ 11%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o[0m
+[9.613s] [ 12%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/storage.cpp.o[0m
+[13.874s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/core/src/storage.cpp:[m[K In member function ‘[01m[Kvirtual void moveit::task_constructor::SubTrajectory::[01;32m[KappendTo[m[K(moveit_task_constructor_msgs::msg::Solution&, moveit::task_constructor::Introspection*) const[m[K’:
+[13.874s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/core/src/storage.cpp:240:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+[13.874s]   240 |         [01;35m[Kif[m[K (trajectory())
+[13.874s]       |         [01;35m[K^~[m[K
+[13.874s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/core/src/storage.cpp:244:17:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+[13.874s]   244 |                 [01;36m[Kthis[m[K->end()->scene()->getPlanningSceneMsg(t.scene_diff);
+[13.874s]       |                 [01;36m[K^~~~[m[K
+[18.393s] [ 13%] [32m[1mLinking CXX shared library libmoveit_task_constructor_core.so[0m
+[19.027s] [ 28%] Built target moveit_task_constructor_core
+[19.047s] [ 29%] [32mBuilding CXX object test/CMakeFiles/gtest_utils.dir/gtest_value_printers.cpp.o[0m
+[19.048s] [ 31%] [32mBuilding CXX object test/CMakeFiles/gtest_utils.dir/stage_mockups.cpp.o[0m
+[19.048s] [ 32%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/current_state.cpp.o[0m
+[19.049s] [ 33%] [32mBuilding CXX object test/CMakeFiles/gtest_utils.dir/models.cpp.o[0m
+[19.049s] [ 34%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/modify_planning_scene.cpp.o[0m
+[19.049s] [ 35%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/fix_collision_objects.cpp.o[0m
+[19.050s] [ 36%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/fixed_state.cpp.o[0m
+[19.050s] [ 37%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/fixed_cartesian_poses.cpp.o[0m
+[19.050s] [ 39%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/generate_random_pose.cpp.o[0m
+[19.050s] [ 40%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/generate_pose.cpp.o[0m
+[19.051s] [ 41%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/generate_grasp_pose.cpp.o[0m
+[19.051s] [ 42%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/generate_place_pose.cpp.o[0m
+[19.051s] [ 43%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/compute_ik.cpp.o[0m
+[19.054s] [ 44%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/predicate_filter.cpp.o[0m
+[19.055s] [ 45%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/passthrough.cpp.o[0m
+[19.055s] [ 47%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/connect.cpp.o[0m
+[24.698s] [ 48%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/move_to.cpp.o[0m
+[34.728s] [ 49%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/move_relative.cpp.o[0m
+[60.197s] [01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+[60.233s] compilation terminated.
+[60.250s] gmake[2]: *** [src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/build.make:90: src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/fix_collision_objects.cpp.o] Error 1
+[60.251s] gmake[2]: *** Waiting for unfinished jobs....
+[68.971s] [01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+[68.973s] compilation terminated.
+[69.000s] gmake[2]: *** [src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/build.make:174: src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/generate_grasp_pose.cpp.o] Error 1
+[82.398s] [01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+[82.401s] compilation terminated.
+[82.425s] gmake[2]: *** [src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/build.make:202: src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/compute_ik.cpp.o] Error 1
+[168.819s] [01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+[168.835s] compilation terminated.
+[168.840s] gmake[2]: *** [src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/build.make:188: src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/generate_place_pose.cpp.o] Error 1
+[179.687s] [ 50%] [32m[1mLinking CXX shared library libgtest_utils.so[0m
+[180.379s] [ 50%] Built target gtest_utils
+[186.125s] gmake[1]: *** [CMakeFiles/Makefile2:390: src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/all] Error 2
+[186.131s] gmake: *** [Makefile:146: all] Error 2
+[186.265s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core' returned '2': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core -- -j16 -l16

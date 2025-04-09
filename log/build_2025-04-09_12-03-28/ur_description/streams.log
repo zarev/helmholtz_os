@@ -1,0 +1,249 @@
+[0.170s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_description -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description
+[0.831s] -- The C compiler identification is GNU 13.3.0
+[2.822s] -- The CXX compiler identification is GNU 13.3.0
+[4.571s] -- Detecting C compiler ABI info
+[5.434s] -- Detecting C compiler ABI info - done
+[5.485s] -- Check for working C compiler: /usr/bin/cc - skipped
+[5.487s] -- Detecting C compile features
+[5.490s] -- Detecting C compile features - done
+[5.774s] -- Detecting CXX compiler ABI info
+[6.764s] -- Detecting CXX compiler ABI info - done
+[6.831s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[6.833s] -- Detecting CXX compile features
+[6.836s] -- Detecting CXX compile features - done
+[6.858s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[7.658s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[8.278s] -- Found ament_cmake_pytest: 2.5.3 (/opt/ros/jazzy/share/ament_cmake_pytest/cmake)
+[8.796s] -- Configuring done (8.6s)
+[8.815s] -- Generating done (0.0s)
+[8.826s] -- Build files have been written to: /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description
+[8.855s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_description -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description
+[8.867s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description -- -j16 -l16
+[9.016s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description -- -j16 -l16
+[9.066s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description
+[9.104s] -- Install configuration: ""
+[9.105s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config
+[9.107s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/initial_positions.yaml
+[9.110s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5
+[9.111s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5/visual_parameters.yaml
+[9.113s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5/physical_parameters.yaml
+[9.116s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5/joint_limits.yaml
+[9.118s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5/default_kinematics.yaml
+[9.120s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10e
+[9.121s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10e/visual_parameters.yaml
+[9.122s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10e/physical_parameters.yaml
+[9.124s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10e/joint_limits.yaml
+[9.125s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10e/default_kinematics.yaml
+[9.126s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5e
+[9.128s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5e/visual_parameters.yaml
+[9.129s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5e/physical_parameters.yaml
+[9.130s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5e/joint_limits.yaml
+[9.132s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur5e/default_kinematics.yaml
+[9.134s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3
+[9.135s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3/visual_parameters.yaml
+[9.136s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3/physical_parameters.yaml
+[9.137s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3/joint_limits.yaml
+[9.139s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3/default_kinematics.yaml
+[9.141s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3e
+[9.142s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3e/visual_parameters.yaml
+[9.145s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3e/physical_parameters.yaml
+[9.146s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3e/joint_limits.yaml
+[9.147s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur3e/default_kinematics.yaml
+[9.148s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur30
+[9.148s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur30/visual_parameters.yaml
+[9.149s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur30/physical_parameters.yaml
+[9.149s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur30/joint_limits.yaml
+[9.151s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur30/default_kinematics.yaml
+[9.153s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur20
+[9.155s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur20/visual_parameters.yaml
+[9.156s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur20/physical_parameters.yaml
+[9.157s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur20/joint_limits.yaml
+[9.159s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur20/default_kinematics.yaml
+[9.163s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10
+[9.165s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10/visual_parameters.yaml
+[9.167s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10/physical_parameters.yaml
+[9.168s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10/joint_limits.yaml
+[9.169s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur10/default_kinematics.yaml
+[9.172s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur16e
+[9.177s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur16e/visual_parameters.yaml
+[9.182s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur16e/physical_parameters.yaml
+[9.186s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur16e/joint_limits.yaml
+[9.187s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/config/ur16e/default_kinematics.yaml
+[9.188s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/launch
+[9.189s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/launch/plan_motion.py
+[9.189s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/launch/view_ur.launch.py
+[9.190s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes
+[9.190s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5
+[9.191s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision
+[9.191s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/forearm.stl
+[9.192s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/upperarm.stl
+[9.193s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/base.stl
+[9.194s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/shoulder.stl
+[9.196s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/wrist3.stl
+[9.197s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/wrist1.stl
+[9.198s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/collision/wrist2.stl
+[9.198s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual
+[9.199s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/wrist3.dae
+[9.200s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/shoulder.dae
+[9.200s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/upperarm.dae
+[9.201s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/forearm.dae
+[9.202s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/base.dae
+[9.203s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/wrist1.dae
+[9.204s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5/visual/wrist2.dae
+[9.205s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e
+[9.206s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision
+[9.206s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/forearm.stl
+[9.207s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/upperarm.stl
+[9.208s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/base.stl
+[9.209s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/shoulder.stl
+[9.210s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist3.stl
+[9.211s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist1.stl
+[9.212s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist2.stl
+[9.213s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual
+[9.214s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist3.dae
+[9.216s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/shoulder.dae
+[9.217s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/upperarm.dae
+[9.217s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/forearm.dae
+[9.218s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/base.dae
+[9.218s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist1.dae
+[9.222s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist2.dae
+[9.227s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e
+[9.228s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision
+[9.230s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/forearm.stl
+[9.231s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/upperarm.stl
+[9.234s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/base.stl
+[9.236s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/shoulder.stl
+[9.238s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist3.stl
+[9.239s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist1.stl
+[9.240s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist2.stl
+[9.240s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual
+[9.241s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist3.dae
+[9.241s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/shoulder.dae
+[9.245s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/upperarm.dae
+[9.258s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/forearm.dae
+[9.263s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/base.dae
+[9.265s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist1.dae
+[9.270s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist2.dae
+[9.277s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3
+[9.278s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision
+[9.280s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/forearm.stl
+[9.281s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/upperarm.stl
+[9.282s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/base.stl
+[9.284s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/shoulder.stl
+[9.287s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/wrist3.stl
+[9.288s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/wrist1.stl
+[9.289s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/collision/wrist2.stl
+[9.291s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual
+[9.292s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/wrist3.dae
+[9.294s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/shoulder.dae
+[9.300s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/upperarm.dae
+[9.308s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/forearm.dae
+[9.314s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/base.dae
+[9.317s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/wrist1.dae
+[9.320s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3/visual/wrist2.dae
+[9.324s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e
+[9.326s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision
+[9.327s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/forearm.stl
+[9.329s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/upperarm.stl
+[9.331s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/base.stl
+[9.332s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/shoulder.stl
+[9.333s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist3.stl
+[9.334s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist1.stl
+[9.335s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist2.stl
+[9.335s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual
+[9.336s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist3.dae
+[9.336s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/shoulder.dae
+[9.341s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/upperarm.dae
+[9.360s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/forearm.dae
+[9.363s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/base.dae
+[9.365s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist1.dae
+[9.370s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist2.dae
+[9.376s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/d435
+[9.378s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/d435/visual
+[9.379s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/d435/visual/d435.stl
+[9.434s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30
+[9.436s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/LICENSE.txt
+[9.443s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/collision
+[9.446s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/collision/forearm.stl
+[9.446s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/collision/upperarm.stl
+[9.447s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/visual
+[9.448s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/visual/upperarm.dae
+[9.458s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/visual/forearm.dae
+[9.466s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur30/visual/UR30_DIFF_8bit_2K.png
+[9.484s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20
+[9.488s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/LICENSE.txt
+[9.490s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision
+[9.491s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/forearm.stl
+[9.492s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/upperarm.stl
+[9.493s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/base.stl
+[9.494s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/shoulder.stl
+[9.495s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/wrist3.stl
+[9.496s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/wrist1.stl
+[9.497s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/collision/wrist2.stl
+[9.499s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual
+[9.500s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/wrist3.dae
+[9.504s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/shoulder.dae
+[9.505s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/upperarm.dae
+[9.506s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/forearm.dae
+[9.507s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/UR20_DIFF_8bit_2K.png
+[9.512s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/base.dae
+[9.514s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/wrist1.dae
+[9.515s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur20/visual/wrist2.dae
+[9.516s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10
+[9.517s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision
+[9.518s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/forearm.stl
+[9.519s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/upperarm.stl
+[9.520s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/base.stl
+[9.521s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/shoulder.stl
+[9.522s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/wrist3.stl
+[9.524s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/wrist1.stl
+[9.525s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/collision/wrist2.stl
+[9.526s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual
+[9.529s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/wrist3.dae
+[9.531s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/shoulder.dae
+[9.532s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/upperarm.dae
+[9.533s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/forearm.dae
+[9.534s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/base.dae
+[9.539s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/wrist1.dae
+[9.542s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur10/visual/wrist2.dae
+[9.552s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur16e
+[9.557s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur16e/collision
+[9.559s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur16e/collision/forearm.stl
+[9.562s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur16e/collision/upperarm.stl
+[9.563s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur16e/visual
+[9.565s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur16e/visual/upperarm.dae
+[9.567s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/meshes/ur16e/visual/forearm.dae
+[9.576s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/rviz
+[9.580s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/rviz/view_robot.rviz
+[9.581s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf
+[9.582s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur_mocked.urdf.xacro
+[9.583s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur.urdf copy.xacro
+[9.585s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur.urdf
+[9.586s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/inc
+[9.587s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/inc/ur_common.xacro
+[9.591s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/inc/ur_sensors.xacro
+[9.592s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/inc/ur_joint_control.xacro
+[9.594s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/inc/ur_transmissions.xacro
+[9.597s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur.ros2_control.xacro
+[9.598s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ros2_control_mock_hardware.xacro
+[9.599s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/gazebo_sim_ros2_control.urdf.xacro
+[9.600s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/intel_rgbd_cam_d435.urdf.xacro
+[9.601s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur_robot.urdf
+[9.602s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur_macro.xacro
+[9.603s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/urdf/ur.urdf.xacro
+[9.604s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ament_index/resource_index/package_run_dependencies/ur_description
+[9.605s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ament_index/resource_index/parent_prefix_path/ur_description
+[9.607s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/environment/ament_prefix_path.sh
+[9.607s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/environment/ament_prefix_path.dsv
+[9.608s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/environment/path.sh
+[9.609s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/environment/path.dsv
+[9.610s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/local_setup.bash
+[9.613s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/local_setup.sh
+[9.615s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/local_setup.zsh
+[9.616s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/local_setup.dsv
+[9.617s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.dsv
+[9.618s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ament_index/resource_index/packages/ur_description
+[9.620s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/cmake/ur_descriptionConfig.cmake
+[9.622s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/cmake/ur_descriptionConfig-version.cmake
+[9.624s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description/share/ur_description/package.xml
+[9.708s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description

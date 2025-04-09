@@ -41,6 +41,8 @@ Start and enable MongoDB:
 
 ```bash
 sudo systemctl daemon-reload
+# Kill any existing MongoDB process that might block startup
+sudo pkill mongod
 sudo systemctl start mongod
 sudo systemctl enable mongod
 sudo systemctl status mongod
