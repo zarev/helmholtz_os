@@ -65,8 +65,6 @@ def generate_launch_description():
     pilz_cartesian_limits_path = os.path.join(moveit_config_share, "config", "pilz_cartesian_limits.yaml")
     rviz_config_path = os.path.join(moveit_config_share, "rviz", "moveit.rviz")
     kinematics_path = os.path.join(moveit_config_share, "config", "kinematics.yaml")
-    initial_positions_file_path = os.path.join(moveit_config_share, "config", 'initial_positions.yaml')
-    pilz_cartesian_limits_file_path = os.path.join(moveit_config_share, "config", 'pilz_cartesian_limits.yaml')
 
     # Find package paths
     pkg_ros_gz_sim = FindPackageShare('ros_gz_sim').find('ros_gz_sim')
@@ -106,7 +104,13 @@ def generate_launch_description():
     urdf_xacro_path = os.path.join(moveit_config_share, "config", "ur.urdf.xacro")
 
     robot_description_content = Command([
-        PathJoinSubstitution([FindExecutable(name="xacro")]), " ", urdf_xacro_path
+        PathJoinSubstitution([FindExecutable(name="xacro")]), " ", urdf_xacro_path,
+        " safety_limits:=", LaunchConfiguration("safety_limits"),
+        " safety_pos_margin:=", LaunchConfiguration("safety_pos_margin"),
+        " safety_k_position:=", LaunchConfiguration("safety_k_position"),
+        " name:=ur",
+        " ur_type:=", LaunchConfiguration("ur_type"),
+        " tf_prefix:=", LaunchConfiguration("tf_prefix")
     ])
 
     robot_description = {'robot_description': ParameterValue(robot_description_content, value_type=str)}
@@ -115,34 +119,35 @@ def generate_launch_description():
         package="joint_state_publisher_gui",
         executable="joint_state_publisher_gui",
     )
-
-
-    # MoveIt Configuration
-    moveit_config = (
-        MoveItConfigsBuilder("ur", package_name=moveit_config_pkg)
-        .robot_description(file_path=urdf_xacro_path)
-        .robot_description_semantic(file_path=srdf_path)
-        .joint_limits(file_path=joint_limits_path)
-        .robot_description_kinematics(file_path=kinematics_path)
-        .pilz_cartesian_limits(file_path=pilz_cartesian_limits_path)
-        .planning_pipelines(pipelines=["ompl", "pilz_industrial_motion_planner"],default_planning_pipeline="pilz_industrial_motion_planner")
-        .trajectory_execution(file_path=moveit_controllers_path)
-        .planning_scene_monitor(
-            publish_robot_description=True,
-            publish_robot_description_semantic=True,
-            publish_planning_scene=True
-        )
-        .pilz_cartesian_limits(file_path=pilz_cartesian_limits_file_path)
-        .to_moveit_configs()
-      )
     # Robot State Publisher
     robot_state_publisher_cmd = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
         name='robot_state_publisher',
         output='both',
-        parameters=[moveit_config.robot_description, {'use_sim_time': use_sim_time}]
+        parameters=[robot_description, {'use_sim_time': use_sim_time}]
     )
+
+    # MoveIt Configuration
+    moveit_config = (
+        MoveItConfigsBuilder("ur", package_name=moveit_config_pkg)
+        .robot_description(file_path=urdf_path)
+        .robot_description_semantic(file_path=srdf_path)
+        .joint_limits(file_path=joint_limits_path)
+        .robot_description_kinematics(file_path=kinematics_path)
+        .pilz_cartesian_limits(file_path=pilz_cartesian_limits_path)
+        .planning_pipelines(
+        pipelines=["ompl", "pilz_industrial_motion_planner"],
+        default_planning_pipeline="ompl"
+     )
+        .trajectory_execution(file_path=moveit_controllers_path)
+        .planning_scene_monitor(
+            publish_robot_description=True,
+            publish_robot_description_semantic=True,
+            publish_planning_scene=True
+        )
+        .to_moveit_configs()
+      )
 
     controller_manager_node = Node(
         package='controller_manager',
@@ -222,12 +227,19 @@ def generate_launch_description():
 
 
     # Start Gazebo ROS Bridge
-    start_gazebo_ros_bridge_cmd = Node(
-        package='ros_gz_bridge',
-        executable='parameter_bridge',
-        parameters=[{'config_file': default_ros_gz_bridge_config_file_path}],
-        output='screen'
+    start_gazebo_ros_image_bridge_cmd = Node(
+        package='ros_gz_image',
+        executable='image_bridge',
+        arguments=[
+            '/camera_head/depth_image',
+            '/camera_head/image',
+        ],
+        remappings=[
+            ('/camera_head/depth_image', '/camera_head/depth/image_rect_raw'),
+            ('/camera_head/image', '/camera_head/color/image_raw'),
+        ],
     )
+
 
     # Spawn robot in Gazebo
     start_gazebo_ros_spawner_cmd = Node(
@@ -268,34 +280,20 @@ def generate_launch_description():
 
     # Add actions to launch description
 
-
-    move_group_capabilities = {"capabilities": "move_group/ExecuteTaskSolutionCapability"}
-
-        # Create move_group node
-    start_move_group_node_cmd = TimerAction(
-        period=30.0,
-        actions=[
-            Node(
-                package="moveit_ros_move_group",
-                executable="move_group",
-                output="screen",
-                parameters=[
-                    moveit_config.to_dict(),
-                    {'use_sim_time': use_sim_time},
-                    {'start_state': {'content': initial_positions_file_path}},
-                    {"capabilities": "move_group/ExecuteTaskSolutionCapability"},
-                ],
-            )
-        ]
+    move_group_node = Node(
+        package="moveit_ros_move_group",
+        executable="move_group",
+        output="screen",
+        parameters=[moveit_config.to_dict(), {"use_sim_time": use_sim_time}],
     )
 
     ld.add_action(set_env_vars_resources)
     ld.add_action(robot_state_publisher_cmd)
     ld.add_action(start_gazebo_cmd)
-    ld.add_action(start_gazebo_ros_bridge_cmd)
+    ld.add_action(start_gazebo_ros_image_bridge_cmd)
     ld.add_action(start_gazebo_ros_spawner_cmd)
     ld.add_action(controller_manager_node)
     ld.add_action(rviz_node)
-    ld.add_action(start_move_group_node_cmd)
+    ld.add_action(move_group_node)
 
     return ld
