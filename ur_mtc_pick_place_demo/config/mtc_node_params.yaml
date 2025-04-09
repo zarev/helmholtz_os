@@ -14,7 +14,7 @@ mtc_node:
     gripper_group_name: "gripper"
     gripper_frame: "tool0"
     gripper_open_pose: "open"
-    gripper_close_pose: "half_closed"
+    gripper_close_pose: "closed"
     arm_home_pose: "home"
 
     # Scene frame parameters
@@ -24,7 +24,7 @@ mtc_node:
     object_name: "object"
     object_type: "cylinder"
     object_reference_frame: "base_link"
-    object_dimensions: [0.35, 0.0125]
+    object_dimensions: [0.7, 0.03]
     object_pose: [0.22, 0.12, 0.0, 0.0, 0.0, 0.0]
 
     # Grasp and place parameters

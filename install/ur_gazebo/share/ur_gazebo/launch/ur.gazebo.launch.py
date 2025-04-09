@@ -65,7 +65,7 @@ def generate_launch_description():
     pilz_cartesian_limits_path = os.path.join(moveit_config_share, "config", "pilz_cartesian_limits.yaml")
     rviz_config_path = os.path.join(moveit_config_share, "rviz", "moveit.rviz")
     kinematics_path = os.path.join(moveit_config_share, "config", "kinematics.yaml")
-
+    
     # Find package paths
     pkg_ros_gz_sim = FindPackageShare('ros_gz_sim').find('ros_gz_sim')
     pkg_share_gazebo = FindPackageShare(package_name_gazebo).find(package_name_gazebo)
@@ -126,6 +126,15 @@ def generate_launch_description():
         name='robot_state_publisher',
         output='both',
         parameters=[robot_description, {'use_sim_time': use_sim_time}]
+    )
+
+    start_gazebo_ros_bridge_cmd = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        parameters=[{
+            'config_file': default_ros_gz_bridge_config_file_path,
+        }],
+        output='screen'
     )
 
     # MoveIt Configuration
@@ -287,6 +296,7 @@ def generate_launch_description():
         parameters=[moveit_config.to_dict(), {"use_sim_time": use_sim_time}],
     )
 
+    ld.add_action(start_gazebo_ros_bridge_cmd)
     ld.add_action(set_env_vars_resources)
     ld.add_action(robot_state_publisher_cmd)
     ld.add_action(start_gazebo_cmd)

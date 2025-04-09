@@ -148,26 +148,31 @@
     </joint>
     <link name="camera_head_color_optical_frame"/>
 
-    <gazebo reference="camera_head_link">
-      <sensor name="camera_head" type="rgbd_camera">
-        <camera>
-          <horizontal_fov>1.5184</horizontal_fov>
-          <image>
-            <width>424</width>
-            <height>240</height>
-          </image>
-          <clip>
-            <near>0.05</near>
-            <far>1.5</far>
-          </clip>
-        </camera>
-        <always_on>1</always_on>
-        <gz_frame_id>camera_head_link</gz_frame_id>
-        <topic>camera_head</topic>
-        <update_rate>5</update_rate>
-        <visualize>true</visualize>
-      </sensor>
-    </gazebo>
+<gazebo reference="camera_head_link">
+  <sensor name="camera_head" type="rgbd_camera">
+    <camera>
+      <horizontal_fov>1.5184</horizontal_fov>
+      <image>
+        <width>424</width>
+        <height>240</height>
+      </image>
+      <clip>
+        <near>0.05</near>
+        <far>1.5</far>
+      </clip>
+    </camera>
+    <always_on>1</always_on>
+    <update_rate>10</update_rate>
+    <gz_frame_id>camera_head_link</gz_frame_id>
+    <output>
+      <image>true</image>
+      <depth_image>true</depth_image>
+      <point_cloud>true</point_cloud>
+    </output>
+    <visualize>true</visualize>
+  </sensor>
+</gazebo>
+
 
   </xacro:if>
 </robot>
