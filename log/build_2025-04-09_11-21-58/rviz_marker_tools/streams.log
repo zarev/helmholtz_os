@@ -1,0 +1,40 @@
+[0.045s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/rviz_marker_tools -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools
+[0.447s] -- The C compiler identification is GNU 13.3.0
+[0.950s] -- The CXX compiler identification is GNU 13.3.0
+[1.574s] -- Detecting C compiler ABI info
+[1.847s] -- Detecting C compiler ABI info - done
+[1.863s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.863s] -- Detecting C compile features
+[1.864s] -- Detecting C compile features - done
+[1.945s] -- Detecting CXX compiler ABI info
+[2.203s] -- Detecting CXX compiler ABI info - done
+[2.220s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.220s] -- Detecting CXX compile features
+[2.221s] -- Detecting CXX compile features - done
+[2.253s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.512s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.752s] -- Found moveit_common: 2.12.2 (/opt/ros/jazzy/share/moveit_common/cmake)
+[2.908s] [0mrviz_marker_tools: You did not request a specific build type: Choosing 'Release' for maximum performance[0m
+[2.915s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[2.947s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.954s] -- Found geometry_msgs: 5.3.5 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[3.286s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[3.308s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[3.334s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.362s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.441s] -- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+[3.554s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[3.561s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[3.676s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[3.861s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[4.010s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.276s] -- Found tf2_eigen: 0.36.8 (/opt/ros/jazzy/share/tf2_eigen/cmake)
+[4.533s] -- Found visualization_msgs: 5.3.5 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[4.663s] -- Configuring done (4.6s)
+[4.694s] -- Generating done (0.0s)
+[4.699s] -- Build files have been written to: /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools
+[4.714s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/moveit_task_constructor/rviz_marker_tools -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools
+[4.715s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/rviz_marker_tools -- -j16 -l16
+[4.845s] [ 50%] [32mBuilding CXX object CMakeFiles/rviz_marker_tools.dir/src/marker_creation.cpp.o[0m
+[12.543s] [100%] [32m[1mLinking CXX shared library librviz_marker_tools.so[0m
+[12.893s] [100%] Built target rviz_marker_tools

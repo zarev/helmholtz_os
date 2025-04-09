@@ -40,6 +40,22 @@ source install/setup.bash
 ```
 
 ---
+## 🧩 MoveIt Task Constructor Setup
+
+To enable advanced pick-and-place planning with MoveIt 2, this project supports [MoveIt Task Constructor (MTC)](https://github.com/ros-planning/moveit_task_constructor).  
+Instead of duplicating the full setup process, we've included a detailed guide in a separate submodule:
+
+📄 **Follow the MTC installation and patching guide here:**  
+[`ur_mtc_pick_place_demo/README.md`](ur_mtc_pick_place_demo/README.md)
+
+This includes:
+- Cloning the correct MTC branch and commit
+- Installing dependencies
+- Fixes for planning scene execution issues
+- Rebuild instructions
+
+Once complete, you'll be ready to run scripted and interactive pick-and-place pipelines using MTC!
+
 
 ## 🚀 Launch Instructions
 
@@ -121,21 +137,6 @@ python3 ~/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_contr
 - `images/`: Preview screenshots  
 
 ---
-## 🧩 MoveIt Task Constructor Setup
-
-To enable advanced pick-and-place planning with MoveIt 2, this project supports [MoveIt Task Constructor (MTC)](https://github.com/ros-planning/moveit_task_constructor).  
-Instead of duplicating the full setup process, we've included a detailed guide in a separate submodule:
-
-📄 **Follow the MTC installation and patching guide here:**  
-[`ur_mtc_pick_place_demo/README.md`](ur_mtc_pick_place_demo/README.md)
-
-This includes:
-- Cloning the correct MTC branch and commit
-- Installing dependencies
-- Fixes for planning scene execution issues
-- Rebuild instructions
-
-Once complete, you'll be ready to run scripted and interactive pick-and-place pipelines using MTC!
 
 ## 🤝 Contributing
 

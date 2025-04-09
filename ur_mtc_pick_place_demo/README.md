@@ -1,7 +1,6 @@
+# MoveIt Task Constructor (MTC) & Warehouse_ROS_Mongo Installation Guide – ROS 2 Jazzy
 
-# MoveIt Task Constructor (MTC) Installation Guide – ROS 2 Jazzy
-
-This guide walks you through installing the MoveIt Task Constructor (MTC) package and applying necessary fixes for a successful setup on ROS 2 Jazzy.
+This guide walks you through installing the MoveIt Task Constructor (MTC) and `warehouse_ros_mongo` packages and applying necessary fixes for a successful setup on ROS 2 Jazzy.
 
 ---
 
@@ -9,48 +8,102 @@ This guide walks you through installing the MoveIt Task Constructor (MTC) packag
 
 Ensure you have:
 - ROS 2 Jazzy installed and sourced
-- A working colcon workspace (e.g. `~/ros2_ws`)
+- A working colcon workspace, e.g. `~/ros2_ws`
 
 ---
 
 ## 🚀 Installation Steps
 
-### 1. Clone the MTC repository
+### 1. Install System Dependencies
+
+```bash
+sudo apt-get update
+sudo apt-get install gnupg curl
+```
+
+---
+
+### 2. Install MongoDB (v7.0)
+
+```bash
+curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
+   --dearmor
+
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | \
+   sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+```
+
+Start and enable MongoDB:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl start mongod
+sudo systemctl enable mongod
+sudo systemctl status mongod
+```
+
+---
+
+## 🏛️ Install `warehouse_ros_mongo`
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/moveit/warehouse_ros_mongo.git -b ros2
+cd warehouse_ros_mongo/
+git reset --hard 7f6a901eef21225141a2d68c82f3d2ec8373bcab
+
+# Edit and remove unwanted dependency
+sed -i '/<depend>mongodb<\/depend>/d' package.xml
+```
+
+Install dependencies:
+
+```bash
+cd ~/ros2_ws
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+```
+
+Build the workspace:
+
+```bash
+colcon build
+source ~/.bashrc
+```
+
+---
+
+## 📚 Install MoveIt Task Constructor (MTC)
+
+### 1. Clone the Repository
 
 ```bash
 cd ~/ros2_ws/src
 git clone https://github.com/moveit/moveit_task_constructor.git -b jazzy
 cd moveit_task_constructor
-```
-
-### 2. Checkout a stable commit
-
-This ensures reproducibility and avoids potential issues from newer changes.
-
-```bash
 git reset --hard 9ced9fc10a15388224f0741e5a930a33f4ed6255
 ```
 
----
-
-### 3. Install dependencies
+### 2. Install Dependencies
 
 ```bash
 cd ~/ros2_ws
+rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
----
-
-### 4. Build the workspace
+### 3. Build the Workspace
 
 ```bash
-cd ~/ros2_ws
 colcon build
 source ~/.bashrc
 ```
 
-> ⚠️ **Note:** You can ignore build warnings like this:
+> ⚠️ **Note:** You can ignore warnings like:
 >
 > ```
 > --- stderr: rviz_marker_tools
@@ -59,41 +112,13 @@ source ~/.bashrc
 
 ---
 
-### 5. Rebuild (if errors show up)
+## 🔧 Fix Known Issues
 
-If you see build errors, rebuild the workspace again:
+### ♻️ Fix 1: Planning Scene Diff
 
-```bash
-cd ~/ros2_ws
-colcon build
-source ~/.bashrc
-```
+**File:** `core/src/storage.cpp`
 
-> ✅ Safe to ignore errors like:
->
-> ```
-> --- stderr: moveit_task_constructor_core
-> lto-wrapper: warning: using serial compilation of 12 LTRANS jobs
-> ```
-
----
-
-## 🛠️ Fix Known Issues
-
-Some runtime issues have been reported when executing plans from code. Follow these fixes to avoid path execution errors.
-
----
-
-### 🔁 Fix 1: Planning Scene Diff
-
-**File:**
-
-```bash
-cd ~/ros2_ws/src/moveit_task_constructor/core/src/
-gedit storage.cpp
-```
-
-**Replace:**
+Replace:
 ```cpp
 if (this->end()->scene()->getParent() == this->start()->scene())
     this->end()->scene()->getPlanningSceneDiffMsg(t.scene_diff);
@@ -101,7 +126,7 @@ else
     this->end()->scene()->getPlanningSceneMsg(t.scene_diff);
 ```
 
-**With:**
+With:
 ```cpp
 this->end()->scene()->getPlanningSceneDiffMsg(t.scene_diff);
 ```
@@ -110,43 +135,37 @@ this->end()->scene()->getPlanningSceneDiffMsg(t.scene_diff);
 
 ### 📏 Fix 2: Cartesian Path Jump Threshold
 
-**File:**
+**File:** `core/src/solvers/cartesian_path.cpp`
 
-```bash
-cd ~/ros2_ws/src/moveit_task_constructor/core/src/solvers/
-gedit cartesian_path.cpp
-```
-
-**Replace:**
+Replace:
 ```cpp
 moveit::core::JumpThreshold(props.get<double>("jump_threshold")), is_valid,
 ```
 
-**With:**
+With:
 ```cpp
 moveit::core::JumpThreshold::relative(props.get<double>("jump_threshold")), is_valid,
 ```
 
 ---
 
-### 🔄 Rebuild
-
-After applying fixes, rebuild the workspace:
+### 📆 Rebuild the Workspace
 
 ```bash
 cd ~/ros2_ws
 colcon build
 source ~/.bashrc
 # OR
-source ~/ros2_ws/install/setup.bash
+source install/setup.bash
 ```
 
 ---
 
 ## 🎉 Success!
 
-You have now successfully installed and patched the **MoveIt Task Constructor** on ROS 2 Jazzy!  
-You're ready to use MTC for pick-and-place and complex motion planning tasks.
+You have now successfully installed and patched:
+- MongoDB and `warehouse_ros_mongo`
+- MoveIt Task Constructor (MTC)
 
----
-  
+You're ready to use MTC for pick-and-place and complex motion planning tasks in ROS 2 Jazzy!
+

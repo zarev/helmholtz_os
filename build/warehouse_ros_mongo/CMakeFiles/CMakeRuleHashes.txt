@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+158b5e27639769c1b5f49340a1d1e3b5 CMakeFiles/ament_cmake_python_build_warehouse_ros_mongo_egg
+88b5e27f22b33a098b65b76fcd100f80 CMakeFiles/ament_cmake_python_copy_warehouse_ros_mongo
+7a2d78f9afaf37cb84f53052855bcedc CMakeFiles/warehouse_ros_mongo_uninstall

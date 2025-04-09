@@ -1,0 +1,38 @@
+[0.042s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo
+[0.438s] -- The C compiler identification is GNU 13.3.0
+[1.025s] -- The CXX compiler identification is GNU 13.3.0
+[1.537s] -- Detecting C compiler ABI info
+[1.774s] -- Detecting C compiler ABI info - done
+[1.793s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.794s] -- Detecting C compile features
+[1.795s] -- Detecting C compile features - done
+[1.882s] -- Detecting CXX compiler ABI info
+[2.136s] -- Detecting CXX compiler ABI info - done
+[2.160s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.161s] -- Detecting CXX compile features
+[2.162s] -- Detecting CXX compile features - done
+[2.239s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.525s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.744s] -- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+[3.037s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[3.067s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[3.117s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.169s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.363s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[3.373s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[3.542s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[3.720s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[3.804s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.090s] -- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)
+[4.118s] -- Found warehouse_ros: 2.0.5 (/opt/ros/jazzy/share/warehouse_ros/cmake)
+[4.584s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[4.586s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[4.587s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[4.732s] [31mCMake Error at cmake/FindMONGODB.cmake:91 (message):
+[4.732s]   MONGODB not found.
+[4.732s] Call Stack (most recent call first):
+[4.733s]   CMakeLists.txt:24 (find_package)
+[4.733s] 
+[4.734s] [0m
+[4.734s] -- Configuring incomplete, errors occurred!
+[4.773s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/warehouse_ros_mongo' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/warehouse_ros_mongo -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo
