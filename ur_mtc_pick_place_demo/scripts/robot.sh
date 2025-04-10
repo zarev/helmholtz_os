@@ -41,7 +41,7 @@ gz service -s /gui/move_to/pose \
 sleep 10
 echo "Launching the Pick and Place demo..."
 ros2 launch ur_mtc_pick_place_demo get_planning_scene_server.launch.py &
-sleep 5
+sleep 25
 ros2 launch ur_mtc_pick_place_demo pick_place_demo.launch.py
 
 # Keep the script running until Ctrl+C

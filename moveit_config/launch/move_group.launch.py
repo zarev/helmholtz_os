@@ -68,6 +68,7 @@ def generate_launch_description():
         moveit_config_share = FindPackageShare(package=package_name_moveit_config).find(package_name_moveit_config)
 
         # File paths from MoveIt config package
+        urdf_path = os.path.join(moveit_config_share, "config", "ur.urdf")
         srdf_file_path = os.path.join(moveit_config_share, "config", f"{robot_name_str}.srdf")
         joint_limits_file_path = os.path.join(moveit_config_share, "config", "joint_limits.yaml")
         kinematics_file_path = os.path.join(moveit_config_share, "config", "kinematics.yaml")
@@ -80,6 +81,7 @@ def generate_launch_description():
             MoveItConfigsBuilder(robot_name_str, package_name=package_name_moveit_config)
             .trajectory_execution(file_path=moveit_controllers_file_path)
             .robot_description_semantic(file_path=srdf_file_path)
+            .robot_description(file_path=urdf_path)
             .joint_limits(file_path=joint_limits_file_path)
             .robot_description_kinematics(file_path=kinematics_file_path)
             .planning_pipelines(

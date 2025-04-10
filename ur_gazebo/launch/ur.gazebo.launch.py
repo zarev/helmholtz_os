@@ -296,10 +296,10 @@ def generate_launch_description():
         parameters=[moveit_config.to_dict(), {"use_sim_time": use_sim_time}],
     )
 
-    ld.add_action(start_gazebo_ros_bridge_cmd)
     ld.add_action(set_env_vars_resources)
     ld.add_action(robot_state_publisher_cmd)
     ld.add_action(start_gazebo_cmd)
+    ld.add_action(start_gazebo_ros_bridge_cmd)
     ld.add_action(start_gazebo_ros_image_bridge_cmd)
     ld.add_action(start_gazebo_ros_spawner_cmd)
     ld.add_action(controller_manager_node)
