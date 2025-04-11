@@ -1,0 +1,77 @@
+[0.058s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests -- -j4 -l4
+[0.131s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.593s] -- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.833s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.859s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.903s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.934s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.104s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.109s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.350s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.646s] -- Found rclcpp_action: 28.1.6 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+[1.820s] -- Found control_msgs: 5.3.0 (/opt/ros/jazzy/share/control_msgs/cmake)
+[2.080s] -- Found moveit_ros_planning_interface: 2.12.2 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[2.111s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[2.423s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[3.102s] -- Found parameter_traits: 0.4.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[3.115s] -- Found rclcpp_lifecycle: 28.1.6 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[3.176s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[3.269s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[3.482s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[3.546s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[3.582s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[3.641s] -- Found moveit_common: 2.12.2 (/opt/ros/jazzy/share/moveit_common/cmake)
+[3.648s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[3.775s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.775s] -- Configured cppcheck include dirs: 
+[3.775s] -- Configured cppcheck exclude dirs and/or files: 
+[3.776s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.776s] -- Configured 'flake8' exclude dirs and/or files: 
+[3.777s] -- Added test 'lint_cmake' to check CMake code style
+[3.778s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[3.779s] -- Added test 'uncrustify' to check C / C++ code style
+[3.779s] -- Configured uncrustify additional arguments: 
+[3.780s] -- Added test 'xmllint' to check XML markup files
+[3.783s] -- Configuring done (3.7s)
+[3.858s] -- Generating done (0.0s)
+[3.873s] -- Build files have been written to: /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests
+[3.935s] [ 16%] [32mBuilding CXX object CMakeFiles/test_pick_and_place.dir/src/test_pick_and_place.cpp.o[0m
+[3.958s] [ 50%] Built target arm_gripper_loop_controller
+[3.986s] [ 83%] Built target test_send_joint_space_goal
+[9.954s] [100%] [32m[1mLinking CXX executable test_pick_and_place[0m
+[10.469s] [100%] Built target test_pick_and_place
+[10.478s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests -- -j4 -l4
+[10.479s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests
+[10.486s] -- Install configuration: ""
+[10.486s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/lib/ur_system_tests/arm_gripper_loop_controller
+[10.486s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/lib/ur_system_tests/test_pick_and_place
+[10.489s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/lib/ur_system_tests/test_pick_and_place" to ""
+[10.489s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/lib/ur_system_tests/test_send_joint_space_goal
+[10.489s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/lib/ur_system_tests/arm_gripper_loop_controller.py
+[10.489s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/lib/ur_system_tests/pick_place.py
+[10.489s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/scripts
+[10.490s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/scripts/pick_place.py
+[10.490s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/scripts/arm_gripper_loop_controller.py
+[10.490s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src
+[10.490s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src/arm_gripper_loop_controller.cpp
+[10.491s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src/test_send_joint_space_goal.cpp
+[10.491s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src/test_send_cartesian_goal.cpp
+[10.491s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src/test_pick_and_place.cpp
+[10.491s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src/test_sending_trajectory.cpp
+[10.492s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src/test_add_virtual_obstacles.cpp
+[10.493s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ament_index/resource_index/package_run_dependencies/ur_system_tests
+[10.493s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ament_index/resource_index/parent_prefix_path/ur_system_tests
+[10.493s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/environment/ament_prefix_path.sh
+[10.493s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/environment/ament_prefix_path.dsv
+[10.493s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/environment/path.sh
+[10.494s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/environment/path.dsv
+[10.494s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/local_setup.bash
+[10.494s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/local_setup.sh
+[10.494s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/local_setup.zsh
+[10.494s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/local_setup.dsv
+[10.494s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/package.dsv
+[10.495s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ament_index/resource_index/packages/ur_system_tests
+[10.495s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/cmake/ur_system_testsConfig.cmake
+[10.495s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/cmake/ur_system_testsConfig-version.cmake
+[10.495s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/package.xml
+[10.496s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests

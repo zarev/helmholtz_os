@@ -139,7 +139,7 @@ MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
   };
 
   // General parameters
-  declare_parameter("execute", false, "Whether to execute the planned task");
+  declare_parameter("execute", true, "Whether to execute the planned task");
   declare_parameter("max_solutions", 25, "Maximum number of solutions to compute");
 
   // Controller parameters
@@ -148,9 +148,9 @@ MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
   // Robot configuration parameters
   declare_parameter("arm_group_name", "arm", "Name of the arm group in the SRDF");
   declare_parameter("gripper_group_name", "gripper", "Name of the gripper group in the SRDF");
-  declare_parameter("gripper_frame", "link6_flange", "Name of the gripper frame");
+  declare_parameter("gripper_frame", "robotiq_arg2f_base_link", "Name of the gripper frame");
   declare_parameter("gripper_open_pose", "open", "Name of the gripper open pose");
-  declare_parameter("gripper_close_pose", "half_closed", "Name of the gripper closed pose");
+  declare_parameter("gripper_close_pose", "closed", "Name of the gripper closed pose");
   declare_parameter("arm_home_pose", "home", "Name of the arm home pose");
 
   // Scene frame parameters
@@ -160,11 +160,12 @@ MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
   declare_parameter("object_name", "object", "Name of the object to be manipulated");
   declare_parameter("object_type", "cylinder", "Type of the object to be manipulated");
   declare_parameter("object_reference_frame", "base_link", "Reference frame for the object");
-  declare_parameter("object_dimensions", std::vector<double>{0.35, 0.0125}, "Dimensions of the object [height, radius]");
+  declare_parameter("object_dimensions", std::vector<double>{0.35, 0.03}, "Dimensions of the object [height, radius]");
   declare_parameter("object_pose", std::vector<double>{0.22, 0.12, 0.0, 0.0, 0.0, 0.0}, "Initial pose of the object [x, y, z, roll, pitch, yaw]");
 
   // Grasp and place parameters
-  declare_parameter("grasp_frame_transform", std::vector<double>{0.0, 0.0, 0.096, 1.5708, 0.0, 0.0}, "Transform from gripper frame to grasp frame [x, y, z, roll, pitch, yaw]");
+declare_parameter("grasp_frame_transform", 
+    std::vector<double>{0.0, 0.0, 0.15, 1.5708, 0.0, 0.0});"Transform from gripper frame to grasp frame [x, y, z, roll, pitch, yaw]");
   declare_parameter("place_pose", std::vector<double>{-0.183, -0.14, 0.0, 0.0, 0.0, 0.0}, "Pose where the object should be placed [x, y, z, roll, pitch, yaw]");
 
   // Motion planning parameters
@@ -181,8 +182,8 @@ MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
 
   // Grasp generation parameters
   declare_parameter("grasp_pose_angle_delta", 0.1309, "Angular resolution for sampling grasp poses (radians)");
-  declare_parameter("grasp_pose_max_ik_solutions", 10, "Maximum number of IK solutions for grasp pose generation");
-  declare_parameter("grasp_pose_min_solution_distance", 0.8, "Minimum distance in joint-space units between IK solutions for grasp pose");
+  declare_parameter("grasp_pose_max_ik_solutions", 25, "Maximum number of IK solutions for grasp pose generation");
+  declare_parameter("grasp_pose_min_solution_distance", 0.5, "Minimum distance in joint-space units between IK solutions for grasp pose");
 
   // Place generation parameters
   declare_parameter("place_pose_max_ik_solutions", 10, "Maximum number of IK solutions for place pose generation");
@@ -584,22 +585,33 @@ mtc::Task MTCTaskNode::createTask()
     /****************************************************
 ---- *               Generate Grasp Pose               *
      ***************************************************/
-    {
-	  // Generate the grasp pose
-	  // This is the stage for computing how the robot should grab the object
-	  // This stage is a generator stage because it doesn't need information from
-	  // stages before or after it.
-	  // When generating solutions, MTC will try to grab the object from many different orientations.
+     {
+      // Generate the grasp pose
+      // This is the stage for computing how the robot should grab the object
+      // This stage is a generator stage because it doesn't need information from
+      // stages before or after it.
+      // When generating solutions, MTC will try to grab the object from many different orientations.
       // Sample grasp pose candidates in angle increments around the z-axis of the object
-
+    
       auto stage = std::make_unique<mtc::stages::GenerateGraspPose>("generate grasp pose");
       stage->properties().configureInitFrom(mtc::Stage::PARENT);
       stage->properties().set("marker_ns", "grasp_pose");
       stage->setPreGraspPose(gripper_open_pose);
       stage->setObject(object_name);
-      stage->setAngleDelta(grasp_pose_angle_delta); //  Angular resolution for sampling grasp poses around the object
+      stage->setAngleDelta(grasp_pose_angle_delta); // Angular resolution for sampling grasp poses around the object
       stage->setMonitoredStage(current_state_ptr);  // Ensure grasp poses are valid given the initial configuration of the robot
-
+    
+      // Allow collision between the gripper and the object during grasp pose generation
+      auto collision_stage = std::make_unique<mtc::stages::ModifyPlanningScene>("allow collision (gripper,object) during grasp pose generation");
+      collision_stage->allowCollisions(
+        object_name,
+        task.getRobotModel()
+          ->getJointModelGroup(gripper_group_name)
+          ->getLinkModelNamesWithCollisionGeometry(),
+        true
+      );
+      grasp->insert(std::move(collision_stage));
+    
       // Compute IK for sampled grasp poses
       auto wrapper = std::make_unique<mtc::stages::ComputeIK>("grasp pose IK", std::move(stage));
       wrapper->setMaxIKSolutions(grasp_pose_max_ik_solutions);

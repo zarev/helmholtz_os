@@ -1,0 +1,21 @@
+[0.052s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests -- -j4 -l4
+[0.300s] [ 33%] Built target arm_gripper_loop_controller
+[0.409s] [ 66%] Built target test_send_joint_space_goal
+[0.591s] [ 83%] [32mBuilding CXX object CMakeFiles/test_pick_and_place.dir/src/test_pick_and_place.cpp.o[0m
+[9.328s] In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:12[m[K:
+[9.328s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[9.328s]    51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[9.328s]       |                                                                             [01;36m[K^[m[K
+[12.620s] In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:13[m[K:
+[12.621s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[12.621s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[12.621s]       |                                                                             [01;36m[K^[m[K
+[12.776s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:[m[K In member function ‘[01m[Kbool IKPickPlaceNode::[01;32m[KcomputeIK[m[K(const geometry_msgs::msg::Pose&, std::vector<double, std::allocator<double> >&)[m[K’:
+[12.776s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:65:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct moveit::planning_interface::MoveGroupInterface::Plan[m[K’ has no member named ‘[01m[Ktrajectory_[m[K’; did you mean ‘[01m[Ktrajectory[m[K’?
+[12.776s]    65 |       joint_positions = plan.[01;31m[Ktrajectory_[m[K.joint_trajectory.points.back().positions;
+[12.776s]       |                              [01;31m[K^~~~~~~~~~~[m[K
+[12.776s]       |                              [32m[Ktrajectory[m[K
+[17.110s] gmake[2]: *** [CMakeFiles/test_pick_and_place.dir/build.make:76: CMakeFiles/test_pick_and_place.dir/src/test_pick_and_place.cpp.o] Error 1
+[17.121s] gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/test_pick_and_place.dir/all] Error 2
+[17.121s] gmake: *** [Makefile:146: all] Error 2
+[17.121s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests -- -j4 -l4

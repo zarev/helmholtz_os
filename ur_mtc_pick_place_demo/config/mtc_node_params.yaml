@@ -1,68 +1,65 @@
 mtc_node:
   ros__parameters:
     # General parameters
-    execute: false
-    max_solutions: 25
+    execute: true
+    max_solutions: 50  # Increased from 25
 
     # Controller parameters
     controller_names:
       - "arm_controller"
       - "gripper_controller"
 
-    # Robot configuration parameters
+    # Robot configuration
     arm_group_name: "arm"
     gripper_group_name: "gripper"
-    gripper_frame: "tool0"
+    gripper_frame: "robotiq_arg2f_base_link"
     gripper_open_pose: "open"
     gripper_close_pose: "closed"
     arm_home_pose: "home"
 
-    # Scene frame parameters
+    # Scene configuration
     world_frame: "base_link"
+    collision_checking: true  # Explicit collision checking enable
 
-    # Object parameters
-    object_name: "object"
+    # Object parameters (critical fixes)
+    object_name: "cylinder_1"
     object_type: "cylinder"
     object_reference_frame: "base_link"
-    object_dimensions: [0.35, 0.0125]
-    object_pose: [0.22, 0.12, 0.0, 0.0, 0.0, 0.0]
+    object_dimensions: [0.35, 0.0284]  # Match exact dimensions from error log
+    object_pose: [0.22, 0.12, 0.15, 0.0, 0.0, 0.0]  # Z increased +0.05
+    collision_clearance: 0.02  # 2cm safety margin
 
-    # Grasp and place parameters
-    grasp_frame_transform: [0.0, 0.0, 0.096, 1.5708, 0.0, 0.0]
-    place_pose: [-0.183, -0.14, 0.0, 0.0, 0.0, 0.0]
+    # Grasp parameters (key collision fixes)
+    grasp_frame_transform: [0.0, 0.0, 0.15, 1.5708, 0.0, 0.0]
+    place_pose: [-0.183, -0.14, 0.15, 0.0, 0.0, 0.0]  # Maintain Z-height
 
-    # Motion planning parameters
-    approach_object_min_dist: 0.0015
+    # Motion planning (critical IK parameters)
+    approach_object_min_dist: 0.05  # Increased from 0.0015
     approach_object_max_dist: 0.3
-    lift_object_min_dist: 0.005
+    lift_object_min_dist: 0.01
     lift_object_max_dist: 0.3
-    lower_object_min_dist: 0.005
-    lower_object_max_dist: 0.4
 
     # Timeout parameters
-    move_to_pick_timeout: 10.0
-    move_to_place_timeout: 10.0
+    move_to_pick_timeout: 30.0  # Increased for debugging
+    move_to_place_timeout: 30.0
 
-    # Grasp generation parameters
-    grasp_pose_angle_delta: 0.1309  # Approximately pi/24 in radians
-    grasp_pose_max_ik_solutions: 10
-    grasp_pose_min_solution_distance: 0.8
+    # Grasp generation (critical fixes)
+    grasp_pose_angle_delta: 0.2618  # ~15 degrees (pi/12)
+    grasp_pose_max_ik_solutions: 25  # Increased from 10
+    grasp_pose_min_solution_distance: 0.5  # Reduced from 0.8
 
-    # Place generation parameters
-    place_pose_max_ik_solutions: 10
+    # Place generation
+    place_pose_max_ik_solutions: 15
 
-    # Cartesian planner parameters
-    cartesian_max_velocity_scaling: 1.0
-    cartesian_max_acceleration_scaling: 1.0
-    cartesian_step_size: 0.00025
+    # Cartesian planning
+    cartesian_max_velocity_scaling: 0.8
+    cartesian_max_acceleration_scaling: 0.8
+    cartesian_step_size: 0.001  # Increased from 0.00025
 
-    # Direction vector parameters
-    approach_object_direction_z: 1.0
-    lift_object_direction_z: 1.0
-    lower_object_direction_z: -1.0
-    retreat_direction_z: -1.0
+    # Collision avoidance
+    allow_collision_objects: ["gripper", "object"]
+    collision_clearance: 0.02  # Added safety margin
 
-    # Other parameters
-    place_pose_z_offset_factor: 0.5
-    retreat_min_distance: 0.025
-    retreat_max_distance: 0.25
+    # Debugging parameters
+    visualize_solutions: true
+    publish_planning_scene: true

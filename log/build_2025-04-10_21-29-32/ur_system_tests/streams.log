@@ -1,0 +1,12 @@
+[0.011s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests -- -j4 -l4
+[0.221s] [ 33%] Built target test_send_joint_space_goal
+[0.223s] [ 66%] Built target arm_gripper_loop_controller
+[0.233s] [ 83%] [32mBuilding CXX object CMakeFiles/test_pick_and_place.dir/src/test_pick_and_place.cpp.o[0m
+[0.649s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:8:10:[m[K [01;31m[Kfatal error: [m[Kcontrol_msgs/action/follow_joint_trajectory.hpp: No such file or directory
+[0.649s]     8 | #include [01;31m[K"control_msgs/action/follow_joint_trajectory.hpp"[m[K
+[0.650s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.650s] compilation terminated.
+[0.651s] gmake[2]: *** [CMakeFiles/test_pick_and_place.dir/build.make:76: CMakeFiles/test_pick_and_place.dir/src/test_pick_and_place.cpp.o] Error 1
+[0.651s] gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/test_pick_and_place.dir/all] Error 2
+[0.651s] gmake: *** [Makefile:146: all] Error 2
+[0.670s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests -- -j4 -l4

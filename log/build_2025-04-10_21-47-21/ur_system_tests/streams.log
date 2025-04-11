@@ -1,0 +1,41 @@
+[0.021s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests -- -j4 -l4
+[0.212s] [ 33%] Built target arm_gripper_loop_controller
+[0.246s] [ 50%] [32mBuilding CXX object CMakeFiles/test_pick_and_place.dir/src/test_pick_and_place.cpp.o[0m
+[0.252s] [ 83%] Built target test_send_joint_space_goal
+[7.523s] [100%] [32m[1mLinking CXX executable test_pick_and_place[0m
+[8.065s] [100%] Built target test_pick_and_place
+[8.075s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests -- -j4 -l4
+[8.076s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests
+[8.083s] -- Install configuration: ""
+[8.084s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/lib/ur_system_tests/arm_gripper_loop_controller
+[8.084s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/lib/ur_system_tests/test_pick_and_place
+[8.085s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/lib/ur_system_tests/test_pick_and_place" to ""
+[8.085s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/lib/ur_system_tests/test_send_joint_space_goal
+[8.086s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/lib/ur_system_tests/arm_gripper_loop_controller.py
+[8.086s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/lib/ur_system_tests/pick_place.py
+[8.086s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/scripts
+[8.086s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/scripts/pick_place.py
+[8.086s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/scripts/arm_gripper_loop_controller.py
+[8.086s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src
+[8.086s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src/arm_gripper_loop_controller.cpp
+[8.087s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src/test_send_joint_space_goal.cpp
+[8.087s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src/test_send_cartesian_goal.cpp
+[8.087s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src/test_pick_and_place.cpp
+[8.087s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src/test_sending_trajectory.cpp
+[8.087s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/src/test_add_virtual_obstacles.cpp
+[8.087s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ament_index/resource_index/package_run_dependencies/ur_system_tests
+[8.087s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ament_index/resource_index/parent_prefix_path/ur_system_tests
+[8.087s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/environment/ament_prefix_path.sh
+[8.088s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/environment/ament_prefix_path.dsv
+[8.089s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/environment/path.sh
+[8.089s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/environment/path.dsv
+[8.089s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/local_setup.bash
+[8.089s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/local_setup.sh
+[8.090s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/local_setup.zsh
+[8.090s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/local_setup.dsv
+[8.090s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/package.dsv
+[8.090s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ament_index/resource_index/packages/ur_system_tests
+[8.090s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/cmake/ur_system_testsConfig.cmake
+[8.090s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/cmake/ur_system_testsConfig-version.cmake
+[8.091s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests/share/ur_system_tests/package.xml
+[8.091s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests

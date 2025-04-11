@@ -1,0 +1,135 @@
+[0.090s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests -- -j4 -l4
+[0.169s] [ 33%] Built target arm_gripper_loop_controller
+[0.180s] [ 66%] Built target test_send_joint_space_goal
+[0.198s] [ 83%] [32mBuilding CXX object CMakeFiles/test_pick_and_place.dir/src/test_pick_and_place.cpp.o[0m
+[0.209s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:13:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kchrono_literals[m[K’ is not a namespace-name
+[0.209s]    13 | using namespace std::[01;31m[Kchrono_literals[m[K;
+[0.209s]       |                      [01;31m[K^~~~~~~~~~~~~~~[m[K
+[0.209s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:14:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kcontrol_msgs[m[K’ does not name a type
+[0.209s]    14 | using FollowJointTrajectory = [01;31m[Kcontrol_msgs[m[K::action::FollowJointTrajectory;
+[0.210s]       |                               [01;31m[K^~~~~~~~~~~~[m[K
+[0.210s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:15:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kcontrol_msgs[m[K’ does not name a type
+[0.210s]    15 | using GripperCommand = [01;31m[Kcontrol_msgs[m[K::action::GripperCommand;
+[0.210s]       |                        [01;31m[K^~~~~~~~~~~~[m[K
+[0.210s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:17:41:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ has not been declared
+[0.211s]    17 | class ArmGripperLoopController : public [01;31m[Krclcpp[m[K::Node
+[0.211s]       |                                         [01;31m[K^~~~~~[m[K
+[0.211s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:17:49:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[KNode[m[K’
+[0.211s]    17 | class ArmGripperLoopController : public rclcpp::[01;31m[KNode[m[K
+[0.211s]       |                                                 [01;31m[K^~~~[m[K
+[0.212s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:19:1:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kpublic[m[K’
+[0.212s]    19 | [01;31m[Kpublic[m[K:
+[0.212s]       | [01;31m[K^~~~~~[m[K
+[0.212s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:19:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[Kpublic[m[K’
+[0.212s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:18:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[0.212s]    18 | [01;36m[K{[m[K
+[0.212s]       | [01;36m[K^[m[K
+[0.213s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:56:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+[0.213s]    56 | [01;31m[Kprivate[m[K:
+[0.213s]       | [01;31m[K^~~~~~~[m[K
+[0.213s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K sendGripperCommand[m[K(double)[m[K’:
+[0.214s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:73:21:[m[K [01;31m[Kerror: [m[K‘[01m[KGripperCommand[m[K’ has not been declared
+[0.214s]    73 |     auto goal_msg = [01;31m[KGripperCommand[m[K::Goal();
+[0.214s]       |                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[0.214s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:77:20:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ has not been declared
+[0.215s]    77 |     auto options = [01;31m[Krclcpp_action[m[K::Client<GripperCommand>::SendGoalOptions();
+[0.215s]       |                    [01;31m[K^~~~~~~~~~~~~[m[K
+[0.215s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:77:42:[m[K [01;31m[Kerror: [m[K‘[01m[KGripperCommand[m[K’ was not declared in this scope; did you mean ‘[01m[KsendGripperCommand[m[K’?
+[0.215s]    77 |     auto options = rclcpp_action::Client<[01;31m[KGripperCommand[m[K>::SendGoalOptions();
+[0.216s]       |                                          [01;31m[K^~~~~~~~~~~~~~[m[K
+[0.220s]       |                                          [32m[KsendGripperCommand[m[K
+[0.220s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:77:59:[m[K [01;31m[Kerror: [m[K‘[01m[K::SendGoalOptions[m[K’ has not been declared
+[0.220s]    77 |     auto options = rclcpp_action::Client<GripperCommand>::[01;31m[KSendGoalOptions[m[K();
+[0.220s]       |                                                           [01;31m[K^~~~~~~~~~~~~~~[m[K
+[0.221s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:78:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_client_[m[K’ was not declared in this scope
+[0.221s]    78 |     [01;31m[Kgripper_client_[m[K->async_send_goal(goal_msg, options);
+[0.221s]       |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[0.221s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K controlLoopCallback[m[K()[m[K’:
+[0.221s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:87:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[0.221s]    87 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Moving to object...");
+[0.221s]       |                     [01;31m[K^~~~[m[K
+[0.221s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:87:9:[m[K [01;31m[Kerror: [m[K‘[01m[KRCLCPP_INFO[m[K’ was not declared in this scope
+[0.221s]    87 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Moving to object...");
+[0.221s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[0.222s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:88:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_pos_[m[K’ was not declared in this scope
+[0.222s]    88 |         sendArmCommand([01;31m[Ktarget_pos_[m[K);
+[0.222s]       |                        [01;31m[K^~~~~~~~~~~[m[K
+[0.222s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:88:9:[m[K [01;31m[Kerror: [m[K‘[01m[KsendArmCommand[m[K’ was not declared in this scope; did you mean ‘[01m[KsendGripperCommand[m[K’?
+[0.223s]    88 |         [01;31m[KsendArmCommand[m[K(target_pos_);
+[0.223s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[0.223s]       |         [32m[KsendGripperCommand[m[K
+[0.223s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:92:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[0.224s]    92 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Closing gripper...");
+[0.224s]       |                     [01;31m[K^~~~[m[K
+[0.225s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:97:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[0.225s]    97 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Returning to home...");
+[0.225s]       |                     [01;31m[K^~~~[m[K
+[0.225s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:98:24:[m[K [01;31m[Kerror: [m[K‘[01m[Khome_pos_[m[K’ was not declared in this scope
+[0.234s]    98 |         sendArmCommand([01;31m[Khome_pos_[m[K);
+[0.234s]       |                        [01;31m[K^~~~~~~~~[m[K
+[0.234s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:102:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[0.234s]   102 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Opening gripper...");
+[0.234s]       |                     [01;31m[K^~~~[m[K
+[0.234s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:107:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[0.235s]   107 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Pick-and-place completed!");
+[0.235s]       |                     [01;31m[K^~~~[m[K
+[0.235s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:108:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope
+[0.235s]   108 |         [01;31m[Ktimer_[m[K->cancel();  // Stop loop
+[0.235s]       |         [01;31m[K^~~~~~[m[K
+[0.235s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:[m[K At global scope:
+[0.235s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:113:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ does not name a type
+[0.235s]   113 |   [01;31m[Krclcpp_action[m[K::Client<FollowJointTrajectory>::SharedPtr arm_client_;
+[0.235s]       |   [01;31m[K^~~~~~~~~~~~~[m[K
+[0.235s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:114:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ does not name a type
+[0.236s]   114 |   [01;31m[Krclcpp_action[m[K::Client<GripperCommand>::SharedPtr gripper_client_;
+[0.236s]       |   [01;31m[K^~~~~~~~~~~~~[m[K
+[0.236s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:115:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a template type
+[0.236s]   115 |   std::[01;31m[Kvector[m[K<std::string> joint_names_;
+[0.236s]       |        [01;31m[K^~~~~~[m[K
+[0.236s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:1:1:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ is defined in header ‘[01m[K<vector>[m[K’; did you forget to ‘[01m[K#include <vector>[m[K’?
+[0.236s]   +++ |+[32m[K#include <vector>[m[K
+[0.236s]     1 | // #include <chrono>
+[0.236s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:116:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a template type
+[0.236s]   116 |   std::[01;31m[Kvector[m[K<double> target_pos_;
+[0.236s]       |        [01;31m[K^~~~~~[m[K
+[0.237s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:116:3:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ is defined in header ‘[01m[K<vector>[m[K’; did you forget to ‘[01m[K#include <vector>[m[K’?
+[0.237s]   116 |   [01;36m[Kstd[m[K::vector<double> target_pos_;
+[0.237s]       |   [01;36m[K^~~[m[K
+[0.237s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:117:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a template type
+[0.237s]   117 |   std::[01;31m[Kvector[m[K<double> home_pos_;
+[0.237s]       |        [01;31m[K^~~~~~[m[K
+[0.237s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:117:3:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ is defined in header ‘[01m[K<vector>[m[K’; did you forget to ‘[01m[K#include <vector>[m[K’?
+[0.237s]   117 |   [01;36m[Kstd[m[K::vector<double> home_pos_;
+[0.237s]       |   [01;36m[K^~~[m[K
+[0.237s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:118:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ does not name a type
+[0.237s]   118 |   [01;31m[Krclcpp[m[K::TimerBase::SharedPtr timer_;
+[0.238s]       |   [01;31m[K^~~~~~[m[K
+[0.238s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:119:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[0.238s]   119 | [01;31m[K}[m[K;
+[0.238s]       | [01;31m[K^[m[K
+[0.238s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[0.238s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:124:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ has not been declared
+[0.238s]   124 |   [01;31m[Krclcpp[m[K::init(argc, argv);
+[0.238s]       |   [01;31m[K^~~~~~[m[K
+[0.238s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:125:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ has not been declared
+[0.238s]   125 |   [01;31m[Krclcpp[m[K::spin(std::make_shared<ArmGripperLoopController>());
+[0.238s]       |   [01;31m[K^~~~~~[m[K
+[0.239s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:125:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kmake_shared[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[0.239s]   125 |   rclcpp::spin(std::[01;31m[Kmake_shared[m[K<ArmGripperLoopController>());
+[0.239s]       |                     [01;31m[K^~~~~~~~~~~[m[K
+[0.239s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:1:1:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::make_shared[m[K’ is defined in header ‘[01m[K<memory>[m[K’; did you forget to ‘[01m[K#include <memory>[m[K’?
+[0.239s]   +++ |+[32m[K#include <memory>[m[K
+[0.239s]     1 | // #include <chrono>
+[0.240s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:125:57:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.240s]   125 |   rclcpp::spin(std::make_shared<ArmGripperLoopController[01;31m[K>[m[K());
+[0.240s]       |                                                         [01;31m[K^[m[K
+[0.240s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:125:59:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+[0.240s]   125 |   rclcpp::spin(std::make_shared<ArmGripperLoopController>([01;31m[K)[m[K);
+[0.240s]       |                                                           [01;31m[K^[m[K
+[0.240s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:126:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ has not been declared
+[0.240s]   126 |   [01;31m[Krclcpp[m[K::shutdown();
+[0.241s]       |   [01;31m[K^~~~~~[m[K
+[0.242s] gmake[2]: *** [CMakeFiles/test_pick_and_place.dir/build.make:76: CMakeFiles/test_pick_and_place.dir/src/test_pick_and_place.cpp.o] Error 1
+[0.242s] gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/test_pick_and_place.dir/all] Error 2
+[0.242s] gmake: *** [Makefile:146: all] Error 2
+[0.242s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests -- -j4 -l4

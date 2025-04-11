@@ -1,0 +1,268 @@
+[0.325s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo': CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo
+[0.439s] -- The C compiler identification is GNU 13.3.0
+[0.956s] -- The CXX compiler identification is GNU 13.3.0
+[1.300s] -- Detecting C compiler ABI info
+[1.491s] -- Detecting C compiler ABI info - done
+[1.504s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.504s] -- Detecting C compile features
+[1.505s] -- Detecting C compile features - done
+[1.573s] -- Detecting CXX compiler ABI info
+[1.853s] -- Detecting CXX compiler ABI info - done
+[1.878s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.878s] -- Detecting CXX compile features
+[1.879s] -- Detecting CXX compile features - done
+[1.896s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.126s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.300s] -- Found generate_parameter_library: 0.4.0 (/opt/ros/jazzy/share/generate_parameter_library/cmake)
+[2.310s] -- Found parameter_traits: 0.4.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[2.534s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.556s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.583s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.611s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.728s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.733s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.830s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.960s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[3.039s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.265s] -- Found rclcpp_lifecycle: 28.1.6 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[3.313s] -- Found moveit_common: 2.12.2 (/opt/ros/jazzy/share/moveit_common/cmake)
+[3.446s] -- Found moveit_core: 2.12.2 (/opt/ros/jazzy/share/moveit_core/cmake)
+[3.744s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[4.805s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[5.058s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[5.058s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[5.722s] -- Found moveit_ros_planning: 2.12.2 (/opt/ros/jazzy/share/moveit_ros_planning/cmake)
+[5.729s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[5.790s] -- Found moveit_ros_planning_interface: 2.12.2 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[5.797s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[5.823s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[5.868s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[5.944s] -- Found moveit_task_constructor_core: 0.1.3 (/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake)
+[6.043s] -- Found ur_interfaces: 0.0.0 (/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake)
+[6.114s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found suitable version "1.83.0", minimum required is "1.65.0") found components: system filesystem iostreams serialization 
+[6.118s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+[6.118s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[6.118s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[6.118s]   cmake_policy command to set the policy and suppress this warning.
+[6.118s] 
+[6.118s]   CMake variable FLANN_ROOT is set to:
+[6.118s] 
+[6.118s]     /usr
+[6.118s] 
+[6.119s]   For compatibility, find_package is ignoring the variable, but code in a
+[6.119s]   .cmake module might still use it.
+[6.119s] Call Stack (most recent call first):
+[6.119s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+[6.119s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+[6.119s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+[6.119s]   CMakeLists.txt:52 (find_package)
+[6.119s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[6.119s] [0m
+[6.126s] -- Found flann version 1.9.2
+[7.222s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[7.222s] -- Found OpenMP: TRUE (found version "4.5") found components: CXX 
+[7.289s] -- Found Threads: TRUE  
+[7.296s] -- Found GLEW: /usr/lib/x86_64-linux-gnu/libGLEW.so  
+[7.368s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL GLX 
+[8.354s] -- Found MPI_C: /usr/lib/x86_64-linux-gnu/libmpi.so (found version "3.1") 
+[8.355s] -- Found MPI: TRUE (found version "3.1") found components: C 
+[8.362s] -- Found JsonCpp: /usr/lib/x86_64-linux-gnu/libjsoncpp.so (found suitable version "1.9.5", minimum required is "0.7.0") 
+[8.899s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+[9.399s] -- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.43") 
+[9.446s] -- Found Eigen3: /usr/include/eigen3 (found version "3.4.0") 
+[11.606s] -- Found X11: /usr/include   
+[11.606s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[12.168s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[12.169s] -- Looking for gethostbyname
+[12.638s] -- Looking for gethostbyname - found
+[12.638s] -- Looking for connect
+[13.113s] -- Looking for connect - found
+[13.114s] -- Looking for remove
+[13.599s] -- Looking for remove - found
+[13.599s] -- Looking for shmat
+[14.018s] -- Looking for shmat - found
+[14.018s] -- Looking for IceConnectionNumber in ICE
+[14.358s] -- Looking for IceConnectionNumber in ICE - found
+[16.588s] -- Found EXPAT: /usr/lib/x86_64-linux-gnu/libexpat.so (found version "2.6.1") 
+[16.593s] -- Found double-conversion: /usr/lib/x86_64-linux-gnu/libdouble-conversion.so  
+[16.597s] -- Found LZ4: /usr/lib/x86_64-linux-gnu/liblz4.so (found version "1.9.4") 
+[16.604s] -- Found LZMA: /usr/lib/x86_64-linux-gnu/liblzma.so (found version "5.4.5") 
+[16.920s] -- Found JPEG: /usr/lib/x86_64-linux-gnu/libjpeg.so (found version "80") 
+[17.876s] -- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.5.1")  
+[17.883s] -- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.13.2") 
+[17.907s] -- Found utf8cpp: /usr/include/utf8cpp  
+[18.402s] -- Checking for module 'libusb-1.0'
+[18.499s] --   Found libusb-1.0, version 1.0.27
+[18.759s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[18.761s] -- Found OpenNI: /usr/lib/libOpenNI.so;libusb::libusb (found version "1.5.4.0") 
+[18.761s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[19.092s] -- Found OpenNI2: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb (found version "2.2.0.33") 
+[19.093s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[19.159s] -- Found Pcap: /usr/lib/x86_64-linux-gnu/libpcap.so  
+[27.506s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[27.528s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[35.852s] -- Found Qhull version 8.0.2
+[43.588s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[51.327s] -- looking for PCL_COMMON
+[51.328s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[51.328s] -- looking for PCL_KDTREE
+[51.329s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[51.330s] -- looking for PCL_OCTREE
+[51.331s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[51.331s] -- looking for PCL_SEARCH
+[51.332s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[51.333s] -- looking for PCL_SAMPLE_CONSENSUS
+[51.333s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[51.334s] -- looking for PCL_FILTERS
+[51.335s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[51.335s] -- looking for PCL_2D
+[51.336s] -- Found PCL_2D: /usr/include/pcl-1.14  
+[51.336s] -- looking for PCL_GEOMETRY
+[51.337s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.14  
+[51.337s] -- looking for PCL_IO
+[51.337s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[51.338s] -- looking for PCL_FEATURES
+[51.339s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[51.339s] -- looking for PCL_ML
+[51.340s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[51.340s] -- looking for PCL_SEGMENTATION
+[51.342s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[51.342s] -- looking for PCL_VISUALIZATION
+[51.343s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[51.344s] -- looking for PCL_SURFACE
+[51.345s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[51.345s] -- looking for PCL_REGISTRATION
+[51.346s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[51.346s] -- looking for PCL_KEYPOINTS
+[51.347s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[51.348s] -- looking for PCL_TRACKING
+[51.349s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[51.349s] -- looking for PCL_RECOGNITION
+[51.350s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[51.351s] -- looking for PCL_STEREO
+[51.352s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[51.352s] -- looking for PCL_APPS
+[51.353s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[51.354s] -- looking for PCL_IN_HAND_SCANNER
+[51.354s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.14  
+[51.355s] -- looking for PCL_MODELER
+[51.355s] -- Found PCL_MODELER: /usr/include/pcl-1.14  
+[51.355s] -- looking for PCL_POINT_CLOUD_EDITOR
+[51.357s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.14  
+[51.357s] -- looking for PCL_OUTOFCORE
+[51.358s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[51.358s] -- looking for PCL_PEOPLE
+[51.360s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[51.361s] -- Found PCL: pcl_common;pcl_kdtree;pcl_octree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_io;pcl_features;pcl_ml;pcl_segmentation;pcl_visualization;pcl_surface;pcl_registration;pcl_keypoints;pcl_tracking;pcl_recognition;pcl_stereo;pcl_apps;pcl_outofcore;pcl_people;Boost::system;Boost::filesystem;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::RenderingContextOpenGL2;VTK::GUISupportQt;FLANN::FLANN;QHULL::QHULL  
+[51.366s] -- Found pcl_conversions: 2.6.2 (/opt/ros/jazzy/share/pcl_conversions/cmake)
+[51.424s] -- Found pcl_ros: 2.6.2 (/opt/ros/jazzy/share/pcl_ros/cmake)
+[51.691s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[51.729s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[51.732s] -- Configured cppcheck include dirs: /home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/include;$<BUILD_INTERFACE:/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/include>
+[51.732s] -- Configured cppcheck exclude dirs and/or files: 
+[51.734s] -- Added test 'flake8' to check Python code syntax and style conventions
+[51.734s] -- Configured 'flake8' exclude dirs and/or files: 
+[51.735s] -- Added test 'lint_cmake' to check CMake code style
+[51.736s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[51.738s] -- Added test 'uncrustify' to check C / C++ code style
+[51.738s] -- Configured uncrustify additional arguments: 
+[51.739s] -- Added test 'xmllint' to check XML markup files
+[51.743s] -- Configuring done (51.4s)
+[52.222s] -- Generating done (0.4s)
+[52.276s] -- Build files have been written to: /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo
+[52.310s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo' returned '0': CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo
+[52.312s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo': CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo -- -j4 -l4
+[52.370s] [  6%] [32mBuilding CXX object CMakeFiles/cluster_extraction.dir/src/cluster_extraction.cpp.o[0m
+[69.480s] [ 12%] [32m[1mLinking CXX shared library libcluster_extraction.so[0m
+[72.040s] [ 12%] Built target cluster_extraction
+[72.062s] [ 18%] [32mBuilding CXX object CMakeFiles/object_segmentation.dir/src/object_segmentation.cpp.o[0m
+[108.342s] [ 25%] [32m[1mLinking CXX shared library libobject_segmentation.so[0m
+[110.989s] [ 25%] Built target object_segmentation
+[111.020s] [ 31%] [32mBuilding CXX object CMakeFiles/plane_segmentation.dir/src/plane_segmentation.cpp.o[0m
+[208.552s] [ 37%] [32m[1mLinking CXX shared library libplane_segmentation.so[0m
+[211.495s] [ 37%] Built target plane_segmentation
+[211.528s] [ 43%] [32mBuilding CXX object CMakeFiles/get_planning_scene_client_node.dir/src/get_planning_scene_client.cpp.o[0m
+[211.529s] [ 50%] [32mBuilding CXX object CMakeFiles/normals_curvature_and_rsd_estimation.dir/src/normals_curvature_and_rsd_estimation.cpp.o[0m
+[218.752s] [ 56%] [32m[1mLinking CXX executable get_planning_scene_client_node[0m
+[219.446s] [ 56%] Built target get_planning_scene_client_node
+[219.474s] [ 62%] [32mBuilding CXX object CMakeFiles/get_planning_scene_client.dir/src/get_planning_scene_client.cpp.o[0m
+[226.048s] [ 68%] [32m[1mLinking CXX shared library libget_planning_scene_client.so[0m
+[226.665s] [ 68%] Built target get_planning_scene_client
+[226.690s] [ 75%] [32mBuilding CXX object CMakeFiles/mtc_node.dir/src/mtc_node.cpp.o[0m
+[229.876s] In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/src/mtc_node.cpp:39[m[K:
+[229.876s] [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[229.876s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[229.876s]       |                                                                             [01;36m[K^[m[K
+[231.938s] In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/src/mtc_node.cpp:40[m[K:
+[231.938s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[231.938s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[231.938s]       |                                                                             [01;36m[K^[m[K
+[241.321s] [ 81%] [32m[1mLinking CXX shared library libnormals_curvature_and_rsd_estimation.so[0m
+[243.492s] [ 81%] Built target normals_curvature_and_rsd_estimation
+[243.520s] [ 87%] [32mBuilding CXX object CMakeFiles/get_planning_scene_server.dir/src/get_planning_scene_server.cpp.o[0m
+[244.254s] [ 93%] [32m[1mLinking CXX executable mtc_node[0m
+[245.140s] [ 93%] Built target mtc_node
+[347.848s] [100%] [32m[1mLinking CXX executable get_planning_scene_server[0m
+[350.679s] [100%] Built target get_planning_scene_server
+[350.726s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo' returned '0': CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo -- -j4 -l4
+[350.739s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo': CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo
+[350.773s] -- Install configuration: "Release"
+[350.775s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/ur_mtc_pick_place_demo/get_planning_scene_client_node
+[350.776s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/ur_mtc_pick_place_demo/get_planning_scene_client_node" to ""
+[350.776s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/ur_mtc_pick_place_demo/get_planning_scene_server
+[350.783s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/ur_mtc_pick_place_demo/get_planning_scene_server" to ""
+[350.783s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/ur_mtc_pick_place_demo/mtc_node
+[350.786s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/ur_mtc_pick_place_demo/mtc_node" to ""
+[350.787s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libcluster_extraction.so
+[350.793s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libcluster_extraction.so" to ""
+[350.794s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libget_planning_scene_client.so
+[350.796s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libget_planning_scene_client.so" to ""
+[350.796s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libnormals_curvature_and_rsd_estimation.so
+[350.801s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libnormals_curvature_and_rsd_estimation.so" to ""
+[350.802s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libobject_segmentation.so
+[350.806s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libobject_segmentation.so" to ""
+[350.806s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libplane_segmentation.so
+[350.813s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libplane_segmentation.so" to ""
+[350.814s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/config
+[350.815s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/config/mtc_node_params.yaml
+[350.815s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/config/get_planning_scene_server.yaml
+[350.818s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo
+[350.819s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/ur_mtc_pick_place_demo
+[350.820s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/ur_mtc_pick_place_demo/plane_segmentation.h
+[350.821s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/ur_mtc_pick_place_demo/get_planning_scene_client.h
+[350.823s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/ur_mtc_pick_place_demo/normals_curvature_and_rsd_estimation.h
+[350.824s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/ur_mtc_pick_place_demo/object_segmentation.h
+[350.825s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/ur_mtc_pick_place_demo/cluster_extraction.h
+[350.826s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/launch
+[350.828s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/launch/point_cloud_viewer.launch.py
+[350.830s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/launch/get_planning_scene_server.launch.py
+[350.831s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/launch/pick_place_demo.launch.py
+[350.832s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/rviz
+[350.833s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/rviz/mtc_demos.rviz
+[350.834s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/rviz/point_cloud_viewer.rviz
+[350.835s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/scripts
+[350.835s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/scripts/robot.sh
+[350.835s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/scripts/pointcloud.sh
+[350.836s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/environment/library_path.sh
+[350.836s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/environment/library_path.dsv
+[350.838s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ament_index/resource_index/package_run_dependencies/ur_mtc_pick_place_demo
+[350.840s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ament_index/resource_index/parent_prefix_path/ur_mtc_pick_place_demo
+[350.842s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/environment/ament_prefix_path.sh
+[350.843s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/environment/ament_prefix_path.dsv
+[350.844s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/environment/path.sh
+[350.844s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/environment/path.dsv
+[350.847s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/local_setup.bash
+[350.848s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/local_setup.sh
+[350.850s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/local_setup.zsh
+[350.852s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/local_setup.dsv
+[350.854s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/package.dsv
+[350.857s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ament_index/resource_index/packages/ur_mtc_pick_place_demo
+[350.858s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/export_ur_mtc_pick_place_demoExport.cmake
+[350.860s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/export_ur_mtc_pick_place_demoExport-release.cmake
+[350.862s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/ament_cmake_export_include_directories-extras.cmake
+[350.862s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/ament_cmake_export_libraries-extras.cmake
+[350.864s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/ament_cmake_export_targets-extras.cmake
+[350.864s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/ur_mtc_pick_place_demoConfig.cmake
+[350.865s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/ur_mtc_pick_place_demoConfig-version.cmake
+[350.868s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/package.xml
+[350.877s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo' returned '0': CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo

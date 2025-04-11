@@ -1,0 +1,34 @@
+[0.190s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core': AMENT_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core -- -j4 -l4
+[0.308s] [  3%] Built target gmock
+[0.313s] [  3%] Built target ament_cmake_python_copy_moveit
+[0.314s] [  5%] Built target gtest_main
+[0.359s] [ 24%] Built target moveit_task_constructor_core
+[0.387s] [ 26%] Built target gtest
+[0.415s] [ 28%] Built target gmock_main
+[0.489s] [ 33%] Built target gtest_utils
+[0.520s] [ 54%] Built target moveit_task_constructor_core_stages
+[0.552s] [ 56%] Built target moveit_task_constructor_core_stage_plugins
+[0.571s] [ 58%] Built target moveit_task_constructor_core-test-mockups
+[0.593s] [ 65%] Built target pymoveit_mtc
+[0.611s] [ 67%] Built target moveit_task_constructor_core-test-stage
+[0.616s] [ 70%] Built target moveit_task_constructor_core-test-container
+[0.636s] [ 72%] Built target moveit_task_constructor_core-test-serial
+[0.648s] [ 74%] Built target moveit_task_constructor_core-test-properties
+[0.652s] [ 77%] Built target moveit_task_constructor_core-test-pruning
+[0.692s] [ 79%] Built target moveit_task_constructor_core-test-cost-terms
+[0.698s] [ 81%] Built target moveit_task_constructor_core-test-fallback
+[0.708s] [ 83%] Built target moveit_task_constructor_core-test-cost-queue
+[0.711s] running egg_info
+[0.731s] [ 86%] Built target moveit_task_constructor_core-test-interface-state
+[0.741s] [ 88%] Built target moveit_task_constructor_core-test-move-to
+[0.741s] writing moveit.egg-info/PKG-INFO
+[0.742s] writing dependency_links to moveit.egg-info/dependency_links.txt
+[0.742s] writing top-level names to moveit.egg-info/top_level.txt
+[0.747s] [ 90%] Built target moveit_task_constructor_core-test-move-relative
+[0.784s] [ 93%] Built target moveit_task_constructor_core-test-pipeline-planner
+[0.797s] [ 95%] Built target pick_ur5
+[0.805s] [ 97%] Built target pick_pr2
+[0.830s] [100%] Built target pick_pa10
+[0.838s] reading manifest file 'moveit.egg-info/SOURCES.txt'
+[0.839s] writing manifest file 'moveit.egg-info/SOURCES.txt'
+[0.869s] [100%] Built target ament_cmake_python_build_moveit_egg

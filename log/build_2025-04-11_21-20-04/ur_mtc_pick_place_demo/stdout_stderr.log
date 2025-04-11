@@ -1,0 +1,58 @@
+[ 12%] Built target cluster_extraction
+[ 25%] Built target get_planning_scene_client
+[ 37%] Built target object_segmentation
+[ 50%] Built target plane_segmentation
+[ 62%] Built target get_planning_scene_client_node
+[ 68%] [32mBuilding CXX object CMakeFiles/mtc_node.dir/src/mtc_node.cpp.o[0m
+[ 81%] Built target normals_curvature_and_rsd_estimation
+[ 93%] Built target get_planning_scene_server
+In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/src/mtc_node.cpp:39[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/src/mtc_node.cpp:40[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/src/mtc_node.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/src/mtc_node.cpp:167:24:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KMTCTaskNode::declare_parameter(const char [22], std::vector<double, std::allocator<double> >, const char [72])[m[K’
+  167 | [01;31m[Kthis->declare_parameter("grasp_frame_transform",[m[K
+      | [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  168 | [01;31m[K    std::vector<double>{0.22, 0.12, 0.3, 1.5708, 0.0, 0.0}, "Transform from gripper frame to grasp frame [x, y, z, roll, pitch, yaw]")[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:1663[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+                 from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/src/mtc_node.cpp:37[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:246:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ParameterT> auto rclcpp::Node::[01;32m[Kdeclare_parameter[m[K(const std::string&, const ParameterT&, const rcl_interfaces::msg::ParameterDescriptor&, bool)[m[K’
+  246 | [01;36m[KNode[m[K::declare_parameter(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:246:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/src/mtc_node.cpp:168:61:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K"Transform from gripper frame to grasp frame [x, y, z, roll, pitch, yaw]"[m[K’ (type ‘[01m[Kconst char [72][m[K’) to type ‘[01m[Kconst rcl_interfaces::msg::ParameterDescriptor&[m[K’ {aka ‘[01m[Kconst rcl_interfaces::msg::ParameterDescriptor_<std::allocator<void> >&[m[K’}
+  168 |     std::vector<double>{0.22, 0.12, 0.3, 1.5708, 0.0, 0.0}, [01;36m[K"Transform from gripper frame to grasp frame [x, y, z, roll, pitch, yaw]"[m[K);
+      |                                                             [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:513:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ParameterT> auto rclcpp::Node::[01;32m[Kdeclare_parameter[m[K(const std::string&, const rcl_interfaces::msg::ParameterDescriptor&, bool)[m[K’
+  513 |   [01;36m[Kdeclare_parameter[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:513:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/src/mtc_node.cpp:167:24:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[KParameterT[m[K’
+  167 | [01;36m[Kthis->declare_parameter("grasp_frame_transform",[m[K
+      | [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  168 | [01;36m[K    std::vector<double>{0.22, 0.12, 0.3, 1.5708, 0.0, 0.0}, "Transform from gripper frame to grasp frame [x, y, z, roll, pitch, yaw]")[m[K;
+      |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:445:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst rclcpp::ParameterValue& rclcpp::Node::[01;32m[Kdeclare_parameter[m[K(const std::string&, const rclcpp::ParameterValue&, const rcl_interfaces::msg::ParameterDescriptor&, bool)[m[K’
+  445 |   [01;36m[Kdeclare_parameter[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:447:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’ to ‘[01m[Kconst rclcpp::ParameterValue&[m[K’
+  447 |     [01;36m[Kconst rclcpp::ParameterValue & default_value[m[K,
+      |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:470:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst rclcpp::ParameterValue& rclcpp::Node::[01;32m[Kdeclare_parameter[m[K(const std::string&, rclcpp::ParameterType, const rcl_interfaces::msg::ParameterDescriptor&, bool)[m[K’
+  470 |   [01;36m[Kdeclare_parameter[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:472:27:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’ to ‘[01m[Krclcpp::ParameterType[m[K’
+  472 |     [01;36m[Krclcpp::ParameterType type[m[K,
+      |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+gmake[2]: *** [CMakeFiles/mtc_node.dir/build.make:76: CMakeFiles/mtc_node.dir/src/mtc_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:336: CMakeFiles/mtc_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
