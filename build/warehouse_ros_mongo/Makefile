@@ -198,17 +198,17 @@ warehouse_ros_mongo_uninstall/fast:
 .PHONY : warehouse_ros_mongo_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_copy_warehouse_ros_mongo
+# Target rules for targets named ament_cmake_python_symlink_warehouse_ros_mongo
 
 # Build rule for target.
-ament_cmake_python_copy_warehouse_ros_mongo: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_warehouse_ros_mongo
-.PHONY : ament_cmake_python_copy_warehouse_ros_mongo
+ament_cmake_python_symlink_warehouse_ros_mongo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_warehouse_ros_mongo
+.PHONY : ament_cmake_python_symlink_warehouse_ros_mongo
 
 # fast build rule for target.
-ament_cmake_python_copy_warehouse_ros_mongo/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_warehouse_ros_mongo.dir/build.make CMakeFiles/ament_cmake_python_copy_warehouse_ros_mongo.dir/build
-.PHONY : ament_cmake_python_copy_warehouse_ros_mongo/fast
+ament_cmake_python_symlink_warehouse_ros_mongo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_warehouse_ros_mongo.dir/build.make CMakeFiles/ament_cmake_python_symlink_warehouse_ros_mongo.dir/build
+.PHONY : ament_cmake_python_symlink_warehouse_ros_mongo/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_warehouse_ros_mongo_egg
@@ -385,7 +385,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_warehouse_ros_mongo_egg"
-	@echo "... ament_cmake_python_copy_warehouse_ros_mongo"
+	@echo "... ament_cmake_python_symlink_warehouse_ros_mongo"
 	@echo "... uninstall"
 	@echo "... warehouse_ros_mongo_uninstall"
 	@echo "... gtest"

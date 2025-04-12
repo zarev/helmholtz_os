@@ -140,7 +140,7 @@ MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
 
   // General parameters
   declare_parameter("execute", true, "Whether to execute the planned task");
-  declare_parameter("max_solutions", 25, "Maximum number of solutions to compute");
+  declare_parameter("max_solutions", 50, "Maximum number of solutions to compute");
 
   // Controller parameters
   declare_parameter("controller_names", std::vector<std::string>{"arm_controller", "gripper_controller"}, "Names of the controllers to use");
@@ -165,7 +165,7 @@ MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
 
   // Grasp and place parameters
 declare_parameter("grasp_frame_transform", 
-    std::vector<double>{0.0, 0.0, 0.15, 1.5708, 0.0, 0.0});"Transform from gripper frame to grasp frame [x, y, z, roll, pitch, yaw]");
+    std::vector<double>{0.0, 0.0, 0.15, 1.5708, 0.0, 0.0}, "Transform from gripper frame to grasp frame [x, y, z, roll, pitch, yaw]");
   declare_parameter("place_pose", std::vector<double>{-0.183, -0.14, 0.0, 0.0, 0.0, 0.0}, "Pose where the object should be placed [x, y, z, roll, pitch, yaw]");
 
   // Motion planning parameters

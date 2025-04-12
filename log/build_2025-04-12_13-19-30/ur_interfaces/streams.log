@@ -1,0 +1,7 @@
+[0.149s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces -- -j4 -l4
+[0.374s] [  2%] Built target ur_interfaces__rosidl_generator_type_description
+[0.522s] failed to create symbolic link '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/ament_cmake_python/ur_interfaces/ur_interfaces' because existing path cannot be removed: Is a directory
+[0.523s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_ur_interfaces.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_ur_interfaces] Error 1
+[0.523s] gmake[1]: *** [CMakeFiles/Makefile2:452: CMakeFiles/ament_cmake_python_symlink_ur_interfaces.dir/all] Error 2
+[0.523s] gmake: *** [Makefile:146: all] Error 2
+[0.606s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces -- -j4 -l4

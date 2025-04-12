@@ -211,19 +211,6 @@ arm_gripper_loop_controller/fast:
 .PHONY : arm_gripper_loop_controller/fast
 
 #=============================================================================
-# Target rules for targets named test_pick_and_place
-
-# Build rule for target.
-test_pick_and_place: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_pick_and_place
-.PHONY : test_pick_and_place
-
-# fast build rule for target.
-test_pick_and_place/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pick_and_place.dir/build.make CMakeFiles/test_pick_and_place.dir/build
-.PHONY : test_pick_and_place/fast
-
-#=============================================================================
 # Target rules for targets named test_send_joint_space_goal
 
 # Build rule for target.
@@ -235,6 +222,19 @@ test_send_joint_space_goal: cmake_check_build_system
 test_send_joint_space_goal/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_send_joint_space_goal.dir/build.make CMakeFiles/test_send_joint_space_goal.dir/build
 .PHONY : test_send_joint_space_goal/fast
+
+#=============================================================================
+# Target rules for targets named test_pick_and_place
+
+# Build rule for target.
+test_pick_and_place: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_pick_and_place
+.PHONY : test_pick_and_place
+
+# fast build rule for target.
+test_pick_and_place/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pick_and_place.dir/build.make CMakeFiles/test_pick_and_place.dir/build
+.PHONY : test_pick_and_place/fast
 
 src/arm_gripper_loop_controller.o: src/arm_gripper_loop_controller.cpp.o
 .PHONY : src/arm_gripper_loop_controller.o

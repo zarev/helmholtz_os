@@ -1,0 +1,8 @@
+[ 12%] Built target normals_curvature_and_rsd_estimation
+[ 25%] Built target get_planning_scene_client
+[ 37%] Built target object_segmentation
+[ 50%] Built target cluster_extraction
+[ 62%] Built target get_planning_scene_client_node
+[ 75%] Built target plane_segmentation
+[ 81%] [32mBuilding CXX object CMakeFiles/mtc_node.dir/src/mtc_node.cpp.o[0m
+[ 93%] Built target get_planning_scene_server

@@ -1,0 +1,337 @@
+[0.000000] (-) TimerEvent: {}
+[0.000734] (-) JobUnselected: {'identifier': 'moveit_config'}
+[0.000820] (-) JobUnselected: {'identifier': 'moveit_task_constructor_capabilities'}
+[0.000876] (-) JobUnselected: {'identifier': 'moveit_task_constructor_core'}
+[0.000897] (-) JobUnselected: {'identifier': 'moveit_task_constructor_demo'}
+[0.000914] (-) JobUnselected: {'identifier': 'moveit_task_constructor_msgs'}
+[0.000930] (-) JobUnselected: {'identifier': 'moveit_task_constructor_visualization'}
+[0.000944] (-) JobUnselected: {'identifier': 'robotiq_2f_85_gripper_visualization'}
+[0.000959] (-) JobUnselected: {'identifier': 'rviz_marker_tools'}
+[0.000972] (-) JobUnselected: {'identifier': 'ur_description'}
+[0.000987] (-) JobUnselected: {'identifier': 'ur_gazebo'}
+[0.001001] (-) JobUnselected: {'identifier': 'ur_interfaces'}
+[0.001048] (-) JobUnselected: {'identifier': 'ur_moveit_demos'}
+[0.001098] (-) JobUnselected: {'identifier': 'ur_mtc_demos'}
+[0.001117] (-) JobUnselected: {'identifier': 'ur_system_tests'}
+[0.001132] (-) JobUnselected: {'identifier': 'warehouse_ros_mongo'}
+[0.001385] (ur_mtc_pick_place_demo) JobQueued: {'identifier': 'ur_mtc_pick_place_demo', 'dependencies': OrderedDict({'moveit_task_constructor_msgs': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs', 'rviz_marker_tools': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools', 'ur_interfaces': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces', 'moveit_task_constructor_core': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core'})}
+[0.001577] (ur_mtc_pick_place_demo) JobStarted: {'identifier': 'ur_mtc_pick_place_demo'}
+[0.097832] (-) TimerEvent: {}
+[0.198142] (-) TimerEvent: {}
+[0.298511] (-) TimerEvent: {}
+[0.399217] (-) TimerEvent: {}
+[0.487973] (ur_mtc_pick_place_demo) JobProgress: {'identifier': 'ur_mtc_pick_place_demo', 'progress': 'cmake'}
+[0.490219] (ur_mtc_pick_place_demo) JobProgress: {'identifier': 'ur_mtc_pick_place_demo', 'progress': 'build'}
+[0.491774] (ur_mtc_pick_place_demo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo', '--', '-j4', '-l4'], 'cwd': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'darsh', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_ASKPASS': '/home/darsh/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/darsh', 'OLDPWD': '/home/darsh/UR3_ROS2_PICK_AND_PLACE', 'TERM_PROGRAM_VERSION': '1.98.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-9b91776d-a637-4a20-9337-e17d9303e54c.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/darsh/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/darsh/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'darsh', 'NAME': 'LAPTOP-9C42ONBH', 'WSL_INTEROP': '/run/WSL/401091_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/darsh/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Asus/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Asus/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Asus/AppData/Local/Microsoft/WinGet/Packages/Doppler.doppler_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/Asus/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Asus/AppData/Roaming/npm:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-ec8466887b.sock', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CMAKE_MODULE_PATH': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'VSCODE_WSL_EXT_LOCATION/up:VSCODE_CLI_REMOTE_ENV/w:ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[0.499307] (-) TimerEvent: {}
+[0.599715] (-) TimerEvent: {}
+[0.653440] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'[ 12%] Built target get_planning_scene_client\n'}
+[0.699936] (-) TimerEvent: {}
+[0.730530] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'[ 25%] Built target plane_segmentation\n'}
+[0.732884] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'[ 50%] Built target cluster_extraction\n'}
+[0.733301] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'[ 50%] Built target normals_curvature_and_rsd_estimation\n'}
+[0.741777] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'[ 62%] Built target object_segmentation\n'}
+[0.781633] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'[ 75%] Built target get_planning_scene_client_node\n'}
+[0.800027] (-) TimerEvent: {}
+[0.804079] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/mtc_node.dir/src/mtc_node.cpp.o\x1b[0m\n'}
+[0.814110] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'[ 93%] Built target get_planning_scene_server\n'}
+[0.900173] (-) TimerEvent: {}
+[1.000438] (-) TimerEvent: {}
+[1.100845] (-) TimerEvent: {}
+[1.201255] (-) TimerEvent: {}
+[1.301599] (-) TimerEvent: {}
+[1.401894] (-) TimerEvent: {}
+[1.502410] (-) TimerEvent: {}
+[1.602984] (-) TimerEvent: {}
+[1.703481] (-) TimerEvent: {}
+[1.803795] (-) TimerEvent: {}
+[1.904225] (-) TimerEvent: {}
+[2.004544] (-) TimerEvent: {}
+[2.104856] (-) TimerEvent: {}
+[2.205213] (-) TimerEvent: {}
+[2.305492] (-) TimerEvent: {}
+[2.405814] (-) TimerEvent: {}
+[2.506212] (-) TimerEvent: {}
+[2.606595] (-) TimerEvent: {}
+[2.706989] (-) TimerEvent: {}
+[2.807373] (-) TimerEvent: {}
+[2.907911] (-) TimerEvent: {}
+[3.008321] (-) TimerEvent: {}
+[3.108823] (-) TimerEvent: {}
+[3.209168] (-) TimerEvent: {}
+[3.309467] (-) TimerEvent: {}
+[3.409785] (-) TimerEvent: {}
+[3.510170] (-) TimerEvent: {}
+[3.610494] (-) TimerEvent: {}
+[3.710823] (-) TimerEvent: {}
+[3.811080] (-) TimerEvent: {}
+[3.911400] (-) TimerEvent: {}
+[4.011676] (-) TimerEvent: {}
+[4.112018] (-) TimerEvent: {}
+[4.212342] (-) TimerEvent: {}
+[4.312787] (-) TimerEvent: {}
+[4.413336] (-) TimerEvent: {}
+[4.513860] (-) TimerEvent: {}
+[4.614472] (-) TimerEvent: {}
+[4.714983] (-) TimerEvent: {}
+[4.815391] (-) TimerEvent: {}
+[4.915714] (-) TimerEvent: {}
+[5.016025] (-) TimerEvent: {}
+[5.116344] (-) TimerEvent: {}
+[5.216711] (-) TimerEvent: {}
+[5.317131] (-) TimerEvent: {}
+[5.417488] (-) TimerEvent: {}
+[5.449081] (ur_mtc_pick_place_demo) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/src/mtc_node.cpp:39\x1b[m\x1b[K:\n'}
+[5.449449] (ur_mtc_pick_place_demo) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K#pragma message: .h header is obsolete. Please use the .hpp header instead.\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.449585] (ur_mtc_pick_place_demo) StderrLine: {'line': b'   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."\x1b[01;36m\x1b[K)\x1b[m\x1b[K\n'}
+[5.449706] (ur_mtc_pick_place_demo) StderrLine: {'line': b'      |                                                                             \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.517581] (-) TimerEvent: {}
+[5.617931] (-) TimerEvent: {}
+[5.718345] (-) TimerEvent: {}
+[5.818834] (-) TimerEvent: {}
+[5.919306] (-) TimerEvent: {}
+[6.019638] (-) TimerEvent: {}
+[6.120130] (-) TimerEvent: {}
+[6.220503] (-) TimerEvent: {}
+[6.320903] (-) TimerEvent: {}
+[6.421290] (-) TimerEvent: {}
+[6.521710] (-) TimerEvent: {}
+[6.622053] (-) TimerEvent: {}
+[6.722415] (-) TimerEvent: {}
+[6.822857] (-) TimerEvent: {}
+[6.923326] (-) TimerEvent: {}
+[7.023759] (-) TimerEvent: {}
+[7.124245] (-) TimerEvent: {}
+[7.224662] (-) TimerEvent: {}
+[7.325179] (-) TimerEvent: {}
+[7.425500] (-) TimerEvent: {}
+[7.525891] (-) TimerEvent: {}
+[7.626259] (-) TimerEvent: {}
+[7.726606] (-) TimerEvent: {}
+[7.826985] (-) TimerEvent: {}
+[7.856658] (ur_mtc_pick_place_demo) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/src/mtc_node.cpp:40\x1b[m\x1b[K:\n'}
+[7.857040] (ur_mtc_pick_place_demo) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K#pragma message: .h header is obsolete. Please use the .hpp header instead.\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.857170] (ur_mtc_pick_place_demo) StderrLine: {'line': b'   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."\x1b[01;36m\x1b[K)\x1b[m\x1b[K\n'}
+[7.857293] (ur_mtc_pick_place_demo) StderrLine: {'line': b'      |                                                                             \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[7.927100] (-) TimerEvent: {}
+[8.027476] (-) TimerEvent: {}
+[8.127959] (-) TimerEvent: {}
+[8.228281] (-) TimerEvent: {}
+[8.328590] (-) TimerEvent: {}
+[8.429172] (-) TimerEvent: {}
+[8.529722] (-) TimerEvent: {}
+[8.630091] (-) TimerEvent: {}
+[8.730558] (-) TimerEvent: {}
+[8.830881] (-) TimerEvent: {}
+[8.931197] (-) TimerEvent: {}
+[9.031574] (-) TimerEvent: {}
+[9.132050] (-) TimerEvent: {}
+[9.232412] (-) TimerEvent: {}
+[9.332736] (-) TimerEvent: {}
+[9.433095] (-) TimerEvent: {}
+[9.533560] (-) TimerEvent: {}
+[9.633952] (-) TimerEvent: {}
+[9.734298] (-) TimerEvent: {}
+[9.834649] (-) TimerEvent: {}
+[9.935040] (-) TimerEvent: {}
+[10.035530] (-) TimerEvent: {}
+[10.135882] (-) TimerEvent: {}
+[10.236160] (-) TimerEvent: {}
+[10.336701] (-) TimerEvent: {}
+[10.437014] (-) TimerEvent: {}
+[10.537307] (-) TimerEvent: {}
+[10.637658] (-) TimerEvent: {}
+[10.737959] (-) TimerEvent: {}
+[10.838363] (-) TimerEvent: {}
+[10.938712] (-) TimerEvent: {}
+[11.039037] (-) TimerEvent: {}
+[11.139340] (-) TimerEvent: {}
+[11.239742] (-) TimerEvent: {}
+[11.340135] (-) TimerEvent: {}
+[11.440589] (-) TimerEvent: {}
+[11.541024] (-) TimerEvent: {}
+[11.641320] (-) TimerEvent: {}
+[11.741694] (-) TimerEvent: {}
+[11.842043] (-) TimerEvent: {}
+[11.942414] (-) TimerEvent: {}
+[12.042777] (-) TimerEvent: {}
+[12.143201] (-) TimerEvent: {}
+[12.243694] (-) TimerEvent: {}
+[12.344097] (-) TimerEvent: {}
+[12.444490] (-) TimerEvent: {}
+[12.544831] (-) TimerEvent: {}
+[12.645195] (-) TimerEvent: {}
+[12.745665] (-) TimerEvent: {}
+[12.846030] (-) TimerEvent: {}
+[12.946464] (-) TimerEvent: {}
+[13.046839] (-) TimerEvent: {}
+[13.147203] (-) TimerEvent: {}
+[13.247582] (-) TimerEvent: {}
+[13.347903] (-) TimerEvent: {}
+[13.448240] (-) TimerEvent: {}
+[13.548706] (-) TimerEvent: {}
+[13.649123] (-) TimerEvent: {}
+[13.749424] (-) TimerEvent: {}
+[13.849734] (-) TimerEvent: {}
+[13.950001] (-) TimerEvent: {}
+[14.050390] (-) TimerEvent: {}
+[14.150710] (-) TimerEvent: {}
+[14.251046] (-) TimerEvent: {}
+[14.351334] (-) TimerEvent: {}
+[14.451707] (-) TimerEvent: {}
+[14.552044] (-) TimerEvent: {}
+[14.652410] (-) TimerEvent: {}
+[14.752780] (-) TimerEvent: {}
+[14.853097] (-) TimerEvent: {}
+[14.953499] (-) TimerEvent: {}
+[15.053959] (-) TimerEvent: {}
+[15.154408] (-) TimerEvent: {}
+[15.254876] (-) TimerEvent: {}
+[15.355301] (-) TimerEvent: {}
+[15.455649] (-) TimerEvent: {}
+[15.555987] (-) TimerEvent: {}
+[15.656310] (-) TimerEvent: {}
+[15.756680] (-) TimerEvent: {}
+[15.856926] (-) TimerEvent: {}
+[15.957376] (-) TimerEvent: {}
+[16.057705] (-) TimerEvent: {}
+[16.157989] (-) TimerEvent: {}
+[16.258295] (-) TimerEvent: {}
+[16.358576] (-) TimerEvent: {}
+[16.458908] (-) TimerEvent: {}
+[16.559255] (-) TimerEvent: {}
+[16.659551] (-) TimerEvent: {}
+[16.759853] (-) TimerEvent: {}
+[16.860133] (-) TimerEvent: {}
+[16.960439] (-) TimerEvent: {}
+[17.060711] (-) TimerEvent: {}
+[17.161024] (-) TimerEvent: {}
+[17.261347] (-) TimerEvent: {}
+[17.361811] (-) TimerEvent: {}
+[17.462275] (-) TimerEvent: {}
+[17.562771] (-) TimerEvent: {}
+[17.663235] (-) TimerEvent: {}
+[17.763716] (-) TimerEvent: {}
+[17.864051] (-) TimerEvent: {}
+[17.964539] (-) TimerEvent: {}
+[18.065007] (-) TimerEvent: {}
+[18.165492] (-) TimerEvent: {}
+[18.265864] (-) TimerEvent: {}
+[18.366249] (-) TimerEvent: {}
+[18.466751] (-) TimerEvent: {}
+[18.567061] (-) TimerEvent: {}
+[18.667390] (-) TimerEvent: {}
+[18.767720] (-) TimerEvent: {}
+[18.868086] (-) TimerEvent: {}
+[18.968453] (-) TimerEvent: {}
+[19.068827] (-) TimerEvent: {}
+[19.169276] (-) TimerEvent: {}
+[19.269879] (-) TimerEvent: {}
+[19.370286] (-) TimerEvent: {}
+[19.470598] (-) TimerEvent: {}
+[19.570924] (-) TimerEvent: {}
+[19.671239] (-) TimerEvent: {}
+[19.771548] (-) TimerEvent: {}
+[19.872437] (-) TimerEvent: {}
+[19.972833] (-) TimerEvent: {}
+[20.073176] (-) TimerEvent: {}
+[20.173596] (-) TimerEvent: {}
+[20.274320] (-) TimerEvent: {}
+[20.374628] (-) TimerEvent: {}
+[20.474931] (-) TimerEvent: {}
+[20.575254] (-) TimerEvent: {}
+[20.675580] (-) TimerEvent: {}
+[20.775875] (-) TimerEvent: {}
+[20.876607] (-) TimerEvent: {}
+[20.976970] (-) TimerEvent: {}
+[21.025976] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable mtc_node\x1b[0m\n'}
+[21.077194] (-) TimerEvent: {}
+[21.177970] (-) TimerEvent: {}
+[21.278307] (-) TimerEvent: {}
+[21.378648] (-) TimerEvent: {}
+[21.479070] (-) TimerEvent: {}
+[21.579637] (-) TimerEvent: {}
+[21.680040] (-) TimerEvent: {}
+[21.780362] (-) TimerEvent: {}
+[21.880727] (-) TimerEvent: {}
+[21.981027] (-) TimerEvent: {}
+[22.081515] (-) TimerEvent: {}
+[22.182213] (-) TimerEvent: {}
+[22.283134] (-) TimerEvent: {}
+[22.384327] (-) TimerEvent: {}
+[22.485457] (-) TimerEvent: {}
+[22.585848] (-) TimerEvent: {}
+[22.686237] (-) TimerEvent: {}
+[22.786547] (-) TimerEvent: {}
+[22.887111] (-) TimerEvent: {}
+[23.070523] (-) TimerEvent: {}
+[23.173689] (-) TimerEvent: {}
+[23.275030] (-) TimerEvent: {}
+[23.376150] (-) TimerEvent: {}
+[23.477437] (-) TimerEvent: {}
+[23.579347] (-) TimerEvent: {}
+[23.682728] (-) TimerEvent: {}
+[23.783933] (-) TimerEvent: {}
+[23.834794] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'[100%] Built target mtc_node\n'}
+[23.884021] (-) TimerEvent: {}
+[23.887471] (ur_mtc_pick_place_demo) CommandEnded: {'returncode': 0}
+[23.896070] (ur_mtc_pick_place_demo) JobProgress: {'identifier': 'ur_mtc_pick_place_demo', 'progress': 'install'}
+[23.944835] (ur_mtc_pick_place_demo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo'], 'cwd': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'darsh', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_ASKPASS': '/home/darsh/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/darsh', 'OLDPWD': '/home/darsh/UR3_ROS2_PICK_AND_PLACE', 'TERM_PROGRAM_VERSION': '1.98.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-9b91776d-a637-4a20-9337-e17d9303e54c.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/darsh/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/darsh/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'darsh', 'NAME': 'LAPTOP-9C42ONBH', 'WSL_INTEROP': '/run/WSL/401091_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/darsh/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Asus/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Asus/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Asus/AppData/Local/Microsoft/WinGet/Packages/Doppler.doppler_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/Asus/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Asus/AppData/Roaming/npm:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-ec8466887b.sock', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CMAKE_MODULE_PATH': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_mtc_pick_place_demo', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'VSCODE_WSL_EXT_LOCATION/up:VSCODE_CLI_REMOTE_ENV/w:ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[23.984217] (-) TimerEvent: {}
+[23.999114] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[24.001608] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/ur_mtc_pick_place_demo/get_planning_scene_client_node\n'}
+[24.007037] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/ur_mtc_pick_place_demo/get_planning_scene_server\n'}
+[24.009348] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/ur_mtc_pick_place_demo/mtc_node\n'}
+[24.016067] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/ur_mtc_pick_place_demo/mtc_node" to ""\n'}
+[24.017153] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libcluster_extraction.so\n'}
+[24.018048] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libget_planning_scene_client.so\n'}
+[24.020196] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libnormals_curvature_and_rsd_estimation.so\n'}
+[24.021004] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libobject_segmentation.so\n'}
+[24.022330] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib/libplane_segmentation.so\n'}
+[24.023430] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/config\n'}
+[24.024417] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/config/mtc_node_params.yaml\n'}
+[24.026787] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/config/get_planning_scene_server.yaml\n'}
+[24.028084] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo\n'}
+[24.028869] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/ur_mtc_pick_place_demo\n'}
+[24.029381] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/ur_mtc_pick_place_demo/plane_segmentation.h\n'}
+[24.030225] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/ur_mtc_pick_place_demo/get_planning_scene_client.h\n'}
+[24.031901] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/ur_mtc_pick_place_demo/normals_curvature_and_rsd_estimation.h\n'}
+[24.032693] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/ur_mtc_pick_place_demo/object_segmentation.h\n'}
+[24.033427] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/ur_mtc_pick_place_demo/cluster_extraction.h\n'}
+[24.033959] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/launch\n'}
+[24.034517] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/launch/point_cloud_viewer.launch.py\n'}
+[24.035747] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/launch/get_planning_scene_server.launch.py\n'}
+[24.036701] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/launch/pick_place_demo.launch.py\n'}
+[24.037971] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/rviz\n'}
+[24.039760] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/rviz/mtc_demos.rviz\n'}
+[24.040453] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/rviz/point_cloud_viewer.rviz\n'}
+[24.040998] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/scripts\n'}
+[24.041963] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/scripts/robot.sh\n'}
+[24.043041] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/scripts/pointcloud.sh\n'}
+[24.043594] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/environment/library_path.sh\n'}
+[24.044026] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/environment/library_path.dsv\n'}
+[24.044470] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ament_index/resource_index/package_run_dependencies/ur_mtc_pick_place_demo\n'}
+[24.045324] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ament_index/resource_index/parent_prefix_path/ur_mtc_pick_place_demo\n'}
+[24.046582] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/environment/ament_prefix_path.sh\n'}
+[24.047450] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/environment/ament_prefix_path.dsv\n'}
+[24.054648] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/environment/path.sh\n'}
+[24.057120] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/environment/path.dsv\n'}
+[24.059023] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/local_setup.bash\n'}
+[24.059755] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/local_setup.sh\n'}
+[24.060674] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/local_setup.zsh\n'}
+[24.061859] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/local_setup.dsv\n'}
+[24.062966] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/package.dsv\n'}
+[24.064194] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ament_index/resource_index/packages/ur_mtc_pick_place_demo\n'}
+[24.067145] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/export_ur_mtc_pick_place_demoExport.cmake\n'}
+[24.069440] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/export_ur_mtc_pick_place_demoExport-release.cmake\n'}
+[24.070296] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[24.071241] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[24.072201] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[24.074309] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/ur_mtc_pick_place_demoConfig.cmake\n'}
+[24.075557] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/cmake/ur_mtc_pick_place_demoConfig-version.cmake\n'}
+[24.076344] (ur_mtc_pick_place_demo) StdoutLine: {'line': b'-- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/share/ur_mtc_pick_place_demo/package.xml\n'}
+[24.077138] (ur_mtc_pick_place_demo) CommandEnded: {'returncode': 0}
+[24.085244] (-) TimerEvent: {}
+[24.234801] (-) TimerEvent: {}
+[24.245024] (ur_mtc_pick_place_demo) JobEnded: {'identifier': 'ur_mtc_pick_place_demo', 'rc': 0}
+[24.252562] (-) EventReactorShutdown: {}

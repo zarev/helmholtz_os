@@ -1,0 +1,207 @@
+[2.338s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests': CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests -- -j4 -l4
+[2.631s] [ 33%] Built target arm_gripper_loop_controller
+[2.707s] [ 50%] [32mBuilding CXX object CMakeFiles/test_pick_and_place.dir/src/test_pick_and_place.cpp.o[0m
+[26.932s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:204:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[26.932s]   204 | }
+[26.933s]       |  [01;31m[K^[m[K
+[26.933s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:36:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[26.933s]    36 | [01;36m[K{[m[K
+[26.934s]       | [01;36m[K^[m[K
+[26.983s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:[m[K In constructor ‘[01m[KPickPlaceNode::[01;32m[KPickPlaceNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[26.984s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:45:5:[m[K [01;31m[Kerror: [m[K‘[01m[KrunTask[m[K’ was not declared in this scope
+[26.985s]    45 |     [01;31m[KrunTask[m[K();
+[26.985s]       |     [01;31m[K^~~~~~~[m[K
+[27.025s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PickPlaceNode::[01;32m[KconfigureTask[m[K()[m[K’:
+[27.026s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:63:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask[m[K’ was not declared in this scope; did you mean ‘[01m[Ktask_[m[K’?
+[27.026s]    63 |       [01;31m[Ktask[m[K.properties().exposeTo(grasp->properties(), { "eef", "group", "ik_frame" });
+[27.027s]       |       [01;31m[K^~~~[m[K
+[27.027s]       |       [32m[Ktask_[m[K
+[27.110s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:69:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kobject_name[m[K’ was not declared in this scope; did you mean ‘[01m[Kget_name[m[K’?
+[27.111s]    69 |         stage->allowCollisions([01;31m[Kobject_name[m[K,
+[27.111s]       |                                [01;31m[K^~~~~~~~~~~[m[K
+[27.112s]       |                                [32m[Kget_name[m[K
+[27.174s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:70:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_group_name[m[K’ was not declared in this scope; did you mean ‘[01m[Kgripper_group[m[K’?
+[27.174s]    70 |           task.getRobotModel()->getJointModelGroup([01;31m[Kgripper_group_name[m[K)->getLinkModelNamesWithCollisionGeometry(), true);
+[27.175s]       |                                                    [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[27.175s]       |                                                    [32m[Kgripper_group[m[K
+[27.250s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:76:76:[m[K [01;31m[Kerror: [m[K‘[01m[Kinterpolation_planner[m[K’ was not declared in this scope
+[27.250s]    76 |         auto stage = std::make_unique<mtc::stages::MoveTo>("open gripper", [01;31m[Kinterpolation_planner[m[K);
+[27.251s]       |                                                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[27.341s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:77:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_group_name[m[K’ was not declared in this scope; did you mean ‘[01m[Kgripper_group[m[K’?
+[27.341s]    77 |         stage->setGroup([01;31m[Kgripper_group_name[m[K);
+[27.342s]       |                         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[27.342s]       |                         [32m[Kgripper_group[m[K
+[27.415s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:78:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_open_pose[m[K’ was not declared in this scope
+[27.416s]    78 |         stage->setGoal([01;31m[Kgripper_open_pose[m[K);
+[27.416s]       |                        [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[27.525s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:87:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_open_pose[m[K’ was not declared in this scope
+[27.526s]    87 |         gen_grasp->setPreGraspPose([01;31m[Kgripper_open_pose[m[K);
+[27.526s]       |                                    [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[27.599s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:88:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kobject_name[m[K’ was not declared in this scope; did you mean ‘[01m[Kget_name[m[K’?
+[27.600s]    88 |         gen_grasp->setObject([01;31m[Kobject_name[m[K);
+[27.602s]       |                              [01;31m[K^~~~~~~~~~~[m[K
+[27.603s]       |                              [32m[Kget_name[m[K
+[27.723s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:90:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state_ptr[m[K’ was not declared in this scope
+[27.724s]    90 |         gen_grasp->setMonitoredStage([01;31m[Kcurrent_state_ptr[m[K);
+[27.725s]       |                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[27.869s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:93:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_frame[m[K’ was not declared in this scope; did you mean ‘[01m[Kgripper_group[m[K’?
+[27.869s]    93 |         ik->setIKFrame([01;31m[Kgripper_frame[m[K);
+[27.870s]       |                        [01;31m[K^~~~~~~~~~~~~[m[K
+[27.870s]       |                        [32m[Kgripper_group[m[K
+[27.978s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:103:77:[m[K [01;31m[Kerror: [m[K‘[01m[Kinterpolation_planner[m[K’ was not declared in this scope
+[27.978s]   103 |         auto stage = std::make_unique<mtc::stages::MoveTo>("close gripper", [01;31m[Kinterpolation_planner[m[K);
+[27.979s]       |                                                                             [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[28.062s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:104:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_group_name[m[K’ was not declared in this scope; did you mean ‘[01m[Kgripper_group[m[K’?
+[28.063s]   104 |         stage->setGroup([01;31m[Kgripper_group_name[m[K);
+[28.063s]       |                         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[28.064s]       |                         [32m[Kgripper_group[m[K
+[28.147s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:105:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_close_pose[m[K’ was not declared in this scope
+[28.147s]   105 |         stage->setGoal([01;31m[Kgripper_close_pose[m[K);
+[28.147s]       |                        [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[28.271s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:112:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kobject_name[m[K’ was not declared in this scope; did you mean ‘[01m[Kget_name[m[K’?
+[28.272s]   112 |         stage->attachObject([01;31m[Kobject_name[m[K, gripper_frame);
+[28.276s]       |                             [01;31m[K^~~~~~~~~~~[m[K
+[28.276s]       |                             [32m[Kget_name[m[K
+[28.368s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:112:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_frame[m[K’ was not declared in this scope; did you mean ‘[01m[Kgripper_group[m[K’?
+[28.369s]   112 |         stage->attachObject(object_name, [01;31m[Kgripper_frame[m[K);
+[28.369s]       |                                          [01;31m[K^~~~~~~~~~~~~[m[K
+[28.370s]       |                                          [32m[Kgripper_group[m[K
+[28.520s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:118:81:[m[K [01;31m[Kerror: [m[K‘[01m[Kcartesian_planner[m[K’ was not declared in this scope
+[28.521s]   118 |         auto stage = std::make_unique<mtc::stages::MoveRelative>("lift object", [01;31m[Kcartesian_planner[m[K);
+[28.522s]       |                                                                                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[28.641s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:121:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_frame[m[K’ was not declared in this scope; did you mean ‘[01m[Kgripper_group[m[K’?
+[28.643s]   121 |         stage->setIKFrame([01;31m[Kgripper_frame[m[K);
+[28.644s]       |                           [01;31m[K^~~~~~~~~~~~~[m[K
+[28.645s]       |                           [32m[Kgripper_group[m[K
+[28.735s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:124:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kworld_frame[m[K’ was not declared in this scope
+[28.735s]   124 |         vec.header.frame_id = [01;31m[Kworld_frame[m[K;
+[28.736s]       |                               [01;31m[K^~~~~~~~~~~[m[K
+[28.803s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:138:12:[m[K [01;31m[Kerror: [m[K‘[01m[Karm_group_name[m[K’ was not declared in this scope; did you mean ‘[01m[Karm_group[m[K’?
+[28.804s]   138 |           {[01;31m[Karm_group_name[m[K, ompl_planner_arm},
+[28.804s]       |            [01;31m[K^~~~~~~~~~~~~~[m[K
+[28.805s]       |            [32m[Karm_group[m[K
+[28.883s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:138:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kompl_planner_arm[m[K’ was not declared in this scope
+[28.883s]   138 |           {arm_group_name, [01;31m[Kompl_planner_arm[m[K},
+[28.884s]       |                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[28.962s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:139:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_group_name[m[K’ was not declared in this scope; did you mean ‘[01m[Kgripper_group[m[K’?
+[28.962s]   139 |           {[01;31m[Kgripper_group_name[m[K, interpolation_planner}
+[28.962s]       |            [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[28.963s]       |            [32m[Kgripper_group[m[K
+[29.077s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:139:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kinterpolation_planner[m[K’ was not declared in this scope
+[29.077s]   139 |           {gripper_group_name, [01;31m[Kinterpolation_planner[m[K}
+[29.077s]       |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[29.090s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:140:9:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::vector<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >::vector(<brace-enclosed initializer list>)[m[K’
+[29.090s]   140 |         [01;31m[K}[m[K);
+[29.091s]       |         [01;31m[K^[m[K
+[29.097s] In file included from [01m[K/usr/include/c++/13/vector:66[m[K,
+[29.099s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:19[m[K,
+[29.107s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K,
+[29.108s]                  from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:1[m[K:
+[29.108s] [01m[K/usr/include/c++/13/bits/stl_vector.h:707:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _InputIterator, class> std::vector<_Tp, _Alloc>::[01;32m[Kvector[m[K(_InputIterator, _InputIterator, const allocator_type&) [35m[K[with <template-parameter-2-2> = _InputIterator; _Tp = std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> >; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >][m[K[m[K’
+[29.108s]   707 |         [01;36m[Kvector[m[K(_InputIterator __first, _InputIterator __last,
+[29.109s]       |         [01;36m[K^~~~~~[m[K
+[29.109s] [01m[K/usr/include/c++/13/bits/stl_vector.h:707:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[29.110s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:140:9:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_InputIterator[m[K’
+[29.110s]   140 |         [01;36m[K}[m[K);
+[29.110s]       |         [01;36m[K^[m[K
+[29.111s] [01m[K/usr/include/c++/13/bits/stl_vector.h:678:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::[01;32m[Kvector[m[K(std::initializer_list<_Tp>, const allocator_type&) [35m[K[with _Tp = std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> >; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >; allocator_type = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >][m[K[m[K’
+[29.111s]   678 |       [01;36m[Kvector[m[K(initializer_list<value_type> __l,
+[29.111s]       |       [01;36m[K^~~~~~[m[K
+[29.112s] [01m[K/usr/include/c++/13/bits/stl_vector.h:678:43:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::initializer_list<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >[m[K’
+[29.112s]   678 |       vector([01;36m[Kinitializer_list<value_type> __l[m[K,
+[29.116s]       |              [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[29.117s] [01m[K/usr/include/c++/13/bits/stl_vector.h:659:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::[01;32m[Kvector[m[K(std::vector<_Tp, _Alloc>&&, std::__type_identity_t<_Alloc>&) [35m[K[with _Tp = std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> >; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >; std::__type_identity_t<_Alloc> = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >][m[K[m[K’
+[29.118s]   659 |       [01;36m[Kvector[m[K(vector&& __rv, const __type_identity_t<allocator_type>& __m)
+[29.119s]       |       [01;36m[K^~~~~~[m[K
+[29.120s] [01m[K/usr/include/c++/13/bits/stl_vector.h:659:23:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::vector<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >&&[m[K’
+[29.120s]   659 |       vector([01;36m[Kvector&& __rv[m[K, const __type_identity_t<allocator_type>& __m)
+[29.121s]       |              [01;36m[K~~~~~~~~~^~~~[m[K
+[29.124s] [01m[K/usr/include/c++/13/bits/stl_vector.h:640:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::[01;32m[Kvector[m[K(std::vector<_Tp, _Alloc>&&, const allocator_type&, std::false_type) [35m[K[with _Tp = std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> >; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >; allocator_type = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >; std::false_type = std::integral_constant<bool, false>][m[K[m[K’
+[29.125s]   640 |       [01;36m[Kvector[m[K(vector&& __rv, const allocator_type& __m, false_type)
+[29.126s]       |       [01;36m[K^~~~~~[m[K
+[29.126s] [01m[K/usr/include/c++/13/bits/stl_vector.h:640:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[29.127s] [01m[K/usr/include/c++/13/bits/stl_vector.h:635:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::[01;32m[Kvector[m[K(std::vector<_Tp, _Alloc>&&, const allocator_type&, std::true_type) [35m[K[with _Tp = std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> >; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >; allocator_type = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >; std::true_type = std::integral_constant<bool, true>][m[K[m[K’
+[29.127s]   635 |       [01;36m[Kvector[m[K(vector&& __rv, const allocator_type& __m, true_type) noexcept
+[29.127s]       |       [01;36m[K^~~~~~[m[K
+[29.128s] [01m[K/usr/include/c++/13/bits/stl_vector.h:635:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[29.128s] [01m[K/usr/include/c++/13/bits/stl_vector.h:624:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::[01;32m[Kvector[m[K(const std::vector<_Tp, _Alloc>&, std::__type_identity_t<_Alloc>&) [35m[K[with _Tp = std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> >; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >; std::__type_identity_t<_Alloc> = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >][m[K[m[K’
+[29.129s]   624 |       [01;36m[Kvector[m[K(const vector& __x, const __type_identity_t<allocator_type>& __a)
+[29.129s]       |       [01;36m[K^~~~~~[m[K
+[29.130s] [01m[K/usr/include/c++/13/bits/stl_vector.h:624:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst std::vector<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >&[m[K’
+[29.130s]   624 |       vector([01;36m[Kconst vector& __x[m[K, const __type_identity_t<allocator_type>& __a)
+[29.131s]       |              [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[29.131s] [01m[K/usr/include/c++/13/bits/stl_vector.h:620:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::[01;32m[Kvector[m[K(std::vector<_Tp, _Alloc>&&) [35m[K[with _Tp = std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> >; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >][m[K[m[K’
+[29.132s]   620 |       [01;36m[Kvector[m[K(vector&&) noexcept = default;
+[29.137s]       |       [01;36m[K^~~~~~[m[K
+[29.138s] [01m[K/usr/include/c++/13/bits/stl_vector.h:620:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[29.138s] [01m[K/usr/include/c++/13/bits/stl_vector.h:601:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::[01;32m[Kvector[m[K(const std::vector<_Tp, _Alloc>&) [35m[K[with _Tp = std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> >; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >][m[K[m[K’
+[29.139s]   601 |       [01;36m[Kvector[m[K(const vector& __x)
+[29.139s]       |       [01;36m[K^~~~~~[m[K
+[29.140s] [01m[K/usr/include/c++/13/bits/stl_vector.h:601:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[29.147s] [01m[K/usr/include/c++/13/bits/stl_vector.h:569:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::[01;32m[Kvector[m[K(size_type, const value_type&, const allocator_type&) [35m[K[with _Tp = std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> >; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >; size_type = long unsigned int; value_type = std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> >; allocator_type = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >][m[K[m[K’
+[29.148s]   569 |       [01;36m[Kvector[m[K(size_type __n, const value_type& __value,
+[29.148s]       |       [01;36m[K^~~~~~[m[K
+[29.148s] [01m[K/usr/include/c++/13/bits/stl_vector.h:569:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::vector<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[29.149s]   569 |       vector([01;36m[Ksize_type __n[m[K, const value_type& __value,
+[29.149s]       |              [01;36m[K~~~~~~~~~~^~~[m[K
+[29.150s] [01m[K/usr/include/c++/13/bits/stl_vector.h:556:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::[01;32m[Kvector[m[K(size_type, const allocator_type&) [35m[K[with _Tp = std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> >; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >; size_type = long unsigned int; allocator_type = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >][m[K[m[K’
+[29.150s]   556 |       [01;36m[Kvector[m[K(size_type __n, const allocator_type& __a = allocator_type())
+[29.150s]       |       [01;36m[K^~~~~~[m[K
+[29.151s] [01m[K/usr/include/c++/13/bits/stl_vector.h:556:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::vector<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[29.151s]   556 |       vector([01;36m[Ksize_type __n[m[K, const allocator_type& __a = allocator_type())
+[29.158s]       |              [01;36m[K~~~~~~~~~~^~~[m[K
+[29.159s] [01m[K/usr/include/c++/13/bits/stl_vector.h:542:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::[01;32m[Kvector[m[K(const allocator_type&) [35m[K[with _Tp = std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> >; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >; allocator_type = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >][m[K[m[K’
+[29.160s]   542 |       [01;36m[Kvector[m[K(const allocator_type& __a) _GLIBCXX_NOEXCEPT
+[29.160s]       |       [01;36m[K^~~~~~[m[K
+[29.160s] [01m[K/usr/include/c++/13/bits/stl_vector.h:542:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[29.160s] [01m[K/usr/include/c++/13/bits/stl_vector.h:531:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::[01;32m[Kvector[m[K() [35m[K[with _Tp = std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> >; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, std::shared_ptr<moveit::task_constructor::solvers::PlannerInterface> > >][m[K[m[K’
+[29.161s]   531 |       [01;36m[Kvector[m[K() = default;
+[29.161s]       |       [01;36m[K^~~~~~[m[K
+[29.161s] [01m[K/usr/include/c++/13/bits/stl_vector.h:531:7:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 2 provided
+[29.161s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:142:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask[m[K’ was not declared in this scope; did you mean ‘[01m[Ktask_[m[K’?
+[29.161s]   142 |       [01;31m[Ktask[m[K.add(std::move(connect));
+[29.162s]       |       [01;31m[K^~~~[m[K
+[29.162s]       |       [32m[Ktask_[m[K
+[29.173s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:148:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask[m[K’ was not declared in this scope; did you mean ‘[01m[Ktask_[m[K’?
+[29.173s]   148 |       [01;31m[Ktask[m[K.properties().exposeTo(place->properties(), { "eef", "group", "ik_frame" });
+[29.174s]       |       [01;31m[K^~~~[m[K
+[29.174s]       |       [32m[Ktask_[m[K
+[29.199s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:153:82:[m[K [01;31m[Kerror: [m[K‘[01m[Kcartesian_planner[m[K’ was not declared in this scope
+[29.199s]   153 |         auto stage = std::make_unique<mtc::stages::MoveRelative>("lower object", [01;31m[Kcartesian_planner[m[K);
+[29.200s]       |                                                                                  [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[29.222s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:155:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_frame[m[K’ was not declared in this scope; did you mean ‘[01m[Kgripper_group[m[K’?
+[29.222s]   155 |         stage->setIKFrame([01;31m[Kgripper_frame[m[K);
+[29.223s]       |                           [01;31m[K^~~~~~~~~~~~~[m[K
+[29.223s]       |                           [32m[Kgripper_group[m[K
+[29.247s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:158:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kworld_frame[m[K’ was not declared in this scope
+[29.247s]   158 |         vec.header.frame_id = [01;31m[Kworld_frame[m[K;
+[29.247s]       |                               [01;31m[K^~~~~~~~~~~[m[K
+[29.288s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:167:76:[m[K [01;31m[Kerror: [m[K‘[01m[Kinterpolation_planner[m[K’ was not declared in this scope
+[29.288s]   167 |         auto stage = std::make_unique<mtc::stages::MoveTo>("open gripper", [01;31m[Kinterpolation_planner[m[K);
+[29.288s]       |                                                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[29.318s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:168:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_group_name[m[K’ was not declared in this scope; did you mean ‘[01m[Kgripper_group[m[K’?
+[29.319s]   168 |         stage->setGroup([01;31m[Kgripper_group_name[m[K);
+[29.319s]       |                         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[29.319s]       |                         [32m[Kgripper_group[m[K
+[29.346s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:169:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_open_pose[m[K’ was not declared in this scope
+[29.346s]   169 |         stage->setGoal([01;31m[Kgripper_open_pose[m[K);
+[29.347s]       |                        [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[29.364s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:176:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kobject_name[m[K’ was not declared in this scope; did you mean ‘[01m[Kget_name[m[K’?
+[29.364s]   176 |         stage->detachObject([01;31m[Kobject_name[m[K, gripper_frame);
+[29.364s]       |                             [01;31m[K^~~~~~~~~~~[m[K
+[29.364s]       |                             [32m[Kget_name[m[K
+[29.382s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:176:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_frame[m[K’ was not declared in this scope; did you mean ‘[01m[Kgripper_group[m[K’?
+[29.382s]   176 |         stage->detachObject(object_name, [01;31m[Kgripper_frame[m[K);
+[29.382s]       |                                          [01;31m[K^~~~~~~~~~~~~[m[K
+[29.382s]       |                                          [32m[Kgripper_group[m[K
+[29.383s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:184:3:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+[29.383s]   184 |   [01;31m[K{[m[K
+[29.384s]       |   [01;31m[K^[m[K
+[29.388s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:[m[K At global scope:
+[29.388s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:204:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+[29.388s]   204 | }
+[29.388s]       |  [01;31m[K^[m[K
+[47.307s] gmake[2]: *** [CMakeFiles/test_pick_and_place.dir/build.make:76: CMakeFiles/test_pick_and_place.dir/src/test_pick_and_place.cpp.o] Error 1
+[47.314s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/test_pick_and_place.dir/all] Error 2
+[47.314s] gmake: *** [Makefile:146: all] Error 2
+[47.314s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests' returned '2': CMAKE_MODULE_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_system_tests:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_system_tests -- -j4 -l4
