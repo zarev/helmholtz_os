@@ -530,7 +530,6 @@ libcluster_extraction.so: /usr/lib/x86_64-linux-gnu/libpcl_io.so
 libcluster_extraction.so: /usr/lib/x86_64-linux-gnu/libpcl_octree.so
 libcluster_extraction.so: /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so
 libcluster_extraction.so: /usr/lib/x86_64-linux-gnu/libpthread.a
-libcluster_extraction.so: /usr/lib/x86_64-linux-gnu/libpcap.so
 libcluster_extraction.so: /usr/lib/x86_64-linux-gnu/libpng.so
 libcluster_extraction.so: /usr/lib/x86_64-linux-gnu/libz.so
 libcluster_extraction.so: /usr/lib/libOpenNI.so

@@ -46,8 +46,3 @@ ros2 launch ur_mtc_pick_place_demo pick_place_demo.launch.py
 
 # Keep the script running until Ctrl+C
 #wait
-
-
-
-
-

@@ -490,10 +490,10 @@ OpenMP_gomp_LIBRARY:FILEPATH=/usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so
 OpenMP_pthread_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.a
 
 //Path to a file.
-PCAP_INCLUDE_DIR:PATH=/usr/include
+PCAP_INCLUDE_DIR:PATH=PCAP_INCLUDE_DIR-NOTFOUND
 
 //Path to a library.
-PCAP_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpcap.so
+PCAP_LIBRARY:FILEPATH=PCAP_LIBRARY-NOTFOUND
 
 //path to 2d headers
 PCL_2D_INCLUDE_DIR:PATH=/usr/include/pcl-1.14
@@ -1986,8 +1986,6 @@ FIND_PACKAGE_MESSAGE_DETAILS_PCL_TRACKING:INTERNAL=[/usr/lib/x86_64-linux-gnu/li
 FIND_PACKAGE_MESSAGE_DETAILS_PCL_VISUALIZATION:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpcl_visualization.so][/usr/include/pcl-1.14][v()]
 //Details about finding PNG
 FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpng.so][/usr/include][v1.6.43()]
-//Details about finding Pcap
-FIND_PACKAGE_MESSAGE_DETAILS_Pcap:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpcap.so][/usr/include][v()]
 //Details about finding Python3
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3][cfound components: Interpreter ][v3.12.3()]
 //Details about finding TIFF

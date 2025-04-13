@@ -165,7 +165,7 @@ MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
 
   // Grasp and place parameters
 declare_parameter("grasp_frame_transform", 
-    std::vector<double>{0.0, 0.0, 0.15, 1.5708, 0.0, 0.0}, "Transform from gripper frame to grasp frame [x, y, z, roll, pitch, yaw]");
+  std::vector<double>{0.15, 0.0, 0.20, 0.0, 1.5708, 0.0}, "Transform from gripper frame to grasp frame [x, y, z, roll, pitch, yaw]");
   declare_parameter("place_pose", std::vector<double>{-0.183, -0.14, 0.0, 0.0, 0.0, 0.0}, "Pose where the object should be placed [x, y, z, roll, pitch, yaw]");
 
   // Motion planning parameters

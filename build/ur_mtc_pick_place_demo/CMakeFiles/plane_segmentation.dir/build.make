@@ -530,7 +530,6 @@ libplane_segmentation.so: /usr/lib/x86_64-linux-gnu/libpcl_io.so
 libplane_segmentation.so: /usr/lib/x86_64-linux-gnu/libpcl_octree.so
 libplane_segmentation.so: /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so
 libplane_segmentation.so: /usr/lib/x86_64-linux-gnu/libpthread.a
-libplane_segmentation.so: /usr/lib/x86_64-linux-gnu/libpcap.so
 libplane_segmentation.so: /usr/lib/x86_64-linux-gnu/libpng.so
 libplane_segmentation.so: /usr/lib/x86_64-linux-gnu/libz.so
 libplane_segmentation.so: /usr/lib/libOpenNI.so

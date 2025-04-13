@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces/rosidl_generator_py/ur_interfaces/ur_interfaces_s__rosidl_typesupport_c.so" "TARGETS" "ur_interfaces_s__rosidl_typesupport_c" "DESTINATION" "lib/python3.12/site-packages/ur_interfaces")

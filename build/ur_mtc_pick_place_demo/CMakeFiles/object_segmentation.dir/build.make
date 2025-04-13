@@ -530,7 +530,6 @@ libobject_segmentation.so: /usr/lib/x86_64-linux-gnu/libpcl_io.so
 libobject_segmentation.so: /usr/lib/x86_64-linux-gnu/libpcl_octree.so
 libobject_segmentation.so: /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so
 libobject_segmentation.so: /usr/lib/x86_64-linux-gnu/libpthread.a
-libobject_segmentation.so: /usr/lib/x86_64-linux-gnu/libpcap.so
 libobject_segmentation.so: /usr/lib/x86_64-linux-gnu/libpng.so
 libobject_segmentation.so: /usr/lib/x86_64-linux-gnu/libz.so
 libobject_segmentation.so: /usr/lib/libOpenNI.so

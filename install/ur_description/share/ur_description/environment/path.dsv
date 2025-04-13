@@ -1,1 +1,1 @@
-/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_description/ament_cmake_environment_hooks/path.dsv
+prepend-non-duplicate-if-exists;PATH;bin

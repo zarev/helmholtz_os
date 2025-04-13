@@ -23,8 +23,8 @@ moveit_task_constructor_msgs__msg__TaskDescription__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
-#include "moveit_task_constructor_msgs/msg/detail/stage_description__functions.h"
 #include "moveit_task_constructor_msgs/msg/detail/property__functions.h"
+#include "moveit_task_constructor_msgs/msg/detail/stage_description__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG

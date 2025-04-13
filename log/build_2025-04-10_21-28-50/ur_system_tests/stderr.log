@@ -1,7 +1,0 @@
-[01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/src/test_pick_and_place.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Kcontrol_msgs/action/follow_joint_trajectory.hpp: No such file or directory
-    3 | #include [01;31m[K<control_msgs/action/follow_joint_trajectory.hpp>[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/test_pick_and_place.dir/build.make:76: CMakeFiles/test_pick_and_place.dir/src/test_pick_and_place.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/test_pick_and_place.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

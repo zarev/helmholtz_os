@@ -526,7 +526,6 @@ get_planning_scene_client_node: /usr/lib/x86_64-linux-gnu/libpcl_io.so
 get_planning_scene_client_node: /usr/lib/x86_64-linux-gnu/libpcl_octree.so
 get_planning_scene_client_node: /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so
 get_planning_scene_client_node: /usr/lib/x86_64-linux-gnu/libpthread.a
-get_planning_scene_client_node: /usr/lib/x86_64-linux-gnu/libpcap.so
 get_planning_scene_client_node: /usr/lib/x86_64-linux-gnu/libpng.so
 get_planning_scene_client_node: /usr/lib/x86_64-linux-gnu/libz.so
 get_planning_scene_client_node: /usr/lib/libOpenNI.so

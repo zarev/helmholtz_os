@@ -1,4 +1,0 @@
-[ 33%] Built target arm_gripper_loop_controller
-[ 50%] [32mBuilding CXX object CMakeFiles/test_pick_and_place.dir/src/test_pick_and_place.cpp.o[0m
-[ 83%] Built target test_send_joint_space_goal
-[100%] [32m[1mLinking CXX executable test_pick_and_place[0m

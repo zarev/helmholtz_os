@@ -523,7 +523,6 @@ mtc_node: /usr/lib/x86_64-linux-gnu/libpcl_io.so
 mtc_node: /usr/lib/x86_64-linux-gnu/libpcl_octree.so
 mtc_node: /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so
 mtc_node: /usr/lib/x86_64-linux-gnu/libpthread.a
-mtc_node: /usr/lib/x86_64-linux-gnu/libpcap.so
 mtc_node: /usr/lib/x86_64-linux-gnu/libpng.so
 mtc_node: /usr/lib/x86_64-linux-gnu/libz.so
 mtc_node: /usr/lib/x86_64-linux-gnu/libpcl_common.so
