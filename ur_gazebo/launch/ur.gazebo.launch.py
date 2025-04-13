@@ -258,7 +258,7 @@ def generate_launch_description():
             '-topic', '/robot_description',
             '-name', robot_name,
             '-allow_renaming', 'true',
-            '-x', '-0.1',  
+            '-x', '-0.2',  
             '-y', '0.0',  
             '-z', '0.0',   # Optional: Set Z position to 0.0 (you can adjust based on your need)
             '-R', '0.0',   # Optional: Set Roll rotation to 0.0 (adjust as needed)

@@ -25,7 +25,7 @@ ros2 launch ur_gazebo ur.gazebo.launch.py \
     pitch:=0.0 \
     yaw:=0.0 &
 
-sleep 15
+sleep 25
 echo "Launching the move group interface..."
 ros2 launch moveit_config move_group.launch.py \
     rviz_config_file:=mtc_demos.rviz \

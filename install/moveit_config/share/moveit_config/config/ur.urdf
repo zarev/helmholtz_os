@@ -246,7 +246,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_base_link.stl"/>
+        <mesh filename="package://robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_base_link.dae" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1"/>
@@ -259,9 +259,6 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="robotiq_arg2f_base_link">
-    <disableFixedJointLumping>true</disableFixedJointLumping>
-  </gazebo>
   <link name="left_outer_knuckle">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.000200000000003065 0.0199435877845359 0.0292245259211331"/>
@@ -573,9 +570,6 @@
     <parent link="tool0"/>
     <child link="robotiq_arg2f_base_link"/>
     <origin rpy="0 0 0" xyz="0 0 0.005"/>
-    <gazebo>
-      <disableFixedJointLumping>true</disableFixedJointLumping>
-    </gazebo>
   </joint>
   <!-- Define the gripper with a meaningful prefix -->
   <!-- 
@@ -717,13 +711,9 @@
         </clip>
       </camera>
       <always_on>1</always_on>
-      <update_rate>10</update_rate>
       <gz_frame_id>camera_head_link</gz_frame_id>
-      <output>
-        <image>true</image>
-        <depth_image>true</depth_image>
-        <point_cloud>true</point_cloud>
-      </output>
+      <topic>camera_head</topic>
+      <update_rate>5</update_rate>
       <visualize>true</visualize>
     </sensor>
   </gazebo>

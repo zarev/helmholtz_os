@@ -25,28 +25,27 @@ mtc_node:
     object_name: "cylinder_1"
     object_type: "cylinder"
     object_reference_frame: "base_link"
-    object_dimensions: [0.35, 0.03]  # Match exact dimensions from error log
+    object_dimensions: [0.45, 0.022]  # Match exact dimensions from error log
     object_pose: [0.22, 0.12, 0.15, 0.0, 0.0, 0.0]  # Z increased +0.05
-    collision_clearance: 0.02  # 2cm safety margin
 
     # Grasp parameters (key collision fixes)
-    grasp_frame_transform: [0.15, 0.0, 0.20, 0.0, 1.5708, 0.0]  # updated (fingers grab sideways)
+    grasp_frame_transform: [-0.10, 0.0, 0.15, 0.0, 1.5708, 0.0]  # fingers grab sideways
     place_pose: [-0.183, -0.14, 0.15, 0.0, 0.0, 0.0]  # Maintain Z-height
 
     # Motion planning (critical IK parameters)
-    approach_object_min_dist: 0.05  # Increased from 0.0015
+    approach_object_min_dist: 0.05
     approach_object_max_dist: 0.3
     lift_object_min_dist: 0.01
     lift_object_max_dist: 0.3
 
     # Timeout parameters
-    move_to_pick_timeout: 30.0  # Increased for debugging
+    move_to_pick_timeout: 30.0
     move_to_place_timeout: 30.0
 
     # Grasp generation (critical fixes)
-    grasp_pose_angle_delta: 0.2618  # ~15 degrees (pi/12)
-    grasp_pose_max_ik_solutions: 25  # Increased from 10
-    grasp_pose_min_solution_distance: 0.5  # Reduced from 0.8
+    grasp_pose_angle_delta: 0.2618  # ~15 degrees
+    grasp_pose_max_ik_solutions: 25
+    grasp_pose_min_solution_distance: 0.5
 
     # Place generation
     place_pose_max_ik_solutions: 15
@@ -54,11 +53,11 @@ mtc_node:
     # Cartesian planning
     cartesian_max_velocity_scaling: 0.8
     cartesian_max_acceleration_scaling: 0.8
-    cartesian_step_size: 0.001  # Increased from 0.00025
+    cartesian_step_size: 0.001
 
     # Collision avoidance
     allow_collision_objects: ["gripper", "object"]
-    collision_clearance: 0.02  # Added safety margin
+    collision_clearance: 0.02  # safety margin
 
     # Debugging parameters
     visualize_solutions: true
