@@ -1,13 +1,12 @@
-
 # UR Robotic Arm with Robotiq 2-Finger Gripper for ROS 2
 
 This project integrates the Robotiq 2-Finger Gripper with a Universal Robots UR3 arm using ROS 2 Jazzy and Gazebo Harmonic. It includes URDF models, ROS 2 control configuration, simulation launch files, and control scripts.
 
-> ✅ **Note:** This setup uses **fixed mimic joint configuration** for the Robotiq gripper to support simulation in **newer Gazebo (Harmonic)**. Only the primary `finger_joint` receives commands—mimic joints automatically follow.
+**Note:** This setup uses **fixed mimic joint configuration** for the Robotiq gripper to support simulation in **newer Gazebo (Harmonic)**. Only the primary `finger_joint` receives commands—mimic joints automatically follow.
 
 ---
 
-## 📦 Installation
+## Installation
 
 Make sure you have [ROS 2 Jazzy](https://docs.ros.org/en/jazzy/index.html) and Gazebo Harmonic installed.
 
@@ -40,12 +39,12 @@ source install/setup.bash
 ```
 
 ---
-## 🧩 MoveIt Task Constructor Setup
+## MoveIt Task Constructor Setup
 
 To enable advanced pick-and-place planning with MoveIt 2, this project supports [MoveIt Task Constructor (MTC)](https://github.com/ros-planning/moveit_task_constructor).  
 Instead of duplicating the full setup process, we've included a detailed guide in a separate submodule:
 
-📄 **Follow the MTC installation and patching guide here:**  
+Follow the MTC installation and patching guide here:  
 [`ur_mtc_pick_place_demo/README.md`](ur_mtc_pick_place_demo/README.md)
 
 This includes:
@@ -56,8 +55,9 @@ This includes:
 
 Once complete, you'll be ready to run scripted and interactive pick-and-place pipelines using MTC!
 
+---
 
-## 🚀 Launch Instructions
+## Launch Instructions
 
 ### Launch Full Simulation in Gazebo
 ```bash
@@ -76,7 +76,7 @@ ros2 launch robotiq_2finger_grippers robotiq_2f_85_gripper_visualization/launch/
 
 ---
 
-## 🤖 Move the Arm from CLI
+## Move the Arm from CLI
 
 Send a simple trajectory:
 ```bash
@@ -103,7 +103,7 @@ ros2 action send_goal /arm_controller/follow_joint_trajectory control_msgs/actio
 
 ---
 
-## 🔁 Run Arm-Gripper Automation Script
+## Run Arm-Gripper Automation Script
 
 Run a full pick-return-release loop:
 ```bash
@@ -112,7 +112,32 @@ python3 ~/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_contr
 
 ---
 
-## 📸 Screenshots
+## Saving Point Cloud Data
+
+To save point cloud data to disk, the output path in the YAML config is:
+```
+/home/darsh/Downloads/
+```
+**Replace `/home/darsh/Downloads/` throughout the project with your desired path** for storing point cloud data.
+
+---
+
+## Run MTC Pipeline
+
+Run the full simulation and pick-place pipeline using MTC:
+```bash
+bash /UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/scripts/robot.sh
+```
+
+This will:
+- Source ROS and workspace environment
+- Launch Gazebo simulation with the UR3 and Robotiq gripper
+- Load RViz with the correct planning configuration
+- Run the MTC pick-and-place pipeline node
+
+---
+
+## Screenshots
 
 ### UR3 with Robotiq Gripper in RViz  
 ![Arm with Gripper](/images/arm_with_gripper.png)
@@ -130,10 +155,9 @@ python3 ~/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_contr
 ![MC](/images/mtc.png)
 
 ### mtc Overview  
-
 ![pick error](images/pick_error.png)
 
-## 📂 Project Structure
+## Project Structure
 
 - `urdf/`: Robot and gripper XACROs  
 - `launch/`: Launch files for simulation and visualization  
@@ -143,16 +167,15 @@ python3 ~/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_contr
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Feel free to open pull requests or issues if you have improvements or bug reports.
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 ---
 
-Let me know if you want a separate section on controller config, MoveIt 2 integration, or Gazebo troubleshooting tips.

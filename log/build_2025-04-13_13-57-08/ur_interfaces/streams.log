@@ -1,0 +1,152 @@
+[0.078s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces -- -j4 -l4
+[0.480s] [  2%] Built target ur_interfaces__rosidl_generator_type_description
+[0.571s] [  2%] Built target ament_cmake_python_copy_ur_interfaces
+[0.643s] [  5%] Built target ur_interfaces__cpp
+[0.733s] [ 20%] Built target ur_interfaces__rosidl_generator_c
+[0.947s] [ 29%] Built target ur_interfaces__rosidl_typesupport_cpp
+[1.004s] [ 38%] Built target ur_interfaces__rosidl_typesupport_fastrtps_c
+[1.031s] [ 47%] Built target ur_interfaces__rosidl_typesupport_introspection_c
+[1.097s] [ 55%] Built target ur_interfaces__rosidl_typesupport_c
+[1.161s] [ 64%] Built target ur_interfaces__rosidl_typesupport_introspection_cpp
+[1.318s] [ 73%] Built target ur_interfaces__rosidl_typesupport_fastrtps_cpp
+[1.423s] [ 73%] Built target ur_interfaces
+[1.710s] [ 76%] Built target ur_interfaces__py
+[1.873s] [ 82%] Built target ur_interfaces__rosidl_generator_py
+[1.980s] running egg_info
+[2.012s] [ 91%] Built target ur_interfaces_s__rosidl_typesupport_fastrtps_c
+[2.028s] [ 94%] Built target ur_interfaces_s__rosidl_typesupport_introspection_c
+[2.274s] writing ur_interfaces.egg-info/PKG-INFO
+[2.274s] writing dependency_links to ur_interfaces.egg-info/dependency_links.txt
+[2.338s] writing top-level names to ur_interfaces.egg-info/top_level.txt
+[2.389s] [100%] Built target ur_interfaces_s__rosidl_typesupport_c
+[2.467s] reading manifest file 'ur_interfaces.egg-info/SOURCES.txt'
+[2.467s] writing manifest file 'ur_interfaces.egg-info/SOURCES.txt'
+[2.541s] [100%] Built target ament_cmake_python_build_ur_interfaces_egg
+[2.595s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces -- -j4 -l4
+[2.595s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces
+[2.648s] -- Install configuration: ""
+[2.649s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ament_index/resource_index/rosidl_interfaces/ur_interfaces
+[2.649s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/srv/GetPlanningScene.json
+[2.650s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces
+[2.650s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv
+[2.651s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/get_planning_scene.h
+[2.651s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail
+[2.652s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__description.c
+[2.652s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__functions.c
+[2.653s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__functions.h
+[2.653s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__type_support.h
+[2.653s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__type_support.c
+[2.653s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__struct.h
+[2.654s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/msg
+[2.654s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/msg/rosidl_generator_c__visibility_control.h
+[2.655s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/environment/library_path.sh
+[2.655s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/environment/library_path.dsv
+[2.657s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/libur_interfaces__rosidl_generator_c.so
+[2.657s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces
+[2.657s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv
+[2.667s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail
+[2.667s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__rosidl_typesupport_fastrtps_c.h
+[2.668s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/msg
+[2.668s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.668s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/libur_interfaces__rosidl_typesupport_fastrtps_c.so
+[2.668s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces
+[2.669s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv
+[2.669s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail
+[2.669s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__rosidl_typesupport_introspection_c.h
+[2.669s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__type_support.c
+[2.670s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/msg
+[2.686s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.687s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/libur_interfaces__rosidl_typesupport_introspection_c.so
+[2.689s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/libur_interfaces__rosidl_typesupport_c.so
+[2.690s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces
+[2.690s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv
+[2.691s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/get_planning_scene.hpp
+[2.691s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail
+[2.692s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__type_support.hpp
+[2.693s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__traits.hpp
+[2.693s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__struct.hpp
+[2.696s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__builder.hpp
+[2.696s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/msg
+[2.697s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[2.698s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces
+[2.698s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv
+[2.699s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail
+[2.700s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__rosidl_typesupport_fastrtps_cpp.hpp
+[2.700s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/dds_fastrtps
+[2.701s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/msg
+[2.701s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.702s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/libur_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[2.703s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces
+[2.704s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv
+[2.705s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail
+[2.705s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__type_support.cpp
+[2.706s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/include/ur_interfaces/ur_interfaces/srv/detail/get_planning_scene__rosidl_typesupport_introspection_cpp.hpp
+[2.707s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/libur_interfaces__rosidl_typesupport_introspection_cpp.so
+[2.708s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/libur_interfaces__rosidl_typesupport_cpp.so
+[2.709s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/environment/pythonpath.sh
+[2.710s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/environment/pythonpath.dsv
+[2.710s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces-0.0.0-py3.12.egg-info
+[2.718s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[2.719s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[2.720s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[2.730s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[2.731s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces
+[2.751s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/_ur_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.751s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/srv
+[2.751s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/srv/_get_planning_scene.py
+[2.752s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/srv/__init__.py
+[2.752s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/srv/_get_planning_scene_s.c
+[2.752s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/ur_interfaces_s__rosidl_typesupport_introspection_c.so
+[2.753s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/_ur_interfaces_s.ep.rosidl_typesupport_c.c
+[2.753s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/_ur_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[2.754s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/ur_interfaces_s__rosidl_typesupport_c.so
+[2.754s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/__init__.py
+[2.754s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/ur_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[3.078s] Listing '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces'...
+[3.078s] Listing '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/srv'...
+[3.088s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/ur_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[3.088s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/ur_interfaces_s__rosidl_typesupport_introspection_c.so
+[3.088s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages/ur_interfaces/ur_interfaces_s__rosidl_typesupport_c.so
+[3.088s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/libur_interfaces__rosidl_generator_py.so
+[3.088s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/srv/GetPlanningScene.idl
+[3.088s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/srv/GetPlanningScene.srv
+[3.088s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ament_index/resource_index/package_run_dependencies/ur_interfaces
+[3.089s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ament_index/resource_index/parent_prefix_path/ur_interfaces
+[3.089s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/environment/ament_prefix_path.sh
+[3.089s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/environment/ament_prefix_path.dsv
+[3.089s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/environment/path.sh
+[3.089s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/environment/path.dsv
+[3.089s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/local_setup.bash
+[3.089s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/local_setup.sh
+[3.089s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/local_setup.zsh
+[3.089s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/local_setup.dsv
+[3.089s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.dsv
+[3.090s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ament_index/resource_index/packages/ur_interfaces
+[3.090s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/export_ur_interfaces__rosidl_generator_cExport.cmake
+[3.090s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/export_ur_interfaces__rosidl_generator_cExport-noconfig.cmake
+[3.094s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/export_ur_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[3.094s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/export_ur_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.094s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ur_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[3.094s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ur_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.094s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ur_interfaces__rosidl_typesupport_cExport.cmake
+[3.094s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ur_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[3.094s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/export_ur_interfaces__rosidl_generator_cppExport.cmake
+[3.095s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/export_ur_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.095s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/export_ur_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.097s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ur_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[3.097s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ur_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.097s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ur_interfaces__rosidl_typesupport_cppExport.cmake
+[3.097s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ur_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[3.098s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/export_ur_interfaces__rosidl_generator_pyExport.cmake
+[3.098s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/export_ur_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[3.098s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/rosidl_cmake-extras.cmake
+[3.098s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.098s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.098s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[3.098s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[3.101s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.101s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.101s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ur_interfacesConfig.cmake
+[3.101s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/cmake/ur_interfacesConfig-version.cmake
+[3.101s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/share/ur_interfaces/package.xml
+[3.117s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/ur_interfaces

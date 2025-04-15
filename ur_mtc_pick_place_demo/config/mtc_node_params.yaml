@@ -25,11 +25,11 @@ mtc_node:
     object_name: "cylinder_1"
     object_type: "cylinder"
     object_reference_frame: "base_link"
-    object_dimensions: [0.45, 0.022]  # Match exact dimensions from error log
+    object_dimensions: [1.0, 0.022]  # Match exact dimensions from error log
     object_pose: [0.22, 0.12, 0.15, 0.0, 0.0, 0.0]  # Z increased +0.05
 
     # Grasp parameters (key collision fixes)
-    grasp_frame_transform: [-0.10, 0.0, 0.15, 0.0, 1.5708, 0.0]  # fingers grab sideways
+    grasp_frame_transform: [-0.05, 0.0, 0.15, 0.0, 1.5708, 0.0]  # fingers grab sideways
     place_pose: [-0.183, -0.14, 0.15, 0.0, 0.0, 0.0]  # Maintain Z-height
 
     # Motion planning (critical IK parameters)
@@ -44,7 +44,7 @@ mtc_node:
 
     # Grasp generation (critical fixes)
     grasp_pose_angle_delta: 0.2618  # ~15 degrees
-    grasp_pose_max_ik_solutions: 25
+    grasp_pose_max_ik_solutions: 50
     grasp_pose_min_solution_distance: 0.5
 
     # Place generation

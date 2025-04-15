@@ -36,5 +36,6 @@
 /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/config/moveit_controllers.yaml
 /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/config/ur.urdf
 /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/config/sensors_3d.yaml
+/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/rviz/move_group.rviz
 /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/rviz/moveit.rviz
 /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config/share/moveit_config/.setup_assistant
