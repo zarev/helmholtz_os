@@ -258,8 +258,8 @@ def generate_launch_description():
             '-topic', '/robot_description',
             '-name', robot_name,
             '-allow_renaming', 'true',
-            '-x', '-0.10',  
-            '-y', '-0.05',  
+            '-x', '-0.2',  
+            '-y', '0.0',  
             '-z', '0.0',   # Optional: Set Z position to 0.0 (you can adjust based on your need)
             '-R', '0.0',   # Optional: Set Roll rotation to 0.0 (adjust as needed)
             '-P', '0.0',   # Optional: Set Pitch rotation to 0.0 (adjust as needed)
@@ -312,7 +312,7 @@ def generate_launch_description():
     ld.add_action(start_gazebo_ros_image_bridge_cmd)
     ld.add_action(start_gazebo_ros_spawner_cmd)
     ld.add_action(controller_manager_node)
-    ld.add_action(rviz_node)
+    # ld.add_action(joint_state_publisher_node)
     ld.add_action(move_group_node)
 
     return ld
