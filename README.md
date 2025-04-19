@@ -133,6 +133,10 @@ python3 ~/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_contr
 
 ![pick error](images/pick_error.png)
 
+### mtc Pipline  
+
+![alt text](images/mtc_pp.png)
+
 ## 📂 Project Structure
 
 - `urdf/`: Robot and gripper XACROs  

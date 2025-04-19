@@ -1,0 +1,375 @@
+[0.173s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core': CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/core -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core
+[0.297s] -- The C compiler identification is GNU 13.3.0
+[0.788s] -- The CXX compiler identification is GNU 13.3.0
+[1.222s] -- Detecting C compiler ABI info
+[1.413s] -- Detecting C compiler ABI info - done
+[1.423s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.424s] -- Detecting C compile features
+[1.424s] -- Detecting C compile features - done
+[1.485s] -- Detecting CXX compiler ABI info
+[1.674s] -- Detecting CXX compiler ABI info - done
+[1.685s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.685s] -- Detecting CXX compile features
+[1.685s] -- Detecting CXX compile features - done
+[1.689s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.844s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.979s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+[1.986s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[2.175s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.194s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.215s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.239s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.301s] -- Found moveit_common: 2.12.2 (/opt/ros/jazzy/share/moveit_common/cmake)
+[2.395s] [0mmoveit_task_constructor_core: You did not request a specific build type: Choosing 'Release' for maximum performance[0m
+[2.398s] -- Found moveit_core: 2.12.2 (/opt/ros/jazzy/share/moveit_core/cmake)
+[2.621s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[3.735s] -- Found parameter_traits: 0.4.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[3.823s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[3.828s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[3.914s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[4.058s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[4.141s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.344s] -- Found rclcpp_lifecycle: 28.1.8 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[4.396s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[4.555s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[4.556s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[5.035s] -- Found moveit_ros_planning: 2.12.2 (/opt/ros/jazzy/share/moveit_ros_planning/cmake)
+[5.040s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[5.092s] -- Found moveit_ros_planning_interface: 2.12.2 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[5.098s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[5.120s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[5.157s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[5.205s] -- Found moveit_task_constructor_msgs: 0.1.3 (/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/share/moveit_task_constructor_msgs/cmake)
+[5.269s] -- Found py_binding_tools: 2.0.1 (/opt/ros/jazzy/share/py_binding_tools/cmake)
+[5.280s] -- Found rviz_marker_tools: 0.1.3 (/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/share/rviz_marker_tools/cmake)
+[5.566s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development Development.Module Development.Embed 
+[5.581s] -- pybind11 v2.13.0 dev1
+[5.653s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.12.3", minimum required is "3.6") 
+[5.673s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.12.so
+[5.689s] -- Performing Test HAS_FLTO
+[5.957s] -- Performing Test HAS_FLTO - Success
+[5.967s] -- Found ament_cmake_pytest: 2.5.3 (/opt/ros/jazzy/share/ament_cmake_pytest/cmake)
+[5.971s] -- Found launch_testing_ament_cmake: 3.4.4 (/opt/ros/jazzy/share/launch_testing_ament_cmake/cmake)
+[5.974s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[6.001s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[6.002s] -- Found PythonExtra: /usr/bin/python3  
+[6.508s] -- Found ament_cmake_gtest: 2.5.3 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)
+[6.512s] -- Found ament_cmake_gmock: 2.5.3 (/opt/ros/jazzy/share/ament_cmake_gmock/cmake)
+[6.512s] -- Found launch_testing_ament_cmake: 3.4.4 (/opt/ros/jazzy/share/launch_testing_ament_cmake/cmake)
+[6.513s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[6.546s] -- Found gmock sources under '/opt/ros/jazzy/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[6.553s] -- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[6.557s] -- Found Threads: TRUE  
+[6.580s] -- Configuring done (6.4s)
+[6.955s] -- Generating done (0.3s)
+[7.045s] -- Build files have been written to: /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core
+[7.068s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core' returned '0': CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/core -DCMAKE_INSTALL_PREFIX=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core
+[7.069s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core': CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core -- -j4 -l4
+[7.115s] [  1%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/container.cpp.o[0m
+[7.121s] [  1%] Built target ament_cmake_python_copy_moveit
+[7.134s] [  2%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/cost_terms.cpp.o[0m
+[7.137s] [  3%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/opt/ros/jazzy/src/gtest_vendor/src/gtest-all.cc.o[0m
+[8.151s] [  4%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[9.571s] [  5%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[9.615s] [  5%] Built target gtest_main
+[9.635s] [  6%] [32mBuilding CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o[0m
+[10.990s] [  8%] [32m[1mLinking CXX static library libgmock_main.a[0m
+[11.022s] [  8%] Built target gmock_main
+[11.042s] [  9%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[17.905s] [ 10%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o[0m
+[19.361s] [ 11%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/introspection.cpp.o[0m
+[22.356s] [ 12%] [32m[1mLinking CXX static library libgtest.a[0m
+[22.426s] [ 12%] Built target gtest
+[22.693s] running egg_info
+[22.694s] creating moveit.egg-info
+[22.718s] writing moveit.egg-info/PKG-INFO
+[22.719s] writing dependency_links to moveit.egg-info/dependency_links.txt
+[22.719s] writing top-level names to moveit.egg-info/top_level.txt
+[22.720s] writing manifest file 'moveit.egg-info/SOURCES.txt'
+[22.760s] [ 13%] [32m[1mLinking CXX static library libgmock.a[0m
+[22.793s] reading manifest file 'moveit.egg-info/SOURCES.txt'
+[22.793s] writing manifest file 'moveit.egg-info/SOURCES.txt'
+[22.825s] [ 13%] Built target ament_cmake_python_build_moveit_egg
+[22.836s] [ 14%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/marker_tools.cpp.o[0m
+[22.846s] [ 14%] Built target gmock
+[23.863s] [ 16%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/merge.cpp.o[0m
+[25.401s] [ 17%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/properties.cpp.o[0m
+[29.183s] [ 18%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/stage.cpp.o[0m
+[36.314s] [ 19%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/task.cpp.o[0m
+[38.326s] [ 20%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/storage.cpp.o[0m
+[39.129s] [ 21%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/utils.cpp.o[0m
+[44.295s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/core/src/storage.cpp:[m[K In member function ‘[01m[Kvirtual void moveit::task_constructor::SubTrajectory::[01;32m[KappendTo[m[K(moveit_task_constructor_msgs::msg::Solution&, moveit::task_constructor::Introspection*) const[m[K’:
+[44.295s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/core/src/storage.cpp:240:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+[44.295s]   240 |         [01;35m[Kif[m[K (trajectory())
+[44.295s]       |         [01;35m[K^~[m[K
+[44.295s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/core/src/storage.cpp:244:17:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+[44.296s]   244 |                 [01;36m[Kthis[m[K->end()->scene()->getPlanningSceneMsg(t.scene_diff);
+[44.296s]       |                 [01;36m[K^~~~[m[K
+[51.716s] [ 22%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/solvers/joint_interpolation.cpp.o[0m
+[52.725s] [ 24%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/solvers/cartesian_path.cpp.o[0m
+[53.197s] [ 25%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/solvers/planner_interface.cpp.o[0m
+[54.207s] [ 26%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/solvers/pipeline_planner.cpp.o[0m
+[59.749s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/core/src/solvers/cartesian_path.cpp:[m[K In member function ‘[01m[Kvirtual moveit::task_constructor::solvers::PlannerInterface::Result moveit::task_constructor::solvers::CartesianPath::[01;32m[Kplan[m[K(const planning_scene::PlanningSceneConstPtr&, const moveit::core::LinkModel&, const Eigen::Isometry3d&, const Eigen::Isometry3d&, const moveit::core::JointModelGroup*, double, robot_trajectory::RobotTrajectoryPtr&, const moveit_msgs::msg::Constraints&)[m[K’:
+[59.749s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/core/src/solvers/cartesian_path.cpp:123:80:[m[K [01;35m[Kwarning: [m[K‘[01m[Kmoveit::core::JumpThreshold::[01;32m[KJumpThreshold[m[K(double)[m[K’ is deprecated: Use JumpThreshold::relative() instead. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[59.749s]   123 |                 moveit::core::JumpThreshold(props.get<double>("jump_threshold")[01;35m[K)[m[K, is_valid,
+[59.749s]       |                                                                                [01;35m[K^[m[K
+[59.751s] In file included from [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/core/src/solvers/cartesian_path.cpp:44[m[K:
+[59.751s] [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/cartesian_interpolator.hpp:82:60:[m[K [01;36m[Knote: [m[Kdeclared here
+[59.751s]    82 |   [[deprecated("Use JumpThreshold::relative() instead.")]] [01;36m[KJumpThreshold[m[K(double relative_factor);
+[59.751s]       |                                                            [01;36m[K^~~~~~~~~~~~~[m[K
+[59.755s] [01m[K/home/darsh/UR3_ROS2_PICK_AND_PLACE/src/moveit_task_constructor/core/src/solvers/cartesian_path.cpp:120:93:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstatic moveit::core::CartesianInterpolator::Percentage moveit::core::CartesianInterpolator::[01;32m[KcomputeCartesianPath[m[K(moveit::core::RobotState*, const moveit::core::JointModelGroup*, std::vector<std::shared_ptr<moveit::core::RobotState> >&, const moveit::core::LinkModel*, const Eigen::Isometry3d&, bool, const moveit::core::MaxEEFStep&, const moveit::core::JumpThreshold&, const moveit::core::GroupStateValidityCallbackFn&, const kinematics::KinematicsQueryOptions&, const kinematics::KinematicsBase::IKCostFn&, const Eigen::Isometry3d&)[m[K’ is deprecated: Replace JumpThreshold with CartesianPrecision [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[59.755s]   120 |         double achieved_fraction = [01;35m[Kmoveit::core::CartesianInterpolator::computeCartesianPath([m[K
+[59.755s]       |                                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[59.755s]   121 | [01;35m[K            &(sandbox_scene->getCurrentStateNonConst()), jmg, trajectory, &link, target, true,[m[K
+[59.755s]       |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[59.755s]   122 | [01;35m[K            moveit::core::MaxEEFStep(props.get<double>("step_size")),[m[K
+[59.756s]       |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                        
+[59.756s]   123 | [01;35m[K                moveit::core::JumpThreshold(props.get<double>("jump_threshold")), is_valid,[m[K
+[59.756s]       |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  
+[59.756s]   124 | [01;35m[K            props.get<kinematics::KinematicsQueryOptions>("kinematics_options"),[m[K
+[59.759s]       |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K             
+[59.759s]   125 | [01;35m[K            props.get<kinematics::KinematicsBase::IKCostFn>("kinematics_cost_fn"), offset)[m[K;
+[59.759s]       |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K   
+[59.760s] [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/cartesian_interpolator.hpp:284:85:[m[K [01;36m[Knote: [m[Kdeclared here
+[59.761s]   284 |   [[deprecated("Replace JumpThreshold with CartesianPrecision")]] static Percentage [01;36m[KcomputeCartesianPath[m[K(
+[59.761s]       |                                                                                     [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[68.389s] [ 27%] [32mBuilding CXX object src/CMakeFiles/moveit_task_constructor_core.dir/solvers/multi_planner.cpp.o[0m
+[74.717s] [ 28%] [32m[1mLinking CXX shared library libmoveit_task_constructor_core.so[0m
+[75.071s] [ 28%] Built target moveit_task_constructor_core
+[75.091s] [ 31%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/modify_planning_scene.cpp.o[0m
+[75.092s] [ 31%] [32mBuilding CXX object test/CMakeFiles/gtest_utils.dir/gtest_value_printers.cpp.o[0m
+[75.092s] [ 32%] [32mBuilding CXX object test/CMakeFiles/gtest_utils.dir/models.cpp.o[0m
+[75.092s] [ 33%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/fix_collision_objects.cpp.o[0m
+[82.150s] [ 34%] [32mBuilding CXX object test/CMakeFiles/gtest_utils.dir/stage_mockups.cpp.o[0m
+[82.512s] [ 35%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/current_state.cpp.o[0m
+[87.311s] [ 36%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/fixed_state.cpp.o[0m
+[94.890s] [ 37%] [32m[1mLinking CXX shared library libgtest_utils.so[0m
+[95.106s] [ 39%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/fixed_cartesian_poses.cpp.o[0m
+[95.202s] [ 39%] Built target gtest_utils
+[95.958s] [ 40%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/generate_pose.cpp.o[0m
+[96.517s] [ 41%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/generate_random_pose.cpp.o[0m
+[97.529s] [ 42%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/generate_grasp_pose.cpp.o[0m
+[111.288s] [ 43%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/passthrough.cpp.o[0m
+[111.758s] [ 44%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/compute_ik.cpp.o[0m
+[112.766s] [ 45%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/predicate_filter.cpp.o[0m
+[113.310s] [ 47%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/generate_place_pose.cpp.o[0m
+[114.321s] [ 48%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/connect.cpp.o[0m
+[126.189s] [ 49%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/move_relative.cpp.o[0m
+[127.060s] [ 50%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/move_to.cpp.o[0m
+[127.576s] [ 51%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/simple_grasp.cpp.o[0m
+[138.916s] [ 52%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stages.dir/pick.cpp.o[0m
+[147.298s] [ 54%] [32m[1mLinking CXX shared library libmoveit_task_constructor_core_stages.so[0m
+[147.610s] [ 54%] Built target moveit_task_constructor_core_stages
+[147.627s] [ 57%] [32mBuilding CXX object src/stages/CMakeFiles/moveit_task_constructor_core_stage_plugins.dir/plugins.cpp.o[0m
+[147.627s] [ 57%] [32mBuilding CXX object python/bindings/CMakeFiles/pymoveit_mtc.dir/src/properties.cpp.o[0m
+[147.627s] [ 57%] [32mBuilding CXX object test/CMakeFiles/moveit_task_constructor_core-test-mockups.dir/test_mockups.cpp.o[0m
+[147.634s] [ 58%] [32mBuilding CXX object test/CMakeFiles/moveit_task_constructor_core-test-stage.dir/test_stage.cpp.o[0m
+[150.471s] [ 59%] [32m[1mLinking CXX shared library libmoveit_task_constructor_core_stage_plugins.so[0m
+[150.736s] [ 59%] Built target moveit_task_constructor_core_stage_plugins
+[150.766s] [ 60%] [32mBuilding CXX object test/CMakeFiles/moveit_task_constructor_core-test-container.dir/test_container.cpp.o[0m
+[157.198s] [ 62%] [32mBuilding CXX object python/bindings/CMakeFiles/pymoveit_mtc.dir/src/solvers.cpp.o[0m
+[159.272s] [ 63%] [32m[1mLinking CXX executable moveit_task_constructor_core-test-stage[0m
+[159.758s] [ 63%] Built target moveit_task_constructor_core-test-stage
+[159.785s] [ 64%] [32mBuilding CXX object test/CMakeFiles/moveit_task_constructor_core-test-serial.dir/test_serial.cpp.o[0m
+[163.199s] [ 65%] [32m[1mLinking CXX executable moveit_task_constructor_core-test-mockups[0m
+[163.811s] [ 65%] Built target moveit_task_constructor_core-test-mockups
+[163.838s] [ 66%] [32mBuilding CXX object test/CMakeFiles/moveit_task_constructor_core-test-pruning.dir/test_pruning.cpp.o[0m
+[167.186s] [ 67%] [32m[1mLinking CXX executable moveit_task_constructor_core-test-container[0m
+[167.689s] [ 67%] Built target moveit_task_constructor_core-test-container
+[167.717s] [ 68%] [32mBuilding CXX object test/CMakeFiles/moveit_task_constructor_core-test-properties.dir/test_properties.cpp.o[0m
+[171.777s] [ 70%] [32mBuilding CXX object python/bindings/CMakeFiles/pymoveit_mtc.dir/src/core.cpp.o[0m
+[172.027s] [ 71%] [32m[1mLinking CXX executable moveit_task_constructor_core-test-properties[0m
+[172.478s] [ 72%] [32m[1mLinking CXX executable moveit_task_constructor_core-test-serial[0m
+[172.507s] [ 72%] Built target moveit_task_constructor_core-test-properties
+[172.534s] [ 73%] [32mBuilding CXX object test/CMakeFiles/moveit_task_constructor_core-test-cost-terms.dir/test_cost_terms.cpp.o[0m
+[172.958s] [ 73%] Built target moveit_task_constructor_core-test-serial
+[172.990s] [ 74%] [32mBuilding CXX object test/CMakeFiles/moveit_task_constructor_core-test-fallback.dir/test_fallback.cpp.o[0m
+[177.992s] [ 75%] [32m[1mLinking CXX executable moveit_task_constructor_core-test-pruning[0m
+[178.485s] [ 75%] Built target moveit_task_constructor_core-test-pruning
+[181.511s] [ 77%] [32mBuilding CXX object test/CMakeFiles/moveit_task_constructor_core-test-cost-queue.dir/test_cost_queue.cpp.o[0m
+[187.484s] [ 78%] [32m[1mLinking CXX executable moveit_task_constructor_core-test-cost-queue[0m
+[188.009s] [ 78%] Built target moveit_task_constructor_core-test-cost-queue
+[188.048s] [ 79%] [32m[1mLinking CXX executable moveit_task_constructor_core-test-fallback[0m
+[188.561s] [ 79%] Built target moveit_task_constructor_core-test-fallback
+[188.849s] [ 80%] [32m[1mLinking CXX executable moveit_task_constructor_core-test-cost-terms[0m
+[189.289s] [ 80%] Built target moveit_task_constructor_core-test-cost-terms
+[191.311s] [ 81%] [32mBuilding CXX object test/CMakeFiles/moveit_task_constructor_core-test-move-relative.dir/test_move_relative.cpp.o[0m
+[192.325s] [ 82%] [32mBuilding CXX object test/CMakeFiles/moveit_task_constructor_core-test-move-to.dir/test_move_to.cpp.o[0m
+[193.339s] [ 83%] [32mBuilding CXX object test/CMakeFiles/moveit_task_constructor_core-test-interface-state.dir/test_interface_state.cpp.o[0m
+[194.407s] [ 85%] [32mBuilding CXX object python/bindings/CMakeFiles/pymoveit_mtc.dir/src/stages.cpp.o[0m
+[204.014s] [ 86%] [32m[1mLinking CXX executable moveit_task_constructor_core-test-interface-state[0m
+[204.549s] [ 86%] Built target moveit_task_constructor_core-test-interface-state
+[205.049s] [ 87%] [32m[1mLinking CXX executable moveit_task_constructor_core-test-move-relative[0m
+[205.646s] [ 87%] Built target moveit_task_constructor_core-test-move-relative
+[206.157s] [ 88%] [32m[1mLinking CXX executable moveit_task_constructor_core-test-move-to[0m
+[206.630s] [ 88%] Built target moveit_task_constructor_core-test-move-to
+[207.651s] [ 89%] [32mBuilding CXX object test/CMakeFiles/pick_ur5.dir/pick_ur5.cpp.o[0m
+[209.665s] [ 90%] [32mBuilding CXX object test/CMakeFiles/moveit_task_constructor_core-test-pipeline-planner.dir/test_pipeline_planner.cpp.o[0m
+[212.797s] [ 91%] [32mBuilding CXX object python/bindings/CMakeFiles/pymoveit_mtc.dir/src/module.cpp.o[0m
+[212.811s] [ 93%] [32mBuilding CXX object test/CMakeFiles/pick_pr2.dir/pick_pr2.cpp.o[0m
+[217.060s] [ 94%] [32m[1mLinking CXX shared module pymoveit_mtc.cpython-312-x86_64-linux-gnu.so[0m
+[219.587s] [01m[Klto-wrapper:[m[K [01;35m[Kwarning: [m[Kusing serial compilation of 12 LTRANS jobs
+[219.588s] [01m[Klto-wrapper:[m[K [01;36m[Knote: [m[Ksee the ]8;;https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html#index-flto‘[01m[K-flto[m[K’ option documentation]8;; for more information
+[223.470s] [ 95%] [32m[1mLinking CXX executable moveit_task_constructor_core-test-pipeline-planner[0m
+[223.839s] [ 96%] [32m[1mLinking CXX executable pick_ur5[0m
+[224.063s] [ 96%] Built target moveit_task_constructor_core-test-pipeline-planner
+[224.389s] [ 96%] Built target pick_ur5
+[229.417s] [ 97%] [32m[1mLinking CXX executable pick_pr2[0m
+[229.836s] [ 97%] Built target pick_pr2
+[236.193s] [ 97%] Built target pymoveit_mtc
+[236.210s] [ 98%] [32mBuilding CXX object test/CMakeFiles/pick_pa10.dir/pick_pa10.cpp.o[0m
+[248.319s] [100%] [32m[1mLinking CXX executable pick_pa10[0m
+[248.703s] [100%] Built target pick_pa10
+[248.716s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core' returned '0': CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core -- -j4 -l4
+[248.718s] Invoking command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core': CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core
+[248.725s] -- Install configuration: "Release"
+[248.725s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/libmoveit_task_constructor_core_stages.so
+[248.727s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/libmoveit_task_constructor_core_stages.so" to ""
+[248.727s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/libmoveit_task_constructor_core_stage_plugins.so
+[248.727s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/libmoveit_task_constructor_core_stage_plugins.so" to ""
+[248.727s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/libmoveit_task_constructor_core.so
+[248.729s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/libmoveit_task_constructor_core.so" to ""
+[248.730s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/environment/pythonpath.sh
+[248.730s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/environment/pythonpath.dsv
+[248.730s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit-0.1.3-py3.12.egg-info
+[248.730s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit-0.1.3-py3.12.egg-info/top_level.txt
+[248.731s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit-0.1.3-py3.12.egg-info/PKG-INFO
+[248.731s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit-0.1.3-py3.12.egg-info/dependency_links.txt
+[248.731s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit-0.1.3-py3.12.egg-info/SOURCES.txt
+[248.731s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit
+[248.731s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit/__init__.py
+[248.732s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit/task_constructor
+[248.732s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit/task_constructor/stages.py
+[248.732s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit/task_constructor/__init__.py
+[248.732s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit/task_constructor/core.py
+[248.764s] Listing '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit'...
+[248.764s] Compiling '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit/__init__.py'...
+[248.764s] Listing '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit/task_constructor'...
+[248.764s] Compiling '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit/task_constructor/__init__.py'...
+[248.764s] Compiling '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit/task_constructor/core.py'...
+[248.764s] Compiling '/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/moveit/task_constructor/stages.py'...
+[248.768s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11
+[248.769s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/stl
+[248.769s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/stl/filesystem.h
+[248.769s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/gil_safe_call_once.h
+[248.769s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/operators.h
+[248.770s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/attr.h
+[248.770s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/functional.h
+[248.770s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/smart_holder.h
+[248.770s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/numpy.h
+[248.770s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/typing.h
+[248.770s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/pybind11.h
+[248.771s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/complex.h
+[248.771s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/gil.h
+[248.771s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/common.h
+[248.771s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/embed.h
+[248.771s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/eigen.h
+[248.772s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/chrono.h
+[248.772s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/type_caster_pyobject_ptr.h
+[248.772s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/iostream.h
+[248.772s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/buffer_info.h
+[248.773s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/pytypes.h
+[248.773s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/trampoline_self_life_support.h
+[248.773s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/eigen
+[248.773s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/eigen/tensor.h
+[248.773s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/eigen/common.h
+[248.774s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/eigen/matrix.h
+[248.774s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/options.h
+[248.774s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/stl.h
+[248.774s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/eval.h
+[248.774s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/stl_bind.h
+[248.774s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/cast.h
+[248.775s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/detail
+[248.775s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/detail/type_caster_base.h
+[248.775s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/detail/type_caster_odr_guard.h
+[248.775s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/detail/init.h
+[248.775s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/detail/typeid.h
+[248.775s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/detail/dynamic_raw_ptr_cast_if_possible.h
+[248.776s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/detail/smart_holder_poc.h
+[248.776s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/detail/smart_holder_type_casters.h
+[248.776s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/detail/smart_holder_sfinae_hooks_only.h
+[248.776s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/detail/common.h
+[248.777s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/detail/descr.h
+[248.777s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/detail/class.h
+[248.777s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/pybind11/detail/internals.h
+[248.777s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake/pybind11Config.cmake
+[248.777s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake/pybind11ConfigVersion.cmake
+[248.778s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake/FindPythonLibsNew.cmake
+[248.778s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake/pybind11Common.cmake
+[248.778s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake/pybind11Tools.cmake
+[248.778s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake/pybind11NewTools.cmake
+[248.778s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake/pybind11Targets.cmake
+[248.779s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/pkgconfig/pybind11.pc
+[248.779s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/pymoveit_mtc.cpython-312-x86_64-linux-gnu.so
+[248.779s] -- Set non-toolchain portion of runtime path of "/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages/pymoveit_mtc.cpython-312-x86_64-linux-gnu.so" to ""
+[248.779s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include
+[248.779s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit
+[248.780s] -- Up-to-date: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python
+[248.780s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/task_constructor
+[248.780s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/python/task_constructor/properties.h
+[248.780s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor
+[248.780s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/utils.h
+[248.780s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages
+[248.780s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/connect.h
+[248.781s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/generate_grasp_pose.h
+[248.781s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/predicate_filter.h
+[248.781s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/pick.h
+[248.781s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/generate_pose.h
+[248.781s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/modify_planning_scene.h
+[248.782s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/fixed_state.h
+[248.782s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/noop.h
+[248.782s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/fixed_cartesian_poses.h
+[248.782s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/move_to.h
+[248.783s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/move_relative.h
+[248.783s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/generate_random_pose.h
+[248.783s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/generate_place_pose.h
+[248.783s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/simple_grasp.h
+[248.783s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/passthrough.h
+[248.783s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/compute_ik.h
+[248.783s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/fix_collision_objects.h
+[248.784s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/current_state.h
+[248.784s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/task.h
+[248.784s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/container.h
+[248.784s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/type_traits.h
+[248.784s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers
+[248.784s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers/multi_planner.h
+[248.785s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers/cartesian_path.h
+[248.785s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers/joint_interpolation.h
+[248.785s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers/planner_interface.h
+[248.785s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers/pipeline_planner.h
+[248.786s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/marker_tools.h
+[248.786s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/cost_queue.h
+[248.786s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/properties.h
+[248.786s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers.h
+[248.787s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stage.h
+[248.787s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/introspection.h
+[248.787s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/storage.h
+[248.787s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/merge.h
+[248.788s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/trajectory_execution_info.h
+[248.788s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/moveit_compat.h
+[248.789s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/cost_terms.h
+[248.790s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/include/moveit/task_constructor/stages.h
+[248.790s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/motion_planning_stages_plugin_description.xml
+[248.790s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/environment/library_path.sh
+[248.791s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/environment/library_path.dsv
+[248.791s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/ament_index/resource_index/package_run_dependencies/moveit_task_constructor_core
+[248.791s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/ament_index/resource_index/parent_prefix_path/moveit_task_constructor_core
+[248.791s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/environment/ament_prefix_path.sh
+[248.791s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/environment/ament_prefix_path.dsv
+[248.791s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/environment/path.sh
+[248.791s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/environment/path.dsv
+[248.792s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/local_setup.bash
+[248.793s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/local_setup.sh
+[248.793s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/local_setup.zsh
+[248.794s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/local_setup.dsv
+[248.794s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/package.dsv
+[248.794s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/ament_index/resource_index/packages/moveit_task_constructor_core
+[248.794s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/ament_index/resource_index/moveit_task_constructor_core__pluginlib__plugin/moveit_task_constructor_core
+[248.795s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake/moveit_task_constructor_coreTargetsExport.cmake
+[248.795s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake/moveit_task_constructor_coreTargetsExport-release.cmake
+[248.795s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake/ament_cmake_export_targets-extras.cmake
+[248.796s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake/ament_cmake_export_dependencies-extras.cmake
+[248.796s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake/moveit_task_constructor_coreConfig.cmake
+[248.796s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake/moveit_task_constructor_coreConfig-version.cmake
+[248.796s] -- Installing: /home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/share/moveit_task_constructor_core/package.xml
+[248.797s] Invoked command in '/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core' returned '0': CMAKE_PREFIX_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_config:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_moveit_demos:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_gazebo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_description:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/robotiq_2f_85_gripper_visualization:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/rviz_marker_tools/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_mtc_pick_place_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_visualization/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_demo/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_capabilities/lib:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/warehouse_ros_mongo/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/ur_interfaces/lib/python3.12/site-packages:/home/darsh/UR3_ROS2_PICK_AND_PLACE/install/moveit_task_constructor_core/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_core

@@ -160,7 +160,7 @@ MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
   declare_parameter("object_name", "object", "Name of the object to be manipulated");
   declare_parameter("object_type", "cylinder", "Type of the object to be manipulated");
   declare_parameter("object_reference_frame", "base_link", "Reference frame for the object");
-  declare_parameter("object_dimensions", std::vector<double>{0.45, 0.022}, "Dimensions of the object [height, radius]");
+  declare_parameter("object_dimensions", std::vector<double>{0.75, 0.022}, "Dimensions of the object [height, radius]");
   declare_parameter("object_pose", std::vector<double>{0.22, 0.12, 0.0, 0.0, 0.0, 0.0}, "Initial pose of the object [x, y, z, roll, pitch, yaw]");
 
   // Grasp and place parameters
