@@ -103,16 +103,13 @@ def generate_launch_description():
     urdf_xacro_path = os.path.join(moveit_config_share, "config", "ur.urdf.xacro")
 
     robot_description_content = Command([
-        PathJoinSubstitution([FindExecutable(name="xacro")]), " ", urdf_xacro_path,
-        " safety_limits:=", LaunchConfiguration("safety_limits"),
-        " safety_pos_margin:=", LaunchConfiguration("safety_pos_margin"),
-        " safety_k_position:=", LaunchConfiguration("safety_k_position"),
-        " name:=ur",
-        " ur_type:=", LaunchConfiguration("ur_type"),
-        " tf_prefix:=", LaunchConfiguration("tf_prefix")
+        PathJoinSubstitution([FindExecutable(name="xacro")]),
+        " ",
+        urdf_xacro_path
     ])
 
     robot_description = {'robot_description': ParameterValue(robot_description_content, value_type=str)}
+
 
     joint_state_publisher_node = Node(
         package="joint_state_publisher_gui",
@@ -161,7 +158,7 @@ def generate_launch_description():
         package='controller_manager',
         executable='ros2_control_node',
         parameters=[
-        moveit_config.robot_description, 
+        robot_description, 
         controller_yaml,
         {'use_sim_time': True}  # Enable simulation time
         ],
@@ -311,8 +308,17 @@ def generate_launch_description():
     ld.add_action(start_gazebo_ros_bridge_cmd)
     ld.add_action(start_gazebo_ros_image_bridge_cmd)
     ld.add_action(start_gazebo_ros_spawner_cmd)
-    ld.add_action(controller_manager_node)
-    # ld.add_action(joint_state_publisher_node)
+    ld.add_action(RegisterEventHandler(
+        event_handler=OnProcessStart(
+            target_action=robot_state_publisher_cmd,
+            on_start=[
+                TimerAction(
+                    period=10.0,
+                    actions=[controller_manager_node]
+                )
+            ]
+        )
+    ))    # ld.add_action(joint_state_publisher_node)
     ld.add_action(move_group_node)
 
     return ld

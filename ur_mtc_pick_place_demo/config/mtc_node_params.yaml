@@ -29,8 +29,8 @@ mtc_node:
     object_pose: [0.22, 0.12, 0.15, 0.0, 0.0, 0.0]  # Z increased +0.05
 
     # Grasp parameters (key collision fixes)
-    grasp_frame_transform: [-0.10, 0.0, 0.15, 0.0, 1.5708, 0.0]  # fingers grab sideways
-    place_pose: [-0.183, -0.14, 0.15, 0.0, 0.0, 0.0]  # Maintain Z-height
+    grasp_frame_transform: [0.0, 0.0, 0.12, 0.0, 1.5708, 0.0]  # fingers grab sideways
+    place_pose: [-0.183, -0.14, 0.0, 0.0, 0.0, 0.0]  # Maintain Z-height
 
     # Motion planning (critical IK parameters)
     approach_object_min_dist: 0.05
@@ -39,8 +39,8 @@ mtc_node:
     lift_object_max_dist: 0.3
 
     # Timeout parameters
-    move_to_pick_timeout: 30.0
-    move_to_place_timeout: 30.0
+    move_to_pick_timeout: 10.0
+    move_to_place_timeout: 10.0
 
     # Grasp generation (critical fixes)
     grasp_pose_angle_delta: 0.2618  # ~15 degrees
@@ -56,7 +56,6 @@ mtc_node:
     cartesian_step_size: 0.001
 
     # Collision avoidance
-    allow_collision_objects: ["gripper", "object"]
     collision_clearance: 0.02  # safety margin
 
     # Debugging parameters

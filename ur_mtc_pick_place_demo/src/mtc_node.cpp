@@ -140,7 +140,7 @@ MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
 
   // General parameters
   declare_parameter("execute", true, "Whether to execute the planned task");
-  declare_parameter("max_solutions", 50, "Maximum number of solutions to compute");
+  declare_parameter("max_solutions", 25, "Maximum number of solutions to compute");
 
   // Controller parameters
   declare_parameter("controller_names", std::vector<std::string>{"arm_controller", "gripper_controller"}, "Names of the controllers to use");
@@ -165,7 +165,7 @@ MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
 
   // Grasp and place parameters
 declare_parameter("grasp_frame_transform", 
-  std::vector<double>{-0.10, 0.0, 0.15, 0.0, 1.5708, 0.0}, "Transform from gripper frame to grasp frame [x, y, z, roll, pitch, yaw]");
+  std::vector<double>{0.0, 0.0, 0.12, 0.0, 1.5708, 0.0}, "Transform from gripper frame to grasp frame [x, y, z, roll, pitch, yaw]");
   declare_parameter("place_pose", std::vector<double>{-0.183, -0.14, 0.0, 0.0, 0.0, 0.0}, "Pose where the object should be placed [x, y, z, roll, pitch, yaw]");
 
   // Motion planning parameters
@@ -600,17 +600,6 @@ mtc::Task MTCTaskNode::createTask()
       stage->setObject(object_name);
       stage->setAngleDelta(grasp_pose_angle_delta); // Angular resolution for sampling grasp poses around the object
       stage->setMonitoredStage(current_state_ptr);  // Ensure grasp poses are valid given the initial configuration of the robot
-    
-      // Allow collision between the gripper and the object during grasp pose generation
-      auto collision_stage = std::make_unique<mtc::stages::ModifyPlanningScene>("allow collision (gripper,object) during grasp pose generation");
-      collision_stage->allowCollisions(
-        object_name,
-        task.getRobotModel()
-          ->getJointModelGroup(gripper_group_name)
-          ->getLinkModelNamesWithCollisionGeometry(),
-        true
-      );
-      grasp->insert(std::move(collision_stage));
     
       // Compute IK for sampled grasp poses
       auto wrapper = std::make_unique<mtc::stages::ComputeIK>("grasp pose IK", std::move(stage));

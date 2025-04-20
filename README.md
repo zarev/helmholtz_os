@@ -7,6 +7,9 @@ This project integrates the Robotiq 2-Finger Gripper with a Universal Robots UR3
 
 ---
 
+## Demo 
+![alt text](images/demo-ezgif.com-video-to-gif-converter.gif)
+
 ## 📦 Installation
 
 Make sure you have [ROS 2 Jazzy](https://docs.ros.org/en/jazzy/index.html) and Gazebo Harmonic installed.
@@ -136,6 +139,9 @@ python3 ~/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_contr
 ### mtc Pipline  
 
 ![alt text](images/mtc_pp.png)
+
+### loop
+![alt text](images/looponline-video-cutter.com-ezgif.com-video-to-gif-converter.gif)
 
 ## 📂 Project Structure
 
