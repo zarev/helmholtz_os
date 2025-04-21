@@ -143,15 +143,6 @@ python3 ~/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_contr
 ### loop
 ![alt text](images/looponline-video-cutter.com-ezgif.com-video-to-gif-converter.gif)
 
-## 📂 Project Structure
-
-- `urdf/`: Robot and gripper XACROs  
-- `launch/`: Launch files for simulation and visualization  
-- `config/`: Controller YAML and joint limits  
-- `scripts/`: Python control scripts  
-- `images/`: Preview screenshots  
-
----
 
 ## 🤝 Contributing
 
@@ -159,10 +150,3 @@ Feel free to open pull requests or issues if you have improvements or bug report
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
----
-
-Let me know if you want a separate section on controller config, MoveIt 2 integration, or Gazebo troubleshooting tips.
