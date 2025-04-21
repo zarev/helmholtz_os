@@ -43,6 +43,7 @@ source install/setup.bash
 ```
 
 ---
+
 ## 🧩 MoveIt Task Constructor Setup
 
 To enable advanced pick-and-place planning with MoveIt 2, this project supports [MoveIt Task Constructor (MTC)](https://github.com/ros-planning/moveit_task_constructor).  
@@ -59,6 +60,7 @@ This includes:
 
 Once complete, you'll be ready to run scripted and interactive pick-and-place pipelines using MTC!
 
+---
 
 ## 🚀 Launch Instructions
 
@@ -115,6 +117,29 @@ python3 ~/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_contr
 
 ---
 
+## 📝 MTC Demo Script
+
+To run the full MTC demo with the UR3 and Robotiq gripper, execute the following steps:
+
+### 1. **Make the Bash Script Executable**
+```bash
+chmod +x ~/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/scripts/robot.sh
+```
+
+### 2. **Run the Script**
+Execute the script to launch the complete simulation:
+```bash
+~/UR3_ROS2_PICK_AND_PLACE/ur_mtc_pick_place_demo/scripts/robot.sh
+```
+
+This script will:
+- Launch the **Gazebo** simulation with the UR3 robot and gripper.
+- Launch **MoveIt 2** with the necessary configurations for pick-and-place tasks.
+- Adjust the **camera position** in the simulation.
+- Start the **Pick-and-Place demo** with MTC.
+
+---
+
 ## 📸 Screenshots
 
 ### UR3 with Robotiq Gripper in RViz  
@@ -147,6 +172,4 @@ python3 ~/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_contr
 ## 🤝 Contributing
 
 Feel free to open pull requests or issues if you have improvements or bug reports.
-
----
 
