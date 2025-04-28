@@ -55,17 +55,16 @@
     <group_state name="open" group="gripper">
         <joint name="finger_joint" value="0"/>
     </group_state>
-    <group_state name="ready" group="arm_with_gripper">
+    <group_state name="ready" group="arm">
         <joint name="elbow_joint" value="0"/>
-        <joint name="finger_joint" value="0.1768"/>
         <joint name="shoulder_lift_joint" value="4.6169"/>
         <joint name="shoulder_pan_joint" value="0"/>
         <joint name="wrist_1_joint" value="0"/>
         <joint name="wrist_2_joint" value="0"/>
-        <joint name="wrist_3_joint" value="0"/>
+        <joint name="wrist_3_joint" value="1.0"/>
     </group_state>
     <group_state name="half_closed" group="gripper">
-        <joint name="finger_joint" value="0.4022"/>
+        <joint name="finger_joint" value="0.50"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="gripper" parent_link="tool0" group="gripper" parent_group="arm"/>

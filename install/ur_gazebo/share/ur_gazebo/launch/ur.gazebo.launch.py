@@ -45,7 +45,7 @@ def generate_launch_description():
 
     # Default values
     default_robot_name = 'ur'
-    default_world_file = 'empty.world'
+    default_world_file = 'pick_and_place_demo.world'
     gazebo_models_path = 'models'
     gazebo_worlds_path = 'worlds'
     ros_gz_bridge_config_file_path = 'config/ros_gz_bridge.yaml'
@@ -136,6 +136,7 @@ def generate_launch_description():
     # MoveIt Configuration
     moveit_config = (
         MoveItConfigsBuilder("ur", package_name=moveit_config_pkg)
+        .trajectory_execution(file_path=moveit_controllers_path)
         .robot_description(file_path=urdf_path)
         .robot_description_semantic(file_path=srdf_path)
         .joint_limits(file_path=joint_limits_path)
@@ -145,7 +146,6 @@ def generate_launch_description():
         pipelines=["ompl", "pilz_industrial_motion_planner"],
         default_planning_pipeline="ompl"
      )
-        .trajectory_execution(file_path=moveit_controllers_path)
         .planning_scene_monitor(
             publish_robot_description=True,
             publish_robot_description_semantic=True,
@@ -186,8 +186,8 @@ def generate_launch_description():
     # )
 
     
-    controllers = ["joint_state_broadcaster", "arm_controller", "gripper_controller"]
-    delays = [15.0, 20.0, 25.0]
+    controllers = ["joint_state_broadcaster" ,"arm_controller", "gripper_controller"]
+    delays = [15.0, 20.0, 25.0 , 30.0]
 
 
 

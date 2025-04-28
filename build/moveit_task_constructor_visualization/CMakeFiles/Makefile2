@@ -876,8 +876,8 @@ motion_planning_tasks/test/CMakeFiles/moveit_task_constructor_visualization-test
 # Target rules for target gtest/CMakeFiles/gtest.dir
 
 # All Build rule for target.
-gtest/CMakeFiles/gtest.dir/all: gtest/CMakeFiles/gtest_autogen.dir/all
 gtest/CMakeFiles/gtest.dir/all: gtest/CMakeFiles/gtest_autogen_timestamp_deps.dir/all
+gtest/CMakeFiles/gtest.dir/all: gtest/CMakeFiles/gtest_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darsh/UR3_ROS2_PICK_AND_PLACE/build/moveit_task_constructor_visualization/CMakeFiles --progress-num=12,13,14,15 "Built target gtest"

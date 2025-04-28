@@ -150,7 +150,7 @@ MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
   declare_parameter("gripper_group_name", "gripper", "Name of the gripper group in the SRDF");
   declare_parameter("gripper_frame", "robotiq_arg2f_base_link", "Name of the gripper frame");
   declare_parameter("gripper_open_pose", "open", "Name of the gripper open pose");
-  declare_parameter("gripper_close_pose", "closed", "Name of the gripper closed pose");
+  declare_parameter("gripper_close_pose", "half_closed", "Name of the gripper closed pose");
   declare_parameter("arm_home_pose", "home", "Name of the arm home pose");
 
   // Scene frame parameters
