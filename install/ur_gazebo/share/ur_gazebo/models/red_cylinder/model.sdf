@@ -17,18 +17,18 @@
       <collision name="collision">
         <geometry>
           <cylinder>
-            <radius>0.022</radius>
-            <length>0.75</length>
+            <radius>0.015</radius>
+            <length>0.35</length>
           </cylinder>
         </geometry>
         <surface>
           <friction>
             <ode>
-              <mu>0.8</mu>
-              <mu2>0.8</mu2>
+              <mu>1.2</mu> <!-- Increased friction coefficient -->
+              <mu2>1.2</mu2> <!-- Increased friction coefficient -->
               <fdir1>0 0 1</fdir1>
-              <slip1>0.001</slip1>
-              <slip2>0.001</slip2>
+              <slip1>0.0005</slip1> <!-- Reduced slip -->
+              <slip2>0.0005</slip2> <!-- Reduced slip -->
             </ode>
             <torsional>
               <coefficient>0.1</coefficient>
@@ -55,8 +55,8 @@
       <visual name="visual">
         <geometry>
           <cylinder>
-            <radius>0.022</radius>
-            <length>0.75</length>
+            <radius>0.0125</radius>
+            <length>0.35</length>
           </cylinder>
         </geometry>
         <material>

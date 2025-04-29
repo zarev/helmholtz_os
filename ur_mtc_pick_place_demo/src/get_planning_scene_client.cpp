@@ -128,7 +128,7 @@ int main(int argc, char** argv)
 
   // Example input parameters
   std::string target_shape = "cylinder";
-  std::vector<double> target_dimensions = {0.75, 0.022};
+  std::vector<double> target_dimensions = {0.35, 0.0125};
 
   // Call the service
   auto response = node->call_service(target_shape, target_dimensions);
