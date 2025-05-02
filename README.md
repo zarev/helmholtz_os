@@ -10,7 +10,7 @@ This project integrates the Robotiq 2-Finger Gripper with a Universal Robots UR3
 ## Demo 
 ![alt text](images/exec.gif)
 
-![alt text](images/demo-ezgif.com-video-t o-gif-converter.gif)
+![alt text](<images/gazebo_simonline-video-cutter.com-ezgif.com-video-to-gif-converter (1).gif>)
 
 ## 📦 Installation
 
