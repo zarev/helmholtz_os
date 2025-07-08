@@ -1,6 +1,12 @@
 
 # UR Robotic Arm with Robotiq 2-Finger Gripper for ROS 2
 
+📖 Related Blog Post: For behind-the-scenes details and the full development journey, check out the companion Medium article:
+👉 👉 [*How I’m Building an Autonomous Pick-and-Place System with ROS 2 Jazzy and Gazebo Harmonic*](https://medium.com/@darshmenon02/how-i-am-building-an-autonomous-pick-and-place-system-with-ros-2-jazzy-and-gazebo-harmonic-6474cbcc8dc7) 
+
+The blog dives into simulation setup, robotic control, MoveIt Task Constructor, and lessons learned—perfect if you're curious about the engineering side or want to replicate the project from scratch.
+
+
 This project integrates the Robotiq 2-Finger Gripper with a Universal Robots UR3 arm using ROS 2 Jazzy and Gazebo Harmonic. It includes URDF models, ROS 2 control configuration, simulation launch files, and control scripts.
 
 > ✅ **Note:** This setup uses **fixed mimic joint configuration** for the Robotiq gripper to support simulation in **newer Gazebo (Harmonic)**. Only the primary `finger_joint` receives commands—mimic joints automatically follow.
