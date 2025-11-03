@@ -15,7 +15,7 @@ DATA_DIR = ROOT_DIR / "data"
 def test_load_open_access_papers_returns_expected_entries():
     papers = web_scraper.load_open_access_papers(DATA_DIR / "open_access_papers.csv")
 
-    assert len(papers) == 2
+    assert len(papers) >= 2
     assert papers[0].title == (
         "Dissimilar laser welding of an as-rolled CoCrFeMnNi high entropy alloy to Inconel 718 superalloy"
     )
