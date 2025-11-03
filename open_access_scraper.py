@@ -1,37 +1,32 @@
-import requests
-from bs4 import BeautifulSoup
 import csv
 import os
-from urllib.parse import urljoin
+from typing import Iterable, Dict
+
+import requests
 
 # Input and output files
-SOURCES_FILE = "sources.csv"       # List of institution URLs
-OUTPUT_FILE = "open_access_papers.csv"
+OPEN_ACCESS_PAPERS_FILE = os.path.join("data", "open_access_papers.csv")
 DOWNLOAD_DIR = "papers"
 
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
-def get_open_access_links(base_url):
-    """Scrape Open Access papers from an institution page."""
-    papers = []
-    try:
-        r = requests.get(base_url, timeout=20)
-        r.raise_for_status()
-        soup = BeautifulSoup(r.text, "html.parser")
 
-        # Find links to PDFs or Open Access indicators
-        for link in soup.find_all("a", href=True):
-            href = link["href"]
-            text = link.get_text(strip=True)
-            if any(keyword in href.lower() for keyword in [".pdf", "open", "doi.org", "publication"]):
-                full_url = urljoin(base_url, href)
-                papers.append({
-                    "Title": text or "Unknown Title",
-                    "PDF_URL": full_url
-                })
-    except Exception as e:
-        print(f"⚠️ Could not scrape {base_url}: {e}")
-    return papers
+def iter_open_access_papers() -> Iterable[Dict[str, str]]:
+    """Yield paper metadata rows from the open access CSV file."""
+    try:
+        with open(OPEN_ACCESS_PAPERS_FILE, newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                title = (row.get("Title") or "").strip()
+                url = (row.get("PDF_URL") or "").strip()
+                if not url:
+                    continue
+                yield {"Title": title or "Unknown Title", "PDF_URL": url}
+    except FileNotFoundError:
+        raise SystemExit(
+            f"❌ Could not find '{OPEN_ACCESS_PAPERS_FILE}'. Ensure the open access CSV exists."
+        )
+
 
 def download_pdf(title, url):
     """Download a PDF from URL."""
@@ -48,26 +43,13 @@ def download_pdf(title, url):
         print(f"❌ Failed {title}: {e}")
 
 def main():
-    all_papers = []
+    papers = list(iter_open_access_papers())
 
-    # Load institution websites
-    with open(SOURCES_FILE, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            site = row.get("Website") or row.get("URL")
-            if site:
-                print(f"🌐 Scanning {site}")
-                papers = get_open_access_links(site)
-                all_papers.extend(papers)
+    if not papers:
+        print("⚠️ No papers found in the open access CSV.")
+        return
 
-    # Write all found papers to CSV
-    with open(OUTPUT_FILE, "w", newline='', encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["Title", "PDF_URL"])
-        writer.writeheader()
-        writer.writerows(all_papers)
-
-    # Download all papers
-    for paper in all_papers:
+    for paper in papers:
         download_pdf(paper["Title"], paper["PDF_URL"])
 
 if __name__ == "__main__":
