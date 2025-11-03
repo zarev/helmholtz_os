@@ -49,6 +49,7 @@ def extract_markdown_from_pages(
     sleep_fn=time.sleep,
     genai_module=genai,
     model=None,
+    fail_on_error: bool = False,
 ) -> List[str]:
     """Process each page image through Gemini and return Markdown snippets."""
 
@@ -67,19 +68,22 @@ def extract_markdown_from_pages(
 
         for attempt in range(retry_limit):
             try:
-                with open(img_path, "rb") as image_file:
-                    prompt = (
-                        "Extract this page into Markdown, keeping tables, code, and layout. "
-                        "If this page includes images, refer to them as "
-                        f"`![Page {i + 1}]({img_path})` at the appropriate place in the text."
-                    )
-                    response = model.generate_content([image_file, prompt])
+                image_bytes = Path(img_path).read_bytes()
+                prompt = (
+                    "Extract this page into Markdown, keeping tables, code, and layout. "
+                    "If this page includes images, refer to them as "
+                    f"`![Page {i + 1}]({img_path})` at the appropriate place in the text."
+                )
+                image_part = {"mime_type": "image/jpeg", "data": image_bytes}
+                response = model.generate_content([image_part, prompt])
                 results.append(f"## Page {i + 1}\n\n{response.text}")
                 break
             except (ResourceExhausted, DeadlineExceeded):
                 print(f"Retry {attempt + 1} for page {i + 1} due to rate/time limits.")
                 sleep_fn(5)
             except Exception as exc:  # pragma: no cover - defensive programming
+                if fail_on_error:
+                    raise
                 print(f"Error on page {i + 1}: {exc}")
                 results.append(f"\n<!-- Page {i + 1} failed -->\n")
                 break
