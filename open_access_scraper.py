@@ -1,8 +1,11 @@
-import requests
-from bs4 import BeautifulSoup
 import csv
 import os
 from urllib.parse import urljoin
+
+import requests
+from bs4 import BeautifulSoup
+
+from pgvector_ingest import store_paper
 
 # Input and output files
 SOURCES_FILE = "sources.csv"       # List of institution URLs
@@ -34,7 +37,11 @@ def get_open_access_links(base_url):
     return papers
 
 def download_pdf(title, url):
-    """Download a PDF from URL."""
+    """Download a PDF from URL.
+
+    Returns the filesystem path for the saved PDF when the download succeeds,
+    otherwise returns ``None``.
+    """
     safe_title = "".join(c if c.isalnum() or c in " -_()" else "_" for c in title)
     filepath = os.path.join(DOWNLOAD_DIR, f"{safe_title}.pdf")
     try:
@@ -44,8 +51,10 @@ def download_pdf(title, url):
             for chunk in response.iter_content(8192):
                 f.write(chunk)
         print(f"✅ {title}")
+        return filepath
     except Exception as e:
         print(f"❌ Failed {title}: {e}")
+        return None
 
 def main():
     all_papers = []
@@ -68,7 +77,9 @@ def main():
 
     # Download all papers
     for paper in all_papers:
-        download_pdf(paper["Title"], paper["PDF_URL"])
+        filepath = download_pdf(paper["Title"], paper["PDF_URL"])
+        if filepath:
+            store_paper(filepath, paper["Title"], paper["PDF_URL"])
 
 if __name__ == "__main__":
     main()
