@@ -18,12 +18,41 @@ HEADERS = {
         "Chrome/91.0.4472.124 Safari/537.36"
     )
 }
+
+BASE_EXPORT_URL = "https://bib-pubdb1.desy.de/PubExporter.py"
+YEARS = list(range(2007, 2026))  
+OUTPUT_FILE = "dois_for_p07.txt"
+
+PARAMS_TEMPLATE = {
+    "p": 'typ:"PUB:(DE-HGF)16" AND experiment:"EXP:(DE-H253)P-P05-20150101" AND pub:"{year}"',
+    "sf": "author",
+    "so": "d",
+    "of": "gsblst",
+    "rg": "50"
+}
 # Input and output files
 OPEN_ACCESS_PAPERS_FILE = os.path.join("data", "open_access_papers.csv")
 DOWNLOAD_DIR = "papers"
 
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
+def fetch_publications(year):
+    params = PARAMS_TEMPLATE.copy()
+    params["p"] = params["p"].format(year=year)
+    response = requests.get(BASE_EXPORT_URL, params=params, headers=HEADERS)
+    response.raise_for_status()
+    return response.text
+
+def extract_clean_links(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    raw_links = set()
+
+    for a in soup.find_all('a', href=True):
+        href = a['href']
+        match = re.match(r'https://bib-pubdb1\.desy\.de/record/\d+$', href)
+        if match:
+            raw_links.add(href)  
+    return sorted(raw_links)
 
 def iter_open_access_papers() -> Iterable[Dict[str, str]]:
     """Yield paper metadata rows from the open access CSV file."""
@@ -84,6 +113,24 @@ def main():
     #    download_pdf(paper["Title"], paper["PDF_URL"])
     
     fetch_and_save(URL, OUTPUT_FILE)
+
+    all_links = []
+    for year in YEARS:
+        print(f"Year: {year}")
+        try:
+            html = fetch_publications(year)
+            links = extract_clean_links(html)
+            all_links.extend(links)
+            for link in links:
+                print(f"{link}")
+        except Exception as e:
+            print(f"Failed to fetch for {year}: {e}")
+
+    with open(OUTPUT_FILE, "w") as f:
+        for link in all_links:
+            f.write(link + "\n")
+
+    print(f"\n Saved {len(all_links)} links to {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
