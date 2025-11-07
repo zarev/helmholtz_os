@@ -2,7 +2,8 @@ import csv
 import os
 from typing import Iterable, Dict
 from bs4 import BeautifulSoup
-
+import re 
+import time 
 
 import requests
 
@@ -10,6 +11,8 @@ URL = 'https://photon-science.desy.de/facilities/petra_iii/beamlines/p05_imaging
 
 # save the HTML file
 OUTPUT_FILE = 'last_page1_final.html'
+INPUT_FILE = "dois_for_p07.txt"
+BASE_FOLDER = "pdfs_new_08082025"
 
 HEADERS = {
     "User-Agent": (
@@ -35,6 +38,57 @@ OPEN_ACCESS_PAPERS_FILE = os.path.join("data", "open_access_papers.csv")
 DOWNLOAD_DIR = "papers"
 
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
+
+def get_year_from_url(url):
+    return url.split("/record/")[-1][:6]  
+
+def get_record_number(url):
+    return url.rstrip("/").split("/")[-1]
+
+def download_pdf(url, year, record_number):
+    response = requests.get(url, headers=HEADERS, stream=True)
+    if response.status_code == 200 and 'application/pdf' in response.headers.get('Content-Type', ''):
+        os.makedirs(os.path.join(BASE_FOLDER, year), exist_ok=True)
+        file_path = os.path.join(BASE_FOLDER, year, f"{record_number}.pdf")
+        with open(file_path, "wb") as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                f.write(chunk)
+        print(f"✅ Downloaded: {file_path}")
+    else:
+        print(f"⚠️ Skipped: PDF not accessible at {url}")
+
+def process_record(url):
+    try:
+        record_number = get_record_number(url)
+        response = requests.get(url, headers=HEADERS)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+
+        # detect the access type of the pdfs 
+        access_tag = soup.find("div", {"id": "detailedrecordminipanelfile"})
+        if not access_tag:
+            print(f"❌ No file info found: {url}")
+            return
+
+        access_type = access_tag.find("small", class_="detailedRecordActions")
+        if not access_type:
+            print(f"❌ Could not determine access type: {url}")
+            return
+
+        if access_type.text.strip() != "OpenAccess:":
+            print(f"🔒 Restricted: {url}")
+            return
+
+        pdf_link_tag = access_tag.find("a", href=True)
+        if pdf_link_tag and pdf_link_tag['href'].endswith(".pdf"):
+            pdf_url = pdf_link_tag['href']
+            year = get_year_from_url(url)  
+            download_pdf(pdf_url, year, record_number)
+        else:
+            print(f"⚠️ No valid PDF link found: {url}")
+
+    except Exception as e:
+        print(f"❌ Error processing {url}: {e}")
 
 def fetch_publications(year):
     params = PARAMS_TEMPLATE.copy()
@@ -71,7 +125,7 @@ def iter_open_access_papers() -> Iterable[Dict[str, str]]:
         )
 
 
-def download_pdf(title, url):
+def download_pdf_from_record(title, url):
     """Download a PDF from URL."""
     safe_title = "".join(c if c.isalnum() or c in " -_()" else "_" for c in title)
     filepath = os.path.join(DOWNLOAD_DIR, f"{safe_title}.pdf")
@@ -125,12 +179,20 @@ def main():
                 print(f"{link}")
         except Exception as e:
             print(f"Failed to fetch for {year}: {e}")
-
+        
     with open(OUTPUT_FILE, "w") as f:
         for link in all_links:
             f.write(link + "\n")
 
     print(f"\n Saved {len(all_links)} links to {OUTPUT_FILE}")
+
+    with open(INPUT_FILE, "r") as f:
+        urls = [line.strip() for line in f if line.strip()]
+
+    for url in urls:
+        print(f"Checking: {url}")
+        process_record(url)
+        time.sleep(3)  
 
 if __name__ == "__main__":
     main()
