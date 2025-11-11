@@ -4,7 +4,6 @@ from typing import Iterable, Dict
 from bs4 import BeautifulSoup
 import re 
 import time 
-
 import requests
 
 URL = 'https://photon-science.desy.de/facilities/petra_iii/beamlines/p05_imaging_beamline/publications_from_p05/2025/index_eng.html'
