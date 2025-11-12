@@ -2,16 +2,18 @@ import csv
 import os
 from typing import Iterable, Dict
 from bs4 import BeautifulSoup
-import re 
-import time 
+import re
+import time
 import requests
+from urllib.parse import urljoin
 
-URL = 'https://photon-science.desy.de/facilities/petra_iii/beamlines/p05_imaging_beamline/publications_from_p05/2025/index_eng.html'
+urls_file = "input_urls.txt"
 
-# save the HTML file
-OUTPUT_FILE = 'last_page1_final.html'
+# Save the HTML file
+DEBUG_HTML_FILE = "debug_page.html"
+DEBUG_SAVE_HTML = False
 INPUT_FILE = "dois_for_p07.txt"
-BASE_FOLDER = "pdfs_new_08082025"
+BASE_FOLDER = "all_pdfs"
 
 HEADERS = {
     "User-Agent": (
@@ -22,39 +24,71 @@ HEADERS = {
 }
 
 BASE_EXPORT_URL = "https://bib-pubdb1.desy.de/PubExporter.py"
-YEARS = list(range(2007, 2026))  
-OUTPUT_FILE = "dois_for_p07.txt"
 
 PARAMS_TEMPLATE = {
     "p": 'typ:"PUB:(DE-HGF)16" AND experiment:"EXP:(DE-H253)P-P05-20150101" AND pub:"{year}"',
     "sf": "author",
     "so": "d",
     "of": "gsblst",
-    "rg": "50"
+    "rg": "50",
 }
+
 # Input and output files
 OPEN_ACCESS_PAPERS_FILE = os.path.join("data", "open_access_papers.csv")
-DOWNLOAD_DIR = "papers"
-
+DOWNLOAD_DIR = "all_pdfs"
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
-def get_year_from_url(url):
-    return url.split("/record/")[-1][:6]  
+
+def load_years(file_path: str) -> list[int]:
+    years = []
+    with open(file_path, "r") as f:
+        for line in f:
+            line = line.strip()
+            if line.isdigit():
+                years.append(int(line))
+    return years
+
+
+YEARS = load_years("data1/years.txt")
+OUTPUT_FILE = "dois_for_p07.txt"
+
+
+def load_urls(file_path: str) -> list[str]:
+    urls = []
+    with open(file_path, "r") as f:
+        for line in f:
+            url = line.strip()
+            if url:
+                urls.append(url)
+    return urls
+
 
 def get_record_number(url):
     return url.rstrip("/").split("/")[-1]
 
-def download_pdf(url, year, record_number):
-    response = requests.get(url, headers=HEADERS, stream=True)
-    if response.status_code == 200 and 'application/pdf' in response.headers.get('Content-Type', ''):
-        os.makedirs(os.path.join(BASE_FOLDER, year), exist_ok=True)
-        file_path = os.path.join(BASE_FOLDER, year, f"{record_number}.pdf")
-        with open(file_path, "wb") as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)
-        print(f"✅ Downloaded: {file_path}")
+
+def download_pdf(pdf_url: str, record_number: str, year_str: str | None = None):
+    os.makedirs(DOWNLOAD_DIR, exist_ok=True)
+
+    if year_str:
+        filename = f"{record_number}_{year_str}.pdf"
     else:
-        print(f"⚠️ Skipped: PDF not accessible at {url}")
+        filename = f"{record_number}.pdf"
+
+    file_path = os.path.join(DOWNLOAD_DIR, filename)
+
+    with requests.get(pdf_url, headers=HEADERS, stream=True, timeout=60) as resp:
+        resp.raise_for_status()
+        if "application/pdf" not in resp.headers.get("Content-Type", "").lower():
+            print(f"⚠️ Skipped (not a PDF content-type): {pdf_url}")
+            return
+        with open(file_path, "wb") as f:
+            for chunk in resp.iter_content(chunk_size=8192):
+                if chunk:
+                    f.write(chunk)
+
+    print(f"✅ Downloaded: {file_path}")
+
 
 def process_record(url):
     try:
@@ -63,7 +97,7 @@ def process_record(url):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
 
-        # detect the access type of the pdfs 
+        # Detect the access type of the PDFs
         access_tag = soup.find("div", {"id": "detailedrecordminipanelfile"})
         if not access_tag:
             print(f"❌ No file info found: {url}")
@@ -79,15 +113,16 @@ def process_record(url):
             return
 
         pdf_link_tag = access_tag.find("a", href=True)
-        if pdf_link_tag and pdf_link_tag['href'].endswith(".pdf"):
-            pdf_url = pdf_link_tag['href']
-            year = get_year_from_url(url)  
-            download_pdf(pdf_url, year, record_number)
+        if pdf_link_tag and pdf_link_tag["href"].endswith(".pdf"):
+            pdf_url = pdf_link_tag["href"]
+            year = None  # optional: replace with get_year_from_url(url) if needed
+            download_pdf(pdf_url, record_number, year)
         else:
             print(f"⚠️ No valid PDF link found: {url}")
 
     except Exception as e:
         print(f"❌ Error processing {url}: {e}")
+
 
 def fetch_publications(year):
     params = PARAMS_TEMPLATE.copy()
@@ -96,32 +131,17 @@ def fetch_publications(year):
     response.raise_for_status()
     return response.text
 
+
 def extract_clean_links(html):
-    soup = BeautifulSoup(html, 'html.parser')
+    soup = BeautifulSoup(html, "html.parser")
     raw_links = set()
 
-    for a in soup.find_all('a', href=True):
-        href = a['href']
-        match = re.match(r'https://bib-pubdb1\.desy\.de/record/\d+$', href)
+    for a in soup.find_all("a", href=True):
+        href = a["href"]
+        match = re.match(r"https://bib-pubdb1\.desy\.de/record/\d+$", href)
         if match:
-            raw_links.add(href)  
+            raw_links.add(href)
     return sorted(raw_links)
-
-def iter_open_access_papers() -> Iterable[Dict[str, str]]:
-    """Yield paper metadata rows from the open access CSV file."""
-    try:
-        with open(OPEN_ACCESS_PAPERS_FILE, newline="", encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                title = (row.get("Title") or "").strip()
-                url = (row.get("PDF_URL") or "").strip()
-                if not url:
-                    continue
-                yield {"Title": title or "Unknown Title", "PDF_URL": url}
-    except FileNotFoundError:
-        raise SystemExit(
-            f"❌ Could not find '{OPEN_ACCESS_PAPERS_FILE}'. Ensure the open access CSV exists."
-        )
 
 
 def download_pdf_from_record(title, url):
@@ -137,35 +157,28 @@ def download_pdf_from_record(title, url):
         print(f"✅ {title}")
     except Exception as e:
         print(f"❌ Failed {title}: {e}")
-    
-def fetch_and_save(url, filename):
+
+
+def fetch_and_save(url):
     response = requests.get(url, headers=HEADERS)
-    response.raise_for_status()  # when there is error, the code stops 
+    response.raise_for_status()
 
-    with open(filename, 'w', encoding='utf-8') as file:
-        file.write(response.text)
+    if DEBUG_SAVE_HTML:
+        with open(DEBUG_HTML_FILE, "w", encoding="utf-8") as file:
+            file.write(response.text)
+        print(f"Saved the page to '{DEBUG_HTML_FILE}'")
 
-    print(f"Saved the page to '{filename}'")
-
-
-    soup = BeautifulSoup(response.text, 'html.parser')
-    title = soup.title.string.strip() if soup.title else "No title found"
-    print(f"Page title is: {title}")
-    print(f"Number of <p> tags in the page: {len(soup.find_all('p'))}")
-    print(f"Number of <table> tags in the page: {len(soup.find_all('table'))}")
+        soup = BeautifulSoup(response.text, "html.parser")
+        title = soup.title.string.strip() if soup.title else "No title found"
+        print(f"Page title is: {title}")
+        print(f"Number of <p> tags in the page: {len(soup.find_all('p'))}")
+        print(f"Number of <table> tags in the page: {len(soup.find_all('table'))}")
 
 
 def main():
-    # papers = list(iter_open_access_papers())
-
-    #if not papers:
-    #    print("⚠️ No papers found in the open access CSV.")
-    #    return
-
-    #for paper in papers:
-    #    download_pdf(paper["Title"], paper["PDF_URL"])
-    
-    fetch_and_save(URL, OUTPUT_FILE)
+    urls = load_urls(urls_file)
+    for url in urls:
+        fetch_and_save(url)
 
     all_links = []
     for year in YEARS:
@@ -178,20 +191,24 @@ def main():
                 print(f"{link}")
         except Exception as e:
             print(f"Failed to fetch for {year}: {e}")
-        
+
     with open(OUTPUT_FILE, "w") as f:
         for link in all_links:
             f.write(link + "\n")
 
     print(f"\n Saved {len(all_links)} links to {OUTPUT_FILE}")
 
-    with open(INPUT_FILE, "r") as f:
-        urls = [line.strip() for line in f if line.strip()]
+    with open(INPUT_FILE, "r", encoding="utf-8") as f:
+        urls = [line.strip() for line in f if line.strip().startswith("http")]
 
-    for url in urls:
-        print(f"Checking: {url}")
-        process_record(url)
-        time.sleep(3)  
+    if not urls:
+        print(f"❌ No valid URLs found in {INPUT_FILE}. Did you accidentally save HTML instead?")
+    else:
+        for url in urls:
+            print(f"Checking: {url}")
+            process_record(url)
+            time.sleep(3)
+
 
 if __name__ == "__main__":
     main()
