@@ -40,3 +40,25 @@ Notes / next steps:
   embedding model (local small model or llama.cpp embedding) for semantic recall.
 - Next tasks: wire llama.cpp for inference, add a Tauri menubar UI, implement
   the pet tick loop and memory summarization jobs.
+
+## Agentic browser CLI
+
+The repository now ships with an `agentic_browser.py` helper that automates the
+inspection of the publication sources list used by the open access scraper. The
+script wraps an LLM client, fetches the HTML for each source, converts the page
+into normalized text snippets, and feeds those snippets back into the model so it
+can triage the listings. The CLI exposes a `--source` flag for ad-hoc
+investigations, as well as a bulk mode that iterates over the complete
+`sources.csv` catalogue.
+
+To experiment with it locally:
+
+```bash
+python agentic_browser.py --source "https://arxiv.org/"
+```
+
+Unit tests covering the HTML normalization helpers, LLM response parsing, and
+happy-path scraping logic live in `tests/test_agentic_browser.py`. Those tests
+run alongside the broader scraper suite via `pytest -q` and include fixtures that
+exercise error handling, making it easier to evolve the agent without breaking
+existing functionality.
