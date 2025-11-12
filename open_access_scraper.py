@@ -25,13 +25,6 @@ HEADERS = {
 
 BASE_EXPORT_URL = "https://bib-pubdb1.desy.de/PubExporter.py"
 
-PARAMS_TEMPLATE = {
-    "p": 'typ:"PUB:(DE-HGF)16" AND experiment:"EXP:(DE-H253)P-P05-20150101" AND pub:"{year}"',
-    "sf": "author",
-    "so": "d",
-    "of": "gsblst",
-    "rg": "50",
-}
 
 # Input and output files
 OPEN_ACCESS_PAPERS_FILE = os.path.join("data", "open_access_papers.csv")
@@ -125,8 +118,13 @@ def process_record(url):
 
 
 def fetch_publications(year):
-    params = PARAMS_TEMPLATE.copy()
-    params["p"] = params["p"].format(year=year)
+    params = {
+        "p": f'typ:"PUB:(DE-HGF)16" AND experiment:"EXP:(DE-H253)P-P05-20150101" AND pub:"{year}"',
+        "sf": "author",
+        "so": "d",
+        "of": "gsblst",
+        "rg": "50",
+    }
     response = requests.get(BASE_EXPORT_URL, params=params, headers=HEADERS)
     response.raise_for_status()
     return response.text
@@ -162,6 +160,7 @@ def download_pdf_from_record(title, url):
 def fetch_and_save(url):
     response = requests.get(url, headers=HEADERS)
     response.raise_for_status()
+    time.sleep(3) # 1 second delay
 
     if DEBUG_SAVE_HTML:
         with open(DEBUG_HTML_FILE, "w", encoding="utf-8") as file:
