@@ -42,7 +42,6 @@ def load_years(file_path: str) -> list[int]:
                 years.append(int(line))
     return years
 
-
 YEARS = list(range(1980, 2026)) 
 OUTPUT_FILE = "dois_for_p07.txt"
 
@@ -52,7 +51,7 @@ def load_urls(file_path: str) -> list[str]:
     with open(file_path, "r") as f:
         for line in f:
             url = line.strip()
-            if url:
+            if url.lower().startswith("http"):
                 urls.append(url)
     return urls
 
@@ -109,7 +108,7 @@ def process_record(url):
         pdf_link_tag = access_tag.find("a", href=True)
         if pdf_link_tag and pdf_link_tag["href"].endswith(".pdf"):
             pdf_url = pdf_link_tag["href"]
-            year = None  # optional: replace with get_year_from_url(url) if needed
+            year = None 
             download_pdf(pdf_url, record_number, year)
         else:
             print(f"⚠️ No valid PDF link found: {url}")
@@ -179,8 +178,14 @@ def fetch_and_save(url):
 
 def main():
     urls = load_urls(urls_file)
-    for url in urls:
-        fetch_and_save(url)
+    desy_urls = [u for u in urls if 'photon-science.desy.de' in u]
+    if not desy_urls:
+        print("No DESY URLs found in the source file.")
+        return
+    
+    desy_url = desy_urls[0]
+    print(f'using url: {desy_url}')
+    fetch_and_save(desy_url)
 
     all_links = []
     for year in YEARS:
@@ -204,7 +209,7 @@ def main():
         urls = [line.strip() for line in f if line.strip().startswith("http")]
 
     if not urls:
-        print(f"❌ No valid URLs found in {INPUT_FILE}. Did you accidentally save HTML instead?")
+        print(f"❌ No valid URLs found in {INPUT_FILE}")
     else:
         for url in urls:
             print(f"Checking: {url}")
