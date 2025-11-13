@@ -1,4 +1,4 @@
-# import csv
+import csv
 import os
 from typing import Iterable, Dict
 from bs4 import BeautifulSoup
@@ -7,7 +7,7 @@ import time
 import requests
 from urllib.parse import urljoin
 
-urls_file = "input_urls.txt"
+urls_file = "data/sources.csv"
 
 # Save the HTML file
 DEBUG_HTML_FILE = "debug_page.html"
@@ -43,7 +43,7 @@ def load_years(file_path: str) -> list[int]:
     return years
 
 
-YEARS = load_years("data1/years.txt")
+YEARS = list(range(1980, 2026)) 
 OUTPUT_FILE = "dois_for_p07.txt"
 
 
@@ -176,7 +176,6 @@ def fetch_and_save(url):
         print(f"Page title is: {title}")
         print(f"Number of <p> tags in the page: {len(soup.find_all('p'))}")
         print(f"Number of <table> tags in the page: {len(soup.find_all('table'))}")
-
 
 def main():
     urls = load_urls(urls_file)
