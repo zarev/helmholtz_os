@@ -1,4 +1,4 @@
-import csv
+# import csv
 import os
 from typing import Iterable, Dict
 from bs4 import BeautifulSoup
@@ -23,8 +23,9 @@ HEADERS = {
     )
 }
 
-BASE_EXPORT_URL = "https://bib-pubdb1.desy.de/PubExporter.py"
-
+BASE_EXPORT_URLS = {
+    "desy": "https://bib-pubdb1.desy.de/PubExporter.py"
+}
 
 # Input and output files
 OPEN_ACCESS_PAPERS_FILE = os.path.join("data", "open_access_papers.csv")
@@ -117,17 +118,20 @@ def process_record(url):
         print(f"❌ Error processing {url}: {e}")
 
 
-def fetch_publications(year):
-    params = {
-        "p": f'typ:"PUB:(DE-HGF)16" AND experiment:"EXP:(DE-H253)P-P05-20150101" AND pub:"{year}"',
-        "sf": "author",
-        "so": "d",
-        "of": "gsblst",
-        "rg": "50",
-    }
-    response = requests.get(BASE_EXPORT_URL, params=params, headers=HEADERS)
-    response.raise_for_status()
-    return response.text
+def fetch_publications(year, source="desy"):
+    '''right now only for desy. can add more databases later (ESRF, Diamond, etc)'''
+    base_url = BASE_EXPORT_URLS.get(source)
+    if source == 'desy':
+        params = {
+            "p": f'typ:"PUB:(DE-HGF)16" AND experiment:"EXP:(DE-H253)P-P05-20150101" AND pub:"{year}"',
+            "sf": "author",
+            "so": "d",
+            "of": "gsblst",
+            "rg": "50",
+        }
+        response = requests.get(base_url, params=params, headers=HEADERS)
+        response.raise_for_status()
+        return response.text
 
 
 def extract_clean_links(html):
