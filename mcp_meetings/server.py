@@ -23,20 +23,15 @@ from .participant_profiler import ParticipantProfiler
 # Initialize the MCP server
 app = Server("mcp-meetings")
 
-# Initialize clients
-calendar_client = None
-participant_profiler = None
+
+def get_calendar_client():
+    """Get or create calendar client instance."""
+    return CalendarClient()
 
 
-def initialize_clients():
-    """Initialize calendar and profiler clients."""
-    global calendar_client, participant_profiler
-    
-    # Initialize calendar client
-    calendar_client = CalendarClient()
-    
-    # Initialize participant profiler
-    participant_profiler = ParticipantProfiler()
+def get_participant_profiler():
+    """Get or create participant profiler instance."""
+    return ParticipantProfiler()
 
 
 @app.list_tools()
@@ -97,6 +92,10 @@ async def list_tools() -> list[Tool]:
 @app.call_tool()
 async def call_tool(name: str, arguments: Any) -> list[TextContent]:
     """Handle tool calls."""
+    
+    # Get client instances
+    calendar_client = get_calendar_client()
+    participant_profiler = get_participant_profiler()
     
     if name == "get_next_week_meetings":
         calendar_id = arguments.get("calendar_id", "primary")
@@ -192,9 +191,6 @@ async def call_tool(name: str, arguments: Any) -> list[TextContent]:
 
 async def main():
     """Run the MCP server."""
-    # Initialize clients
-    initialize_clients()
-    
     # Run the server
     async with stdio_server() as (read_stream, write_stream):
         await app.run(

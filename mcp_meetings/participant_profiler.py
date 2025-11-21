@@ -74,8 +74,8 @@ class ParticipantProfiler:
     
     def _get_deterministic_random(self, seed: str, choices: List[str]) -> str:
         """Get a deterministic random choice based on seed."""
-        # Use hash of seed to get a deterministic "random" index
-        hash_value = int(hashlib.md5(seed.encode()).hexdigest(), 16)
+        # Use SHA-256 hash of seed to get a deterministic "random" index
+        hash_value = int(hashlib.sha256(seed.encode()).hexdigest(), 16)
         index = hash_value % len(choices)
         return choices[index]
     

@@ -2,7 +2,9 @@
 
 import asyncio
 import json
+import tempfile
 from datetime import datetime
+from pathlib import Path
 
 from mcp_meetings.calendar_client import CalendarClient
 from mcp_meetings.participant_profiler import ParticipantProfiler
@@ -142,7 +144,7 @@ async def test_full_workflow():
     print(json.dumps(result, indent=2, default=str))
     
     # Save to file
-    output_file = '/tmp/meeting_participants_output.json'
+    output_file = Path(tempfile.gettempdir()) / 'meeting_participants_output.json'
     with open(output_file, 'w') as f:
         json.dump(result, f, indent=2, default=str)
     print(f"\nOutput saved to: {output_file}")
