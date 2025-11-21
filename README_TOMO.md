@@ -7,6 +7,7 @@ and retrieving vector memories using a deterministic (small) embedder.
 What is included:
 - `docker-compose.yml` — starts Postgres with pgvector
 - `backend/` — minimal FastAPI backend, a deterministic embedder, DB helpers, and SQL migration
+- `mcp_meetings/` — MCP (Model Context Protocol) server for meeting and participant management
 
 Quickstart (Linux/macOS):
 
@@ -34,6 +35,20 @@ uvicorn backend.main:app --reload --host 127.0.0.1 --port 8000
 
 - POST http://127.0.0.1:8000/talk with JSON { "text": "hello tomo" }
 - POST http://127.0.0.1:8000/memories/search with JSON { "text": "hello" }
+
+## MCP Meetings App
+
+The `mcp_meetings/` directory contains a standalone MCP server that provides tools for:
+- Getting meetings scheduled for the next week
+- Extracting participant information from meetings
+- Generating comprehensive JSON profiles including mini bios for each participant
+
+See [mcp_meetings/QUICKSTART.md](mcp_meetings/QUICKSTART.md) for setup and usage instructions.
+
+Quick test:
+```bash
+python test_mcp_meetings.py
+```
 
 Notes / next steps:
 - This PoC uses a deterministic placeholder embedder; swap it for a real

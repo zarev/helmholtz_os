@@ -1,0 +1,14 @@
+# Credentials and tokens - DO NOT COMMIT
+credentials.json
+token.pickle
+*.pickle
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment files
+.env
+.env.local

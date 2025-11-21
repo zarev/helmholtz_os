@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "meetings": {
+      "command": "python",
+      "args": ["-m", "mcp_meetings.server"],
+      "cwd": "/path/to/helmholtz_os",
+      "env": {
+        "MCP_CALENDAR_ID": "primary"
+      }
+    }
+  }
+}
