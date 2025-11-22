@@ -3,3 +3,4 @@ pdf2image
 Pillow
 tqdm
 google-generativeai
+requests
