@@ -10,7 +10,7 @@ The MCP (Model Context Protocol) server is located in the `mcp/` directory. It p
 
 #### Quick Start - Running the MCP Server
 
-1. **Prerequisites**: Node.js 18+ (tested with Node 20+)
+1. **Prerequisites**: Node.js 18+ (tested with Node 22)
 
 2. **Install dependencies**:
    ```bash
@@ -28,7 +28,8 @@ The MCP (Model Context Protocol) server is located in the `mcp/` directory. It p
    npm start
    ```
 
-   The server will output: `Helmholtz OS MCP server is ready on stdio.`
+   The server will log to stderr: `Helmholtz OS MCP server is ready on stdio.`  
+   The server speaks JSON-RPC/MCP over stdio (no banners on stdout).
 
 For detailed MCP server documentation, client configuration examples, and available tools, see [mcp/README.md](mcp/README.md).
 
