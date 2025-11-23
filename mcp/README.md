@@ -22,6 +22,12 @@ npm start
 
 The server speaks JSON-RPC/MCP over stdio, so it does not print banners to stdout. Status and errors are written to stderr.
 
+## Run tests
+
+```bash
+npm test
+```
+
 ### Available MCP primitives
 
 - **Tools**
