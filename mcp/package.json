@@ -1,0 +1,17 @@
+{
+  "name": "helmholtz-os-mcp-server",
+  "version": "0.1.0",
+  "description": "Minimal MCP server for Helmholtz OS that works with Claude Code, Gemini CLI, and ChatGPT MCP integrations.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["mcp", "model-context-protocol", "helmholtz"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.22.0",
+    "zod": "^3.24.1"
+  }
+}
