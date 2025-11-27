@@ -39,12 +39,6 @@ class SearchRequest(BaseModel):
 
 app = FastAPI(title="tomo-poc-backend")
 
-# Serve the simple frontend for PoC from ../frontend
-frontend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "frontend"))
-if os.path.isdir(frontend_dir):
-    app.mount("/", StaticFiles(directory=frontend_dir, html=True), name="frontend")
-
-
 @app.on_event("startup")
 def startup():
     # Run migrations automatically for PoC
@@ -132,3 +126,8 @@ def model_start(req: ModelStartRequest):
 def model_stop():
     res = llama_stop_server()
     return res
+
+# Serve the simple frontend for PoC from ../frontend
+frontend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "frontend"))
+if os.path.isdir(frontend_dir):
+    app.mount("/", StaticFiles(directory=frontend_dir, html=True), name="frontend")
