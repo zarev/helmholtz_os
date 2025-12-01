@@ -46,6 +46,72 @@ class LLMClient(Protocol):
     ) -> str:
         ...
 
+class GeminiLLM:
+    """Thin wrapper over Gemini's chat completions endpoint."""
+
+    def __init__(
+        self,
+        api_key: str,
+        model: str,
+        base_url: str = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
+        timeout: float = 30.0,
+    ) -> None:
+        if not api_key:
+            raise ValueError("An API key is required to use the GeminiLLM client.")
+        self.api_key = api_key
+        self.model = model
+        self.base_url = base_url
+        self.timeout = timeout
+
+    def complete(
+        self,
+        prompt: str,
+        *,
+        system_prompt: Optional[str] = None,
+        temperature: float = 0.2,
+        max_tokens: int = 400,
+    ) -> str:
+        messages: List[dict[str, str]] = []
+        if system_prompt:
+            prompt = system_prompt+prompt
+
+        response = requests.post(
+            f"{self.base_url}",
+            headers={
+                "Content-Type": "application/json",
+                "x-goog-api-key": f"{self.api_key}",
+            },
+            json={
+                "contents": [
+                                {
+                                    "parts": [
+                                    {
+                                        "text": f"{prompt}"
+                                    }
+                                            ]
+                                }
+                            ],
+                            "generationConfig": {
+                                "temperature": temperature,
+                                "maxOutputTokens": max_tokens,
+                                                }
+                },
+            timeout=self.timeout,
+        )
+
+        response.raise_for_status()
+        data = response.json()
+        try:
+            candidates = data.get("candidates") or []
+        except AttributeError as exc:  # pragma: no cover - defensive guard
+            raise ValueError(f"Unexpected response payload: {data}") from exc
+        if not candidates:
+            raise ValueError("Gemini response did not include candidates")
+        content = candidates[0].get("content") or {}
+        parts = content.get("parts") or []
+        if not parts or "text" not in parts[0]:
+            raise ValueError("Gemini response did not contain textual content")
+        return parts[0]["text"] 
 
 class OpenAIChatLLM:
     """Thin wrapper over OpenAI's chat completions endpoint."""
