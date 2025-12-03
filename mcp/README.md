@@ -64,7 +64,7 @@ Restart Claude Desktop; the MCP tools should appear under integrations.
 
 ### Gemini CLI
 
-Update your Gemini CLI profile (for example, `~/.config/gemini/config.json`):
+Update your Gemini CLI profile (for example, `~/.gemini/settings.json`):
 
 ```json
 {
