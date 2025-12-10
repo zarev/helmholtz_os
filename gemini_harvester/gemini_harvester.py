@@ -1,7 +1,8 @@
 import argparse
+import csv
 import os
 from pathlib import Path
-from typing import Optional
+from typing import List, Optional, Sequence, Tuple
 
 try:
     import tomllib
@@ -12,9 +13,11 @@ import google.generativeai as genai
 import yaml
 
 
-CONFIG_PATH = Path(__file__).resolve().parents[1] / "gemini_harvester" /"gemini_prompts.yaml"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+CONFIG_PATH = PROJECT_ROOT / "gemini_harvester" / "gemini_prompts.yaml"
 GEMINI_CONFIG_PATH = Path.home() / ".config" / "gemini-cli.toml"
 DEFAULT_GEMINI_MODEL = "gemini-2.5-flash-lite"
+DEFAULT_SOURCES_CSV = PROJECT_ROOT / "data" / "sources.csv"
 
 
 def load_prompts():
@@ -76,7 +79,7 @@ def call_gemini(
     return text.strip()
 
 
-def harvest_with_gemini(url: str) -> dict:
+def harvest_with_gemini(url: str) -> str:
     prompts = load_prompts()
     template = prompts["harvest_publications"]
     prompt = build_prompt(template, url)
@@ -86,26 +89,79 @@ def harvest_with_gemini(url: str) -> dict:
     return data
 
 
+def load_source_urls(csv_path: Path) -> List[str]:
+    urls: List[str] = []
+    with csv_path.open("r", encoding="utf-8", newline="") as handle:
+        reader = csv.reader(handle)
+        for row in reader:
+            if not row:
+                continue
+            candidate = row[0].strip()
+            if not candidate:
+                continue
+            if not urls and candidate.lower() == "website":
+                continue
+            urls.append(candidate)
+    return urls
+
+
+def harvest_multiple(urls: Sequence[str]) -> List[Tuple[str, str]]:
+    results: List[Tuple[str, str]] = []
+    for url in urls:
+        payload = harvest_with_gemini(url)
+        results.append((url, payload))
+    return results
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Harvest publications from a URL using Gemini + Chrome DevTools MCP."
     )
-    parser.add_argument("url", help="Publications page URL to harvest")
+    parser.add_argument("url", nargs="?", help="Publications page URL to harvest")
     parser.add_argument(
         "-o", "--output", help="Output file (default: stdout)", default=None
     )
+    parser.add_argument(
+        "-s",
+        "--sources-file",
+        help="CSV file containing source URLs (used when URL is omitted)",
+        default=str(DEFAULT_SOURCES_CSV),
+    )
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=1,
+        help="Number of sources to process from the CSV when no URL is provided",
+    )
     args = parser.parse_args()
 
-    data = harvest_with_gemini(args.url)
+    if args.url:
+        urls_to_process: List[str] = [args.url]
+    else:
+        if args.batch_size <= 0:
+            parser.error("--batch-size must be a positive integer")
+        csv_path = Path(args.sources_file)
+        urls = load_source_urls(csv_path)
+        if not urls:
+            parser.error(f"No URLs found in {csv_path}")
+        urls_to_process = urls[: args.batch_size]
 
-    if args.output:
-        out_path = Path(args.output)
-        out_path.write_text(data, encoding="utf-8")
-    
-    print(data)
-    print("\n")
-    print("*****Done!*****")
-    print("*****You still don't understand what you're dealing with, do you? The perfect organism.*****")
+    if args.output and len(urls_to_process) > 1:
+        parser.error("--output may only be used when harvesting a single URL")
+
+    results = harvest_multiple(urls_to_process)
+
+    for url, data in results:
+        if args.output:
+            out_path = Path(args.output)
+            out_path.write_text(data, encoding="utf-8")
+        else:
+            print(data)
+        print("\n")
+        print("*****Done!*****")
+        print(
+            "*****You still don't understand what you're dealing with, do you? The perfect organism.*****"
+        )
 
 
 if __name__ == "__main__":
