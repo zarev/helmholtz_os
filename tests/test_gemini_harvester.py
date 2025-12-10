@@ -50,9 +50,9 @@ def test_call_gemini_invokes_generative_model(monkeypatch):
     captured = {}
 
     class DummyModel:
-        def generate_content(self, prompt):
+        def generate_content(self, prompt, **_kwargs):
             captured["prompt"] = prompt
-            return types.SimpleNamespace(text=" success ")
+            return types.SimpleNamespace(text='{"open_access": ["success"], "not_open_access": []}')
 
     class DummyGenAI:
         def __init__(self):
@@ -72,7 +72,7 @@ def test_call_gemini_invokes_generative_model(monkeypatch):
 
     result = gh.call_gemini("do things", genai_module=dummy)
 
-    assert result == "success"
+    assert result == {"open_access": ["success"], "not_open_access": []}
     assert dummy.configured_key == "api-key"
     assert dummy.model_name == "my-model"
     assert captured["prompt"] == "do things"
@@ -80,7 +80,7 @@ def test_call_gemini_invokes_generative_model(monkeypatch):
 
 def test_call_gemini_requires_text(monkeypatch):
     class DummyModel:
-        def generate_content(self, prompt):  # pragma: no cover - trivial
+        def generate_content(self, prompt, **_kwargs):  # pragma: no cover - trivial
             return types.SimpleNamespace(text="")
 
     class DummyGenAI:
@@ -96,19 +96,37 @@ def test_call_gemini_requires_text(monkeypatch):
         gh.call_gemini("prompt", genai_module=DummyGenAI())
 
 
+def test_call_gemini_validates_json(monkeypatch):
+    class DummyModel:
+        def generate_content(self, prompt, **_kwargs):  # pragma: no cover - trivial
+            return types.SimpleNamespace(text="not json")
+
+    class DummyGenAI:
+        def configure(self, *_args, **_kwargs):
+            pass
+
+        def GenerativeModel(self, *_args, **_kwargs):
+            return DummyModel()
+
+    monkeypatch.setattr(gh, "_resolve_api_key", lambda *_args, **_kwargs: "key")
+
+    with pytest.raises(RuntimeError, match="not valid JSON"):
+        gh.call_gemini("prompt", genai_module=DummyGenAI())
+
+
 def test_harvest_with_gemini_builds_prompt(monkeypatch):
     monkeypatch.setattr(gh, "load_prompts", lambda: {"harvest_publications": "Run {{ url }}"})
     captured = {}
 
-    def fake_call(prompt: str) -> str:
+    def fake_call(prompt: str):
         captured["prompt"] = prompt
-        return "{\"result\": []}"
+        return {"open_access": [], "not_open_access": []}
 
     monkeypatch.setattr(gh, "call_gemini", fake_call)
 
     result = gh.harvest_with_gemini("https://harvest.me")
 
-    assert result == "{\"result\": []}"
+    assert result == {"open_access": [], "not_open_access": []}
     assert captured["prompt"] == "Run https://harvest.me"
 
 
@@ -124,8 +142,8 @@ def test_load_source_urls_skips_header_and_blank_lines(tmp_path):
 def test_harvest_multiple_calls_each_url(monkeypatch):
     urls = ["https://one", "https://two"]
     responses = {
-        "https://one": "{\"result\": 1}",
-        "https://two": "{\"result\": 2}",
+        "https://one": {"open_access": ["1"], "not_open_access": []},
+        "https://two": {"open_access": [], "not_open_access": ["2"]},
     }
     calls = []
 
@@ -139,3 +157,14 @@ def test_harvest_multiple_calls_each_url(monkeypatch):
 
     assert calls == urls
     assert result == [(url, responses[url]) for url in urls]
+
+
+def test_validate_harvest_payload_rejects_bad_shapes():
+    with pytest.raises(RuntimeError, match="JSON object"):
+        gh._validate_harvest_payload([])
+
+    with pytest.raises(RuntimeError, match="open_access.*list"):
+        gh._validate_harvest_payload({"open_access": "oops", "not_open_access": []})
+
+    with pytest.raises(RuntimeError, match="strings"):
+        gh._validate_harvest_payload({"open_access": [1], "not_open_access": []})
