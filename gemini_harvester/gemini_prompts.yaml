@@ -6,8 +6,8 @@ harvest_publications: |
      {{ url }}
   2. Wait until the main list of publications has loaded.
   3. Take a text snapshot of the page (a11y tree). From this snapshot: extract all publication entries.
-  4. Return two lists:
-      5.1. **an open access** list with publication titles.
-      5.2. **not open access** list with publication titles.
-
-  Do not explain. Do not add prose. Just return two lists.
+  4. Return a JSON with the following structure:
+      {
+        "open_access": [list of publication titles that are open access],
+        "not_open_access": [list of publication titles that are not open access]
+      }
