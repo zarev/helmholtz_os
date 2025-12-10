@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import os
 from pathlib import Path
 import sys
 import types
@@ -114,11 +115,30 @@ def test_call_gemini_validates_json(monkeypatch):
         gh.call_gemini("prompt", genai_module=DummyGenAI())
 
 
+def test_call_gemini_best_effort_extracts_embedded_json(monkeypatch):
+    class DummyModel:
+        def generate_content(self, prompt, **_kwargs):  # pragma: no cover - trivial
+            return types.SimpleNamespace(text="Here you go: {\"open_access\": [\"A\"], \"not_open_access\": []} Thanks!")
+
+    class DummyGenAI:
+        def configure(self, *_args, **_kwargs):
+            pass
+
+        def GenerativeModel(self, *_args, **_kwargs):
+            return DummyModel()
+
+    monkeypatch.setattr(gh, "_resolve_api_key", lambda *_args, **_kwargs: "key")
+
+    result = gh.call_gemini("prompt", genai_module=DummyGenAI(), best_effort=True)
+
+    assert result == {"open_access": ["A"], "not_open_access": []}
+
+
 def test_harvest_with_gemini_builds_prompt(monkeypatch):
     monkeypatch.setattr(gh, "load_prompts", lambda: {"harvest_publications": "Run {{ url }}"})
     captured = {}
 
-    def fake_call(prompt: str):
+    def fake_call(prompt: str, **_kwargs):
         captured["prompt"] = prompt
         return {"open_access": [], "not_open_access": []}
 
@@ -147,7 +167,7 @@ def test_harvest_multiple_calls_each_url(monkeypatch):
     }
     calls = []
 
-    def fake_harvest(url: str) -> str:
+    def fake_harvest(url: str, **_kwargs) -> str:
         calls.append(url)
         return responses[url]
 
@@ -168,3 +188,15 @@ def test_validate_harvest_payload_rejects_bad_shapes():
 
     with pytest.raises(RuntimeError, match="strings"):
         gh._validate_harvest_payload({"open_access": [1], "not_open_access": []})
+def test_harvest_specific_url_returns_real_papers():
+    url = "https://www.maxiv.lu.se/science/publications/"
+
+    result = gh.harvest_with_gemini(url, best_effort=True)
+
+    assert "open_access" in result
+    assert isinstance(result["open_access"], list)
+    assert len(result["open_access"]) >= 1
+    assert all(isinstance(item, str) and item.strip() for item in result["open_access"])
+    print("Open access publications found:")
+    for item in result["open_access"]:
+        print(f"- {item}")
