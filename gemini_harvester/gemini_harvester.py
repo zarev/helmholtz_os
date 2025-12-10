@@ -1,11 +1,20 @@
 import argparse
-import subprocess
+import os
 from pathlib import Path
+from typing import Optional
 
+try:
+    import tomllib
+except ModuleNotFoundError:  # pragma: no cover - Python <3.11 fallback
+    import tomli as tomllib  # type: ignore
+
+import google.generativeai as genai
 import yaml
 
 
 CONFIG_PATH = Path(__file__).resolve().parents[1] / "gemini_harvester" /"gemini_prompts.yaml"
+GEMINI_CONFIG_PATH = Path.home() / ".config" / "gemini-cli.toml"
+DEFAULT_GEMINI_MODEL = "gemini-2.5-flash-lite"
 
 
 def load_prompts():
@@ -17,24 +26,54 @@ def build_prompt(template: str, url: str) -> str:
     return template.replace("{{ url }}", url)
 
 
-def call_gemini(prompt: str) -> str:
-    """
-    Call the `gemini` CLI with the prompt via stdin.
-    """
-    proc = subprocess.run(
-        ["gemini"],
-        input=prompt,
-        text=True,
-        capture_output=True,
-        check=False,
+def _load_cli_token(config_path: Path = GEMINI_CONFIG_PATH) -> Optional[str]:
+    if not config_path.exists():
+        return None
+
+    try:
+        data = tomllib.loads(config_path.read_text(encoding="utf-8"))
+    except (OSError, tomllib.TOMLDecodeError):
+        return None
+
+    token = data.get("token")
+    return token if isinstance(token, str) and token.strip() else None
+
+
+def _resolve_api_key(config_path: Path = GEMINI_CONFIG_PATH) -> str:
+    for env_var in ("GEMINI_API_KEY", "GOOGLE_API_KEY"):
+        value = os.environ.get(env_var)
+        if value:
+            return value
+
+    token = _load_cli_token(config_path)
+    if token:
+        return token
+
+    raise RuntimeError(
+        "Gemini API key not found. Set GEMINI_API_KEY/GOOGLE_API_KEY or add a token to "
+        f"{config_path}."
     )
 
-    if proc.returncode != 0:
-        raise RuntimeError(
-            f"gemini CLI failed with code {proc.returncode}:\nSTDERR:\n{proc.stderr}"
-        )
 
-    return proc.stdout.strip()
+def call_gemini(
+    prompt: str,
+    *,
+    model: Optional[str] = None,
+    genai_module=genai,
+) -> str:
+    api_key = _resolve_api_key()
+    selected_model = model or os.environ.get("GEMINI_MODEL") or DEFAULT_GEMINI_MODEL
+
+    # Configure the SDK once per call to keep the function stateless.
+    genai_module.configure(api_key=api_key)
+    chat_model = genai_module.GenerativeModel(selected_model)
+    response = chat_model.generate_content(prompt)
+
+    text = getattr(response, "text", "")
+    if not text:
+        raise RuntimeError("Gemini response did not contain any text output")
+
+    return text.strip()
 
 
 def harvest_with_gemini(url: str) -> dict:

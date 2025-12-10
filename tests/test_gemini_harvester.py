@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib.util
 from pathlib import Path
 import sys
+import types
 
 import pytest
 
@@ -23,45 +24,76 @@ def _load_module():
 gh = _load_module()
 
 
-def test_call_gemini_returns_stdout(monkeypatch):
-    recorded = {}
+def test_resolve_api_key_prefers_env_over_file(monkeypatch, tmp_path):
+    cfg = tmp_path / "gemini-cli.toml"
+    cfg.write_text('token = "file-key"', encoding="utf-8")
+    monkeypatch.setenv("GEMINI_API_KEY", "env-key")
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
 
-    class DummyProc:
-        returncode = 0
-        stdout = " success \n"
-        stderr = ""
+    result = gh._resolve_api_key(cfg)
 
-    def fake_run(args, input, text, capture_output, check):
-        recorded["args"] = args
-        recorded["input"] = input
-        assert text is True and capture_output is True and check is False
-        return DummyProc()
-
-    monkeypatch.setattr(gh.subprocess, "run", fake_run)
-
-    output = gh.call_gemini("do things")
-
-    assert recorded["args"] == ["gemini"]
-    assert recorded["input"] == "do things"
-    assert output == "success"
+    assert result == "env-key"
 
 
-def test_call_gemini_raises_on_failure(monkeypatch):
-    class DummyProc:
-        returncode = 42
-        stdout = ""
-        stderr = "boom"
+def test_resolve_api_key_reads_cli_config(monkeypatch, tmp_path):
+    cfg = tmp_path / "gemini-cli.toml"
+    cfg.write_text('token = "file-key"', encoding="utf-8")
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
 
-    def fake_run(*_args, **_kwargs):
-        return DummyProc()
+    result = gh._resolve_api_key(cfg)
 
-    monkeypatch.setattr(gh.subprocess, "run", fake_run)
+    assert result == "file-key"
 
-    with pytest.raises(RuntimeError) as exc:
-        gh.call_gemini("bad call")
 
-    assert "gemini CLI failed" in str(exc.value)
-    assert "boom" in str(exc.value)
+def test_call_gemini_invokes_generative_model(monkeypatch):
+    captured = {}
+
+    class DummyModel:
+        def generate_content(self, prompt):
+            captured["prompt"] = prompt
+            return types.SimpleNamespace(text=" success ")
+
+    class DummyGenAI:
+        def __init__(self):
+            self.configured_key = None
+            self.model_name = None
+
+        def configure(self, api_key):
+            self.configured_key = api_key
+
+        def GenerativeModel(self, name):
+            self.model_name = name
+            return DummyModel()
+
+    dummy = DummyGenAI()
+    monkeypatch.setenv("GEMINI_MODEL", "my-model")
+    monkeypatch.setattr(gh, "_resolve_api_key", lambda *_args, **_kwargs: "api-key")
+
+    result = gh.call_gemini("do things", genai_module=dummy)
+
+    assert result == "success"
+    assert dummy.configured_key == "api-key"
+    assert dummy.model_name == "my-model"
+    assert captured["prompt"] == "do things"
+
+
+def test_call_gemini_requires_text(monkeypatch):
+    class DummyModel:
+        def generate_content(self, prompt):  # pragma: no cover - trivial
+            return types.SimpleNamespace(text="")
+
+    class DummyGenAI:
+        def configure(self, *_args, **_kwargs):
+            pass
+
+        def GenerativeModel(self, *_args, **_kwargs):
+            return DummyModel()
+
+    monkeypatch.setattr(gh, "_resolve_api_key", lambda *_args, **_kwargs: "key")
+
+    with pytest.raises(RuntimeError, match="did not contain any text"):
+        gh.call_gemini("prompt", genai_module=DummyGenAI())
 
 
 def test_harvest_with_gemini_builds_prompt(monkeypatch):
