@@ -110,3 +110,32 @@ def test_harvest_with_gemini_builds_prompt(monkeypatch):
 
     assert result == "{\"result\": []}"
     assert captured["prompt"] == "Run https://harvest.me"
+
+
+def test_load_source_urls_skips_header_and_blank_lines(tmp_path):
+    sources = tmp_path / "sources.csv"
+    sources.write_text("Website\n\nhttps://first.example.com\n  \nhttps://second.example.com  \n", encoding="utf-8")
+
+    urls = gh.load_source_urls(sources)
+
+    assert urls == ["https://first.example.com", "https://second.example.com"]
+
+
+def test_harvest_multiple_calls_each_url(monkeypatch):
+    urls = ["https://one", "https://two"]
+    responses = {
+        "https://one": "{\"result\": 1}",
+        "https://two": "{\"result\": 2}",
+    }
+    calls = []
+
+    def fake_harvest(url: str) -> str:
+        calls.append(url)
+        return responses[url]
+
+    monkeypatch.setattr(gh, "harvest_with_gemini", fake_harvest)
+
+    result = gh.harvest_multiple(urls)
+
+    assert calls == urls
+    assert result == [(url, responses[url]) for url in urls]
