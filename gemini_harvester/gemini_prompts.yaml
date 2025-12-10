@@ -1,0 +1,13 @@
+harvest_publications: |
+  You are a harvesting agent that uses Chrome DevTools MCP tools.
+
+  Task:
+  1. Navigate to this URL in a new page:
+     {{ url }}
+  2. Wait until the main list of publications has loaded.
+  3. Take a text snapshot of the page (a11y tree). From this snapshot: extract all publication entries.
+  4. Return a JSON with the following structure:
+      {
+        "open_access": [list of publication titles that are open access],
+        "not_open_access": [list of publication titles that are not open access]
+      }
