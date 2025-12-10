@@ -2,6 +2,7 @@ import argparse
 import csv
 import json
 import os
+import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
@@ -91,11 +92,43 @@ def _validate_harvest_payload(payload: Any) -> Dict[str, List[str]]:
     }
 
 
+def _parse_json_payload(text: str, *, best_effort: bool) -> Dict[str, List[str]]:
+    try:
+        payload = json.loads(text)
+    except json.JSONDecodeError as exc:
+        if not best_effort:
+            raise RuntimeError("Gemini response was not valid JSON") from exc
+
+        stripped = text.strip()
+        if stripped.startswith("```"):
+            stripped = re.sub(r"^```[a-zA-Z]*\s*", "", stripped)
+            stripped = re.sub(r"```$", "", stripped)
+            try:
+                payload = json.loads(stripped)
+                return _validate_harvest_payload(payload)
+            except json.JSONDecodeError:
+                pass
+
+        match = re.search(r"\{.*\}", text, flags=re.S)
+        if match:
+            try:
+                payload = json.loads(match.group(0))
+            except json.JSONDecodeError:
+                raise RuntimeError(
+                    "Gemini response was not valid JSON even after extracting the first object"
+                ) from exc
+        else:
+            raise RuntimeError("Gemini response did not include a JSON object") from exc
+
+    return _validate_harvest_payload(payload)
+
+
 def call_gemini(
     prompt: str,
     *,
     model: Optional[str] = None,
     genai_module=genai,
+    best_effort: bool = False,
 ) -> Dict[str, List[str]]:
     api_key = _resolve_api_key()
     selected_model = model or os.environ.get("GEMINI_MODEL") or DEFAULT_GEMINI_MODEL
@@ -107,26 +140,39 @@ def call_gemini(
         "response_mime_type": "application/json",
         "response_schema": HARVEST_RESPONSE_SCHEMA,
     }
-    response = chat_model.generate_content(prompt, generation_config=generation_config)
+    try:
+        response = chat_model.generate_content(
+            prompt, generation_config=generation_config
+        )
+    except Exception:
+        if not best_effort:
+            raise
+        # Retry without schema; if that still fails, fall back to a prompt-enforced JSON response.
+        try:
+            response = chat_model.generate_content(
+                prompt, generation_config={"response_mime_type": "application/json"}
+            )
+        except Exception:
+            fallback_prompt = (
+                prompt
+                + "\n\nReturn ONLY a JSON object with keys open_access and not_open_access, "
+                + "each an array of strings. No markdown fences, no prose."
+            )
+            response = chat_model.generate_content(fallback_prompt)
 
     text = getattr(response, "text", "")
     if not text:
         raise RuntimeError("Gemini response did not contain any text output")
 
-    try:
-        payload = json.loads(text)
-    except json.JSONDecodeError as exc:  # pragma: no cover - defensive
-        raise RuntimeError("Gemini response was not valid JSON") from exc
-
-    return _validate_harvest_payload(payload)
+    return _parse_json_payload(text, best_effort=best_effort)
 
 
-def harvest_with_gemini(url: str) -> Dict[str, List[str]]:
+def harvest_with_gemini(url: str, *, best_effort: bool = False) -> Dict[str, List[str]]:
     prompts = load_prompts()
     template = prompts["harvest_publications"]
     prompt = build_prompt(template, url)
     print("Building better worlds...")
-    return call_gemini(prompt)
+    return call_gemini(prompt, best_effort=best_effort)
 
 
 def load_source_urls(csv_path: Path) -> List[str]:
@@ -145,10 +191,12 @@ def load_source_urls(csv_path: Path) -> List[str]:
     return urls
 
 
-def harvest_multiple(urls: Sequence[str]) -> List[Tuple[str, Dict[str, List[str]]]]:
+def harvest_multiple(
+    urls: Sequence[str], *, best_effort: bool = False
+) -> List[Tuple[str, Dict[str, List[str]]]]:
     results: List[Tuple[str, Dict[str, List[str]]]] = []
     for url in urls:
-        payload = harvest_with_gemini(url)
+        payload = harvest_with_gemini(url, best_effort=best_effort)
         results.append((url, payload))
     return results
 
@@ -173,6 +221,11 @@ def main():
         default=1,
         help="Number of sources to process from the CSV when no URL is provided",
     )
+    parser.add_argument(
+        "--best-effort-json",
+        action="store_true",
+        help="When set, attempts to recover JSON from non-conforming Gemini responses",
+    )
     args = parser.parse_args()
 
     if args.url:
@@ -189,7 +242,7 @@ def main():
     if args.output and len(urls_to_process) > 1:
         parser.error("--output may only be used when harvesting a single URL")
 
-    results = harvest_multiple(urls_to_process)
+    results = harvest_multiple(urls_to_process, best_effort=args.best_effort_json)
 
     for url, data in results:
         rendered = json.dumps(data, ensure_ascii=False, indent=2)
