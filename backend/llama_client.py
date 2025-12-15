@@ -8,6 +8,7 @@ usable without a running LLM.
 import os
 import subprocess
 import time
+import logging
 from typing import Any, Dict, List, Optional
 
 import numpy as np
@@ -22,6 +23,10 @@ REQUEST_TIMEOUT = float(os.environ.get("LLAMA_REQUEST_TIMEOUT", "5.0"))
 # Internal process handle for a server started by this adapter (if any)
 _proc: Optional[subprocess.Popen] = None
 
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 
 def _try_post(path: str, json: Dict[str, Any], timeout: float = REQUEST_TIMEOUT) -> Optional[requests.Response]:
     url = LLAMA_URL.rstrip("/") + path
@@ -29,7 +34,8 @@ def _try_post(path: str, json: Dict[str, Any], timeout: float = REQUEST_TIMEOUT)
         resp = requests.post(url, json=json, timeout=timeout)
         if resp.status_code == 200:
             return resp
-    except requests.RequestException:
+    except requests.RequestException as e:
+        logger.warning(f"Request to {url} failed: {e}")
         return None
     return None
 
@@ -73,10 +79,14 @@ def start_server(cmd: List[str], cwd: Optional[str] = None) -> Dict[str, Any]:
         return {"running": True, "pid": _proc.pid, "started": False}
 
     # Start the process
-    _proc = subprocess.Popen(cmd, cwd=cwd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    # give it a short moment to start
-    time.sleep(0.5)
-    return {"running": _proc.poll() is None, "pid": _proc.pid if _proc else None, "started": True}
+    try:
+        _proc = subprocess.Popen(cmd, cwd=cwd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        # give it a short moment to start
+        time.sleep(0.5)
+        return {"running": _proc.poll() is None, "pid": _proc.pid if _proc else None, "started": True}
+    except (FileNotFoundError, OSError) as e:
+        _proc = None
+        return {"running": False, "pid": None, "started": False, "error": str(e)}
 
 
 def stop_server() -> Dict[str, Any]:
@@ -123,10 +133,12 @@ def embed(text: str) -> np.ndarray:
                         first = data["data"][0]
                         if isinstance(first, dict) and "embedding" in first:
                             return np.array(first["embedding"], dtype=float)
-            except Exception:
+            except Exception as e:
+                logger.warning(f"Failed to parse embedding response: {e}")
                 continue
 
     # fallback
+    logger.warning("Llama server unavailable, falling back to deterministic embedder.")
     return text_to_embedding(text)
 
 
@@ -170,9 +182,11 @@ def completion(prompt: str, n_predict: int = 128, temperature: float = 0.7) -> s
                 # If response is plain text
                 if resp.text:
                     return resp.text.strip()
-            except Exception:
+            except Exception as e:
+                logger.warning(f"Failed to parse completion response: {e}")
                 continue
 
     # Final fallback: short deterministic echo-style reply
     summary = prompt.strip().replace('\n', ' ')[:120]
+    logger.warning("Llama server unavailable, falling back to mock completion.")
     return f"Tomo: I heard '{summary}'. (model unavailable)"
