@@ -12,7 +12,8 @@ from typing import Any, Dict, List, Optional
 from fastapi.staticfiles import StaticFiles
 
 import numpy as np
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
 from .embedder import EMBED_DIM, text_to_embedding, vec_to_pgvector_literal
@@ -39,6 +40,15 @@ class SearchRequest(BaseModel):
 
 app = FastAPI(title="tomo-poc-backend")
 
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    # For debugging, you might want to log the exception here
+    print(f"Unhandled exception: {exc}")
+    return JSONResponse(
+        status_code=500,
+        content={"message": "An internal server error occurred."},
+    )
+
 @app.on_event("startup")
 def startup():
     # Run migrations automatically for PoC
@@ -56,44 +66,54 @@ def health() -> Dict[str, str]:
 
 @app.post("/talk", response_model=TalkResponse)
 def talk(req: TalkRequest) -> TalkResponse:
-    if not req.text:
-        raise HTTPException(status_code=400, detail="text is required")
-
-    # Try to get an embedding from a local model; fallback to deterministic embedder
     try:
-        emb = llama_embed(req.text)
-    except Exception:
-        emb = text_to_embedding(req.text)
+        if not req.text:
+            raise HTTPException(status_code=400, detail="text is required")
 
-    if emb.shape[0] != EMBED_DIM:
-        # If dims don't match, coerce/truncate/pad to EMBED_DIM
-        arr = np.asarray(emb, dtype=float)
-        if arr.size > EMBED_DIM:
-            emb = arr[:EMBED_DIM]
-        else:
-            # pad with zeros
-            emb = np.concatenate([arr, np.zeros(EMBED_DIM - arr.size, dtype=float)])
+        # Try to get an embedding from a local model; fallback to deterministic embedder
+        try:
+            emb = llama_embed(req.text)
+        except Exception:
+            emb = text_to_embedding(req.text)
 
-    emb_literal = vec_to_pgvector_literal(emb)
-    # persist memory (simple category 'interaction')
-    row = insert_memory(req.pet_id, req.text, emb_literal, category="interaction")
+        if emb.shape[0] != EMBED_DIM:
+            # If dims don't match, coerce/truncate/pad to EMBED_DIM
+            arr = np.asarray(emb, dtype=float)
+            if arr.size > EMBED_DIM:
+                emb = arr[:EMBED_DIM]
+            else:
+                # pad with zeros
+                emb = np.concatenate([arr, np.zeros(EMBED_DIM - arr.size, dtype=float)])
 
-    # Try to get a completion from local llama server; fallback to deterministic echo
-    try:
-        reply = llama_completion(req.text)
-    except Exception:
-        summary = req.text.strip().replace('\n', ' ')[:120]
-        reply = f"Tomo: I heard '{summary}'. Thanks for sharing!"
+        emb_literal = vec_to_pgvector_literal(emb)
+        # persist memory (simple category 'interaction')
+        row = insert_memory(req.pet_id, req.text, emb_literal, category="interaction")
 
-    return TalkResponse(reply=reply, memory_id=row.get("id"))
+        # Try to get a completion from local llama server; fallback to deterministic echo
+        try:
+            reply = llama_completion(req.text)
+        except Exception:
+            summary = req.text.strip().replace('\n', ' ')[:120]
+            reply = f"Tomo: I heard '{summary}'. Thanks for sharing!"
+
+        return TalkResponse(reply=reply, memory_id=row.get("id"))
+    except HTTPException as http_exc:
+        raise http_exc
+    except Exception as exc:
+        print(f"An unexpected error occurred in /talk: {exc}")
+        raise HTTPException(status_code=500, detail="An internal server error occurred.")
 
 
 @app.post("/memories/search")
 def memories_search(req: SearchRequest) -> List[Dict[str, Any]]:
-    emb = text_to_embedding(req.text)
-    emb_literal = vec_to_pgvector_literal(emb)
-    rows = search_memories(emb_literal, pet_id=req.pet_id, k=req.k or 5)
-    return rows
+    try:
+        emb = text_to_embedding(req.text)
+        emb_literal = vec_to_pgvector_literal(emb)
+        rows = search_memories(emb_literal, pet_id=req.pet_id, k=req.k or 5)
+        return rows
+    except Exception as exc:
+        print(f"An unexpected error occurred in /memories/search: {exc}")
+        raise HTTPException(status_code=500, detail="An internal server error occurred.")
 
 
 class ModelStartRequest(BaseModel):
