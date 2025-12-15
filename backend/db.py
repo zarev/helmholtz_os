@@ -11,22 +11,32 @@ from psycopg2.extras import RealDictCursor
 
 MIGRATION_PATH = os.path.join(os.path.dirname(__file__), "migrations", "001_init.sql")
 
+class DBError(Exception):
+    """Custom exception for database-related errors."""
+    pass
+
 
 def get_conn() -> psycopg2.extensions.connection:
     dsn = os.environ.get("DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/tomo")
-    return psycopg2.connect(dsn)
+    try:
+        return psycopg2.connect(dsn)
+    except psycopg2.Error as e:
+        raise DBError(f"Database connection error: {e}") from e
 
 
 def run_migrations() -> None:
-    with open(MIGRATION_PATH, "r", encoding="utf-8") as fh:
-        sql = fh.read()
-    conn = get_conn()
     try:
-        with conn:
-            with conn.cursor() as cur:
-                cur.execute(sql)
-    finally:
-        conn.close()
+        with open(MIGRATION_PATH, "r", encoding="utf-8") as fh:
+            sql = fh.read()
+        conn = get_conn()
+        try:
+            with conn:
+                with conn.cursor() as cur:
+                    cur.execute(sql)
+        finally:
+            conn.close()
+    except (psycopg2.Error, IOError) as e:
+        raise DBError(f"Migration failed: {e}") from e
 
 
 def insert_memory(pet_id: Optional[str], content: str, embedding_literal: str, category: Optional[str] = None,
@@ -48,7 +58,11 @@ def insert_memory(pet_id: Optional[str], content: str, embedding_literal: str, c
                     (pet_id, embedding_literal, content, category, importance),
                 )
                 row = cur.fetchone()
+                if row is None:
+                    raise DBError("Insert failed, no row returned.")
                 return dict(row)
+    except psycopg2.Error as e:
+        raise DBError(f"Insert failed: {e}") from e
     finally:
         conn.close()
 
@@ -87,5 +101,7 @@ def search_memories(embedding_literal: str, pet_id: Optional[str] = None, k: int
                     )
                 rows = cur.fetchall()
                 return [dict(r) for r in rows]
+    except psycopg2.Error as e:
+        raise DBError(f"Search failed: {e}") from e
     finally:
         conn.close()
