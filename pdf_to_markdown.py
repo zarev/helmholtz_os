@@ -8,6 +8,7 @@ in a dedicated directory.
 from __future__ import annotations
 
 import os
+import sys
 import time
 from pathlib import Path
 from typing import List
@@ -35,8 +36,10 @@ def split_pdf_to_images(
     converter=convert_from_path,
 ) -> List[Image.Image]:
     """Split a PDF into images using the provided DPI."""
-
-    return converter(pdf_path, dpi=dpi)
+    try:
+        return converter(pdf_path, dpi=dpi)
+    except Exception as e:
+        raise RuntimeError(f"Failed to split PDF: {e}") from e
 
 
 def extract_markdown_from_pages(
@@ -51,7 +54,6 @@ def extract_markdown_from_pages(
     model=None,
 ) -> List[str]:
     """Process each page image through Gemini and return Markdown snippets."""
-
     if model is None:
         genai_module.configure(api_key=api_key)
         model = genai_module.GenerativeModel(model_name)
@@ -63,7 +65,12 @@ def extract_markdown_from_pages(
         img_name = f"page_{i + 1}.jpg"
         img_path = os.path.join(images_dir, img_name)
 
-        page.save(img_path, "JPEG", quality=image_quality)
+        try:
+            page.save(img_path, "JPEG", quality=image_quality)
+        except OSError as e:
+            print(f"Error saving image for page {i + 1}: {e}")
+            results.append(f"\n<!-- Page {i + 1} failed to save image -->\n")
+            continue
 
         for attempt in range(retry_limit):
             try:
@@ -89,9 +96,11 @@ def extract_markdown_from_pages(
 def save_markdown(snippets: List[str], output_path: str = OUTPUT_MD) -> None:
     """Save the combined Markdown output to disk."""
     markdown_output = "\n\n---\n\n".join(snippets)
-    with open(output_path, "w", encoding="utf-8") as output_file:
-        output_file.write(markdown_output)
-
+    try:
+        with open(output_path, "w", encoding="utf-8") as output_file:
+            output_file.write(markdown_output)
+    except IOError as e:
+        raise RuntimeError(f"Failed to save Markdown file: {e}") from e
 
 
 def main() -> None:
