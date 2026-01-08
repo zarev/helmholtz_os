@@ -7,8 +7,10 @@ harvest_publications: |
   2. Wait until the main list of publications has loaded.
   3. Take a text snapshot of the page (a11y tree).
   4. From this snapshot: extract all publication entries.
-  4. On the basis of the snapshot information, decide what publications are **open access** and **not open access**.
-  5. Insert your findings (only publication titles) into the following JSON object strictly preserving its structure:
+  5. On the basis of the snapshot information, decide what publications are definitely **open access**.
+  6. If you are not sure, then classify the paper as **not open access**.
+  7. Choose up to 5 open access and up to 5 not open access publications.
+  8. Insert your choice (only publication titles) into the following JSON object strictly preserving its structure:
       {{ HARVEST_RESPONSE_SCHEMA }}
-    
-    Do not explain. Do not add prose. Just return a JSON object.
+
+  Don't make any comments on you actions. Just return only the JSON object.
