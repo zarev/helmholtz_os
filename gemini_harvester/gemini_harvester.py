@@ -178,8 +178,7 @@ def call_gemini_cli(
             response = proc.stdout
 
     #text = getattr(response, "text", "")
-    
-    print(response)
+
     text = response
     if not text:
         raise RuntimeError("Gemini response did not contain any text output")
@@ -247,7 +246,6 @@ def main():
         help="When set, attempts to recover JSON from non-conforming Gemini responses",
     )
     args = parser.parse_args()
-    import ipdb; ipdb.set_trace()
 
     if args.url:
         urls_to_process: List[str] = [args.url]
