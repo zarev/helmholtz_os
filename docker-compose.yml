@@ -11,5 +11,18 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
 
+  ros2:
+    image: ros:humble-ros-base
+    container_name: ros2
+    # Mount the local workspace so you can build/run packages from the repo
+    volumes:
+      - ./ros2_ws:/root/ros2_ws:rw
+    working_dir: /root/ros2_ws
+    network_mode: host
+    tty: true
+    stdin_open: true
+    # Start an interactive shell with ROS environment sourced; build/run manually inside
+    command: bash -lc "source /opt/ros/humble/setup.bash && bash"
+
 volumes:
   db-data:
