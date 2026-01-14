@@ -19,8 +19,6 @@ import subprocess
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = PROJECT_ROOT / "gemini_harvester" / "gemini_prompts.yaml"
-#GEMINI_CONFIG_PATH = Path.home() / ".config" / "gemini-cli.toml"
-#DEFAULT_GEMINI_MODEL = "models/gemini-pro-latest"
 DEFAULT_SOURCES_CSV = PROJECT_ROOT / "data" / "sources.csv"
 HARVEST_RESPONSE_SCHEMA: Dict[str, Any] = {
     "type": "object",
@@ -36,41 +34,10 @@ def load_prompts():
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
-
 def build_prompt(template: str, url: str) -> str:
     template = template.replace("{{ url }}", url)
     template = template.replace("{{ HARVEST_RESPONSE_SCHEMA }}", json.dumps(HARVEST_RESPONSE_SCHEMA, indent=2))
     return template
-
-
-# def _load_cli_token(config_path: Path = GEMINI_CONFIG_PATH) -> Optional[str]:
-#     if not config_path.exists():
-#         return None
-
-#     try:
-#         data = tomllib.loads(config_path.read_text(encoding="utf-8"))
-#     except (OSError, tomllib.TOMLDecodeError):
-#         return None
-
-#     token = data.get("token")
-#     return token if isinstance(token, str) and token.strip() else None
-
-
-# def _resolve_api_key(config_path: Path = GEMINI_CONFIG_PATH) -> str:
-#     for env_var in ("GEMINI_API_KEY", "GOOGLE_API_KEY"):
-#         value = os.environ.get(env_var)
-#         if value:
-#             return value
-
-#     token = _load_cli_token(config_path)
-#     if token:
-#         return token
-
-#     raise RuntimeError(
-#         "Gemini API key not found. Set GEMINI_API_KEY/GOOGLE_API_KEY or add a token to "
-#         f"{config_path}."
-#     )
-
 
 def _validate_harvest_payload(payload: Any) -> Dict[str, List[str]]:
     if not isinstance(payload, dict):
@@ -128,26 +95,10 @@ def _parse_json_payload(text: str, *, best_effort: bool) -> Dict[str, List[str]]
 
 def call_gemini_cli(
     prompt: str,
-    #*,
-    #model: Optional[str] = None,
-    #genai_module=genai,
     best_effort: bool = False,
 ) -> Dict[str, List[str]]:
     """ Call the gemini CLI with the prompt. """
-    #api_key = _resolve_api_key()
-    #selected_model = model or os.environ.get("GEMINI_MODEL") or DEFAULT_GEMINI_MODEL
-
-    # Configure the SDK once per call to keep the function stateless.
-    #genai_module.configure(api_key=api_key)
-    #chat_model = genai_module.GenerativeModel(selected_model)
-    #generation_config = {
-     #   "response_mime_type": "application/json",
-     #   "response_schema": HARVEST_RESPONSE_SCHEMA,
-    #}
     try:
-        #response = chat_model.generate_content(
-        #    prompt, generation_config=generation_config
-        #)
         proc = subprocess.run( ["gemini"], input=prompt, text=True, capture_output=True, check=False )
         if proc.returncode != 0:
             raise RuntimeError(proc.stderr)
@@ -156,11 +107,7 @@ def call_gemini_cli(
     except Exception:
         if not best_effort:
             raise
-        # Retry without schema; if that still fails, fall back to a prompt-enforced JSON response.
         try:
-            #response = chat_model.generate_content(
-            #    prompt, generation_config={"response_mime_type": "application/json"}
-            #)
             proc = subprocess.run( ["gemini"], input=fallback_prompt, text=True, capture_output=True, check=False )
             if proc.returncode != 0:
                 raise RuntimeError(proc.stderr)
@@ -171,13 +118,10 @@ def call_gemini_cli(
                 + "\n\nReturn ONLY a JSON object with keys open_access and not_open_access, "
                 + "each an array of strings. No markdown fences, no prose."
             )
-            #response = chat_model.generate_content(fallback_prompt)
             proc = subprocess.run( ["gemini"], input=fallback_prompt, text=True, capture_output=True, check=False )
             if proc.returncode != 0:
                 raise RuntimeError(proc.stderr)
             response = proc.stdout
-
-    #text = getattr(response, "text", "")
 
     text = response
     if not text:
