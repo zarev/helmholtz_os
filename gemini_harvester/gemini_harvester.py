@@ -148,7 +148,7 @@ def call_gemini_cli(
         #response = chat_model.generate_content(
         #    prompt, generation_config=generation_config
         #)
-        proc = subprocess.run( ["gemini", "--model", "gemini-2.5-flash"], input=prompt, text=True, capture_output=True, check=False )
+        proc = subprocess.run( ["gemini"], input=prompt, text=True, capture_output=True, check=False )
         if proc.returncode != 0:
             raise RuntimeError(proc.stderr)
         response = proc.stdout.strip()
@@ -161,7 +161,7 @@ def call_gemini_cli(
             #response = chat_model.generate_content(
             #    prompt, generation_config={"response_mime_type": "application/json"}
             #)
-            proc = subprocess.run( ["gemini", "--model", "gemini-2.5-flash"], input=fallback_prompt, text=True, capture_output=True, check=False )
+            proc = subprocess.run( ["gemini"], input=fallback_prompt, text=True, capture_output=True, check=False )
             if proc.returncode != 0:
                 raise RuntimeError(proc.stderr)
             response = proc.stdout
@@ -172,7 +172,7 @@ def call_gemini_cli(
                 + "each an array of strings. No markdown fences, no prose."
             )
             #response = chat_model.generate_content(fallback_prompt)
-            proc = subprocess.run( ["gemini", "--model", "gemini-2.5-flash"], input=fallback_prompt, text=True, capture_output=True, check=False )
+            proc = subprocess.run( ["gemini"], input=fallback_prompt, text=True, capture_output=True, check=False )
             if proc.returncode != 0:
                 raise RuntimeError(proc.stderr)
             response = proc.stdout
