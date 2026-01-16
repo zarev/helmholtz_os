@@ -1,0 +1,38 @@
+{
+  "name": "helmholtz-os-ros2",
+  "privileged": true,
+  "remoteUser": "ros",
+  "workspaceFolder": "/workspaces/helmholtz_os",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/helmholtz_os,type=bind",
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile",
+    "args": {
+      "USERNAME": "ros",
+      "USER_UID": "1000",
+      "ROS_DISTRO": "jazzy"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-iot.vscode-ros",
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-themes",
+        "twxs.cmake",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "eamodio.gitlens"
+      ]
+    }
+  },
+  "containerEnv": {
+    "ROS_DOMAIN_ID": "42",
+    "ROS_AUTOMATIC_DISCOVERY_RANGE": "LOCALHOST"
+  },
+  "runArgs": [
+    "--net=host",
+    "--ipc=host"
+  ],
+  "postCreateCommand": "sudo rosdep init 2>/dev/null || true; rosdep update || true; cd /workspaces/helmholtz_os/ros2_ws && rosdep install --from-paths src --ignore-src -y || true; colcon build --symlink-install"
+}
