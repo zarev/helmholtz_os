@@ -1,6 +1,7 @@
 # Environment variable files
 .env
 .env.local
+.idea/
 
 # Python artifacts
 __pycache__/
@@ -15,3 +16,10 @@ __pycache__/
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Rose build files
+build/
+install/
+log/
+
+ros2_ws/ 
