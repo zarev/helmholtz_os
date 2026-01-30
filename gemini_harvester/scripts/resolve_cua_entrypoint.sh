@@ -16,8 +16,11 @@ fi
 # shellcheck disable=SC1091
 . .venv/bin/activate
 
-python -m cua.mcp.server --help || true
-python -m cua.mcp --help || true
-python -m cua --help || true
+python -m mcp_server --help 2>&1 | head -5 || true
+python -m cua.mcp.server --help 2>&1 | head -5 || true
+python -m cua.mcp --help 2>&1 | head -5 || true
+python -m cua --help 2>&1 | head -5 || true
 
-python -c "import cua, pkgutil; print([m.name for m in pkgutil.iter_modules(cua.__path__)])"
+echo ""
+echo "Available MCP server submodules:"
+python -c "import mcp_server, pkgutil; print([m.name for m in pkgutil.iter_modules(mcp_server.__path__)])" 2>/dev/null || echo "Could not list mcp_server submodules"

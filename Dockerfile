@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
@@ -12,6 +12,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
     poppler-utils \
     nodejs \
     npm \
+    libpq-dev \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace/helmholtz_os
@@ -30,7 +31,7 @@ WORKDIR /opt/cua
 RUN python -m venv .venv \
  && . .venv/bin/activate \
  && pip install -U pip \
- && pip install -e .
+ && pip install -e libs/python/mcp-server
 
 WORKDIR /workspace/helmholtz_os
 COPY . .
