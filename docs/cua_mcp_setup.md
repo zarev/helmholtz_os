@@ -31,7 +31,7 @@ Gemini CLI reads MCP server config from a settings file. This repository already
   "mcpServers": {
     "cua": {
       "command": "/opt/cua/.venv/bin/python",
-      "args": ["-m", "cua.mcp.server"],
+      "args": ["-m", "mcp_server"],
       "cwd": "/opt/cua",
       "timeout": 600000,
       "trust": false
