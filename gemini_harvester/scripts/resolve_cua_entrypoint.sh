@@ -22,5 +22,5 @@ python -m cua.mcp --help 2>&1 | head -5 || true
 python -m cua --help 2>&1 | head -5 || true
 
 echo ""
-echo "Available CUA submodules:"
-python -c "import cua_mcp_server, pkgutil; print([m.name for m in pkgutil.iter_modules(cua_mcp_server.__path__)])" 2>/dev/null || echo "Could not list cua_mcp_server submodules"
+echo "Available MCP server submodules:"
+python -c "import mcp_server, pkgutil; print([m.name for m in pkgutil.iter_modules(mcp_server.__path__)])" 2>/dev/null || echo "Could not list mcp_server submodules"
