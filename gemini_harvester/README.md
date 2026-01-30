@@ -23,3 +23,6 @@ python gemini_harvester.py https://www.maxiv.lu.se/science/publications/
 
 ### Important Notes
 Since the harvester relies on an LLM for document identification and classification, all extracted information should be reviewed and validated before use.
+
+### CUA MCP integration
+To enable the CUA MCP server in the same container image as Gemini CLI, follow the setup guide in `docs/cua_mcp_setup.md`, then verify that the `cua` MCP server appears inside Gemini CLI.

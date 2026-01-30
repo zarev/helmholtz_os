@@ -16,6 +16,13 @@
       "command": "npx",
       "args": ["-y", "chrome-devtools-mcp@latest"],
       "trust": true
+    },
+    "cua": {
+      "command": "/opt/cua/.venv/bin/python",
+      "args": ["-m", "cua.mcp.server"],
+      "cwd": "/opt/cua",
+      "timeout": 600000,
+      "trust": false
     }
   }
 }
