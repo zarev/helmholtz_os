@@ -17,7 +17,7 @@ The compose file already defines an `app` service for the FastAPI backend and a 
 Once the image is built and running, resolve the MCP entrypoint. You can use the helper script in this repo:
 
 ```bash
-docker-compose run --rm gemini ./gemini_harvester/scripts/resolve_cua_entrypoint.sh
+docker-compose run --rm gemini ./scripts/resolve_cua_entrypoint.sh
 ```
 
 The script tries the common modules and then prints the available CUA submodules. Use the first module that responds to `--help` as the MCP entrypoint.
