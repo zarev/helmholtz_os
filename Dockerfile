@@ -27,13 +27,12 @@ WORKDIR /opt
 RUN git clone https://github.com/trycua/cua.git
 
 WORKDIR /opt/cua
-RUN python -m venv .venv \
- && . .venv/bin/activate \
- && pip install -U pip \
+RUN pip install -U pip \
  && pip install -e .
 
 WORKDIR /workspace/helmholtz_os
 COPY . .
 
+COPY . .
 EXPOSE 8000
 CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
