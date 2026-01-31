@@ -1,5 +1,18 @@
 version: '3.8'
 services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /workspace/helmholtz_os
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/tomo
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/workspace/helmholtz_os
+    depends_on:
+      - db
   db:
     image: ankane/pgvector:latest
     environment:
@@ -10,6 +23,18 @@ services:
       - "5432:5432"
     volumes:
       - db-data:/var/lib/postgresql/data
+  gemini:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /workspace/helmholtz_os/gemini_harvester
+    command: ["gemini"]
+    stdin_open: true
+    tty: true
+    environment:
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+    volumes:
+      - .:/workspace/helmholtz_os
 
 volumes:
   db-data:
