@@ -155,6 +155,42 @@ If npm start fails, double-check:
 
 
 
+\## 2.1. Running computer-use-mcp with Docker (Ubuntu + X11)
+
+
+
+The repository includes a Docker Compose service that runs the domdomegg/computer-use-mcp MCP server. This server uses nut.js to control the desktop, so it must connect to a real X11 display session.
+
+
+
+1. On the Ubuntu host, allow local Docker containers to use your X server (quick-and-dirty for testing):
+
+
+
+xhost +local:
+
+
+
+2. Start the service with Docker Compose (from the repository root):
+
+
+
+docker compose up --build computer-use-mcp
+
+
+
+3. The service expects the host X11 socket and DISPLAY variable. The compose file mounts `/tmp/.X11-unix` and passes `DISPLAY` through automatically.
+
+
+
+If you are on Wayland-only, log into an “Ubuntu on Xorg” session first so X11 socket sharing works.
+
+
+
+---
+
+
+
 \## 3. Connecting from Gemini CLI
 
 
@@ -197,6 +233,26 @@ The general pattern is:
 
 Once configured, you should see MCP-related tools listed or be able to call them according to the Gemini CLI documentation.
 
+
+
+For computer-use-mcp, configure Gemini CLI to launch the server over stdio. In your `.gemini/settings.json` (inside the container or environment where Gemini CLI runs):
+
+
+
+{
+  "mcpServers": {
+    "computer-use": {
+      "command": "npx",
+      "args": ["-y", "computer-use-mcp"],
+      "timeout": 600000,
+      "trust": false
+    }
+  }
+}
+
+
+
+The computer-use-mcp container also ensures this settings file exists during startup if it is missing.
 
 
 ---
@@ -284,6 +340,3 @@ This MCP example is a small building block for the larger Helmholtz OS / “Moxy
 
 
 This document is intended as a contributor-level guide: once you can run this MCP example and connect it from Gemini CLI, you have a working baseline for experimenting with more advanced MCP-based agents in this repository.
-
-
-
