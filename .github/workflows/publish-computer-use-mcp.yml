@@ -1,0 +1,36 @@
+name: Publish computer-use-mcp image
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "docker/computer-use-mcp/**"
+      - ".github/workflows/publish-computer-use-mcp.yml"
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/computer-use-mcp/Dockerfile
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/computer-use-mcp:latest
+            ghcr.io/${{ github.repository_owner }}/computer-use-mcp:${{ github.sha }}
