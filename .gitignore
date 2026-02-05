@@ -15,3 +15,11 @@ __pycache__/
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# ROS 2 build artifacts
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# IDE specific files
+.idea/
