@@ -1,7 +1,29 @@
 version: '3.8'
 services:
+  desktop:
+    image: elestio/ubuntu_desktop:${SOFTWARE_VERSION_TAG}
+    restart: always
+    dns:
+      - 8.8.8.8
+    ports:
+      - "172.17.0.1:6901:6901"
+      - "172.17.0.1:4901:4901"
+    volumes:
+      - /data:/home/kasm-user
+      - ./scripts/vnc_startup.sh:/dockerstartup/vnc_startup.sh
+      - ./data-src/jsmpeg:/dockerstartup/jsmpeg
+      - ./data-src/jsmpeg/injectaudio.js:/usr/share/kasmvnc/www/dist/style.bundle.js
+      - ./data-src/jsmpeg/jsmpeg.min.js:/usr/share/kasmvnc/www/dist/jsmpeg.min.js
+      - ./data-src/jsmpeg/audio.html:/usr/share/kasmvnc/www/dist/audio.html
+      # Share the X socket directory so another container can draw on the desktop
+      - x11-sock:/tmp/.X11-unix
+    shm_size: "512m"
+    environment:
+      VNC_USER: ${ADMIN_LOGIN}
+      VNC_PW: ${ADMIN_PASSWORD}
   db:
     image: ankane/pgvector:latest
+    restart: unless-stopped
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
@@ -43,3 +65,4 @@ services:
 
 volumes:
   db-data:
+  x11-sock:
