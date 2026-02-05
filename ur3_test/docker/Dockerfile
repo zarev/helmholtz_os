@@ -51,7 +51,8 @@ RUN git clone --branch ${REPO_BRANCH} --depth 1 ${REPO_URL} ur3_pick_place
 RUN git clone --branch ros2 --depth 1 https://github.com/moveit/py_binding_tools.git && \
     git clone --branch ros2 --depth 1 https://github.com/ros-planning/warehouse_ros.git && \
     git clone --branch ros2 --depth 1 https://github.com/moveit/moveit_visual_tools.git && \
-    git clone --branch ros2 --depth 1 https://github.com/PickNikRobotics/rviz_visual_tools.git
+    git clone --branch ros2 --depth 1 https://github.com/PickNikRobotics/rviz_visual_tools.git && \
+    git clone --branch ros2 --depth 1 https://github.com/PickNikRobotics/graph_msgs.git
 
 WORKDIR ${WS}
 
@@ -65,7 +66,6 @@ moveit_planners moveit_configs_utils \
 moveit_resources_panda_moveit_config moveit_resources_fanuc_moveit_config \
 moveit_ros_warehouse warehouse_ros warehouse_ros_sqlite \
 pcl_ros py_binding_tools \
-graph_msgs \
 gz_ros2_control_demos \
 libmongoclient-dev liburdfdom-tools joint_state_publisher_gui"
 
@@ -77,6 +77,6 @@ RUN echo "source /opt/ros/jazzy/setup.bash" >> /etc/bash.bashrc && \
 WORKDIR /ws
 CMD ["bash"]
 
-RUN export MAKEFLAGS="-j1" && \
+RUN export MAKEFLAGS="-j0" && \
     source /opt/ros/jazzy/setup.bash && \
-    colcon build --symlink-install --parallel-workers 1
+    colcon build --symlink-install
