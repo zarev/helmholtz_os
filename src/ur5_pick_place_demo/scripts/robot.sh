@@ -12,4 +12,5 @@ fi
 source /ws/install/setup.bash
 
 # UR5e simulation
-ros2 launch ur_simulation_gz ur_sim_control.launch.py ur_type:=ur5e
+ros2 launch ur_simulation_gz ur_sim_control.launch.py ur_type:=ur5e \
+  world_file:=/ws/src/ur5_pick_place_demo/worlds/pick_place.sdf \

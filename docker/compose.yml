@@ -1,20 +1,26 @@
 services:
   ur5_sim:
     build:
-        context: ..
-        dockerfile: docker/Dockerfile
+      context: ..
+      dockerfile: docker/Dockerfile
+      args:
+        USER_ID: ${USER_ID}
+        GROUP_ID: ${GROUP_ID}
+        USERNAME: ubuntu
+
     image: ur5_ros2_pick_place:jazzy
     container_name: ur5_sim
 
-    user: "${UID}:${GID}"
-
     network_mode: host
+
     environment:
-      - DISPLAY=${DISPLAY}
-      - QT_X11_NO_MITSHM=1
-      - ROS_DOMAIN_ID=0
+      DISPLAY: ${DISPLAY}
+      QT_X11_NO_MITSHM: 1
+      ROS_DOMAIN_ID: 0
+
     volumes:
       - ..:/ws:rw
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
+
     stdin_open: true
     tty: true
