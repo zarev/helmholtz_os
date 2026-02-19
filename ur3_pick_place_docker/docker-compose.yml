@@ -14,6 +14,7 @@ services:
       - IGN_GAZEBO_RESOURCE_PATH=/ws/install/ur_description/share:/ws/install/robotiq_2f_85_gripper_visualization/share:/ws/install
     volumes:
       - ./ws:/ws:rw
+      - ./image.png:/ws/image.png:ro
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - /dev/dri:/dev/dri
     stdin_open: true

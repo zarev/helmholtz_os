@@ -1,20 +1,27 @@
 services:
-  ur3_sim:
+  ur3:
     build:
-      context: .
-      dockerfile: docker/Dockerfile
-    image: ur3_pick_place:jazzy
-    container_name: ur3_sim_test
+      context: ./docker
+      dockerfile: Dockerfile
     network_mode: host
     ipc: host
     environment:
       - DISPLAY=${DISPLAY}
       - QT_X11_NO_MITSHM=1
       - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
+      - USER_ID=${USER_ID:-1000}
+      - GROUP_ID=${GROUP_ID:-1000}
+      - XAUTHORITY=/tmp/.Xauthority
       - GZ_SIM_RESOURCE_PATH=/ws/install/ur_description/share:/ws/install/robotiq_2f_85_gripper_visualization/share:/ws/install
       - IGN_GAZEBO_RESOURCE_PATH=/ws/install/ur_description/share:/ws/install/robotiq_2f_85_gripper_visualization/share:/ws/install
     volumes:
+      - ./ws:/ws:rw
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - /dev/dri:/dev/dri
+    devices:
+      - /dev/dri:/dev/dri
+    group_add:
+      - video
+    shm_size: "2gb"
     stdin_open: true
     tty: true
