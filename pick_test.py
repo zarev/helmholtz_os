@@ -77,6 +77,20 @@ SCAN_OPTIONS = [
 ]
 
 # ---------------------------------------------------------------------------
+# Task options (used in Popup 2)
+# ---------------------------------------------------------------------------
+TASK_DESCRIPTION = (
+    "Battery sample has been successfully grasped.\n\n"
+    "Please select the next task for this sample:"
+)
+
+TASK_OPTIONS = [
+    "🔬  Scan the sample",
+    "📦  Put it away (storage)",
+    "🚚  Remove from system"
+]
+
+# ---------------------------------------------------------------------------
 # Helper: blocking Tk dialog running in its own thread
 # ---------------------------------------------------------------------------
 
@@ -184,9 +198,9 @@ def _agent_popup_1_grasp():
     return bool(choice[0])  # default False if window was closed via X
 
 
-def _agent_popup_2_scan(image_path=None):
+def _agent_popup_3_scan(image_path=None):
     """
-    Popup 2 – Post-place scan analysis.
+    Popup 3 – Post-place scan analysis.
     Shows a fake scan image + CT description and lets the operator
     choose one of four next-step options.
 
@@ -342,9 +356,83 @@ def _agent_popup_2_scan(image_path=None):
     return choice[0]
 
 
-# ---------------------------------------------------------------------------
-# Main ROS 2 node
-# ---------------------------------------------------------------------------
+def _agent_popup_2_task():
+    """
+    Popup 2 – Task selection after successful grasp.
+    Lets the operator choose what to do with the grasped sample.
+
+    Returns the chosen option string (or None if closed without choice).
+    """
+    if tk is None:
+        print("[AGENT] tkinter unavailable – defaulting to 'Scan'")
+        return TASK_OPTIONS[0]
+
+    root = tk.Tk()
+    root.title("🤖 AI Agent – Task Selection")
+    root.resizable(False, False)
+    root.lift()
+    root.attributes("-topmost", True)
+
+    choice = [None]
+
+    BG      = "#0f172a"
+    PANEL   = "#1e293b"
+    ACCENT  = "#fbbf24"
+    FG      = "#e2e8f0"
+    FG_DIM  = "#94a3b8"
+    FONT    = ("Segoe UI", 11)
+    FONT_B  = ("Segoe UI", 11, "bold")
+    FONT_H  = ("Segoe UI", 15, "bold")
+
+    OPTION_COLORS = ["#60a5fa", "#4ade80", "#f87171", "#a78bfa"]
+
+    root.configure(bg=BG)
+
+    def _close_with(value):
+        choice[0] = value
+        root.destroy()
+
+    # ── Header bar ───────────────────────────────────────────────────────────
+    tk.Frame(root, bg=ACCENT, height=6).pack(fill="x")
+
+    body = tk.Frame(root, bg=BG, padx=28, pady=24)
+    body.pack(fill="both", expand=True)
+
+    # Agent badge
+    badge = tk.Frame(body, bg=PANEL, padx=12, pady=8)
+    badge.pack(fill="x", pady=(0, 14))
+    tk.Label(badge, text="🤖  AI INSPECTION AGENT  —  TASK SELECTION",
+             fg=ACCENT, bg=PANEL, font=("Segoe UI", 10, "bold")).pack(anchor="w")
+    tk.Label(badge, text="Sample successfully grasped. Awaiting operator decision.",
+             fg=FG_DIM, bg=PANEL, font=("Segoe UI", 9)).pack(anchor="w")
+
+    # Main message
+    tk.Label(body, text="What is the task needed for this sample?",
+             fg=FG, bg=BG, font=FONT_H).pack(anchor="w", pady=(0, 14))
+
+    tk.Label(body,
+             text=TASK_DESCRIPTION,
+             fg=FG_DIM, bg=BG, font=("Segoe UI", 10), justify="left").pack(anchor="w", pady=8)
+
+    # Divider
+    tk.Frame(body, bg="#334155", height=1).pack(fill="x", pady=12)
+
+    # Task option buttons
+    btn_frame = tk.Frame(body, bg=BG)
+    btn_frame.pack(fill="x", pady=(4, 0))
+
+    for i, opt in enumerate(TASK_OPTIONS):
+        color = OPTION_COLORS[i % len(OPTION_COLORS)]
+        tk.Button(btn_frame, text=opt,
+                  font=FONT_B, bg=color, fg="#0f172a",
+                  activebackground=color,
+                  relief="flat", padx=16, pady=11,
+                  cursor="hand2",
+                  command=lambda o=opt: _close_with(o)
+                  ).pack(side="left", padx=(0, 6), fill="x", expand=True)
+
+    root.mainloop()
+    return choice[0]
 
 class UR3_IK_PickPlace(Node):
     def __init__(self):
@@ -518,6 +606,22 @@ class UR3_IK_PickPlace(Node):
 
     # ── AGENT POPUP 2 ────────────────────────────────────────────────────────
 
+    def _ask_agent_task(self):
+        """
+        Block the robot thread and show Popup 3 (task selection).
+        Returns the chosen task option string.
+        """
+        self.get_logger().info("[AGENT] Showing task-selection popup …")
+        try:
+            result = _run_dialog_thread(_agent_popup_2_task)
+        except Exception as exc:
+            self.get_logger().error(f"[AGENT] Popup error: {exc} — defaulting to SCAN")
+            result = TASK_OPTIONS[0]
+        self.get_logger().info(f"[AGENT] Operator selected task: {result}")
+        return result
+
+    # ── AGENT POPUP 3 ────────────────────────────────────────────────────────
+
     def _ask_agent_scan(self):
         """
         Block the robot thread and show Popup 2 (scan analysis).
@@ -526,7 +630,7 @@ class UR3_IK_PickPlace(Node):
         self.get_logger().info("[AGENT] Showing scan-analysis popup …")
         image_path = self._resolve_scan_image()
         try:
-            result = _run_dialog_thread(_agent_popup_2_scan, image_path)
+            result = _run_dialog_thread(_agent_popup_3_scan, image_path)
         except Exception as exc:
             self.get_logger().error(f"[AGENT] Popup error: {exc}")
             result = None
@@ -581,7 +685,15 @@ class UR3_IK_PickPlace(Node):
             if not should_grasp:
                 # Operator said NO → return home and end loop
                 self.get_logger().info("[AGENT] Abort selected — returning to init")
-                self.gripper_cmd(0.0)
+                # Ensure gripper is closed, then move to the initial (safe) pose
+                try:
+                    self.gripper_cmd(0.0)
+                except Exception:
+                    pass
+                self.get_logger().info("Moving to initial pose")
+                self.move_pose(
+                    self._pose_at(pick_x + 0.1, pick_y, pick_z + pre_z), 3.0
+                )
                 break   # ← exits the while loop entirely
 
             # ── 4. Descend and grasp ─────────────────────────────────────
@@ -610,13 +722,19 @@ class UR3_IK_PickPlace(Node):
                 continue
 
             # ═══════════════════════════════════════════════════════════════
-            # AGENT POPUP 2 — Scan analysis: operator picks next action.
+            # AGENT POPUP 2 — Task selection: operator picks next action.
+            # Robot is stationary here while the popup blocks.
+            # ═══════════════════════════════════════════════════════════════
+            task_choice = self._ask_agent_task()
+            self.get_logger().info(f"[AGENT] Task recorded: {task_choice or '(no choice)'}")
+
+            # ═══════════════════════════════════════════════════════════════
+            # AGENT POPUP 3 — Scan analysis: operator picks next action.
+            # Show scan while the robot still holds the sample (before release).
             # Robot is stationary here while the popup blocks.
             # ═══════════════════════════════════════════════════════════════
             scan_choice = self._ask_agent_scan()
-            self.get_logger().info(
-                f"[AGENT] Action recorded: {scan_choice or '(no choice)'}"
-            )
+            self.get_logger().info(f"[AGENT] Action recorded: {scan_choice or '(no choice)'}")
 
             # In all cases: open gripper and return to a safe home pose.
             self.get_logger().info("Open gripper (release sample)")
