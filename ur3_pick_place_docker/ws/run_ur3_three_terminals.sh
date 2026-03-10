@@ -23,9 +23,10 @@ if [[ -n "$ROS_SETUP" ]]; then
   PREFIX="source \"$ROS_SETUP\" && "
 fi
 
-CMD1='ros2 launch ur_gazebo ur.gazebo.launch.py'
-CMD2='ros2 launch moveit_config move_group.launch.py'
-CMD3='python3 /ws/src/UR3_ROS2_PICK_AND_PLACE/ur_system_tests/scripts/arm_gripper_loop_controller.py'
+UR_TYPE="${UR_TYPE:-ur3}"
+CMD1="ros2 launch ur_simulation_gz ur_sim_moveit.launch.py ur_type:=${UR_TYPE}"
+CMD2='python3 /ws/pick_place_moveit_action.py'
+CMD3='tail -f /tmp/pick_place_moveit_action.log'
 
 SLEEP_BETWEEN="${SLEEP_BETWEEN:-2}"
 

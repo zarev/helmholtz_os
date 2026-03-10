@@ -10,11 +10,13 @@ services:
       - DISPLAY=${DISPLAY}
       - QT_X11_NO_MITSHM=1
       - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
-      - GZ_SIM_RESOURCE_PATH=/ws/install/ur_description/share:/ws/install/robotiq_2f_85_gripper_visualization/share:/ws/install
-      - IGN_GAZEBO_RESOURCE_PATH=/ws/install/ur_description/share:/ws/install/robotiq_2f_85_gripper_visualization/share:/ws/install
+      - UR_TYPE=${UR_TYPE:-ur3}
+      - GZ_SIM_RESOURCE_PATH=/opt/ros/jazzy/share/ur_description:/opt/ros/jazzy/share/robotiq_2f_85_gripper_visualization
+      - IGN_GAZEBO_RESOURCE_PATH=/opt/ros/jazzy/share/ur_description:/opt/ros/jazzy/share/robotiq_2f_85_gripper_visualization
     volumes:
       - ./ws:/ws:rw
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - /dev/dri:/dev/dri
+    command: ["/run_ur3_pick_place.sh"]
     stdin_open: true
     tty: true

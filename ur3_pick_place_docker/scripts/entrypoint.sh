@@ -18,7 +18,8 @@ add_gz_share () {
 
 # Any package referenced via model://<pkg_name>/...
 add_gz_share ur_description
-add_gz_share ur_gazebo
+add_gz_share ur_simulation_gz
 add_gz_share robotiq_2f_85_gripper_visualization
+add_gz_share ur_moveit_config
 
 exec "$@"
