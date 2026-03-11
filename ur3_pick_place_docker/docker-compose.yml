@@ -11,6 +11,8 @@ services:
       - QT_X11_NO_MITSHM=1
       - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
       - UR_TYPE=${UR_TYPE:-ur3}
+      - REQUIRE_GUI=${REQUIRE_GUI:-1}
+      - RUN_PICK_PLACE_CLIENT=${RUN_PICK_PLACE_CLIENT:-1}
       - GZ_SIM_RESOURCE_PATH=/opt/ros/jazzy/share/ur_description:/opt/ros/jazzy/share/robotiq_2f_85_gripper_visualization
       - IGN_GAZEBO_RESOURCE_PATH=/opt/ros/jazzy/share/ur_description:/opt/ros/jazzy/share/robotiq_2f_85_gripper_visualization
     volumes:
@@ -18,5 +20,12 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - /dev/dri:/dev/dri
     command: ["/run_ur3_pick_place.sh"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "bash -lc 'source /opt/ros/jazzy/setup.bash && ros2 action list | grep -q ^/move_action$ && ros2 topic list | grep -q ^/clock$'"]
+      interval: 20s
+      timeout: 10s
+      retries: 6
+      start_period: 60s
     stdin_open: true
     tty: true

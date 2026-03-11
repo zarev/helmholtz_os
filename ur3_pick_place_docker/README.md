@@ -20,6 +20,11 @@ action client at `ws/pick_place_moveit_action.py`.
 - Docker and Docker Compose plugin installed.
 - Linux host with X11 available if you want GUI windows from Gazebo/RViz.
 - Access to Docker daemon (`sudo` may be required on this host).
+- For GUI mode, allow local root X11 access on host:
+
+```bash
+xhost +local:root
+```
 
 ## Build
 
@@ -37,6 +42,8 @@ sudo docker compose build
 
 ## Run
 
+From this directory:
+
 ```bash
 docker compose up
 ```
@@ -47,8 +54,16 @@ With `sudo` if needed:
 sudo docker compose up
 ```
 
+From repository root (recommended for deployment scripts):
+
+```bash
+sudo docker compose -f ur3_pick_place_docker/docker-compose.yml up --build
+```
+
 The service default command is `/run_ur3_pick_place.sh`, which launches the
 simulation stack and then starts the pick and place client.
+
+The service includes a healthcheck that validates `/move_action` and `/clock`.
 
 ## Optional Configuration
 
@@ -62,6 +77,18 @@ UR_TYPE=ur3e docker compose up
 
 ```bash
 ROS_DOMAIN_ID=10 docker compose up
+```
+
+- Keep the simulator up without auto-running the action client:
+
+```bash
+RUN_PICK_PLACE_CLIENT=0 docker compose up
+```
+
+- Skip GUI preflight checks (headless/CI scenarios):
+
+```bash
+REQUIRE_GUI=0 docker compose up
 ```
 
 ## Logs and Verification
@@ -84,10 +111,31 @@ docker exec ur3_sim tail -f /tmp/ur_sim_moveit.log
 docker exec ur3_sim bash -lc 'source /opt/ros/jazzy/setup.bash && ros2 action list | grep /move_action'
 ```
 
+- Verify Gazebo clock is active:
+
+```bash
+docker exec ur3_sim bash -lc 'source /opt/ros/jazzy/setup.bash && timeout 5 ros2 topic echo /clock --once'
+```
+
+- Verify Gazebo and RViz processes:
+
+```bash
+docker exec ur3_sim bash -lc 'ps -ef | grep -E "gz sim|rviz2" | grep -v grep'
+```
+
 Expected client output includes:
 
 - `Waiting for MoveIt action server...`
 - `Connected to MoveIt`
+
+If startup fails, inspect `/tmp/ur_sim_moveit.log` in the container.
+
+Common issue:
+
+- Qt/X11 display errors (`could not connect to display :0`)
+  - Run `xhost +local:root` on the host
+  - Ensure `DISPLAY` is exported on the host
+  - Restart the service
 
 ## Stop
 
