@@ -11,6 +11,7 @@ services:
       - QT_X11_NO_MITSHM=1
       - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
       - UR_TYPE=${UR_TYPE:-ur3}
+      - LAUNCH_RVIZ=${LAUNCH_RVIZ:-0}
       - REQUIRE_GUI=${REQUIRE_GUI:-1}
       - RUN_PICK_PLACE_CLIENT=${RUN_PICK_PLACE_CLIENT:-1}
       - GZ_SIM_RESOURCE_PATH=/opt/ros/jazzy/share/ur_description:/opt/ros/jazzy/share/robotiq_2f_85_gripper_visualization

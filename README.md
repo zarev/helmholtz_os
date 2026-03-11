@@ -25,4 +25,6 @@ sudo docker exec ur3_sim bash -lc 'source /opt/ros/jazzy/setup.bash && timeout 5
 
 If `/move_action` is listed and `/clock` returns a message, MoveIt and Gazebo are running.
 
+By default, RViz GUI is disabled (`LAUNCH_RVIZ=0`) while MoveIt planning remains active.
+
 For full deployment details (GUI prerequisites, healthchecks, optional headless mode), see the UR3 guide.

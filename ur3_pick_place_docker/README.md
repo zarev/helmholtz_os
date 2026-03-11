@@ -11,7 +11,8 @@ action client at `ws/pick_place_moveit_action.py`.
   - `ros-jazzy-ur-simulation-gz`
   - `ros-jazzy-moveit-msgs`
 - Container startup now launches:
-  1. `ros2 launch ur_simulation_gz ur_sim_moveit.launch.py ur_type:=ur3`
+  1. `ros2 launch ur_simulation_gz ur_sim_control.launch.py ur_type:=ur3 launch_rviz:=false`
+  2. `ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur3 use_sim_time:=true launch_rviz:=0`
   2. waits for `/move_action`
   3. runs `python3 /ws/pick_place_moveit_action.py`
 
@@ -79,6 +80,12 @@ UR_TYPE=ur3e docker compose up
 ROS_DOMAIN_ID=10 docker compose up
 ```
 
+- Enable RViz GUI (default is disabled):
+
+```bash
+LAUNCH_RVIZ=1 docker compose up
+```
+
 - Keep the simulator up without auto-running the action client:
 
 ```bash
@@ -99,10 +106,11 @@ REQUIRE_GUI=0 docker compose up
 docker compose logs -f ur3_sim
 ```
 
-- MoveIt/simulation launch log inside container:
+- Simulation and MoveIt launch logs inside container:
 
 ```bash
-docker exec ur3_sim tail -f /tmp/ur_sim_moveit.log
+docker exec ur3_sim tail -f /tmp/ur_sim_control.log
+docker exec ur3_sim tail -f /tmp/ur_moveit.log
 ```
 
 - Verify `/move_action` exists:
@@ -117,7 +125,7 @@ docker exec ur3_sim bash -lc 'source /opt/ros/jazzy/setup.bash && ros2 action li
 docker exec ur3_sim bash -lc 'source /opt/ros/jazzy/setup.bash && timeout 5 ros2 topic echo /clock --once'
 ```
 
-- Verify Gazebo and RViz processes:
+- Verify Gazebo (and optional RViz) processes:
 
 ```bash
 docker exec ur3_sim bash -lc 'ps -ef | grep -E "gz sim|rviz2" | grep -v grep'
@@ -128,7 +136,7 @@ Expected client output includes:
 - `Waiting for MoveIt action server...`
 - `Connected to MoveIt`
 
-If startup fails, inspect `/tmp/ur_sim_moveit.log` in the container.
+If startup fails, inspect `/tmp/ur_sim_control.log` and `/tmp/ur_moveit.log` in the container.
 
 Common issue:
 
