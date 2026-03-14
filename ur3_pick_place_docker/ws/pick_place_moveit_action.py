@@ -1,81 +1,114 @@
 #!/usr/bin/env python3
 
+import time
+
 import rclpy
-from rclpy.node import Node
+from builtin_interfaces.msg import Duration
+from control_msgs.action import FollowJointTrajectory
 from rclpy.action import ActionClient
+from rclpy.executors import ExternalShutdownException
+from rclpy.node import Node
+from trajectory_msgs.msg import JointTrajectoryPoint
 
-from moveit_msgs.action import MoveGroup
-from geometry_msgs.msg import PoseStamped
 
-
-class MoveItPoseClient(Node):
+class PickPlaceTrajectoryClient(Node):
     def __init__(self):
-        super().__init__('moveit_pose_client')
+        super().__init__('pick_place_trajectory_client')
 
-        self.client = ActionClient(self, MoveGroup, '/move_action')
-        self.get_logger().info('Waiting for MoveIt action server...')
-        self.client.wait_for_server()
-        self.get_logger().info('Connected to MoveIt')
+        self.joint_names = [
+            'shoulder_pan_joint',
+            'shoulder_lift_joint',
+            'elbow_joint',
+            'wrist_1_joint',
+            'wrist_2_joint',
+            'wrist_3_joint',
+        ]
 
-        self.send_pose_goal()
+        # Trajectory points chosen to create clear left-right motion around the scene.
+        self.home_joints = [0.0, -1.20, 1.40, -1.80, -1.57, 0.0]
+        self.pick_joints = [0.45, -1.35, 1.60, -1.85, -1.57, 0.45]
+        self.place_joints = [-0.45, -1.35, 1.60, -1.85, -1.57, -0.45]
 
-    def send_pose_goal(self):
-        goal = MoveGroup.Goal()
+        self.arm_action = self._connect_arm_action()
 
-        goal.request.group_name = 'ur_manipulator'
-        goal.request.num_planning_attempts = 5
-        goal.request.allowed_planning_time = 5.0
-        goal.request.max_velocity_scaling_factor = 0.3
-        goal.request.max_acceleration_scaling_factor = 0.3
+    def _connect_arm_action(self):
+        endpoints = [
+            '/scaled_joint_trajectory_controller/follow_joint_trajectory',
+            '/joint_trajectory_controller/follow_joint_trajectory',
+        ]
 
-        pose = PoseStamped()
-        pose.header.frame_id = 'base_link'
-        pose.pose.position.x = 0.22
-        pose.pose.position.y = 0.12
-        pose.pose.position.z = 0.30
-        pose.pose.orientation.w = 1.0
+        for endpoint in endpoints:
+            client = ActionClient(self, FollowJointTrajectory, endpoint)
+            self.get_logger().info(f'Waiting for arm action server: {endpoint}')
+            if client.wait_for_server(timeout_sec=10.0):
+                self.get_logger().info(f'Connected to arm action server: {endpoint}')
+                return client
 
-        goal.request.goal_constraints.append(
-            self.pose_to_constraint(pose)
-        )
+        self.get_logger().error('No arm trajectory action server became available')
+        return None
 
-        self.client.send_goal_async(goal)
+    def send_arm_goal(self, positions, label: str, duration_sec: int = 3) -> bool:
+        if self.arm_action is None:
+            return False
 
-    def pose_to_constraint(self, pose):
-        from moveit_msgs.msg import Constraints, PositionConstraint, OrientationConstraint
-        from shape_msgs.msg import SolidPrimitive
+        goal = FollowJointTrajectory.Goal()
+        goal.trajectory.joint_names = self.joint_names
 
-        c = Constraints()
+        point = JointTrajectoryPoint()
+        point.positions = [float(v) for v in positions]
+        point.time_from_start = Duration(sec=duration_sec)
+        goal.trajectory.points = [point]
 
-        pc = PositionConstraint()
-        pc.header = pose.header
-        pc.link_name = 'tool0'
-        box = SolidPrimitive()
-        box.type = SolidPrimitive.BOX
-        box.dimensions = [0.01, 0.01, 0.01]
-        pc.constraint_region.primitives.append(box)
-        pc.constraint_region.primitive_poses.append(pose.pose)
-        pc.weight = 1.0
+        self.get_logger().info(f'Sending arm trajectory goal: {label}')
+        send_future = self.arm_action.send_goal_async(goal)
+        rclpy.spin_until_future_complete(self, send_future, timeout_sec=10.0)
+        if not send_future.done() or send_future.result() is None:
+            self.get_logger().error(f'Goal send timed out: {label}')
+            return False
 
-        oc = OrientationConstraint()
-        oc.header = pose.header
-        oc.link_name = 'tool0'
-        oc.orientation = pose.pose.orientation
-        oc.absolute_x_axis_tolerance = 0.1
-        oc.absolute_y_axis_tolerance = 0.1
-        oc.absolute_z_axis_tolerance = 0.1
-        oc.weight = 1.0
+        goal_handle = send_future.result()
+        if not goal_handle.accepted:
+            self.get_logger().error(f'Goal rejected: {label}')
+            return False
 
-        c.position_constraints.append(pc)
-        c.orientation_constraints.append(oc)
+        # Some controllers execute correctly but delay/omit action result feedback.
+        # Use a conservative dwell based on trajectory duration to avoid preempting.
+        dwell_sec = float(duration_sec) + 1.0
+        time.sleep(dwell_sec)
+        self.get_logger().info(f'Goal dispatched: {label} (waited {dwell_sec:.1f}s)')
+        return True
 
-        return c
+    def run_loop(self):
+        if self.arm_action is None:
+            return
+
+        # Allow controllers to fully settle before commanding first motion.
+        time.sleep(2.0)
+
+        while rclpy.ok():
+            ok = self.send_arm_goal(self.home_joints, 'home', duration_sec=3)
+            ok = self.send_arm_goal(self.pick_joints, 'pick_approach', duration_sec=3) and ok
+            ok = self.send_arm_goal(self.place_joints, 'place_approach', duration_sec=3) and ok
+            ok = self.send_arm_goal(self.home_joints, 'home_return', duration_sec=3) and ok
+
+            if ok:
+                self.get_logger().info('Pick/place motion cycle complete; waiting 1.5s')
+            else:
+                self.get_logger().warn('Cycle had failures; retrying after short pause')
+            time.sleep(1.5)
 
 
 def main():
     rclpy.init()
-    node = MoveItPoseClient()
-    rclpy.spin(node)
+    node = PickPlaceTrajectoryClient()
+    try:
+        node.run_loop()
+    except (KeyboardInterrupt, ExternalShutdownException):
+        node.get_logger().info('Interrupted, shutting down')
+    finally:
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 
 if __name__ == '__main__':
