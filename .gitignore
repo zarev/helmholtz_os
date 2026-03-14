@@ -22,5 +22,8 @@ build/
 install/
 log/
 
+# Runtime simulation logs
+ur3_pick_place_docker/ws/gazebo_launch.log
+
 ros2_ws/ 
 src/ 
