@@ -86,6 +86,20 @@ ROS_DOMAIN_ID=10 docker compose up
 LAUNCH_RVIZ=1 docker compose up
 ```
 
+- Override the Gazebo world file (default auto-detects populated pick-place world):
+
+```bash
+WORLD_FILE=/opt/ros/jazzy/share/ur_gazebo/worlds/pick_and_place_demo.world docker compose up
+```
+
+Default selection order if `WORLD_FILE` is unset:
+
+- `/ws/install/ur_gazebo/share/ur_gazebo/worlds/pick_and_place_demo.world`
+- `/opt/ros/jazzy/share/ur_gazebo/worlds/pick_and_place_demo.world`
+- fallback: `empty.sdf`
+
+If a provided `WORLD_FILE` does not exist in the container, startup falls back to `empty.sdf`.
+
 - Keep the simulator up without auto-running the action client:
 
 ```bash

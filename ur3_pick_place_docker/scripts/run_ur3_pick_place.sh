@@ -12,6 +12,23 @@ REQUIRE_GUI="${REQUIRE_GUI:-1}"
 RUN_PICK_PLACE_CLIENT="${RUN_PICK_PLACE_CLIENT:-1}"
 LAUNCH_RVIZ="${LAUNCH_RVIZ:-0}"
 
+if [ -n "${WORLD_FILE:-}" ]; then
+  if [ ! -f "${WORLD_FILE}" ] && [ "${WORLD_FILE}" != "empty.sdf" ]; then
+    echo "[run] WARNING: WORLD_FILE not found at ${WORLD_FILE}, falling back to empty.sdf" >&2
+    WORLD_FILE="empty.sdf"
+  fi
+else
+  # Prefer the custom pick-and-place world from the mounted workspace overlay.
+  if [ -f "/ws/install/ur_gazebo/share/ur_gazebo/worlds/pick_and_place_demo.world" ]; then
+    WORLD_FILE="/ws/install/ur_gazebo/share/ur_gazebo/worlds/pick_and_place_demo.world"
+  elif [ -f "/opt/ros/jazzy/share/ur_gazebo/worlds/pick_and_place_demo.world" ]; then
+    WORLD_FILE="/opt/ros/jazzy/share/ur_gazebo/worlds/pick_and_place_demo.world"
+  else
+    echo "[run] WARNING: pick_and_place_demo.world not found, falling back to empty.sdf" >&2
+    WORLD_FILE="empty.sdf"
+  fi
+fi
+
 if [ "${REQUIRE_GUI}" = "1" ]; then
   if [ -z "${DISPLAY:-}" ]; then
     echo "[run] ERROR: DISPLAY is not set but REQUIRE_GUI=1" >&2
@@ -27,8 +44,8 @@ if [ "${REQUIRE_GUI}" = "1" ]; then
   fi
 fi
 
-echo "[run] Launching UR simulation + MoveIt for ${UR_TYPE} (launch_rviz=${LAUNCH_RVIZ})"
-ros2 launch ur_simulation_gz ur_sim_control.launch.py ur_type:="${UR_TYPE}" launch_rviz:=false > /tmp/ur_sim_control.log 2>&1 &
+echo "[run] Launching UR simulation + MoveIt for ${UR_TYPE} (launch_rviz=${LAUNCH_RVIZ}, world_file=${WORLD_FILE})"
+ros2 launch ur_simulation_gz ur_sim_control.launch.py ur_type:="${UR_TYPE}" launch_rviz:=false world_file:="${WORLD_FILE}" > /tmp/ur_sim_control.log 2>&1 &
 CONTROL_PID=$!
 
 ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:="${UR_TYPE}" use_sim_time:=true launch_rviz:="${LAUNCH_RVIZ}" > /tmp/ur_moveit.log 2>&1 &

@@ -14,8 +14,8 @@ services:
       - LAUNCH_RVIZ=${LAUNCH_RVIZ:-0}
       - REQUIRE_GUI=${REQUIRE_GUI:-1}
       - RUN_PICK_PLACE_CLIENT=${RUN_PICK_PLACE_CLIENT:-1}
-      - GZ_SIM_RESOURCE_PATH=/opt/ros/jazzy/share/ur_description:/opt/ros/jazzy/share/robotiq_2f_85_gripper_visualization
-      - IGN_GAZEBO_RESOURCE_PATH=/opt/ros/jazzy/share/ur_description:/opt/ros/jazzy/share/robotiq_2f_85_gripper_visualization
+      - GZ_SIM_RESOURCE_PATH=/ws/install/ur_gazebo/share:/ws/install/ur_description/share:/ws/install/robotiq_2f_85_gripper_visualization/share:/ws/install:/opt/ros/jazzy/share/ur_description:/opt/ros/jazzy/share/robotiq_2f_85_gripper_visualization
+      - IGN_GAZEBO_RESOURCE_PATH=/ws/install/ur_gazebo/share:/ws/install/ur_description/share:/ws/install/robotiq_2f_85_gripper_visualization/share:/ws/install:/opt/ros/jazzy/share/ur_description:/opt/ros/jazzy/share/robotiq_2f_85_gripper_visualization
     volumes:
       - ./ws:/ws:rw
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
