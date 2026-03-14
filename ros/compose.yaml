@@ -1,0 +1,11 @@
+services:
+  talker:
+    build: ./ # use the Dockerfile as base image
+    command: ros2 run demo_nodes_cpp talker
+
+  listener:
+    build: ./ # use the Dockerfile as base image
+    environment:
+      - "PYTHONUNBUFFERED=1"
+    command: ros2 run demo_nodes_py listener
+
