@@ -3,3 +3,5 @@ pdf2image
 Pillow
 tqdm
 google-generativeai
+
+icalendar>=5.0
