@@ -3,7 +3,8 @@ set -e
 
 source /opt/ros/jazzy/setup.bash
 
-if [ -f /ws/install/setup.bash ]; then
+USE_WS_OVERLAY="${USE_WS_OVERLAY:-0}"
+if [ "${USE_WS_OVERLAY}" = "1" ] && [ -f /ws/install/setup.bash ]; then
   source /ws/install/setup.bash
 fi
 

@@ -438,18 +438,13 @@ class UR3_IK_PickPlace(Node):
     def __init__(self):
         super().__init__("ur3_ik_pick_place")
 
-        self.arm = None
-        self.arm_action_name = None
-        for action_name in [
+        self.arm_action_name = os.getenv(
+            "ARM_ACTION_NAME",
             "/scaled_joint_trajectory_controller/follow_joint_trajectory",
-            "/joint_trajectory_controller/follow_joint_trajectory",
-            "/arm_controller/follow_joint_trajectory",
-        ]:
-            candidate = ActionClient(self, FollowJointTrajectory, action_name)
-            if candidate.wait_for_server(timeout_sec=6.0):
-                self.arm = candidate
-                self.arm_action_name = action_name
-                break
+        )
+        self.ik_group_name = os.getenv("IK_GROUP_NAME", "ur_manipulator")
+        self.require_gripper = os.getenv("REQUIRE_GRIPPER", "0") == "1"
+        self.arm = ActionClient(self, FollowJointTrajectory, self.arm_action_name)
 
         self.gripper = ActionClient(self, GripperCommand,
                                     "/gripper_controller/gripper_cmd")
@@ -458,13 +453,6 @@ class UR3_IK_PickPlace(Node):
         self.ik = self.create_client(GetPositionIK, "/compute_ik")
         self.last_joint_state = None
         self.last_orientation = None
-        self._fallback_goal_idx = 0
-        self._fallback_joint_goals = [
-            [0.0, -1.8, 1.7, -1.5, -1.57, 0.0],
-            [0.3, -1.6, 1.45, -1.4, -1.57, 0.2],
-            [-0.3, -1.6, 1.45, -1.4, -1.57, -0.2],
-            [0.0, -1.9, 1.9, -1.6, -1.57, 0.0],
-        ]
         self.orientation_rpy_candidates = [
             (math.pi, 0.0, 0.0),
             (math.pi, 0.0, math.pi / 2.0),
@@ -478,17 +466,24 @@ class UR3_IK_PickPlace(Node):
                                  self._joint_state_cb, 10)
 
         self.get_logger().info("Waiting for services...")
-        if self.arm is None:
+        if not self.arm.wait_for_server(timeout_sec=20.0):
             raise RuntimeError("No arm FollowJointTrajectory action server is available")
 
-        self.gripper_available = self.gripper.wait_for_server(timeout_sec=3.0)
+        self.gripper_available = self.gripper.wait_for_server(timeout_sec=20.0)
         if not self.gripper_available:
-            self.get_logger().warn(
-                "Gripper action server not available; running arm-only sequence"
-            )
+            if self.require_gripper:
+                raise RuntimeError("Gripper action server /gripper_controller/gripper_cmd is unavailable")
+            self.get_logger().warn("Gripper server unavailable; continuing in arm-only mode")
 
         if not self.ik.wait_for_service(timeout_sec=20.0):
             raise RuntimeError("IK service /compute_ik did not become available in time")
+
+        # Ensure we have at least one joint-state sample before commanding motion.
+        wait_deadline = time.time() + 45.0
+        while self.last_joint_state is None and time.time() < wait_deadline:
+            rclpy.spin_once(self, timeout_sec=0.1)
+        if self.last_joint_state is None:
+            raise RuntimeError("No /joint_states data received")
 
         self.get_logger().info(f"All services ready (arm action: {self.arm_action_name})")
 
@@ -523,7 +518,7 @@ class UR3_IK_PickPlace(Node):
 
     def compute_ik(self, pose: PoseStamped):
         req = GetPositionIK.Request()
-        req.ik_request.group_name = "arm"
+        req.ik_request.group_name = self.ik_group_name
         req.ik_request.ik_link_name = EE_LINK
         req.ik_request.pose_stamped = pose
         req.ik_request.timeout.sec = 4
@@ -547,7 +542,10 @@ class UR3_IK_PickPlace(Node):
                 req.ik_request.pose_stamped = pose
 
                 future = self.ik.call_async(req)
-                rclpy.spin_until_future_complete(self, future)
+                rclpy.spin_until_future_complete(self, future, timeout_sec=6.0)
+                if not future.done():
+                    self.get_logger().warn("IK request timed out; trying next orientation")
+                    continue
 
                 res = future.result()
                 if res and res.error_code.val == res.error_code.SUCCESS:
@@ -567,7 +565,17 @@ class UR3_IK_PickPlace(Node):
 
     # ── Motion helpers ───────────────────────────────────────────────────────
 
-    def _send_action_goal(self, client, goal, label):
+    def _arm_reached(self, target_positions, tolerance=0.08):
+        if self.last_joint_state is None:
+            return False
+        js = self.last_joint_state
+        try:
+            current = [js.position[js.name.index(j)] for j in UR_JOINTS]
+        except ValueError:
+            return False
+        return all(abs(c - t) <= tolerance for c, t in zip(current, target_positions))
+
+    def _send_action_goal(self, client, goal, label, expected_positions=None):
         goal_future = client.send_goal_async(goal)
         rclpy.spin_until_future_complete(self, goal_future, timeout_sec=12.0)
         goal_handle = goal_future.result()
@@ -578,12 +586,15 @@ class UR3_IK_PickPlace(Node):
         result_future = goal_handle.get_result_async()
         rclpy.spin_until_future_complete(self, result_future, timeout_sec=20.0)
         if result_future.result() is None:
-            dwell_sec = 4.0
-            self.get_logger().warn(
-                f"{label} result not received; assuming execution and waiting {dwell_sec:.1f}s"
-            )
-            time.sleep(dwell_sec)
-            return True
+            if expected_positions is not None:
+                deadline = time.time() + 25.0
+                while time.time() < deadline:
+                    rclpy.spin_once(self, timeout_sec=0.1)
+                    if self._arm_reached(expected_positions):
+                        self.get_logger().info(f"{label} reached target via joint-state check")
+                        return True
+            self.get_logger().error(f"{label} result not received")
+            return False
         return True
 
     def move_joints(self, joints, t=4.0):
@@ -595,22 +606,23 @@ class UR3_IK_PickPlace(Node):
         p.time_from_start = Duration(sec=sec, nanosec=nanosec)
         goal.trajectory.joint_names = UR_JOINTS
         goal.trajectory.points = [p]
-        return self._send_action_goal(self.arm, goal, "Arm")
+        return self._send_action_goal(self.arm, goal, "Arm", expected_positions=joints)
 
     def move_pose(self, pose: PoseStamped, t=4.0):
         joints = self.compute_ik(pose)
         if not joints:
-            fallback = self._fallback_joint_goals[
-                self._fallback_goal_idx % len(self._fallback_joint_goals)
-            ]
-            self._fallback_goal_idx += 1
-            self.get_logger().warn("IK failed, using fallback joint goal")
-            return self.move_joints(fallback, t)
+            return False
+        return self.move_joints(joints, t)
+
+    def move_step(self, label, joints, t):
+        self.get_logger().info(label)
         return self.move_joints(joints, t)
 
     def gripper_cmd(self, pos):
         if not self.gripper_available:
-            self.get_logger().warn("Skipping gripper command because gripper server is unavailable")
+            if self.require_gripper:
+                self.get_logger().error("Gripper command requested but gripper server is unavailable")
+                return False
             return True
         g = GripperCommand.Goal()
         g.command.position = pos
@@ -620,7 +632,7 @@ class UR3_IK_PickPlace(Node):
     @staticmethod
     def _pose_at(x, y, z):
         p = PoseStamped()
-        p.header.frame_id = "world"
+        p.header.frame_id = os.getenv("POSE_FRAME", "base_link")
         p.pose.position.x = x
         p.pose.position.y = y
         p.pose.position.z = z
@@ -688,13 +700,17 @@ class UR3_IK_PickPlace(Node):
 
     def pick_loop(self):
         # Scene geometry (metres)
-        pick_x,  pick_y,  pick_z  = -0.4,  0.2,  0.075
-        place_x, place_y, place_z =  0.35, -0.15, 0.075
+        pick_x = float(os.getenv("PICK_X", "0.35"))
+        pick_y = float(os.getenv("PICK_Y", "0.15"))
+        pick_z = float(os.getenv("PICK_Z", "0.12"))
+        place_x = float(os.getenv("PLACE_X", "0.35"))
+        place_y = float(os.getenv("PLACE_Y", "-0.20"))
+        place_z = float(os.getenv("PLACE_Z", "0.12"))
 
-        pre_z      = 0.20   # pre-grasp height above object
-        grasp_z    = 0.02   # small Z offset at grasp
-        lift_z     = 0.18   # lift height after grasp
-        standoff_y = 0.12   # horizontal standoff for place approach
+        pre_z      = 0.20
+        grasp_z    = 0.02
+        lift_z     = 0.18
+        standoff_y = 0.12
 
         while rclpy.ok():
             # ── 1. Open gripper ──────────────────────────────────────────
