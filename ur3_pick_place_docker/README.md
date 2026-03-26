@@ -49,6 +49,19 @@ From this directory:
 docker compose up
 ```
 
+Recommended for GUI sessions (auto-detects DISPLAY and XAUTHORITY, applies xhost):
+
+```bash
+bash scripts/run_with_gui.sh
+```
+
+You can pass any compose args through the helper:
+
+```bash
+bash scripts/run_with_gui.sh down --remove-orphans
+bash scripts/run_with_gui.sh up -d ur3_sim
+```
+
 With `sudo` if needed:
 
 ```bash

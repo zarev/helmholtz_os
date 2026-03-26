@@ -38,6 +38,15 @@ else
   fi
 fi
 
+# If WORLD_FILE comes from a source tree, include its sibling models directory so
+# model:// URIs referenced by the world can be resolved without an overlay build.
+world_dir="$(dirname "${WORLD_FILE}")"
+models_dir="$(dirname "${world_dir}")/models"
+if [ -d "${models_dir}" ]; then
+  export GZ_SIM_RESOURCE_PATH="${models_dir}:${world_dir}:${GZ_SIM_RESOURCE_PATH:-}"
+  export IGN_GAZEBO_RESOURCE_PATH="${models_dir}:${world_dir}:${IGN_GAZEBO_RESOURCE_PATH:-}"
+fi
+
 if [ "${REQUIRE_GUI}" = "1" ]; then
   if [ -z "${DISPLAY:-}" ]; then
     echo "[run] ERROR: DISPLAY is not set but REQUIRE_GUI=1" >&2
@@ -55,6 +64,11 @@ if [ "${REQUIRE_GUI}" = "1" ]; then
     echo "[run] ERROR: X11 socket not found in container (/tmp/.X11-unix)" >&2
     echo "[run] Ensure /tmp/.X11-unix is mounted and DISPLAY points to a valid host display" >&2
     exit 1
+  fi
+
+  if [ -n "${XAUTHORITY:-}" ] && [ ! -f "${XAUTHORITY}" ]; then
+    echo "[run] WARNING: XAUTHORITY is set to ${XAUTHORITY} but file does not exist in container" >&2
+    echo "[run] GUI may fail with authorization errors. Ensure host ~/.Xauthority is available." >&2
   fi
 
   if [ "${DISPLAY_SESSION}" = "wayland" ]; then
