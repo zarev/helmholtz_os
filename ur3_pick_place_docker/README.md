@@ -55,6 +55,18 @@ Recommended for GUI sessions (auto-detects DISPLAY and XAUTHORITY, applies xhost
 bash scripts/run_with_gui.sh
 ```
 
+Host runtime values used by the helper are read from `host.env` in this folder.
+
+Edit `host.env` for values such as:
+
+- `LAUNCH_RVIZ` (default `0` for headless RViz)
+- `RUN_PICK_PLACE_CLIENT`
+- `WORLD_FILE`
+- `SIM_BACKEND`
+- `REQUIRE_GRIPPER`
+
+This keeps launcher behavior deterministic and avoids accidental overrides from exported shell variables.
+
 You can pass any compose args through the helper:
 
 ```bash
@@ -81,6 +93,9 @@ The service includes a healthcheck that validates `/move_action` and `/clock`.
 
 ## Optional Configuration
 
+When using `bash scripts/run_with_gui.sh`, set managed runtime values in `host.env`.
+If you run `docker compose up` directly, inline environment variables still work.
+
 - Set robot type (default is `ur3`):
 
 ```bash
@@ -93,7 +108,7 @@ UR_TYPE=ur3e docker compose up
 ROS_DOMAIN_ID=10 docker compose up
 ```
 
-- Enable RViz GUI (default is disabled):
+- Enable RViz GUI when running compose directly (helper uses `.host.env`):
 
 ```bash
 LAUNCH_RVIZ=1 docker compose up
