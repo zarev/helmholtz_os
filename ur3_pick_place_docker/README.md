@@ -11,9 +11,9 @@ action client at `ws/pick_place_moveit_action.py`.
   - `ros-jazzy-ur-simulation-gz`
   - `ros-jazzy-moveit-msgs`
 - Container startup now launches:
-  1. `ros2 launch ur_simulation_gz ur_sim_control.launch.py ur_type:=ur3 launch_rviz:=false`
+  1. `ros2 launch ur_gazebo ur.gazebo.launch.py ur_type:=ur3 use_sim_time:=true`
   2. `ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur3 use_sim_time:=true launch_rviz:=0`
-  2. waits for `/move_action`
+  3. waits for `/arm_controller/follow_joint_trajectory`, `/compute_ik`, `/gripper_controller/gripper_cmd`
   3. runs `python3 /ws/pick_place_moveit_action.py`
 
 ## Prerequisites
@@ -124,13 +124,25 @@ docker compose logs -f ur3_sim
 
 ```bash
 docker exec ur3_sim tail -f /tmp/ur_sim_control.log
-docker exec ur3_sim tail -f /tmp/ur_moveit.log
+docker exec ur3_sim tail -f /tmp/move_group.log
 ```
 
-- Verify `/move_action` exists:
+- Verify arm action exists:
 
 ```bash
-docker exec ur3_sim bash -lc 'source /opt/ros/jazzy/setup.bash && ros2 action list | grep /move_action'
+docker exec ur3_sim bash -lc 'source /opt/ros/jazzy/setup.bash && ros2 action list | grep /arm_controller/follow_joint_trajectory'
+```
+
+- Verify gripper action exists:
+
+```bash
+docker exec ur3_sim bash -lc 'source /opt/ros/jazzy/setup.bash && ros2 action list | grep /gripper_controller/gripper_cmd'
+```
+
+- Verify `/compute_ik` exists:
+
+```bash
+docker exec ur3_sim bash -lc 'source /opt/ros/jazzy/setup.bash && ros2 service list | grep /compute_ik'
 ```
 
 - Verify Gazebo clock is active:
@@ -145,12 +157,13 @@ docker exec ur3_sim bash -lc 'source /opt/ros/jazzy/setup.bash && timeout 5 ros2
 docker exec ur3_sim bash -lc 'ps -ef | grep -E "gz sim|rviz2" | grep -v grep'
 ```
 
-Expected client output includes:
+Expected startup output includes:
 
-- `Waiting for MoveIt action server...`
-- `Connected to MoveIt`
+- `/arm_controller/follow_joint_trajectory is available`
+- `/compute_ik is available`
+- `/gripper_controller/gripper_cmd is available`
 
-If startup fails, inspect `/tmp/ur_sim_control.log` and `/tmp/ur_moveit.log` in the container.
+If startup fails, inspect `/tmp/ur_sim_control.log` and `/tmp/move_group.log` in the container.
 
 Common issue:
 

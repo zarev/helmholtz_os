@@ -15,6 +15,12 @@ LAUNCH_RVIZ="${LAUNCH_RVIZ:-0}"
 ARM_ACTION_NAME="${ARM_ACTION_NAME:-/scaled_joint_trajectory_controller/follow_joint_trajectory}"
 REQUIRE_GRIPPER="${REQUIRE_GRIPPER:-0}"
 SIM_BACKEND="${SIM_BACKEND:-upstream}"
+DISPLAY_SESSION="${XDG_SESSION_TYPE:-unknown}"
+
+echo "[run] Detected host display session: ${DISPLAY_SESSION}"
+if [ "${DISPLAY_SESSION}" = "wayland" ]; then
+  echo "[run] Wayland session detected. Gazebo/RViz use XWayland via DISPLAY=${DISPLAY:-unset}."
+fi
 
 if [ -n "${WORLD_FILE:-}" ]; then
   if [ ! -f "${WORLD_FILE}" ] && [ "${WORLD_FILE}" != "empty.sdf" ]; then
@@ -35,8 +41,13 @@ fi
 if [ "${REQUIRE_GUI}" = "1" ]; then
   if [ -z "${DISPLAY:-}" ]; then
     echo "[run] ERROR: DISPLAY is not set but REQUIRE_GUI=1" >&2
-    echo "[run] Host fix: export DISPLAY=:0 and allow X11 access for docker" >&2
-    echo "[run] Example: xhost +local:root" >&2
+    if [ "${DISPLAY_SESSION}" = "wayland" ]; then
+      echo "[run] Host fix (Wayland): ensure XWayland is available and DISPLAY is exported (commonly :0 or :1)" >&2
+      echo "[run] Also allow local docker access: xhost +local:root" >&2
+    else
+      echo "[run] Host fix (X11): export DISPLAY=:0 and allow X11 access for docker" >&2
+      echo "[run] Example: xhost +local:root" >&2
+    fi
     exit 1
   fi
 
@@ -44,6 +55,12 @@ if [ "${REQUIRE_GUI}" = "1" ]; then
     echo "[run] ERROR: X11 socket not found in container (/tmp/.X11-unix)" >&2
     echo "[run] Ensure /tmp/.X11-unix is mounted and DISPLAY points to a valid host display" >&2
     exit 1
+  fi
+
+  if [ "${DISPLAY_SESSION}" = "wayland" ]; then
+    if [ -z "${XAUTHORITY:-}" ]; then
+      echo "[run] WARNING: XAUTHORITY is not set. If GUI fails with authorization errors, run: xhost +local:root" >&2
+    fi
   fi
 fi
 
