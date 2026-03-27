@@ -8,6 +8,13 @@ if [ "${USE_WS_OVERLAY}" = "1" ] && [ -f /ws/install/setup.bash ]; then
   source /ws/install/setup.bash
 fi
 
+# Some checked-in URDF assets still point at a historical workspace root.
+# Provide a compatibility symlink without modifying the nested source tree.
+if [ -d /ws ] && [ ! -e /home/asimov/UR3_ROS2_PICK_AND_PLACE ]; then
+  mkdir -p /home/asimov
+  ln -s /ws /home/asimov/UR3_ROS2_PICK_AND_PLACE
+fi
+
 add_gz_share () {
   local pkg="$1"
   local prefix
