@@ -14,6 +14,7 @@ from pathlib import Path
 import time
 import math
 import threading
+import xml.etree.ElementTree as ET
 import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionClient
@@ -52,6 +53,7 @@ UR_JOINTS = [
 ]
 
 EE_LINK = "tool0"
+DEFAULT_PICK_MODEL_NAME = "red_cylinder"
 
 # ---------------------------------------------------------------------------
 # Fake scan descriptions (used in Popup 2)
@@ -639,6 +641,73 @@ class UR3_IK_PickPlace(Node):
         p.pose.orientation.w = 1.0
         return p
 
+    @staticmethod
+    def _parse_pose_text(pose_text):
+        values = [float(value) for value in pose_text.split()]
+        while len(values) < 6:
+            values.append(0.0)
+        return tuple(values[:6])
+
+    def _resolve_world_model_pose(self, model_name, world_file):
+        if not world_file:
+            self.get_logger().warn("WORLD_FILE is unset; falling back to PICK_* coordinates")
+            return None
+
+        world_path = Path(world_file)
+        if not world_path.is_file():
+            self.get_logger().warn(
+                f"WORLD_FILE {world_file} is unavailable; falling back to PICK_* coordinates"
+            )
+            return None
+
+        try:
+            world_tree = ET.parse(world_path)
+        except (ET.ParseError, OSError) as exc:
+            self.get_logger().warn(
+                f"Failed to parse WORLD_FILE {world_file}: {exc}; falling back to PICK_* coordinates"
+            )
+            return None
+
+        root = world_tree.getroot()
+        for include in root.findall(".//include"):
+            include_name = (include.findtext("name") or "").strip()
+            include_uri = (include.findtext("uri") or "").strip()
+            uri_model_name = include_uri.rsplit("/", 1)[-1] if include_uri else ""
+            if include_name != model_name and uri_model_name != model_name:
+                continue
+
+            pose_text = (include.findtext("pose") or "0 0 0 0 0 0").strip()
+            return self._parse_pose_text(pose_text)
+
+        self.get_logger().warn(
+            f"Model {model_name} was not found in WORLD_FILE {world_file}; falling back to PICK_* coordinates"
+        )
+        return None
+
+    def _resolve_pick_target(self):
+        fallback_pick = (
+            float(os.getenv("PICK_X", "0.35")),
+            float(os.getenv("PICK_Y", "0.15")),
+            float(os.getenv("PICK_Z", "0.12")),
+        )
+
+        world_file = os.getenv("WORLD_FILE", "")
+        model_name = os.getenv("PICK_MODEL_NAME", DEFAULT_PICK_MODEL_NAME)
+        world_pose = self._resolve_world_model_pose(model_name, world_file)
+        if world_pose is None:
+            self.get_logger().info(
+                "Using fallback pick target x=%.3f y=%.3f z=%.3f"
+                % fallback_pick
+            )
+            return fallback_pick
+
+        pick_target = world_pose[:3]
+        self.get_logger().info(
+            "Resolved %s target from %s at x=%.3f y=%.3f z=%.3f"
+            % (model_name, world_file, pick_target[0], pick_target[1], pick_target[2])
+        )
+        return pick_target
+
     # ── AGENT POPUP 1 ────────────────────────────────────────────────────────
 
     def _ask_agent_grasp(self):
@@ -699,20 +768,17 @@ class UR3_IK_PickPlace(Node):
     # ── Main pick-and-place loop ─────────────────────────────────────────────
 
     def pick_loop(self):
-        # Scene geometry (metres)
-        pick_x = float(os.getenv("PICK_X", "0.35"))
-        pick_y = float(os.getenv("PICK_Y", "0.15"))
-        pick_z = float(os.getenv("PICK_Z", "0.12"))
-        place_x = float(os.getenv("PLACE_X", "0.35"))
-        place_y = float(os.getenv("PLACE_Y", "-0.20"))
-        place_z = float(os.getenv("PLACE_Z", "0.12"))
-
         pre_z      = 0.20
-        grasp_z    = 0.02
+        grasp_z    = 0.015
         lift_z     = 0.18
         standoff_y = 0.12
 
         while rclpy.ok():
+            pick_x, pick_y, pick_z = self._resolve_pick_target()
+            place_x = float(os.getenv("PLACE_X", "0.35"))
+            place_y = float(os.getenv("PLACE_Y", "-0.20"))
+            place_z = float(os.getenv("PLACE_Z", "0.12"))
+
             # ── 1. Open gripper ──────────────────────────────────────────
             self.get_logger().info("Opening gripper")
             if not self.gripper_cmd(0.0):

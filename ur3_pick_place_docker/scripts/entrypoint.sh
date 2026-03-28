@@ -45,4 +45,10 @@ add_gz_share ur_gazebo
 add_gz_share robotiq_2f_85_gripper_visualization
 add_gz_share ur_moveit_config
 
+# Prefer repo-owned model overrides over vendored workspace assets.
+if [ -d /project_models ]; then
+  export GZ_SIM_RESOURCE_PATH="/project_models:${GZ_SIM_RESOURCE_PATH}"
+  export IGN_GAZEBO_RESOURCE_PATH="/project_models:${IGN_GAZEBO_RESOURCE_PATH}"
+fi
+
 exec "$@"

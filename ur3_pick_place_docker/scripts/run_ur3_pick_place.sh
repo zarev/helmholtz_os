@@ -127,6 +127,14 @@ if [ -d "${workspace_source_root}" ]; then
   export IGN_GAZEBO_RESOURCE_PATH="${workspace_source_root}:${IGN_GAZEBO_RESOURCE_PATH:-}"
 fi
 
+# Prefer repo-owned model overrides when present so they win over vendored
+# workspace models with the same model:// name.
+project_models_dir="/project_models"
+if [ -d "${project_models_dir}" ]; then
+  export GZ_SIM_RESOURCE_PATH="${project_models_dir}:${GZ_SIM_RESOURCE_PATH:-}"
+  export IGN_GAZEBO_RESOURCE_PATH="${project_models_dir}:${IGN_GAZEBO_RESOURCE_PATH:-}"
+fi
+
 if [ "${REQUIRE_GUI}" = "1" ]; then
   if [ -z "${DISPLAY:-}" ]; then
     echo "[run] ERROR: DISPLAY is not set but REQUIRE_GUI=1" >&2
