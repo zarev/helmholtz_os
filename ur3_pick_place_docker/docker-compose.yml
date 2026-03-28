@@ -23,7 +23,7 @@ services:
       - ARM_ACTION_NAME=${ARM_ACTION_NAME:-/scaled_joint_trajectory_controller/follow_joint_trajectory}
       - IK_GROUP_NAME=${IK_GROUP_NAME:-ur_manipulator}
       - REQUIRE_GRIPPER=${REQUIRE_GRIPPER:-1}
-      - WORLD_FILE=${WORLD_FILE:-/ws/src/UR3_ROS2_PICK_AND_PLACE/ur_gazebo/worlds/pick_and_place_demo.world}
+      - WORLD_FILE=${WORLD_FILE:-/project_worlds/pick_and_place_demo.local.world}
       - POSE_FRAME=${POSE_FRAME:-base_link}
       - PICK_X=${PICK_X:-0.35}
       - PICK_Y=${PICK_Y:-0.15}
@@ -35,6 +35,7 @@ services:
       - IGN_GAZEBO_RESOURCE_PATH=/ws/install/ur_gazebo/share:/ws/install/ur_description/share:/ws/install/robotiq_2f_85_gripper_visualization/share:/ws/install:/opt/ros/jazzy/share:/opt/ros/jazzy/share/ur_description:/opt/ros/jazzy/share/robotiq_2f_85_gripper_visualization
     volumes:
       - ./ws:/ws:rw
+      - ./worlds:/project_worlds:ro
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - ${XAUTHORITY_HOST:-${HOME}/.Xauthority}:/tmp/.Xauthority:ro
       - /dev/dri:/dev/dri

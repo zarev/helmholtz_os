@@ -105,8 +105,8 @@ if [ -d "${models_dir}" ]; then
   export IGN_GAZEBO_RESOURCE_PATH="${models_dir}:${world_dir}:${IGN_GAZEBO_RESOURCE_PATH:-}"
 fi
 
-# Support world files copied into /ws while their companion models remain in the
-# mounted source tree.
+# Support project-level worlds mounted outside the ROS source tree while their
+# companion models remain in the workspace source tree.
 workspace_models_dir="/ws/src/UR3_ROS2_PICK_AND_PLACE/ur_gazebo/models"
 if [ -d "${workspace_models_dir}" ]; then
   export GZ_SIM_RESOURCE_PATH="${workspace_models_dir}:${GZ_SIM_RESOURCE_PATH:-}"

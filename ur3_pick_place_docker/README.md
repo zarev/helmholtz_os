@@ -114,14 +114,15 @@ ROS_DOMAIN_ID=10 docker compose up
 LAUNCH_RVIZ=1 docker compose up
 ```
 
-- Override the Gazebo world file (default auto-detects populated pick-place world):
+- Override the Gazebo world file (default uses the project-local canonical world under `worlds/`):
 
 ```bash
-WORLD_FILE=/opt/ros/jazzy/share/ur_gazebo/worlds/pick_and_place_demo.world docker compose up
+WORLD_FILE=/project_worlds/pick_and_place_demo.local.world docker compose up
 ```
 
 Default selection order if `WORLD_FILE` is unset:
 
+- `/project_worlds/pick_and_place_demo.local.world`
 - `/ws/install/ur_gazebo/share/ur_gazebo/worlds/pick_and_place_demo.world`
 - `/opt/ros/jazzy/share/ur_gazebo/worlds/pick_and_place_demo.world`
 - fallback: `empty.sdf`
