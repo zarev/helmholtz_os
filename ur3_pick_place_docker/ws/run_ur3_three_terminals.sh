@@ -32,7 +32,8 @@ SLEEP_BETWEEN="${SLEEP_BETWEEN:-2}"
 SET_GAZEBO_CAMERA="${SET_GAZEBO_CAMERA:-1}"
 CAMERA_WAIT_TIMEOUT="${CAMERA_WAIT_TIMEOUT:-45}"
 # Side-profile default: battery/cylinder on left and UR3 on right at startup.
-GAZEBO_CAMERA_REQ="${GAZEBO_CAMERA_REQ:-pose: {position: {x: 2.45, y: -1.35, z: 1.25}, orientation: {x: -0.12, y: 0.33, z: 0.89, w: 0.28}}}"
+DEFAULT_GAZEBO_CAMERA_REQ='pose: { position: { x: 2.45 y: -1.35 z: 1.25 } orientation: { x: -0.12 y: 0.33 z: 0.89 w: 0.28 } }'
+GAZEBO_CAMERA_REQ="${GAZEBO_CAMERA_REQ:-${DEFAULT_GAZEBO_CAMERA_REQ}}"
 
 run_in_terminal() {
   local cmd="$1"

@@ -12,6 +12,49 @@ ARM_ACTION_NAME="${ARM_ACTION_NAME:-/scaled_joint_trajectory_controller/follow_j
 REQUIRE_GRIPPER="${REQUIRE_GRIPPER:-1}"
 SIM_BACKEND="${SIM_BACKEND:-upstream}"
 DISPLAY_SESSION="${XDG_SESSION_TYPE:-unknown}"
+SET_GAZEBO_CAMERA="${SET_GAZEBO_CAMERA:-1}"
+CAMERA_WAIT_TIMEOUT="${CAMERA_WAIT_TIMEOUT:-45}"
+DEFAULT_GAZEBO_CAMERA_REQ='pose: { position: { x: 2.45 y: -1.35 z: 1.25 } orientation: { x: -0.12 y: 0.33 z: 0.89 w: 0.28 } }'
+GAZEBO_CAMERA_REQ="${GAZEBO_CAMERA_REQ:-${DEFAULT_GAZEBO_CAMERA_REQ}}"
+
+setup_gz_cli_env() {
+  export LD_LIBRARY_PATH="/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+  export GZ_CONFIG_PATH="/opt/ros/jazzy/opt/gz_cmake_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/gz_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz${GZ_CONFIG_PATH:+:${GZ_CONFIG_PATH}}"
+}
+
+set_gazebo_camera() {
+  local timeout_seconds="$1"
+  local camera_req="$2"
+
+  if ! command -v /opt/ros/jazzy/opt/gz_tools_vendor/bin/gz >/dev/null 2>&1; then
+    echo "[camera] gz CLI not found; skipping camera setup." >&2
+    return 0
+  fi
+
+  setup_gz_cli_env
+
+  echo "[camera] Waiting for /gui/move_to/pose service"
+  for _ in $(seq 1 "${timeout_seconds}"); do
+    if ! kill -0 "${SIM_PID}" >/dev/null 2>&1; then
+      echo "[camera] Simulation exited before camera service became available." >&2
+      return 0
+    fi
+
+    if /opt/ros/jazzy/opt/gz_tools_vendor/bin/gz service -l 2>/dev/null | grep -q '^/gui/move_to/pose$'; then
+      echo "[camera] Applying startup camera pose"
+      /opt/ros/jazzy/opt/gz_tools_vendor/bin/gz service -s /gui/move_to/pose \
+        --reqtype gz.msgs.GUICamera \
+        --reptype gz.msgs.Boolean \
+        --timeout 5000 \
+        --req "${camera_req}" >/dev/null || echo "[camera] Failed to apply startup camera pose." >&2
+      return 0
+    fi
+
+    sleep 1
+  done
+
+  echo "[camera] Timeout waiting for /gui/move_to/pose; skipping camera setup." >&2
+}
 
 action_server_available() {
   local action_name="$1"
@@ -200,6 +243,10 @@ else
   echo "[run] Launching upstream UR simulation for ${UR_TYPE} (world_file=${WORLD_FILE})"
   ros2 launch ur_simulation_gz ur_sim_control.launch.py ur_type:="${UR_TYPE}" launch_rviz:=false world_file:="${WORLD_FILE}" "${upstream_extra_args[@]}" > /tmp/ur_sim_control.log 2>&1 &
   SIM_PID=$!
+fi
+
+if [ "${REQUIRE_GUI}" = "1" ] && [ "${SET_GAZEBO_CAMERA}" = "1" ]; then
+  set_gazebo_camera "${CAMERA_WAIT_TIMEOUT}" "${GAZEBO_CAMERA_REQ}" &
 fi
 
 if [ "${LAUNCH_RVIZ}" = "1" ]; then
