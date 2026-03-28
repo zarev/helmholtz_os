@@ -57,6 +57,7 @@ wait_for_action_server() {
 
 activate_controller_with_retry() {
   local controller_name="$1"
+  local spawner_log="/tmp/${controller_name}_spawner.log"
 
   echo "[run] Activating ${controller_name} with extended switch timeout"
   if ! ros2 run controller_manager spawner "${controller_name}" \
@@ -64,9 +65,14 @@ activate_controller_with_retry() {
     --controller-manager-timeout 120 \
     --service-call-timeout 120 \
     --switch-timeout 120 \
-    > "/tmp/${controller_name}_spawner.log" 2>&1; then
+    > "${spawner_log}" 2>&1; then
+    if grep -Eq "active' state|already active|already loaded, skipping load_controller" "${spawner_log}"; then
+      echo "[run] ${controller_name} is already present; deferring readiness check to action/server availability"
+      return 0
+    fi
+
     echo "[run] ERROR: failed to activate ${controller_name}" >&2
-    tail -n 80 "/tmp/${controller_name}_spawner.log" >&2 || true
+    tail -n 80 "${spawner_log}" >&2 || true
     exit 1
   fi
 }
@@ -111,6 +117,14 @@ workspace_models_dir="/ws/src/UR3_ROS2_PICK_AND_PLACE/ur_gazebo/models"
 if [ -d "${workspace_models_dir}" ]; then
   export GZ_SIM_RESOURCE_PATH="${workspace_models_dir}:${GZ_SIM_RESOURCE_PATH:-}"
   export IGN_GAZEBO_RESOURCE_PATH="${workspace_models_dir}:${IGN_GAZEBO_RESOURCE_PATH:-}"
+fi
+
+# Allow model://<package_name>/... assets to resolve directly from the
+# checked-in workspace source tree when those packages are not installed.
+workspace_source_root="/ws/src/UR3_ROS2_PICK_AND_PLACE"
+if [ -d "${workspace_source_root}" ]; then
+  export GZ_SIM_RESOURCE_PATH="${workspace_source_root}:${GZ_SIM_RESOURCE_PATH:-}"
+  export IGN_GAZEBO_RESOURCE_PATH="${workspace_source_root}:${IGN_GAZEBO_RESOURCE_PATH:-}"
 fi
 
 if [ "${REQUIRE_GUI}" = "1" ]; then
@@ -159,11 +173,11 @@ if [ "${SIM_BACKEND}" = "overlay_gazebo" ]; then
 else
   upstream_extra_args=()
   if [ "${REQUIRE_GRIPPER}" = "1" ]; then
-    gripper_description_file="/ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_config/config/ur.urdf"
+    gripper_description_file="/ws/config/ur_gz_robotiq.urdf.xacro"
     gripper_controllers_file="/ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_config/config/ros2_controllers.yaml"
 
     if [ -f "${gripper_description_file}" ] && [ -f "${gripper_controllers_file}" ]; then
-      echo "[run] REQUIRE_GRIPPER=1; launching upstream sim with gripper-enabled description/controllers"
+      echo "[run] REQUIRE_GRIPPER=1; launching upstream sim with repo-owned gripper description/controllers"
       upstream_extra_args+=("description_file:=${gripper_description_file}")
       upstream_extra_args+=("controllers_file:=${gripper_controllers_file}")
       upstream_extra_args+=("initial_joint_controller:=arm_controller")
