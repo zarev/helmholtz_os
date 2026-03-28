@@ -13,6 +13,64 @@ REQUIRE_GRIPPER="${REQUIRE_GRIPPER:-1}"
 SIM_BACKEND="${SIM_BACKEND:-upstream}"
 DISPLAY_SESSION="${XDG_SESSION_TYPE:-unknown}"
 
+action_server_available() {
+  local action_name="$1"
+  ros2 action info "${action_name}" 2>/dev/null | grep -Eq '^Action servers: [1-9][0-9]*$'
+}
+
+wait_for_action_server() {
+  local action_name="$1"
+  local timeout_seconds="$2"
+  local label="$3"
+  local found=0
+
+  echo "[run] Waiting for ${action_name} action server"
+  for _ in $(seq 1 "${timeout_seconds}"); do
+    if ! kill -0 "${SIM_PID}" >/dev/null 2>&1; then
+      echo "[run] ERROR: simulation launch exited before ${action_name} became available" >&2
+      echo "[run] Last launch log lines:" >&2
+      tail -n 80 /tmp/ur_sim_control.log >&2 || true
+      exit 1
+    fi
+
+    if ! kill -0 "${MOVEIT_PID}" >/dev/null 2>&1; then
+      echo "[run] ERROR: move_group launch exited before ${action_name} became available" >&2
+      echo "[run] Last move_group log lines:" >&2
+      tail -n 80 /tmp/move_group.log >&2 || true
+      exit 1
+    fi
+
+    if action_server_available "${action_name}"; then
+      echo "[run] ${label} is available"
+      found=1
+      break
+    fi
+    sleep 1
+  done
+
+  if [ "${found}" != "1" ]; then
+    echo "[run] ERROR: ${action_name} did not appear within timeout" >&2
+    echo "[run] Check /tmp/ur_sim_control.log for details" >&2
+    exit 1
+  fi
+}
+
+activate_controller_with_retry() {
+  local controller_name="$1"
+
+  echo "[run] Activating ${controller_name} with extended switch timeout"
+  if ! ros2 run controller_manager spawner "${controller_name}" \
+    -c /controller_manager \
+    --controller-manager-timeout 120 \
+    --service-call-timeout 120 \
+    --switch-timeout 120 \
+    > "/tmp/${controller_name}_spawner.log" 2>&1; then
+    echo "[run] ERROR: failed to activate ${controller_name}" >&2
+    tail -n 80 "/tmp/${controller_name}_spawner.log" >&2 || true
+    exit 1
+  fi
+}
+
 if [ "${USE_WS_OVERLAY}" = "1" ] && [ -f /ws/install/setup.bash ]; then
   source /ws/install/setup.bash
 fi
@@ -45,6 +103,14 @@ models_dir="$(dirname "${world_dir}")/models"
 if [ -d "${models_dir}" ]; then
   export GZ_SIM_RESOURCE_PATH="${models_dir}:${world_dir}:${GZ_SIM_RESOURCE_PATH:-}"
   export IGN_GAZEBO_RESOURCE_PATH="${models_dir}:${world_dir}:${IGN_GAZEBO_RESOURCE_PATH:-}"
+fi
+
+# Support world files copied into /ws while their companion models remain in the
+# mounted source tree.
+workspace_models_dir="/ws/src/UR3_ROS2_PICK_AND_PLACE/ur_gazebo/models"
+if [ -d "${workspace_models_dir}" ]; then
+  export GZ_SIM_RESOURCE_PATH="${workspace_models_dir}:${GZ_SIM_RESOURCE_PATH:-}"
+  export IGN_GAZEBO_RESOURCE_PATH="${workspace_models_dir}:${IGN_GAZEBO_RESOURCE_PATH:-}"
 fi
 
 if [ "${REQUIRE_GUI}" = "1" ]; then
@@ -134,37 +200,6 @@ cleanup() {
 }
 trap cleanup EXIT
 
-echo "[run] Waiting for ${ARM_ACTION_NAME} action server"
-found_arm_action=0
-for i in $(seq 1 120); do
-  if ! kill -0 "${SIM_PID}" >/dev/null 2>&1; then
-    echo "[run] ERROR: simulation launch exited before arm action became available" >&2
-    echo "[run] Last launch log lines:" >&2
-    tail -n 80 /tmp/ur_sim_control.log >&2 || true
-    exit 1
-  fi
-
-  if ! kill -0 "${MOVEIT_PID}" >/dev/null 2>&1; then
-    echo "[run] ERROR: move_group launch exited before arm action became available" >&2
-    echo "[run] Last move_group log lines:" >&2
-    tail -n 80 /tmp/move_group.log >&2 || true
-    exit 1
-  fi
-
-  if ros2 action list 2>/dev/null | grep -q "^${ARM_ACTION_NAME}$"; then
-    echo "[run] ${ARM_ACTION_NAME} is available"
-    found_arm_action=1
-    break
-  fi
-  sleep 1
-done
-
-if [ "${found_arm_action}" != "1" ]; then
-  echo "[run] ERROR: ${ARM_ACTION_NAME} did not appear within timeout" >&2
-  echo "[run] Check /tmp/ur_sim_control.log for details" >&2
-  exit 1
-fi
-
 echo "[run] Waiting for /compute_ik service"
 found_compute_ik=0
 for i in $(seq 1 120); do
@@ -196,39 +231,18 @@ if [ "${found_compute_ik}" != "1" ]; then
   exit 1
 fi
 
+if [ "${SIM_BACKEND}" = "upstream" ]; then
+  activate_controller_with_retry "arm_controller"
+fi
+
+wait_for_action_server "${ARM_ACTION_NAME}" 120 "${ARM_ACTION_NAME}"
+
 if [ "${REQUIRE_GRIPPER}" = "1" ] && [ "${SIM_BACKEND}" = "upstream" ]; then
-  echo "[run] Spawning gripper_controller for upstream simulation"
-  if ! ros2 run controller_manager spawner gripper_controller -c /controller_manager --controller-manager-timeout 120 > /tmp/gripper_spawner.log 2>&1; then
-    echo "[run] ERROR: failed to spawn gripper_controller in upstream mode" >&2
-    tail -n 80 /tmp/gripper_spawner.log >&2 || true
-    exit 1
-  fi
+  activate_controller_with_retry "gripper_controller"
 fi
 
 if [ "${REQUIRE_GRIPPER}" = "1" ]; then
-  echo "[run] Waiting for /gripper_controller/gripper_cmd action server"
-  found_gripper_action=0
-  for i in $(seq 1 120); do
-    if ! kill -0 "${SIM_PID}" >/dev/null 2>&1; then
-      echo "[run] ERROR: simulation launch exited before /gripper_controller/gripper_cmd became available" >&2
-      echo "[run] Last launch log lines:" >&2
-      tail -n 80 /tmp/ur_sim_control.log >&2 || true
-      exit 1
-    fi
-
-    if ros2 action list 2>/dev/null | grep -q '^/gripper_controller/gripper_cmd$'; then
-      echo "[run] /gripper_controller/gripper_cmd is available"
-      found_gripper_action=1
-      break
-    fi
-    sleep 1
-  done
-
-  if [ "${found_gripper_action}" != "1" ]; then
-    echo "[run] ERROR: /gripper_controller/gripper_cmd did not appear within timeout" >&2
-    echo "[run] Check /tmp/ur_sim_control.log for details" >&2
-    exit 1
-  fi
+  wait_for_action_server "/gripper_controller/gripper_cmd" 120 "/gripper_controller/gripper_cmd"
 else
   echo "[run] REQUIRE_GRIPPER=${REQUIRE_GRIPPER}; skipping gripper action wait"
 fi
