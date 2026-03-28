@@ -14,7 +14,7 @@ SIM_BACKEND="${SIM_BACKEND:-upstream}"
 DISPLAY_SESSION="${XDG_SESSION_TYPE:-unknown}"
 SET_GAZEBO_CAMERA="${SET_GAZEBO_CAMERA:-1}"
 CAMERA_WAIT_TIMEOUT="${CAMERA_WAIT_TIMEOUT:-45}"
-DEFAULT_GAZEBO_CAMERA_REQ='pose: { position: { x: 2.45 y: -1.35 z: 1.25 } orientation: { x: -0.12 y: 0.33 z: 0.89 w: 0.28 } }'
+DEFAULT_GAZEBO_CAMERA_REQ='pose: { position: { x: 1.43 y: -0.58 z: 0.75 } orientation: { x: -0.20 y: 0.05 z: 0.95 w: 0.23 } }'
 GAZEBO_CAMERA_REQ="${GAZEBO_CAMERA_REQ:-${DEFAULT_GAZEBO_CAMERA_REQ}}"
 
 setup_gz_cli_env() {
