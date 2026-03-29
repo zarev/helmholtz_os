@@ -23,6 +23,7 @@ services:
       - ARM_ACTION_NAME=${ARM_ACTION_NAME:-/scaled_joint_trajectory_controller/follow_joint_trajectory}
       - IK_GROUP_NAME=${IK_GROUP_NAME:-ur_manipulator}
       - REQUIRE_GRIPPER=${REQUIRE_GRIPPER:-1}
+      - ROBOT_LOOP_MODE=${ROBOT_LOOP_MODE:-lift_up_down}
       - WORLD_FILE=${WORLD_FILE:-/project_worlds/pick_and_place_demo.local.world}
       - POSE_FRAME=${POSE_FRAME:-base_link}
       - PICK_X=${PICK_X:-0.35}

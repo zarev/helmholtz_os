@@ -54,6 +54,22 @@ UR_JOINTS = [
 
 EE_LINK = "tool0"
 DEFAULT_PICK_MODEL_NAME = "red_cylinder"
+DEFAULT_LOOP_MODE = "pick_place"
+LOOP_MODES = {
+    "pick_place": "run_pick_place_loop",
+    "lift_up_down": "run_lift_up_down_loop",
+}
+DEFAULT_HOME_JOINTS = [0.0, -1.57, 0.0, -1.57, 0.0, 0.0]
+LOW_START_POSE_CANDIDATES = [
+    (0.18, -0.10, 0.24),
+    (0.20, -0.08, 0.22),
+    (0.16, -0.12, 0.20),
+]
+FULLY_UP_POSE_CANDIDATES = [
+    (0.00, -0.18, 0.52),
+    (-0.05, -0.18, 0.50),
+    (0.05, -0.20, 0.48),
+]
 
 # ---------------------------------------------------------------------------
 # Fake scan descriptions (used in Popup 2)
@@ -437,7 +453,7 @@ def _agent_popup_2_task():
     return choice[0]
 
 class UR3_IK_PickPlace(Node):
-    def __init__(self):
+    def __init__(self, loop_name=None):
         super().__init__("ur3_ik_pick_place")
 
         self.arm_action_name = os.getenv(
@@ -489,7 +505,8 @@ class UR3_IK_PickPlace(Node):
 
         self.get_logger().info(f"All services ready (arm action: {self.arm_action_name})")
 
-        self.pick_loop()
+        selected_loop = loop_name or os.getenv("ROBOT_LOOP_MODE", DEFAULT_LOOP_MODE)
+        self.run_selected_loop(selected_loop)
 
     # ── callbacks ────────────────────────────────────────────────────────────
 
@@ -576,6 +593,15 @@ class UR3_IK_PickPlace(Node):
         except ValueError:
             return False
         return all(abs(c - t) <= tolerance for c, t in zip(current, target_positions))
+
+    def _current_arm_joints(self):
+        if self.last_joint_state is None:
+            return None
+        js = self.last_joint_state
+        try:
+            return [js.position[js.name.index(j)] for j in UR_JOINTS]
+        except ValueError:
+            return None
 
     def _send_action_goal(self, client, goal, label, expected_positions=None):
         goal_future = client.send_goal_async(goal)
@@ -765,9 +791,18 @@ class UR3_IK_PickPlace(Node):
                 return candidate
         return None
 
-    # ── Main pick-and-place loop ─────────────────────────────────────────────
+    def run_selected_loop(self, loop_name):
+        loop_method_name = LOOP_MODES.get(loop_name)
+        if loop_method_name is None:
+            available = ", ".join(sorted(LOOP_MODES))
+            raise RuntimeError(f"Unknown ROBOT_LOOP_MODE '{loop_name}'. Available modes: {available}")
 
-    def pick_loop(self):
+        self.get_logger().info(f"Starting loop mode: {loop_name}")
+        getattr(self, loop_method_name)()
+
+    # ── Original pick-and-place flow ────────────────────────────────────────
+
+    def run_pick_place_loop(self):
         pre_z      = 0.20
         grasp_z    = 0.015
         lift_z     = 0.18
@@ -872,10 +907,49 @@ class UR3_IK_PickPlace(Node):
             # remove the 'break' below if you want continuous cycling.
             break
 
+    # ── Simple low-start lift loop ──────────────────────────────────────────
+
+    def run_lift_up_down_loop(self):
+        start_joints = self._current_arm_joints() or list(DEFAULT_HOME_JOINTS)
+
+        self.get_logger().info("Opening gripper")
+        if not self.gripper_cmd(0.0):
+            return
+
+        reached_low_start = False
+        for index, pose_xyz in enumerate(LOW_START_POSE_CANDIDATES, start=1):
+            self.get_logger().info(f"Move gripper to low start pose candidate {index}")
+            if self.move_pose(self._pose_at(*pose_xyz), 3.0):
+                reached_low_start = True
+                break
+
+        if not reached_low_start:
+            self.get_logger().error("Failed to reach any low start pose candidate")
+            return
+
+        moved_up = False
+        for index, pose_xyz in enumerate(FULLY_UP_POSE_CANDIDATES, start=1):
+            self.get_logger().info(f"Move arm to fully-up pose candidate {index}")
+            if self.move_pose(self._pose_at(*pose_xyz), 3.5):
+                moved_up = True
+                break
+
+        if not moved_up:
+            self.get_logger().error("Failed to reach any fully-up pose candidate")
+            return
+
+        self.get_logger().info("Return arm to initial position")
+        if not self.move_joints(start_joints, 3.5):
+            self.get_logger().error("Failed to return arm to the initial position")
+            return
+
+        self.get_logger().info("Lift up/down loop complete")
+        time.sleep(1.0)
+
 
 def main():
     rclpy.init()
-    node = UR3_IK_PickPlace()
+    node = UR3_IK_PickPlace(loop_name=os.getenv("ROBOT_LOOP_MODE", DEFAULT_LOOP_MODE))
     try:
         pass
     except KeyboardInterrupt:
