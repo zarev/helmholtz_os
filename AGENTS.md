@@ -20,4 +20,5 @@
 
 - Before creating a commit for the current work chunk, ask whether the user wants that chunk committed now.
 - When creating a commit, use the initial problem prompt for that work chunk to shape the commit message.
+- Commit messages must be short, precise, and describe the actual change.
 - After creating a commit, always notify the user that the commit was made.
