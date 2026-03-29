@@ -15,3 +15,9 @@
 
 - Prefer validation that matches the user-visible outcome: screenshots for visual behavior, runtime checks for live services, and targeted verification for each requested change.
 - Do not stop after making code changes alone; stop only after the requested behavior has been checked with an explicit validation step.
+
+## Commits
+
+- Before creating a commit for the current work chunk, ask whether the user wants that chunk committed now.
+- When creating a commit, use the initial problem prompt for that work chunk to shape the commit message.
+- After creating a commit, always notify the user that the commit was made.
