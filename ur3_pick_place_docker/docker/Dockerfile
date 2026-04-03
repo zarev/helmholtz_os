@@ -17,6 +17,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     dbus-x11 x11-apps \
     && rm -rf /var/lib/apt/lists/*
 
+# UR simulation + MoveIt runtime dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ros-jazzy-ur \
+    ros-jazzy-ur-moveit-config \
+    ros-jazzy-ur-simulation-gz \
+    ros-jazzy-moveit-msgs \
+    && rm -rf /var/lib/apt/lists/*
+
 # Initialize rosdep (safe if already initialized)
 RUN rosdep init || true && rosdep update
 
@@ -26,7 +34,9 @@ WORKDIR ${WS}
 
 # Copy entrypoint (sources ROS + workspace overlay if present)
 COPY scripts/entrypoint.sh /entrypoint.sh
+COPY scripts/run_ur3_pick_place.sh /run_ur3_pick_place.sh
 RUN chmod +x /entrypoint.sh
+RUN chmod +x /run_ur3_pick_place.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["bash"]
+CMD ["/run_ur3_pick_place.sh"]
