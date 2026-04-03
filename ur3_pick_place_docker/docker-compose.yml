@@ -38,7 +38,7 @@ services:
       - ./ws:/ws:rw
       - ./models:/project_models:ro
       - ./worlds:/project_worlds:ro
-      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ${X11_SOCKET_DIR_HOST:-/tmp/.X11-unix}:/tmp/.X11-unix:rw
       - ${XAUTHORITY_HOST:-${HOME}/.Xauthority}:/tmp/.Xauthority:ro
       - /dev/dri:/dev/dri
     command: ["/run_ur3_pick_place.sh"]

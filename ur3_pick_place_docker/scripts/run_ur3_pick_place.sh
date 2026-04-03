@@ -61,6 +61,18 @@ action_server_available() {
   ros2 action info "${action_name}" 2>/dev/null | grep -Eq '^Action servers: [1-9][0-9]*$'
 }
 
+controller_name_from_action() {
+  local action_name="${1#/}"
+  local suffix="/follow_joint_trajectory"
+
+  if [[ "${action_name}" == *"${suffix}" ]]; then
+    printf '%s\n' "${action_name%"${suffix}"}"
+    return
+  fi
+
+  printf '%s\n' "${action_name}"
+}
+
 wait_for_action_server() {
   local action_name="$1"
   local timeout_seconds="$2"
@@ -225,7 +237,7 @@ else
   upstream_extra_args=()
   if [ "${REQUIRE_GRIPPER}" = "1" ]; then
     gripper_description_file="/ws/config/ur_gz_robotiq.urdf.xacro"
-    gripper_controllers_file="/ws/src/UR3_ROS2_PICK_AND_PLACE/moveit_config/config/ros2_controllers.yaml"
+    gripper_controllers_file="/ws/config/ros2_controllers.yaml"
 
     if [ -f "${gripper_description_file}" ] && [ -f "${gripper_controllers_file}" ]; then
       echo "[run] REQUIRE_GRIPPER=1; launching upstream sim with repo-owned gripper description/controllers"
@@ -236,7 +248,8 @@ else
         ARM_ACTION_NAME="/arm_controller/follow_joint_trajectory"
       fi
     else
-      echo "[run] WARNING: gripper config files not found for upstream launch; gripper action may be unavailable" >&2
+      echo "[run] WARNING: gripper config files not found for upstream launch; disabling gripper-specific waits" >&2
+      REQUIRE_GRIPPER=0
     fi
   fi
 
@@ -244,6 +257,9 @@ else
   ros2 launch ur_simulation_gz ur_sim_control.launch.py ur_type:="${UR_TYPE}" launch_rviz:=false world_file:="${WORLD_FILE}" "${upstream_extra_args[@]}" > /tmp/ur_sim_control.log 2>&1 &
   SIM_PID=$!
 fi
+
+ARM_CONTROLLER_NAME="$(controller_name_from_action "${ARM_ACTION_NAME}")"
+echo "[run] Using arm action ${ARM_ACTION_NAME} (controller: ${ARM_CONTROLLER_NAME})"
 
 if [ "${REQUIRE_GUI}" = "1" ] && [ "${SET_GAZEBO_CAMERA}" = "1" ]; then
   set_gazebo_camera "${CAMERA_WAIT_TIMEOUT}" "${GAZEBO_CAMERA_REQ}" &
@@ -301,7 +317,7 @@ if [ "${found_compute_ik}" != "1" ]; then
 fi
 
 if [ "${SIM_BACKEND}" = "upstream" ]; then
-  activate_controller_with_retry "arm_controller"
+  activate_controller_with_retry "${ARM_CONTROLLER_NAME}"
 fi
 
 wait_for_action_server "${ARM_ACTION_NAME}" 120 "${ARM_ACTION_NAME}"

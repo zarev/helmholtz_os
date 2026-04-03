@@ -13,8 +13,8 @@ action client at `ws/pick_place_moveit_action.py`.
 - Container startup now launches:
   1. `ros2 launch ur_gazebo ur.gazebo.launch.py ur_type:=ur3 use_sim_time:=true`
   2. `ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur3 use_sim_time:=true launch_rviz:=0`
-  3. waits for `/arm_controller/follow_joint_trajectory`, `/compute_ik`, `/gripper_controller/gripper_cmd`
-  3. runs `python3 /ws/pick_place_moveit_action.py`
+  3. waits for `/compute_ik`, the configured arm trajectory action, and optionally `/gripper_controller/gripper_cmd`
+  4. runs `python3 /ws/pick_place_moveit_action.py`
 
 ## Prerequisites
 
@@ -49,6 +49,8 @@ From this directory:
 docker compose up
 ```
 
+Use direct `docker compose up` for headless or non-GUI runs. For GUI sessions, use the helper below.
+
 Recommended for GUI sessions (auto-detects DISPLAY and XAUTHORITY, applies xhost):
 
 ```bash
@@ -78,6 +80,12 @@ With `sudo` if needed:
 
 ```bash
 sudo docker compose up
+```
+
+If Docker comes from the Snap package and you need GUI access without the helper, pass the X11 socket source explicitly:
+
+```bash
+X11_SOCKET_DIR_HOST=/var/lib/snapd/hostfs/tmp/.X11-unix XAUTHORITY_HOST="${XAUTHORITY}" docker compose up
 ```
 
 From repository root (recommended for deployment scripts):
@@ -159,7 +167,7 @@ docker exec ur3_sim tail -f /tmp/move_group.log
 - Verify arm action exists:
 
 ```bash
-docker exec ur3_sim bash -lc 'source /opt/ros/jazzy/setup.bash && ros2 action list | grep /arm_controller/follow_joint_trajectory'
+docker exec ur3_sim bash -lc 'source /opt/ros/jazzy/setup.bash && ros2 action list | grep -E "/(scaled_joint_trajectory_controller|arm_controller)/follow_joint_trajectory"'
 ```
 
 - Verify gripper action exists:
@@ -188,11 +196,13 @@ docker exec ur3_sim bash -lc 'ps -ef | grep -E "gz sim|rviz2" | grep -v grep'
 
 Expected startup output includes:
 
-- `/arm_controller/follow_joint_trajectory is available`
+- `/<configured arm controller>/follow_joint_trajectory is available`
 - `/compute_ik is available`
-- `/gripper_controller/gripper_cmd is available`
+- `/gripper_controller/gripper_cmd is available` when gripper support is enabled and fully configured
 
 If startup fails, inspect `/tmp/ur_sim_control.log` and `/tmp/move_group.log` in the container.
+
+If the repo-owned gripper controller config is absent, startup warns and continues without gripper-specific waits.
 
 Common issue:
 

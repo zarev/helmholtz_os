@@ -97,6 +97,22 @@ detect_xauthority_host() {
   printf '%s\n' ""
 }
 
+detect_x11_socket_dir_host() {
+  if [ -n "${X11_SOCKET_DIR_HOST:-}" ]; then
+    printf '%s\n' "${X11_SOCKET_DIR_HOST}"
+    return
+  fi
+
+  local docker_root
+  docker_root="$(docker info --format '{{.DockerRootDir}}' 2>/dev/null || true)"
+  if [[ "${docker_root}" == /var/snap/docker/* ]]; then
+    printf '%s\n' "/var/lib/snapd/hostfs/tmp/.X11-unix"
+    return
+  fi
+
+  printf '%s\n' "/tmp/.X11-unix"
+}
+
 DISPLAY_VALUE="$(detect_display)"
 if [ -z "${DISPLAY_VALUE}" ]; then
   echo "[gui-run] ERROR: Unable to detect DISPLAY. Start from a desktop terminal and export DISPLAY (for example :0)." >&2
@@ -108,6 +124,9 @@ XAUTHORITY_HOST_VALUE="$(detect_xauthority_host)"
 if [ -n "${XAUTHORITY_HOST_VALUE}" ]; then
   export XAUTHORITY_HOST="${XAUTHORITY_HOST_VALUE}"
 fi
+
+X11_SOCKET_DIR_HOST_VALUE="$(detect_x11_socket_dir_host)"
+export X11_SOCKET_DIR_HOST="${X11_SOCKET_DIR_HOST_VALUE}"
 
 # Managed runtime config values come from host.env (when present) or defaults.
 set_managed_var "UR_TYPE" "ur3"
@@ -135,6 +154,7 @@ if command -v xhost >/dev/null 2>&1; then
 fi
 
 echo "[gui-run] DISPLAY=${DISPLAY}"
+echo "[gui-run] X11_SOCKET_DIR_HOST=${X11_SOCKET_DIR_HOST}"
 if [ -f "${HOST_CONFIG_FILE}" ]; then
   echo "[gui-run] HOST_CONFIG_FILE=${HOST_CONFIG_FILE}"
 else
