@@ -1,0 +1,13 @@
+# Default initial joint positions for Gazebo / ros2_control fake hardware.
+initial_positions:
+  # UR arm — upright/ready pose
+  shoulder_pan_joint:  -0.1
+  shoulder_lift_joint: -1.6315
+  elbow_joint:          0.0
+  wrist_1_joint:        1.8251
+  wrist_2_joint:        0.0
+  wrist_3_joint:        1.2844
+
+  # Gripper — only the master joint needs an initial value.
+  # All other gripper joints are now fixed (DART does not support mimic).
+  gripper_finger_joint: 0.0

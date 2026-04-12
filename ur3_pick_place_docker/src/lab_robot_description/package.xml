@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>lab_robot_description</name>
+  <version>0.0.1</version>
+  <description>Scaffold package for lab_robot_description.</description>
+  <maintainer email="lab@example.com">Lab Scaffold</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>robotiq_2f_85_gripper_visualization</exec_depend>
+  <exec_depend>robotiq_description</exec_depend>
+  <exec_depend>ur_description</exec_depend>
+  <exec_depend>ur_simulation_gz</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
